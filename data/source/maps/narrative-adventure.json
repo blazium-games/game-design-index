@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.1",
+  "slug": "narrative-adventure",
+  "title": "Narrative Adventure Gameplay Map",
+  "map_type": "genre",
+  "source_url": "https://github.com/blazium-games/game-mechanics-index",
+  "subject": {
+    "kind": "genre",
+    "name": "Narrative Adventure",
+    "genres": [
+      "Adventure",
+      "Narrative"
+    ],
+    "influences": [
+      "Firewatch",
+      "What Remains of Edith Finch"
+    ]
+  },
+  "narrative": {
+    "description": "Narrative adventures prioritize story revelation, environmental storytelling, and dialogue-driven choices over skill-heavy combat. Progression is measured in discovered plot beats and character relationships.",
+    "core_loop": "Traverse authored spaces, interact with objects and characters, make dialogue or moral choices, and unlock new story chapters or locations.",
+    "skills_tested": [
+      "observation",
+      "interpretation",
+      "empathy",
+      "branching consequence tracking"
+    ]
+  },
+  "signature_gameplay": [
+    "dialogue-choice-consequences",
+    "narrative-chapter-progression",
+    "environmental-trigger-switch"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "dialogue-choice-consequences",
+      "role": "signature",
+      "map_notes": "Branching conversations alter relationships and outcomes.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Branching conversations alter relationships and outcomes."
+    },
+    {
+      "mechanic_slug": "narrative-chapter-progression",
+      "role": "signature",
+      "map_notes": "Story advances through discrete chapters or acts.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Story advances through discrete chapters or acts."
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "signature",
+      "map_notes": "Inspectable objects and triggers reveal lore and unlock paths.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 3,
+      "expression": "Inspectable objects and triggers reveal lore and unlock paths."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "context": {
+    "perspective": "first-person",
+    "dimension": "3d",
+    "session_type": "session-based",
+    "world_structure": "linear-chapters"
+  },
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure"
+    ],
+    "influence_slugs": [
+      "firewatch",
+      "what-remains-of-edith-finch"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Narrative Adventure through its core adventure loop.",
+    "theme_tags": [
+      "adventure",
+      "narrative",
+      "dialogue-choice-consequences",
+      "narrative-chapter-progression",
+      "environmental-trigger-switch"
+    ],
+    "design_pillars": [
+      "Dialogue Choice Consequences",
+      "Narrative Chapter Progression",
+      "Environmental Trigger Switch"
+    ]
+  }
+}

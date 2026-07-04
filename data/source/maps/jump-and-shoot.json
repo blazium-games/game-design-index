@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.1",
+  "slug": "jump-and-shoot",
+  "title": "Jump'n'Shoot Gameplay Map",
+  "map_type": "genre",
+  "source_url": "https://github.com/blazium-games/game-mechanics-index",
+  "subject": {
+    "kind": "genre",
+    "name": "Jump'n'Shoot",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Mega Man",
+      "Mega Man X"
+    ]
+  },
+  "narrative": {
+    "description": "Jump'n'Shoot is a subgenre of platformer games that doubles down on platforming while adding shooter elements. The hallmark is facing-locked shooting combined with jump cutoff, forcing players to jump to hit targets above their line of sight.",
+    "core_loop": "Platforming movement (run, jump, climb, dash, fall) while firing to manage threats and clear space.",
+    "skills_tested": [
+      "timing",
+      "positioning",
+      "aim control",
+      "pattern recognition"
+    ]
+  },
+  "signature_gameplay": [
+    "facing-locked-shooting",
+    "jump-cutoff",
+    "precision-platforming",
+    "instant-fire-attack",
+    "unrestricted-primary-fire",
+    "resource-gated-weapon",
+    "ability-loadout-switching"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "facing-locked-shooting",
+      "role": "signature",
+      "map_notes": "Hallmark mechanic; weapon aim locked to character facing direction.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Hallmark mechanic; weapon aim locked to character facing direction.",
+      "depends_on": [
+        "jump-cutoff",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "jump-cutoff",
+      "role": "signature",
+      "map_notes": "Hallmark mechanic; early jump release for vertical aim windows.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Hallmark mechanic; early jump release for vertical aim windows.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "signature",
+      "map_notes": "Snappy locomotion required for hazard navigation while shooting.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Snappy locomotion required for hazard navigation while shooting.",
+      "depends_on": [
+        "jump-cutoff"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "signature",
+      "map_notes": "Responsive attacks without charge delay.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Responsive attacks without charge delay.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "unrestricted-primary-fire"
+      ]
+    },
+    {
+      "mechanic_slug": "unrestricted-primary-fire",
+      "role": "signature",
+      "map_notes": "Baseline weapon always available without resource cost.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Baseline weapon always available without resource cost.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "instant-fire-attack"
+      ]
+    },
+    {
+      "mechanic_slug": "resource-gated-weapon",
+      "role": "signature",
+      "map_notes": "Special weapons consume ammo or energy.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Special weapons consume ammo or energy.",
+      "depends_on": [
+        "ability-loadout-switching"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-loadout-switching",
+      "role": "signature",
+      "map_notes": "Switch between acquired weapons or abilities.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Switch between acquired weapons or abilities.",
+      "depends_on": [
+        "instant-fire-attack",
+        "resource-gated-weapon"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "precision-platformer"
+    ],
+    "influence_slugs": [
+      "mega-man-2",
+      "mega-man-x2"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Jump'n'Shoot through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "facing-locked-shooting",
+      "jump-cutoff",
+      "precision-platforming"
+    ],
+    "design_pillars": [
+      "Facing Locked Shooting",
+      "Jump Cutoff",
+      "Precision Platforming"
+    ]
+  }
+}

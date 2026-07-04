@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.1",
+  "slug": "pokemon-super-mystery-dungeon",
+  "title": "Pok\u00e9mon Super Mystery Dungeon Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.nintendolife.com/guides/50-best-nintendo-3ds-games-of-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Pok\u00e9mon Super Mystery Dungeon",
+    "genres": [
+      "Roguelike"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Pok\u00e9mon Super Mystery Dungeon (2015) is a acclaimed roguelike title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Descend procedural floors, manage risk, and rebuild after permadeath.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "roguelike-map-routing",
+    "permadeath-run-structure",
+    "rpg-stat-progression",
+    "resource-scarcity-management",
+    "purchase-gated-upgrade",
+    "deck-composition-roguelike",
+    "card-draw-hand-management",
+    "relic-passive-synergy"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "roguelike-map-routing",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from roguelike-deckbuilder recipe; customize for Pok\u00e9mon Super Mystery Dungeon.",
+      "expression": "Branching path selection between combat, rest, shop, and event nodes.",
+      "depends_on": [
+        "permadeath-run-structure"
+      ]
+    },
+    {
+      "mechanic_slug": "permadeath-run-structure",
+      "role": "signature",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from roguelike-deckbuilder recipe; customize for Pok\u00e9mon Super Mystery Dungeon.",
+      "expression": "Run ends on defeat; build resets for the next attempt."
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from roguelike-deckbuilder recipe; customize for Pok\u00e9mon Super Mystery Dungeon.",
+      "expression": "In-run stat growth via cards, relics, or upgrades."
+    },
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from roguelike-deckbuilder recipe; customize for Pok\u00e9mon Super Mystery Dungeon.",
+      "expression": "Energy, gold, or HP are tight resources each turn or node."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "map_notes": "Uplifted from roguelike-deckbuilder recipe; customize for Pok\u00e9mon Super Mystery Dungeon.",
+      "expression": "Shops convert run currency into deck improvements."
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "domain": "level",
+      "phase": "optional",
+      "weight": 2,
+      "map_notes": "Uplifted from roguelike-deckbuilder recipe; customize for Pok\u00e9mon Super Mystery Dungeon.",
+      "expression": "Elite fights and optional paths trade risk for reward."
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "domain": "combat",
+      "phase": "late",
+      "weight": 3,
+      "map_notes": "Uplifted from roguelike-deckbuilder recipe; customize for Pok\u00e9mon Super Mystery Dungeon.",
+      "expression": "Act and final bosses test the completed build."
+    },
+    {
+      "mechanic_slug": "deck-composition-roguelike",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from roguelike-deckbuilder recipe; customize for Pok\u00e9mon Super Mystery Dungeon.",
+      "expression": "Add and remove cards to shape each run build.",
+      "depends_on": [
+        "card-draw-hand-management",
+        "roguelike-map-routing"
+      ]
+    },
+    {
+      "mechanic_slug": "card-draw-hand-management",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from roguelike-deckbuilder recipe; customize for Pok\u00e9mon Super Mystery Dungeon.",
+      "expression": "Draw, play, and discard with hand size limits.",
+      "depends_on": [
+        "deck-composition-roguelike",
+        "resource-scarcity-management"
+      ]
+    },
+    {
+      "mechanic_slug": "relic-passive-synergy",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from roguelike-deckbuilder recipe; customize for Pok\u00e9mon Super Mystery Dungeon.",
+      "expression": "Passive relics define run synergies.",
+      "depends_on": [
+        "deck-composition-roguelike",
+        "rpg-stat-progression"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2015
+  },
+  "relationships": {
+    "genre_maps": [
+      "roguelike-deckbuilder"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A roguelike experience centered on Pok\u00e9mon Super Mystery Dungeon.",
+    "theme_tags": [
+      "roguelike",
+      "roguelike-map-routing",
+      "permadeath-run-structure",
+      "rpg-stat-progression"
+    ],
+    "design_pillars": [
+      "Roguelike Map Routing",
+      "Permadeath Run Structure",
+      "Rpg Stat Progression"
+    ]
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.1",
+  "slug": "sin-and-punishment",
+  "title": "Sin & Punishment Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://gamefaqs.gamespot.com/boards/204-classic-gaming/79732676",
+  "subject": {
+    "kind": "game",
+    "name": "Sin & Punishment",
+    "genres": [
+      "Shooter"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Sin & Punishment (2000) is a acclaimed shooter title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Dodge bullet patterns, destroy formations, and survive escalating waves.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "projectile-pattern-enemy-design",
+    "telegraphed-threat-loop",
+    "instant-fire-attack",
+    "life-based-retry-system",
+    "linear-stage-gauntlet"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from bullet-hell recipe; customize for Sin & Punishment.",
+      "expression": "Enemies emit readable but dense bullet curtains.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from bullet-hell recipe; customize for Sin & Punishment.",
+      "expression": "Wind-ups and pattern cycles create learnable dodge windows.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from bullet-hell recipe; customize for Sin & Punishment.",
+      "expression": "Responsive player shots reward positioning without charge delay."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "signature",
+      "domain": "session",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from bullet-hell recipe; customize for Sin & Punishment.",
+      "expression": "Limited lives or continues cap run length and raise stakes."
+    },
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from bullet-hell recipe; customize for Sin & Punishment.",
+      "expression": "Sequential stages escalate pattern complexity.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from bullet-hell recipe; customize for Sin & Punishment.",
+      "expression": "Boss spell cards or phases test accumulated pattern knowledge.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "supporting",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 2,
+      "map_notes": "Uplifted from bullet-hell recipe; customize for Sin & Punishment.",
+      "expression": "Shot power tiers reward survival without dying."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2000
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A shooter experience centered on Sin & Punishment.",
+    "theme_tags": [
+      "shooter",
+      "projectile-pattern-enemy-design",
+      "telegraphed-threat-loop",
+      "instant-fire-attack"
+    ],
+    "design_pillars": [
+      "Projectile Pattern Enemy Design",
+      "Telegraphed Threat Loop",
+      "Instant Fire Attack"
+    ]
+  }
+}

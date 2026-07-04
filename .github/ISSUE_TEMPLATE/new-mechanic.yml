@@ -1,0 +1,35 @@
+name: New mechanic
+description: Propose a reusable mechanic entry
+title: "New mechanic: "
+labels: ["data", "mechanic"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Mechanic name
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options: [locomotion, combat, progression, economy, level, session]
+    validations:
+      required: true
+  - type: dropdown
+    id: flavor
+    attributes:
+      label: Flavor
+      options: [action, adventure, strategy]
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: One-sentence summary
+    validations:
+      required: true
+  - type: textarea
+    id: example_games
+    attributes:
+      label: Example games

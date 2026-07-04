@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.1",
+  "slug": "horror-survival",
+  "title": "Horror Survival Gameplay Map",
+  "map_type": "genre",
+  "source_url": "https://github.com/blazium-games/game-mechanics-index",
+  "subject": {
+    "kind": "genre",
+    "name": "Horror Survival",
+    "genres": [
+      "Horror",
+      "Survival"
+    ],
+    "influences": [
+      "Resident Evil",
+      "Silent Hill"
+    ]
+  },
+  "narrative": {
+    "description": "Horror survival games constrain resources and visibility while telegraphing threats to create dread and tension between safe rooms.",
+    "core_loop": "Explore hostile spaces with limited supplies, manage inventory and health, solve locks, and survive encounters or flee.",
+    "skills_tested": [
+      "resource management",
+      "risk assessment",
+      "pattern recognition",
+      "navigation under pressure"
+    ],
+    "design_pillars": [
+      "scarcity creates dread",
+      "safe room rhythm",
+      "readable threat tells"
+    ]
+  },
+  "signature_gameplay": [
+    "resource-scarcity-management",
+    "depletable-health-pool",
+    "telegraphed-threat-loop",
+    "bench-checkpoint"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "map_notes": "Ammo, healing, and keys are deliberately scarce.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Ammo, healing, and keys are deliberately scarce.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "signature",
+      "map_notes": "Low TTK raises stakes on mistakes.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 4,
+      "expression": "Low TTK raises stakes on mistakes."
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "signature",
+      "map_notes": "Audio and visual tells signal danger.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 4,
+      "expression": "Audio and visual tells signal danger."
+    },
+    {
+      "mechanic_slug": "bench-checkpoint",
+      "role": "signature",
+      "map_notes": "Safe rooms save and heal between tense zones.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 4,
+      "expression": "Safe rooms save and heal between tense zones.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "supporting",
+      "map_notes": "Puzzles gate progression through locked areas.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Puzzles gate progression through locked areas.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Files and lore optional pickups.",
+      "domain": "level",
+      "phase": "optional",
+      "weight": 2,
+      "expression": "Files and lore optional pickups.",
+      "depends_on": [
+        "environmental-trigger-switch"
+      ],
+      "optional": true
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "context": {
+    "perspective": "third-person",
+    "dimension": "3d",
+    "session_type": "campaign",
+    "world_structure": "hub-and-spoke"
+  },
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure"
+    ],
+    "influence_slugs": [
+      "resident-evil-4",
+      "silent-hill-2",
+      "phasmophobia"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Horror Survival through its core horror loop.",
+    "theme_tags": [
+      "horror",
+      "survival",
+      "resource-scarcity-management",
+      "depletable-health-pool",
+      "telegraphed-threat-loop"
+    ],
+    "design_pillars": [
+      "scarcity creates dread",
+      "safe room rhythm",
+      "readable threat tells"
+    ]
+  },
+  "systems": {
+    "failure_model": "checkpoint-respawn",
+    "economy_tightness": "scarce"
+  },
+  "variants": [
+    {
+      "id": "asymmetric-horror",
+      "label": "Asymmetric Horror Multiplayer",
+      "add_signatures": [
+        "asymmetric-multiplayer"
+      ],
+      "notes": "One monster vs survivors with different win conditions."
+    }
+  ]
+}

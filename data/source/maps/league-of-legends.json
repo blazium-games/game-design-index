@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.1",
+  "slug": "league-of-legends",
+  "title": "League of Legends Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://en.wikipedia.org/wiki/List_of_best-selling_video_games",
+  "subject": {
+    "kind": "game",
+    "name": "League of Legends",
+    "genres": [
+      "MOBA",
+      "Strategy"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "League of Legends is a competitive MOBA where teams of five champions push three lanes, secure objectives, and teamfight to destroy the enemy Nexus.",
+    "core_loop": "Pick a champion, farm minions and jungle camps, purchase item power spikes, coordinate vision and objectives, and siege the enemy base.",
+    "skills_tested": [
+      "team coordination",
+      "map awareness",
+      "mechanical execution",
+      "draft strategy",
+      "wave management"
+    ]
+  },
+  "signature_gameplay": [
+    "lane-push-moba",
+    "equipment-loadout",
+    "rpg-stat-progression",
+    "real-time-action-combat",
+    "resource-scarcity-management"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "lane-push-moba",
+      "role": "signature",
+      "map_notes": "In League of Legends, teams push minion waves along lanes toward enemy structures.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In League of Legends, teams push minion waves along lanes toward enemy structures.",
+      "depends_on": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "signature",
+      "map_notes": "In League of Legends, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In League of Legends, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "signature",
+      "map_notes": "In League of Legends, defeating enemies or completing objectives grants experience that increases character stats such as HP, attack, or defense.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In League of Legends, defeating enemies or completing objectives grants experience that increases character stats such as HP, attack, or defense.",
+      "depends_on": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "mechanic_slug": "real-time-action-combat",
+      "role": "signature",
+      "map_notes": "In League of Legends, direct player control over attacks, dodges, and combos in real time.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In League of Legends, direct player control over attacks, dodges, and combos in real time.",
+      "depends_on": [
+        "equipment-loadout",
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "map_notes": "In League of Legends, limited ammo, healing, and save resources force careful risk assessment.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In League of Legends, limited ammo, healing, and save resources force careful risk assessment."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2009
+  },
+  "relationships": {
+    "genre_maps": [
+      "tactics-strategy"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience League of Legends through its core moba loop.",
+    "theme_tags": [
+      "moba",
+      "strategy",
+      "lane-push-moba",
+      "equipment-loadout",
+      "rpg-stat-progression"
+    ],
+    "design_pillars": [
+      "Lane Push Moba",
+      "Equipment Loadout",
+      "Rpg Stat Progression"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "scarce"
+  }
+}

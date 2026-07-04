@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.1",
+  "slug": "pac-man-world-2",
+  "title": "Pac-Man World 2 Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Pac-Man World 2",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario 64"
+    ]
+  },
+  "narrative": {
+    "description": "Namco's sequel expands butt-bounce combat and ghost boss gauntlets across themed family-rescue stages.",
+    "core_loop": "Butt-bounce through worlds, rescue Pac-family, and defeat Spooky across linear ghost-infested stages.",
+    "skills_tested": [
+      "bounce chaining",
+      "ghost combat",
+      "family rescue routing"
+    ]
+  },
+  "signature_gameplay": [
+    "linear-stage-gauntlet",
+    "spin-attack-combat",
+    "boss-gated-progression"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "signature",
+      "map_notes": "Core linear stage gauntlet defines Pac-Man World 2 stage design.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Core linear stage gauntlet defines Pac-Man World 2 stage design.",
+      "depends_on": [
+        "boss-gated-progression",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "signature",
+      "map_notes": "Pac-Man World 2 uses spin attack combat for world structure.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Pac-Man World 2 uses spin attack combat for world structure."
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "signature",
+      "map_notes": "boss gated progression drives progression in Pac-Man World 2.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "boss gated progression drives progression in Pac-Man World 2.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Hazards and obstacles test traversal mastery in Pac-Man World 2.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hazards and obstacles test traversal mastery in Pac-Man World 2.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Checkpoints and stage boundaries save progress between attempts.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Checkpoints and stage boundaries save progress between attempts.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Lives or health gates retries on failure.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lives or health gates retries on failure.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Boss encounters follow learnable attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss encounters follow learnable attack cycles.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden collectibles reward thorough exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden collectibles reward thorough exploration."
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Platform sections demand accurate jump timing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Platform sections demand accurate jump timing.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Enemy attacks telegraph before striking.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemy attacks telegraph before striking.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health depletes on hazard and enemy contact.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health depletes on hazard and enemy contact.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Major encounters shift behavior across multiple phases. (Pac-Man World 2)",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Major encounters shift behavior across multiple phases. (Pac-Man World 2)",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2002
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-64"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Pac-Man World 2 through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "linear-stage-gauntlet",
+      "spin-attack-combat",
+      "boss-gated-progression"
+    ],
+    "design_pillars": [
+      "Linear Stage Gauntlet",
+      "Spin Attack Combat",
+      "Boss Gated Progression"
+    ]
+  }
+}

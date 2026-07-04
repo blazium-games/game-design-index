@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.1",
+  "slug": "gran-turismo",
+  "title": "Gran Turismo Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Gran Turismo",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "influences": [
+      "Ridge Racer",
+      "Virtua Racing"
+    ]
+  },
+  "narrative": {
+    "description": "Polyphony Digital's PS1 racing sim pioneered the license-driven career mode with hundreds of real cars, tuning depth, and rigorous driving tests gating progression through class championships.",
+    "core_loop": "Pass license tests, earn credits in races, buy and tune cars, and win championships to unlock higher license tiers and events.",
+    "skills_tested": [
+      "racing line precision",
+      "brake timing",
+      "tuning literacy",
+      "credit management"
+    ]
+  },
+  "signature_gameplay": [
+    "license-progression-gates",
+    "vehicle-tuning-economy",
+    "mission-select-structure"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "license-progression-gates",
+      "role": "signature",
+      "map_notes": "B-A-IB-IA-S license tests gate access to car classes and events.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "B-A-IB-IA-S license tests gate access to car classes and events.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "vehicle-tuning-economy",
+      "role": "signature",
+      "map_notes": "Credits buy cars and parts; tuning affects race performance.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Credits buy cars and parts; tuning affects race performance.",
+      "depends_on": [
+        "license-progression-gates",
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "mission-select-structure",
+      "role": "signature",
+      "map_notes": "Race events, championships, and tests selectable from world map menus.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Race events, championships, and tests selectable from world map menus."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Parts shop upgrades suspension, gearing, and power.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Parts shop upgrades suspension, gearing, and power.",
+      "depends_on": [
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "loot-based-economy",
+      "role": "supporting",
+      "map_notes": "Prize money from races funds garage expansion.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Prize money from races funds garage expansion."
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "License tests demand pixel-perfect racing lines akin to platform precision.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "License tests demand pixel-perfect racing lines akin to platform precision."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Failed license tests retry immediately with penalty-free learning.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Failed license tests retry immediately with penalty-free learning."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1997
+  },
+  "relationships": {
+    "influence_slugs": [
+      "virtua-racing"
+    ],
+    "genre_maps": [
+      "tycoon-simulation",
+      "life-sim"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Gran Turismo through its core racing loop.",
+    "theme_tags": [
+      "racing",
+      "simulation",
+      "license-progression-gates",
+      "vehicle-tuning-economy",
+      "mission-select-structure"
+    ],
+    "design_pillars": [
+      "License Progression Gates",
+      "Vehicle Tuning Economy",
+      "Mission Select Structure"
+    ]
+  }
+}

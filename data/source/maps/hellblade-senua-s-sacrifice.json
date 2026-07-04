@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.1",
+  "slug": "hellblade-senua-s-sacrifice",
+  "title": "Hellblade: Senua\u2019s Sacrifice Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.avclub.com/best-videogames-of-the-decade",
+  "subject": {
+    "kind": "game",
+    "name": "Hellblade: Senua\u2019s Sacrifice",
+    "genres": [
+      "Action-Adventure",
+      "Horror"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Hellblade: Senua's Sacrifice follows a Celtic warrior's journey into Norse hell, blending melee combat with psychosis-inspired perception puzzles and binaural audio.",
+    "core_loop": "Fight mythic enemies in melee combat, solve environmental perception puzzles, navigate distorted spaces shaped by Senua's mental state, and advance through a personal narrative.",
+    "skills_tested": [
+      "combat timing",
+      "observation",
+      "pattern recognition",
+      "narrative interpretation"
+    ]
+  },
+  "signature_gameplay": [
+    "melee-primary-combat",
+    "telegraphed-threat-loop",
+    "puzzle-room-exploration",
+    "depletable-health-pool",
+    "environmental-hazard-navigation"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "melee-primary-combat",
+      "role": "signature",
+      "map_notes": "In Hellblade: Senua\u2019s Sacrifice, the primary offensive loop uses close-range melee strikes rather than projectile weapons.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Hellblade: Senua\u2019s Sacrifice, the primary offensive loop uses close-range melee strikes rather than projectile weapons.",
+      "depends_on": [
+        "depletable-health-pool",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "signature",
+      "map_notes": "In Hellblade: Senua\u2019s Sacrifice, a combat encounter structure in which an enemy signals an incoming attack through a distinct visual or audio cue before the attack resolves.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Hellblade: Senua\u2019s Sacrifice, a combat encounter structure in which an enemy signals an incoming attack through a distinct visual or audio cue before the attack resolves."
+    },
+    {
+      "mechanic_slug": "puzzle-room-exploration",
+      "role": "signature",
+      "map_notes": "In Hellblade: Senua\u2019s Sacrifice, interconnected rooms hide switches, keys, and environmental secrets.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Hellblade: Senua\u2019s Sacrifice, interconnected rooms hide switches, keys, and environmental secrets."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "signature",
+      "map_notes": "In Hellblade: Senua\u2019s Sacrifice, a survival mechanic where the player character possesses a finite quantity of health points that decrease when taking damage, with depletion resulting in failure.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Hellblade: Senua\u2019s Sacrifice, a survival mechanic where the player character possesses a finite quantity of health points that decrease when taking damage, with depletion resulting in failure."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "signature",
+      "map_notes": "In Hellblade: Senua\u2019s Sacrifice, a traversal mechanic in which the level space contains persistent damaging or lethal obstacles that the player must avoid through precise movement.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Hellblade: Senua\u2019s Sacrifice, a traversal mechanic in which the level space contains persistent damaging or lethal obstacles that the player must avoid through precise movement."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2017
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure",
+      "horror-survival"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Hellblade: Senua\u2019s Sacrifice through its core action-adventure loop.",
+    "theme_tags": [
+      "action-adventure",
+      "horror",
+      "melee-primary-combat",
+      "telegraphed-threat-loop",
+      "puzzle-room-exploration"
+    ],
+    "design_pillars": [
+      "Melee Primary Combat",
+      "Telegraphed Threat Loop",
+      "Puzzle Room Exploration"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "scarce"
+  }
+}

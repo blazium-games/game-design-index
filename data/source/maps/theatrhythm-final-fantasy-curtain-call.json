@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.1",
+  "slug": "theatrhythm-final-fantasy-curtain-call",
+  "title": "Theatrhythm Final Fantasy: Curtain Call Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.nintendolife.com/guides/50-best-nintendo-3ds-games-of-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Theatrhythm Final Fantasy: Curtain Call",
+    "genres": [
+      "Rhythm"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Theatrhythm Final Fantasy: Curtain Call (2014) is a acclaimed rhythm title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Hit note prompts in time with music across escalating song challenges.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "swipe-note-battle-system",
+    "rhythm-tap-timing",
+    "song-stage-progression"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "swipe-note-battle-system",
+      "role": "signature",
+      "map_notes": "Core swipe note battle system loop defines Theatrhythm Final Fantasy: Curtain Call's identity.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Touch or button swipes match on-screen prompts during music-driven combat.",
+      "depends_on": [
+        "rhythm-tap-timing"
+      ]
+    },
+    {
+      "mechanic_slug": "rhythm-tap-timing",
+      "role": "signature",
+      "map_notes": "Core rhythm tap timing loop defines Theatrhythm Final Fantasy: Curtain Call's identity.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Notes scroll to a beat line; players tap, hold, or slide on precise timing windows.",
+      "depends_on": [
+        "song-stage-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "song-stage-progression",
+      "role": "signature",
+      "map_notes": "Core song stage progression loop defines Theatrhythm Final Fantasy: Curtain Call's identity.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Unlock and play through a curated track list with increasing difficulty tiers.",
+      "depends_on": [
+        "mission-select-structure",
+        "rhythm-tap-timing"
+      ]
+    },
+    {
+      "mechanic_slug": "mission-select-structure",
+      "role": "supporting",
+      "map_notes": "Mission Select Structure supports the main loop in Theatrhythm Final Fantasy: Curtain Call.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A menu or hub lets the player choose missions or levels in flexible order with difficulty ratings."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Life Based Retry System supports the main loop in Theatrhythm Final Fantasy: Curtain Call.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A failure-buffer system in which the player is granted a limited number of retries, losing one life upon failure and restarting from a previous checkpoint."
+    },
+    {
+      "mechanic_slug": "combo-trick-scoring",
+      "role": "supporting",
+      "map_notes": "Combo Trick Scoring supports the main loop in Theatrhythm Final Fantasy: Curtain Call.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Chained tricks and aerial maneuvers multiply score within a combo timer during skating or stunt gameplay.",
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "fill-reward-progression-loop",
+      "role": "supporting",
+      "map_notes": "Fill Reward Progression Loop supports the main loop in Theatrhythm Final Fantasy: Curtain Call.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "input-aligned-movement",
+      "role": "supporting",
+      "map_notes": "Input Aligned Movement supports the main loop in Theatrhythm Final Fantasy: Curtain Call.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Movement responds directly and immediately to input direction with minimal inertia, optimized for top-down or free-aim combat spaces."
+    },
+    {
+      "mechanic_slug": "multi-line-scoring-multiplier",
+      "role": "supporting",
+      "map_notes": "Multi Line Scoring Multiplier supports the main loop in Theatrhythm Final Fantasy: Curtain Call.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Clearing multiple lines simultaneously awards disproportionately higher scores than single-line clears."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Purchase Gated Upgrade supports the main loop in Theatrhythm Final Fantasy: Curtain Call.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices.",
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "bench-checkpoint",
+      "role": "supporting",
+      "map_notes": "Bench Checkpoint supports the main loop in Theatrhythm Final Fantasy: Curtain Call.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Designated rest points save progress, restore health or resources, and set respawn locations on death."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2014
+  },
+  "design_intent": {
+    "player_fantasy": "A rhythm experience centered on Theatrhythm Final Fantasy: Curtain Call.",
+    "theme_tags": [
+      "rhythm",
+      "swipe-note-battle-system",
+      "rhythm-tap-timing",
+      "song-stage-progression"
+    ],
+    "design_pillars": [
+      "Swipe Note Battle System",
+      "Rhythm Tap Timing",
+      "Song Stage Progression"
+    ]
+  }
+}

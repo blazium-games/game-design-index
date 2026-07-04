@@ -1,0 +1,23 @@
+# Build
+data/dist/
+site/dist/
+site/node_modules/
+site/public/api/v1/
+*.exe
+*.zip
+
+# Env
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# npm pack
+packages/mechanics-index-data/api/

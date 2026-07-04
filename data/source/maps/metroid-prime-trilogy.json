@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.1",
+  "slug": "metroid-prime-trilogy",
+  "title": "Metroid Prime Trilogy Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Metroid Prime Trilogy",
+    "genres": [
+      "Action-Adventure",
+      "Platformer"
+    ],
+    "influences": [
+      "Metroid",
+      "Super Metroid"
+    ]
+  },
+  "narrative": {
+    "description": "Nintendo's compilation bundles Metroid Prime 1-3, translating Samus' isolation exploration into first-person scanning, ability-gated biomes, and atmospheric boss hunts across Tallon IV, Aether, and Corruption's galaxy.",
+    "core_loop": "Scan environments for clues, acquire beams and suits to open new biomes, defeat bosses for key abilities, and unravel Space Pirate plots.",
+    "skills_tested": [
+      "exploration memory",
+      "scanning deduction",
+      "combat positioning",
+      "ability sequencing"
+    ]
+  },
+  "signature_gameplay": [
+    "remaster-collection-format",
+    "ability-gated-exploration",
+    "first-person-platforming"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "remaster-collection-format",
+      "role": "signature",
+      "map_notes": "Three Metroid Prime games compiled with Wii controls and enhancements.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Three Metroid Prime games compiled with Wii controls and enhancements."
+    },
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "signature",
+      "map_notes": "Beams, suits, and movement upgrades permanently unlock new regions.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Beams, suits, and movement upgrades permanently unlock new regions.",
+      "depends_on": [
+        "ability-driven-backtracking"
+      ]
+    },
+    {
+      "mechanic_slug": "first-person-platforming",
+      "role": "signature",
+      "map_notes": "Morph ball tunnels and precision jumps viewed from first-person perspective.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Morph ball tunnels and precision jumps viewed from first-person perspective."
+    },
+    {
+      "mechanic_slug": "ability-driven-backtracking",
+      "role": "supporting",
+      "map_notes": "Late abilities reveal hidden items in earlier zones.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Late abilities reveal hidden items in earlier zones.",
+      "depends_on": [
+        "ability-gated-exploration"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Major bosses grant artifacts and abilities gating story progress.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Major bosses grant artifacts and abilities gating story progress.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Logbook scans, item expansions, and sequence breaks reward mastery.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Logbook scans, item expansions, and sequence breaks reward mastery."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Lava, dark worlds, and Phazon corruption alter traversal rules.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lava, dark worlds, and Phazon corruption alter traversal rules."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Energy tanks expand health depleted by enemy and hazard hits.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Energy tanks expand health depleted by enemy and hazard hits."
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Save stations and shuttle rides checkpoint progress.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Save stations and shuttle rides checkpoint progress.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses like Ridley and Meta Ridley follow phase patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses like Ridley and Meta Ridley follow phase patterns.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Prime and Dark Samus fights span multiple arena forms.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Prime and Dark Samus fights span multiple arena forms.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Boss charge attacks telegraph with audio and visual wind-up.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss charge attacks telegraph with audio and visual wind-up.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Beams fire immediately with lock-on assist.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Beams fire immediately with lock-on assist."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2009
+  },
+  "relationships": {
+    "influence_slugs": [
+      "metroid",
+      "super-metroid"
+    ],
+    "genre_maps": [
+      "narrative-adventure",
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Metroid Prime Trilogy through its core action-adventure loop.",
+    "theme_tags": [
+      "action-adventure",
+      "platformer",
+      "remaster-collection-format",
+      "ability-gated-exploration",
+      "first-person-platforming"
+    ],
+    "design_pillars": [
+      "Remaster Collection Format",
+      "Ability Gated Exploration",
+      "First Person Platforming"
+    ]
+  }
+}

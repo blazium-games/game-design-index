@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.1",
+  "slug": "top-down-shooter",
+  "title": "Top-Down Shooter Gameplay Map",
+  "map_type": "genre",
+  "source_url": "https://github.com/blazium-games/game-mechanics-index",
+  "subject": {
+    "kind": "genre",
+    "name": "Top-Down Shooter",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "influences": [
+      "Enter the Gungeon",
+      "Minishoot Adventures"
+    ]
+  },
+  "narrative": {
+    "description": "Top-down shooters combine free aim with room-based combat, bullet patterns, and often roguelike run structure.",
+    "core_loop": "Clear rooms of enemies using aimed fire and dodging, collect loot, route through floors, and survive boss encounters.",
+    "skills_tested": [
+      "aim control",
+      "dodging",
+      "pattern recognition",
+      "build routing"
+    ],
+    "design_pillars": [
+      "readable bullets",
+      "aim independence",
+      "room combat clarity"
+    ]
+  },
+  "signature_gameplay": [
+    "decoupled-aim-control",
+    "projectile-pattern-enemy-design",
+    "roguelike-map-routing",
+    "encounter-containment"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "decoupled-aim-control",
+      "role": "signature",
+      "map_notes": "Independent aim from movement direction.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Independent aim from movement direction.",
+      "depends_on": [
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "signature",
+      "map_notes": "Bullet curtains require weaving and spacing.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Bullet curtains require weaving and spacing.",
+      "depends_on": [
+        "decoupled-aim-control"
+      ]
+    },
+    {
+      "mechanic_slug": "roguelike-map-routing",
+      "role": "signature",
+      "map_notes": "Procedural floors or room paths per run.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 4,
+      "expression": "Procedural floors or room paths per run."
+    },
+    {
+      "mechanic_slug": "encounter-containment",
+      "role": "signature",
+      "map_notes": "Rooms lock until cleared.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 4,
+      "expression": "Rooms lock until cleared."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "HP tension between rooms.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 3,
+      "expression": "HP tension between rooms."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Shops between floors.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 2,
+      "expression": "Shops between floors.",
+      "optional": true
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "context": {
+    "perspective": "top-down",
+    "dimension": "2d",
+    "session_type": "run-based",
+    "world_structure": "room-based-dungeon"
+  },
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell",
+      "metroidvania",
+      "roguelike-deckbuilder"
+    ],
+    "influence_slugs": [
+      "minishoot-adventures",
+      "enter-the-gungeon",
+      "dead-cells"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Top-Down Shooter through its core shooter loop.",
+    "theme_tags": [
+      "shooter",
+      "action",
+      "decoupled-aim-control",
+      "projectile-pattern-enemy-design",
+      "roguelike-map-routing"
+    ],
+    "design_pillars": [
+      "readable bullets",
+      "aim independence",
+      "room combat clarity"
+    ]
+  },
+  "systems": {
+    "metaprogression": true
+  },
+  "variants": [
+    {
+      "id": "metroidvania-shooter",
+      "label": "Metroidvania Shooter",
+      "add_signatures": [
+        "ability-gated-exploration",
+        "ability-driven-backtracking"
+      ],
+      "notes": "Persistent map with ability gates plus top-down combat."
+    }
+  ]
+}

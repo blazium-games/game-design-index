@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.1",
+  "slug": "pokemon-x-y",
+  "title": "Pok\u00e9mon X & Y Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.nintendolife.com/guides/50-best-nintendo-3ds-games-of-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Pok\u00e9mon X & Y",
+    "genres": [
+      "RPG"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Pok\u00e9mon X & Y (2013) is a acclaimed rpg title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Catch or recruit party members, battle trainers or foes, and collect badges or objectives.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "turn-based-party-combat",
+    "rpg-stat-progression",
+    "overworld-map-stage-selection",
+    "equipment-loadout",
+    "map-resource-monster-groups"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "turn-based-party-combat",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Pok\u00e9mon X & Y.",
+      "expression": "Party members act in turns selecting skills and targets.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Pok\u00e9mon X & Y.",
+      "expression": "Level-ups and stat curves define long-term power growth.",
+      "depends_on": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "mechanic_slug": "overworld-map-stage-selection",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Pok\u00e9mon X & Y.",
+      "expression": "World map or hub connects towns, dungeons, and story beats.",
+      "depends_on": [
+        "boss-gated-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Pok\u00e9mon X & Y.",
+      "expression": "Weapons, armor, and accessories customize party roles.",
+      "depends_on": [
+        "purchase-gated-upgrade",
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "map-resource-monster-groups",
+      "role": "signature",
+      "domain": "level",
+      "phase": "early",
+      "weight": 3,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Pok\u00e9mon X & Y.",
+      "expression": "Random or visible encounters populate dungeons and overworld."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Pok\u00e9mon X & Y.",
+      "expression": "Shops convert currency into gear and consumables."
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Pok\u00e9mon X & Y.",
+      "expression": "Story bosses gate new regions or abilities.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "domain": "combat",
+      "phase": "late",
+      "weight": 3,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Pok\u00e9mon X & Y.",
+      "expression": "Late-game bosses introduce phase shifts and new abilities."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2013
+  },
+  "relationships": {
+    "genre_maps": [
+      "turn-based-rpg"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A rpg experience centered on Pok\u00e9mon X & Y.",
+    "theme_tags": [
+      "rpg",
+      "turn-based-party-combat",
+      "rpg-stat-progression",
+      "overworld-map-stage-selection"
+    ],
+    "design_pillars": [
+      "Turn Based Party Combat",
+      "Rpg Stat Progression",
+      "Overworld Map Stage Selection"
+    ]
+  }
+}

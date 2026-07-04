@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.1",
+  "slug": "banjo-kazooie",
+  "title": "Banjo-Kazooie Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Banjo-Kazooie",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario 64",
+      "Donkey Kong 64"
+    ]
+  },
+  "narrative": {
+    "description": "Rare's N64 collectathon defines the genre with Gruntilda's lair hub, jigsaw piece expansion, and move-teaching Bottles sequences across nine themed worlds.",
+    "core_loop": "Collect jiggies and notes in hub-linked worlds, learn moves from Bottles, transform via Mumbo, and climb Gruntilda's lair to rescue Tooty.",
+    "skills_tested": [
+      "move sequencing",
+      "jiggy routing",
+      "transformation timing",
+      "note collection under pressure"
+    ]
+  },
+  "signature_gameplay": [
+    "collectathon-token-gating",
+    "hub-world-stage-gates",
+    "ability-gated-exploration",
+    "power-up-transformation-states"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Jiggies expand Gruntilda's lair; notes gate move tutorials and 100-note doors.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Jiggies expand Gruntilda's lair; notes gate move tutorials and 100-note doors.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "signature",
+      "map_notes": "Gruntilda's lair hub connects to nine worlds via jigsaw piece expansion.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Gruntilda's lair hub connects to nine worlds via jigsaw piece expansion.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "signature",
+      "map_notes": "Bottles teaches talon trot, beak bomb, flight pad, and other moves gating new areas.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Bottles teaches talon trot, beak bomb, flight pad, and other moves gating new areas.",
+      "depends_on": [
+        "ability-driven-backtracking"
+      ]
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "signature",
+      "map_notes": "Mumbo tokens transform Banjo into termite, crocodile, pumpkin, and other forms.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Mumbo tokens transform Banjo into termite, crocodile, pumpkin, and other forms."
+    },
+    {
+      "mechanic_slug": "character-swap-abilities",
+      "role": "supporting",
+      "map_notes": "Banjo and Kazooie combine for distinct attack and traversal options.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Banjo and Kazooie combine for distinct attack and traversal options.",
+      "depends_on": [
+        "ability-gated-exploration",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Jinjos, eggs, and secret stops extend 100% completion.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Jinjos, eggs, and secret stops extend 100% completion."
+    },
+    {
+      "mechanic_slug": "ability-driven-backtracking",
+      "role": "supporting",
+      "map_notes": "New moves reveal jiggies in previously visited worlds.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "New moves reveal jiggies in previously visited worlds.",
+      "depends_on": [
+        "ability-gated-exploration"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Rusty bucket bay, Gobi's valley, and Clanker's cavern test mastery.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Rusty bucket bay, Gobi's valley, and Clanker's cavern test mastery."
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Gruntilda's quiz and final fight gate story completion.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Gruntilda's quiz and final fight gate story completion.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "World bosses like Conga follow learnable attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "World bosses like Conga follow learnable attack cycles.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "glide-traversal",
+      "role": "supporting",
+      "map_notes": "Flight pads and Kazooie flight extend aerial exploration.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Flight pads and Kazooie flight extend aerial exploration.",
+      "depends_on": [
+        "power-up-transformation-states"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "World entrances checkpoint progress between sessions.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "World entrances checkpoint progress between sessions.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Rat-a-tat rap and roll attack clear enemies.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Rat-a-tat rap and roll attack clear enemies."
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Gruntilda's spells telegraph before area-wide attacks.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Gruntilda's spells telegraph before area-wide attacks.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Golden feathers act as extra lives for stage attempts.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Golden feathers act as extra lives for stage attempts.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1998
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-64",
+      "donkey-kong-64"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Banjo-Kazooie through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "collectathon-token-gating",
+      "hub-world-stage-gates",
+      "ability-gated-exploration"
+    ],
+    "design_pillars": [
+      "Collectathon Token Gating",
+      "Hub World Stage Gates",
+      "Ability Gated Exploration"
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.1",
+  "slug": "diablo",
+  "title": "Diablo Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.lemon64.com/forum/viewtopic.php?t=84325",
+  "subject": {
+    "kind": "game",
+    "name": "Diablo",
+    "genres": [
+      "Action RPG"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Diablo (1996) is a acclaimed action rpg title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Real-time combat against large foes with craftable gear and stat growth.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "turn-based-party-combat",
+    "rpg-stat-progression",
+    "overworld-map-stage-selection",
+    "equipment-loadout",
+    "map-resource-monster-groups"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "turn-based-party-combat",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Diablo.",
+      "expression": "Party members act in turns selecting skills and targets.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Diablo.",
+      "expression": "Level-ups and stat curves define long-term power growth.",
+      "depends_on": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "mechanic_slug": "overworld-map-stage-selection",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Diablo.",
+      "expression": "World map or hub connects towns, dungeons, and story beats.",
+      "depends_on": [
+        "boss-gated-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Diablo.",
+      "expression": "Weapons, armor, and accessories customize party roles.",
+      "depends_on": [
+        "purchase-gated-upgrade",
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "map-resource-monster-groups",
+      "role": "signature",
+      "domain": "level",
+      "phase": "early",
+      "weight": 3,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Diablo.",
+      "expression": "Random or visible encounters populate dungeons and overworld."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Diablo.",
+      "expression": "Shops convert currency into gear and consumables."
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Diablo.",
+      "expression": "Story bosses gate new regions or abilities.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "domain": "combat",
+      "phase": "late",
+      "weight": 3,
+      "map_notes": "Uplifted from turn-based-rpg recipe; customize for Diablo.",
+      "expression": "Late-game bosses introduce phase shifts and new abilities."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 1996
+  },
+  "relationships": {
+    "genre_maps": [
+      "turn-based-rpg"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A action rpg experience centered on Diablo.",
+    "theme_tags": [
+      "action-rpg",
+      "turn-based-party-combat",
+      "rpg-stat-progression",
+      "overworld-map-stage-selection"
+    ],
+    "design_pillars": [
+      "Turn Based Party Combat",
+      "Rpg Stat Progression",
+      "Overworld Map Stage Selection"
+    ]
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.1",
+  "slug": "human-fall-flat",
+  "title": "Human: Fall Flat Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://en.wikipedia.org/wiki/List_of_best-selling_video_games",
+  "subject": {
+    "kind": "game",
+    "name": "Human: Fall Flat",
+    "genres": [
+      "Puzzle"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Human: Fall Flat (2016) is a acclaimed puzzle title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Place or match pieces under pressure to clear objectives and chase high scores.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "physics-ragdoll-puzzle",
+    "co-op-couch-chaos",
+    "sandbox-goal-optional"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "physics-ragdoll-puzzle",
+      "role": "signature",
+      "map_notes": "Core physics ragdoll puzzle loop defines Human: Fall Flat's identity.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Floppy character bodies interact with physics objects to solve environmental puzzles.",
+      "depends_on": [
+        "co-op-couch-chaos",
+        "sandbox-goal-optional"
+      ]
+    },
+    {
+      "mechanic_slug": "co-op-couch-chaos",
+      "role": "signature",
+      "map_notes": "Core co op couch chaos loop defines Human: Fall Flat's identity.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Local multiplayer where friendly interference is as important as cooperation.",
+      "depends_on": [
+        "physics-ragdoll-puzzle"
+      ]
+    },
+    {
+      "mechanic_slug": "sandbox-goal-optional",
+      "role": "signature",
+      "map_notes": "Core sandbox goal optional loop defines Human: Fall Flat's identity.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Levels support completion goals but reward playful physics experimentation.",
+      "depends_on": [
+        "co-op-couch-chaos",
+        "physics-ragdoll-puzzle"
+      ]
+    },
+    {
+      "mechanic_slug": "lock-delay-placement",
+      "role": "supporting",
+      "map_notes": "Lock Delay Placement supports the main loop in Human: Fall Flat.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "After a piece lands, a brief grace period allows final horizontal adjustments before it locks permanently.",
+      "depends_on": [
+        "hard-drop-placement",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "next-piece-preview",
+      "role": "supporting",
+      "map_notes": "Next Piece Preview supports the main loop in Human: Fall Flat.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A display shows the upcoming piece or pieces, enabling advance planning of placement strategy.",
+      "depends_on": [
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "soft-drop-control",
+      "role": "supporting",
+      "map_notes": "Soft Drop Control supports the main loop in Human: Fall Flat.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Holding a direction accelerates piece descent without instant lock, allowing faster placement at a score or risk tradeoff.",
+      "depends_on": [
+        "escalating-drop-speed",
+        "hard-drop-placement"
+      ]
+    },
+    {
+      "mechanic_slug": "hard-drop-placement",
+      "role": "supporting",
+      "map_notes": "Hard Drop Placement supports the main loop in Human: Fall Flat.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "An instant-drop input locks the current piece at its horizontal position immediately.",
+      "depends_on": [
+        "soft-drop-control",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "tetromino-rotation",
+      "role": "supporting",
+      "map_notes": "Tetromino Rotation supports the main loop in Human: Fall Flat.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Falling polyomino pieces rotate in fixed increments to fit into the playfield grid."
+    },
+    {
+      "mechanic_slug": "multi-line-scoring-multiplier",
+      "role": "supporting",
+      "map_notes": "Multi Line Scoring Multiplier supports the main loop in Human: Fall Flat.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Clearing multiple lines simultaneously awards disproportionately higher scores than single-line clears."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Life Based Retry System supports the main loop in Human: Fall Flat.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A failure-buffer system in which the player is granted a limited number of retries, losing one life upon failure and restarting from a previous checkpoint."
+    },
+    {
+      "mechanic_slug": "escalating-drop-speed",
+      "role": "supporting",
+      "map_notes": "Escalating Drop Speed supports the main loop in Human: Fall Flat.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "The rate at which pieces fall increases over time or level, compressing decision windows as the session progresses."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2016
+  },
+  "design_intent": {
+    "player_fantasy": "A puzzle experience centered on Human: Fall Flat.",
+    "theme_tags": [
+      "puzzle",
+      "physics-ragdoll-puzzle",
+      "co-op-couch-chaos",
+      "sandbox-goal-optional"
+    ],
+    "design_pillars": [
+      "Physics Ragdoll Puzzle",
+      "Co Op Couch Chaos",
+      "Sandbox Goal Optional"
+    ]
+  }
+}

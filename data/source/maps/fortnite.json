@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.1",
+  "slug": "fortnite",
+  "title": "Fortnite Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.gq-magazine.co.uk/article/best-video-games-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Fortnite",
+    "genres": [
+      "Battle Royale",
+      "Shooter"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Fortnite Battle Royale combines last-player-standing shooting with on-the-fly building of ramps, walls, and cover across a shrinking island map.",
+    "core_loop": "Drop onto the island, loot weapons and materials, build structures during fights, outlast the storm circle, and eliminate opponents to win the match.",
+    "skills_tested": [
+      "building speed",
+      "aim control",
+      "positioning",
+      "resource gathering",
+      "adaptability"
+    ]
+  },
+  "signature_gameplay": [
+    "open-world-exploration",
+    "resource-scarcity-management",
+    "equipment-loadout",
+    "depletable-health-pool",
+    "round-based-health-duel"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "open-world-exploration",
+      "role": "signature",
+      "map_notes": "In Fortnite, minimal UI encourages discovery of landmarks and secrets across vast terrain.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Fortnite, minimal UI encourages discovery of landmarks and secrets across vast terrain."
+    },
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "map_notes": "In Fortnite, limited ammo, healing, and save resources force careful risk assessment.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Fortnite, limited ammo, healing, and save resources force careful risk assessment.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "signature",
+      "map_notes": "In Fortnite, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Fortnite, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "signature",
+      "map_notes": "In Fortnite, a survival mechanic where the player character possesses a finite quantity of health points that decrease when taking damage, with depletion resulting in failure.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Fortnite, a survival mechanic where the player character possesses a finite quantity of health points that decrease when taking damage, with depletion resulting in failure."
+    },
+    {
+      "mechanic_slug": "round-based-health-duel",
+      "role": "signature",
+      "map_notes": "In Fortnite, matches are divided into rounds with separate health pools; winning a set number of rounds wins the match.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Fortnite, matches are divided into rounds with separate health pools; winning a set number of rounds wins the match.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2017
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Fortnite through its core battle royale loop.",
+    "theme_tags": [
+      "battle-royale",
+      "shooter",
+      "open-world-exploration",
+      "resource-scarcity-management",
+      "equipment-loadout"
+    ],
+    "design_pillars": [
+      "Open World Exploration",
+      "Resource Scarcity Management",
+      "Equipment Loadout"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "scarce"
+  }
+}

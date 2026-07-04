@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.1",
+  "slug": "street-fighter-ii-turbo",
+  "title": "Street Fighter II Turbo Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-2d-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Street Fighter II Turbo",
+    "genres": [
+      "Fighting"
+    ],
+    "influences": [
+      "Street Fighter II",
+      "Arcade Fighting Games"
+    ]
+  },
+  "narrative": {
+    "description": "The world's strongest fighters converge in a global martial arts tournament. Players select a character, battle through a ladder of opponents using special move inputs, combos, and supers, and confront M. Bison to become champion.",
+    "core_loop": "Select a fighter, win two-round matches against CPU or human opponents using normals, specials, and supers, read and punish opponent patterns, manage health across rounds, and advance through the tournament ladder.",
+    "skills_tested": [
+      "reaction time",
+      "input execution",
+      "pattern recognition",
+      "spacing control",
+      "mind games"
+    ]
+  },
+  "signature_gameplay": [
+    "special-move-command-input",
+    "combo-chain-system",
+    "round-based-health-duel"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "special-move-command-input",
+      "role": "signature",
+      "map_notes": "Quarter-circle, dragon punch, and charge motions execute character-specific special attacks.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Quarter-circle, dragon punch, and charge motions execute character-specific special attacks.",
+      "depends_on": [
+        "combo-chain-system",
+        "instant-fire-attack"
+      ]
+    },
+    {
+      "mechanic_slug": "combo-chain-system",
+      "role": "signature",
+      "map_notes": "Normals and specials link into cancel chains and juggle combos for extended damage.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Normals and specials link into cancel chains and juggle combos for extended damage.",
+      "depends_on": [
+        "frame-punish-engagement",
+        "special-move-command-input"
+      ]
+    },
+    {
+      "mechanic_slug": "round-based-health-duel",
+      "role": "signature",
+      "map_notes": "Best-of-three rounds with depleting health bars; first to empty opponent HP wins the round.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Best-of-three rounds with depleting health bars; first to empty opponent HP wins the round.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health bar depletes on hits; zero HP loses the round.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health bar depletes on hits; zero HP loses the round.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "frame-punish-engagement",
+      "role": "supporting",
+      "map_notes": "Whiffed attacks and unsafe moves are punished with fast counter hits.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Whiffed attacks and unsafe moves are punished with fast counter hits.",
+      "depends_on": [
+        "combo-chain-system",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Light, medium, and heavy normals execute immediately on button press.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Light, medium, and heavy normals execute immediately on button press."
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "CPU opponents follow character-specific attack tendencies and patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "CPU opponents follow character-specific attack tendencies and patterns.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Jump-ins, fireballs, and special wind-ups telegraph before resolving.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Jump-ins, fireballs, and special wind-ups telegraph before resolving.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "super-meter-resource",
+      "role": "supporting",
+      "map_notes": "Turbo edition adds super combo gauge filled by dealing and taking damage.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Turbo edition adds super combo gauge filled by dealing and taking damage.",
+      "depends_on": [
+        "combo-chain-system"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Tournament ladder requires defeating each opponent to reach M. Bison.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Tournament ladder requires defeating each opponent to reach M. Bison.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Final M. Bison fight and some encounters span multiple rounds.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Final M. Bison fight and some encounters span multiple rounds.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Continue credits allow rematch after losing the tournament.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Continue credits allow rematch after losing the tournament.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-loadout-switching",
+      "role": "supporting",
+      "map_notes": "Character select screen determines the entire moveset and playstyle for the run.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Character select screen determines the entire moveset and playstyle for the run.",
+      "depends_on": [
+        "instant-fire-attack"
+      ]
+    },
+    {
+      "mechanic_slug": "input-aligned-movement",
+      "role": "supporting",
+      "map_notes": "Eight-directional walk, crouch, and jump for spacing control.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Eight-directional walk, crouch, and jump for spacing control."
+    },
+    {
+      "mechanic_slug": "encounter-containment",
+      "role": "supporting",
+      "map_notes": "Fights occur in bounded arenas with ring-out only via corner pressure.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Fights occur in bounded arenas with ring-out only via corner pressure.",
+      "depends_on": [
+        "boss-gated-progression",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "time-charged-attack",
+      "role": "supporting",
+      "map_notes": "Charge characters hold directions to power special moves.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Charge characters hold directions to power special moves."
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "supporting",
+      "map_notes": "Hadouken, sonic boom, and fireball zoning create projectile-based spacing games.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hadouken, sonic boom, and fireball zoning create projectile-based spacing games.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "fighting-game"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Street Fighter II Turbo through its core fighting loop.",
+    "theme_tags": [
+      "fighting",
+      "special-move-command-input",
+      "combo-chain-system",
+      "round-based-health-duel"
+    ],
+    "design_pillars": [
+      "Special Move Command Input",
+      "Combo Chain System",
+      "Round Based Health Duel"
+    ]
+  }
+}

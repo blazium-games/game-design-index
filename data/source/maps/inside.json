@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.1",
+  "slug": "inside",
+  "title": "Inside Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.gq-magazine.co.uk/article/best-video-games-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Inside",
+    "genres": [
+      "Action-Adventure"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Narrative adventures prioritize story revelation, environmental storytelling, and dialogue-driven choices over skill-heavy combat. Progression is measured in discovered plot beats and character relationships.",
+    "core_loop": "Traverse authored spaces, interact with objects and characters, make dialogue or moral choices, and unlock new story chapters or locations.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "dialogue-choice-consequences",
+    "narrative-chapter-progression",
+    "environmental-trigger-switch"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "dialogue-choice-consequences",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from narrative-adventure recipe; customize for Inside.",
+      "expression": "Branching conversations alter relationships and outcomes."
+    },
+    {
+      "mechanic_slug": "narrative-chapter-progression",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from narrative-adventure recipe; customize for Inside.",
+      "expression": "Story advances through discrete chapters or acts."
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "signature",
+      "domain": "level",
+      "phase": "early",
+      "weight": 3,
+      "map_notes": "Uplifted from narrative-adventure recipe; customize for Inside.",
+      "expression": "Inspectable objects and triggers reveal lore and unlock paths."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2016
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A action-adventure experience centered on Inside.",
+    "theme_tags": [
+      "action-adventure",
+      "dialogue-choice-consequences",
+      "narrative-chapter-progression",
+      "environmental-trigger-switch"
+    ],
+    "design_pillars": [
+      "Dialogue Choice Consequences",
+      "Narrative Chapter Progression",
+      "Environmental Trigger Switch"
+    ]
+  }
+}

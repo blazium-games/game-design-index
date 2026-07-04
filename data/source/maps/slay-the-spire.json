@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.1",
+  "slug": "slay-the-spire",
+  "title": "Slay the Spire Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://meepleandthemoose.com/category/top-100-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Slay the Spire",
+    "genres": [
+      "Roguelike",
+      "Deckbuilder",
+      "Strategy"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Slay the Spire is a roguelike deckbuilder where players route through procedural acts, build a synergistic deck, and defeat bosses with limited energy each turn.",
+    "core_loop": "Choose paths on the act map, fight turn-based card battles, acquire cards and relics, spend gold at shops, and defeat an act boss to advance.",
+    "skills_tested": [
+      "deck synergy planning",
+      "risk routing",
+      "probability assessment",
+      "resource management"
+    ]
+  },
+  "signature_gameplay": [
+    "deck-composition-roguelike",
+    "roguelike-map-routing",
+    "card-draw-hand-management",
+    "relic-passive-synergy",
+    "resource-scarcity-management"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "deck-composition-roguelike",
+      "role": "signature",
+      "map_notes": "In Slay the Spire, players build a run-specific deck by adding and removing cards between encounters.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Slay the Spire, players build a run-specific deck by adding and removing cards between encounters.",
+      "depends_on": [
+        "card-draw-hand-management",
+        "roguelike-map-routing"
+      ]
+    },
+    {
+      "mechanic_slug": "roguelike-map-routing",
+      "role": "signature",
+      "map_notes": "In Slay the Spire, choose branching paths across a run map with risk-reward nodes.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Slay the Spire, choose branching paths across a run map with risk-reward nodes."
+    },
+    {
+      "mechanic_slug": "card-draw-hand-management",
+      "role": "signature",
+      "map_notes": "In Slay the Spire, players draw from a deck into a limited hand and discard or exhaust cards each turn.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Slay the Spire, players draw from a deck into a limited hand and discard or exhaust cards each turn.",
+      "depends_on": [
+        "deck-composition-roguelike",
+        "resource-scarcity-management"
+      ]
+    },
+    {
+      "mechanic_slug": "relic-passive-synergy",
+      "role": "signature",
+      "map_notes": "In Slay the Spire, passive relics or artifacts modify rules and combo with deck or combat systems.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Slay the Spire, passive relics or artifacts modify rules and combo with deck or combat systems.",
+      "depends_on": [
+        "deck-composition-roguelike"
+      ]
+    },
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "map_notes": "In Slay the Spire, limited ammo, healing, and save resources force careful risk assessment.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Slay the Spire, limited ammo, healing, and save resources force careful risk assessment."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2019
+  },
+  "relationships": {
+    "genre_maps": [
+      "roguelike-deckbuilder",
+      "tactics-strategy"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Slay the Spire through its core roguelike loop.",
+    "theme_tags": [
+      "roguelike",
+      "deckbuilder",
+      "strategy",
+      "deck-composition-roguelike",
+      "roguelike-map-routing",
+      "card-draw-hand-management"
+    ],
+    "design_pillars": [
+      "Deck Composition Roguelike",
+      "Roguelike Map Routing",
+      "Card Draw Hand Management"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "scarce",
+    "metaprogression": true
+  }
+}

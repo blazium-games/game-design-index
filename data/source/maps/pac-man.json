@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.1",
+  "slug": "pac-man",
+  "title": "Pac-Man Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Pac-Man",
+    "genres": [
+      "Arcade",
+      "Maze"
+    ],
+    "influences": [
+      "Space Invaders",
+      "Galaxian"
+    ]
+  },
+  "narrative": {
+    "description": "Namco's maze classic tasks players with eating every dot while evading four color-coded ghosts whose AI personalities create emergent chase tension across 256 increasingly frantic boards.",
+    "core_loop": "Clear all dots in the maze, use power pellets to turn the tables on ghosts, grab fruit bonuses, and survive escalating speed increases.",
+    "skills_tested": [
+      "route planning",
+      "ghost behavior reading",
+      "risk-reward timing",
+      "pattern execution"
+    ]
+  },
+  "signature_gameplay": [
+    "maze-chase-high-score",
+    "telegraphed-threat-loop",
+    "life-based-retry-system"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "maze-chase-high-score",
+      "role": "signature",
+      "map_notes": "Single-screen maze chase optimized for high-score routing and ghost avoidance.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Single-screen maze chase optimized for high-score routing and ghost avoidance.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "signature",
+      "map_notes": "Ghost mode shifts between scatter, chase, and frightened states with readable behavior.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Ghost mode shifts between scatter, chase, and frightened states with readable behavior.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "signature",
+      "map_notes": "Three lives per credit with extra lives at point thresholds.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Three lives per credit with extra lives at point thresholds.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "supporting",
+      "map_notes": "Power pellets temporarily allow ghost consumption for bonus points.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Power pellets temporarily allow ghost consumption for bonus points.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Fruit bonuses and ghost combos reward optimal pellet timing.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Fruit bonuses and ghost combos reward optimal pellet timing."
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Split-screen intermissions punctuate level groups.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Split-screen intermissions punctuate level groups.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Maze corridors constrain escape routes during ghost swarms.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Maze corridors constrain escape routes during ghost swarms."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "One hit from a ghost costs a life unless powered up.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "One hit from a ghost costs a life unless powered up.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Each maze completion advances to the next board layout.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Each maze completion advances to the next board layout.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "supporting",
+      "map_notes": "Ghosts converge from four directions creating emergent bullet-hell-like pressure.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Ghosts converge from four directions creating emergent bullet-hell-like pressure.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "No attack input; power mode is the offensive state change.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "No attack input; power mode is the offensive state change."
+    },
+    {
+      "mechanic_slug": "escalating-drop-speed",
+      "role": "supporting",
+      "map_notes": "Ghost and Pac-Man speed increase as more dots are consumed.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Ghost and Pac-Man speed increase as more dots are consumed."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1980
+  },
+  "relationships": {
+    "influence_slugs": [
+      "space-invaders"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Pac-Man through its core arcade loop.",
+    "theme_tags": [
+      "arcade",
+      "maze",
+      "maze-chase-high-score",
+      "telegraphed-threat-loop",
+      "life-based-retry-system"
+    ],
+    "design_pillars": [
+      "Maze Chase High Score",
+      "Telegraphed Threat Loop",
+      "Life Based Retry System"
+    ]
+  },
+  "systems": {
+    "failure_model": "permadeath-or-lives"
+  }
+}

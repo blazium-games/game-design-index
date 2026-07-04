@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.1",
+  "slug": "precision-platformer",
+  "title": "Precision Platformer Gameplay Map",
+  "map_type": "genre",
+  "source_url": "https://github.com/blazium-games/game-mechanics-index",
+  "subject": {
+    "kind": "genre",
+    "name": "Precision Platformer",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Celeste",
+      "Super Meat Boy"
+    ]
+  },
+  "narrative": {
+    "description": "Precision platformers center on tight movement controls, short lethal hazards, and learn-by-doing level chunks. Failure is frequent but recovery is fast, training muscle memory.",
+    "core_loop": "Retry short platforming challenges, refine jump and dash timing, reach checkpoints, and clear gauntlet stages or rooms with minimal friction between attempts.",
+    "skills_tested": [
+      "timing",
+      "muscle memory",
+      "spatial awareness",
+      "persistence"
+    ]
+  },
+  "signature_gameplay": [
+    "precision-platforming",
+    "environmental-hazard-navigation",
+    "mid-level-checkpoint",
+    "life-based-retry-system"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "signature",
+      "map_notes": "Snappy acceleration, jump height, and coyote time define feel.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Snappy acceleration, jump height, and coyote time define feel.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "signature",
+      "map_notes": "Spikes, pits, and moving hazards demand exact routes.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Spikes, pits, and moving hazards demand exact routes.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "signature",
+      "map_notes": "Frequent checkpoints reduce frustration while preserving challenge.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 4,
+      "expression": "Frequent checkpoints reduce frustration while preserving challenge.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "signature",
+      "map_notes": "Instant respawn or limited lives tune difficulty curve.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 3,
+      "expression": "Instant respawn or limited lives tune difficulty curve.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "assist-mode-accessibility",
+      "role": "supporting",
+      "map_notes": "Optional assists broaden audience without removing core challenge.",
+      "domain": "combat",
+      "phase": "optional",
+      "weight": 2,
+      "expression": "Optional assists broaden audience without removing core challenge.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Secret rooms and B-side tracks reward mastery.",
+      "domain": "level",
+      "phase": "optional",
+      "weight": 2,
+      "expression": "Secret rooms and B-side tracks reward mastery."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "context": {
+    "perspective": "side-view",
+    "dimension": "2d",
+    "session_type": "session-based",
+    "world_structure": "room-or-stage-gauntlet"
+  },
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "precision-platformer"
+    ],
+    "influence_slugs": [
+      "celeste",
+      "super-meat-boy"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Precision Platformer through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "precision-platforming",
+      "environmental-hazard-navigation",
+      "mid-level-checkpoint"
+    ],
+    "design_pillars": [
+      "Precision Platforming",
+      "Environmental Hazard Navigation",
+      "Mid Level Checkpoint"
+    ]
+  },
+  "systems": {
+    "failure_model": "permadeath-or-lives"
+  }
+}

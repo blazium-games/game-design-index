@@ -1,0 +1,291 @@
+{
+  "schema_version": "1.1",
+  "slug": "super-mario-galaxy",
+  "title": "Super Mario Galaxy Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Super Mario Galaxy",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario 64",
+      "Super Mario Sunshine"
+    ]
+  },
+  "narrative": {
+    "description": "Nintendo's Wii masterpiece sends Mario across spherical planetoids with gravity-normalized running, launch stars, and orchestral hub progression through the Comet Observatory.",
+    "core_loop": "Collect Power Stars on planetoid courses, unlock observatory domes with star totals, and defeat Bowser across gravity-shifting galactic stages.",
+    "skills_tested": [
+      "gravity adaptation",
+      "orbit jump timing",
+      "star routing",
+      "boss pattern reading"
+    ]
+  },
+  "signature_gameplay": [
+    "planet-gravity-platforming",
+    "hub-world-stage-gates",
+    "collectathon-token-gating"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "planet-gravity-platforming",
+      "role": "signature",
+      "map_notes": "Each planetoid has its own gravity pole; Mario walks seamlessly around spheres.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Each planetoid has its own gravity pole; Mario walks seamlessly around spheres.",
+      "depends_on": [
+        "collectathon-token-gating",
+        "free-camera-3d-movement"
+      ]
+    },
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "signature",
+      "map_notes": "Comet Observatory domes unlock via Power Star totals feeding Rosalina's story.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Comet Observatory domes unlock via Power Star totals feeding Rosalina's story.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Power Stars and Luigi stars gate dome access and ending requirements.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Power Stars and Luigi stars gate dome access and ending requirements.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "free-camera-3d-movement",
+      "role": "supporting",
+      "map_notes": "Spin attacks and long jumps adapt to local gravity vectors.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Spin attacks and long jumps adapt to local gravity vectors.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Prankster Comets and purple coin missions demand exact movement.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Prankster Comets and purple coin missions demand exact movement.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Secret stars, Luigi missions, and comet variants extend completion.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Secret stars, Luigi missions, and comet variants extend completion."
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Bowser encounters gate observatory story milestones.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bowser encounters gate observatory story milestones.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Bowser fights span gravity-flipping arena phases.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bowser fights span gravity-flipping arena phases.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "supporting",
+      "map_notes": "Bee, Boo, Spring, and Ice Mario caps alter traversal.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bee, Boo, Spring, and Ice Mario caps alter traversal.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Black holes, lava oceans, and electric rails test adaptation.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Black holes, lava oceans, and electric rails test adaptation.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses like King Kaliente follow learnable attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses like King Kaliente follow learnable attack cycles.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Stars persist; death respawns at course entrance.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Stars persist; death respawns at course entrance.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Bowser's fireball waves telegraph with audio cues.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bowser's fireball waves telegraph with audio cues.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Spin and jump stomp clear Chomps and fodder enemies.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Spin and jump stomp clear Chomps and fodder enemies."
+    },
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "supporting",
+      "map_notes": "Fire and ice flowers gate specific puzzle solutions.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Fire and ice flowers gate specific puzzle solutions."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Health wedges deplete on hazard hits; stars remain collected.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health wedges deplete on hazard hits; stars remain collected.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2007
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-64",
+      "super-mario-sunshine"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Super Mario Galaxy through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "planet-gravity-platforming",
+      "hub-world-stage-gates",
+      "collectathon-token-gating"
+    ],
+    "design_pillars": [
+      "Planet Gravity Platforming",
+      "Hub World Stage Gates",
+      "Collectathon Token Gating"
+    ]
+  }
+}

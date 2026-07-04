@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.1",
+  "slug": "ultima-online",
+  "title": "Ultima Online Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://digitaldreamdoor.com/pages/best_video-games-1990s.html",
+  "subject": {
+    "kind": "game",
+    "name": "Ultima Online",
+    "genres": [
+      "Simulation"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Ultima Online (1997) is a acclaimed simulation title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Balance systems, allocate resources, and grow your city or transport network.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "city-building-simulation",
+    "city-building-economy",
+    "resource-scarcity-management",
+    "purchase-gated-upgrade"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "city-building-simulation",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from tycoon-simulation recipe; customize for Ultima Online.",
+      "expression": "Core loop of placing and connecting functional buildings or rides."
+    },
+    {
+      "mechanic_slug": "city-building-economy",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from tycoon-simulation recipe; customize for Ultima Online.",
+      "expression": "Income and upkeep drive expansion decisions."
+    },
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from tycoon-simulation recipe; customize for Ultima Online.",
+      "expression": "Budget, staff, and space are limited build resources."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "map_notes": "Uplifted from tycoon-simulation recipe; customize for Ultima Online.",
+      "expression": "New attractions or zones unlock via spending milestones.",
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "fill-reward-progression-loop",
+      "role": "supporting",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 2,
+      "map_notes": "Uplifted from tycoon-simulation recipe; customize for Ultima Online.",
+      "expression": "Scenario goals reward meeting guest or citizen quotas.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 1997
+  },
+  "relationships": {
+    "genre_maps": [
+      "tycoon-simulation",
+      "life-sim"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A simulation experience centered on Ultima Online.",
+    "theme_tags": [
+      "simulation",
+      "city-building-simulation",
+      "city-building-economy",
+      "resource-scarcity-management"
+    ],
+    "design_pillars": [
+      "City Building Simulation",
+      "City Building Economy",
+      "Resource Scarcity Management"
+    ]
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.1",
+  "slug": "mega-man-2",
+  "title": "Mega Man 2 Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-2d-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Mega Man 2",
+    "genres": [
+      "Jump'n'Shoot",
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Mega Man"
+    ]
+  },
+  "narrative": {
+    "description": "Dr. Wily returns with eight new Robot Masters threatening the world. Mega Man must choose which boss stages to tackle in any order, defeat each Robot Master to copy their weapon, and exploit the classic weakness cycle before assaulting Wily's fortress.",
+    "core_loop": "Pick a Robot Master stage from the select screen, platform through hazards and enemies, defeat the boss to earn their weapon, and use acquired weapons to exploit weaknesses on remaining bosses before the Wily stages.",
+    "skills_tested": [
+      "timing",
+      "positioning",
+      "pattern recognition",
+      "boss order strategy",
+      "weapon management"
+    ]
+  },
+  "signature_gameplay": [
+    "boss-weakness-network",
+    "boss-gated-abilities",
+    "non-linear-boss-selection"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "boss-weakness-network",
+      "role": "signature",
+      "map_notes": "Each Robot Master is critically weak to a specific weapon obtained from another boss; Metal Man is famously weak to Quick Man's weapon.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Each Robot Master is critically weak to a specific weapon obtained from another boss; Metal Man is famously weak to Quick Man's weapon.",
+      "depends_on": [
+        "boss-gated-abilities",
+        "non-linear-boss-selection"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-abilities",
+      "role": "signature",
+      "map_notes": "Defeating each Robot Master permanently grants Mega Man their special weapon for the rest of the campaign.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Defeating each Robot Master permanently grants Mega Man their special weapon for the rest of the campaign.",
+      "depends_on": [
+        "boss-weakness-network",
+        "non-linear-boss-selection"
+      ]
+    },
+    {
+      "mechanic_slug": "non-linear-boss-selection",
+      "role": "signature",
+      "map_notes": "Eight Robot Master stages are selectable in any order from the iconic stage-select screen.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Eight Robot Master stages are selectable in any order from the iconic stage-select screen.",
+      "depends_on": [
+        "boss-gated-abilities",
+        "boss-weakness-network"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-loadout-switching",
+      "role": "supporting",
+      "map_notes": "Pause menu weapon select switches between Mega Buster and eight boss weapons.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Pause menu weapon select switches between Mega Buster and eight boss weapons.",
+      "depends_on": [
+        "instant-fire-attack",
+        "resource-gated-weapon"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "All eight Robot Masters must be cleared before Wily Castle stages unlock.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "All eight Robot Masters must be cleared before Wily Castle stages unlock.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Life energy depletes on contact and enemy hits; zero health triggers death.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Life energy depletes on contact and enemy hits; zero health triggers death.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Spikes, pits, lava, and stage-specific traps like Air Man's wind currents.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Spikes, pits, lava, and stage-specific traps like Air Man's wind currents.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "facing-locked-shooting",
+      "role": "supporting",
+      "map_notes": "Mega Buster and all weapons fire in the direction Mega Man faces.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Mega Buster and all weapons fire in the direction Mega Man faces.",
+      "depends_on": [
+        "jump-cutoff",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "health-capacity-upgrade",
+      "role": "supporting",
+      "map_notes": "E-Tanks found in stages permanently extend the maximum life bar capacity.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "E-Tanks found in stages permanently extend the maximum life bar capacity.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Mega Buster and weapons fire immediately on button press.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Mega Buster and weapons fire immediately on button press.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "unrestricted-primary-fire"
+      ]
+    },
+    {
+      "mechanic_slug": "jump-cutoff",
+      "role": "supporting",
+      "map_notes": "Variable jump height for precise platforming and vertical shots.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Variable jump height for precise platforming and vertical shots.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Three lives per stage attempt; continue with password on game over.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Three lives per stage attempt; continue with password on game over.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Wily battles span multiple forms across separate rooms.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Wily battles span multiple forms across separate rooms.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Each Robot Master follows learnable attack cycles and movement patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Each Robot Master follows learnable attack cycles and movement patterns.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Snappy run-and-jump control with no momentum carry.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Snappy run-and-jump control with no momentum carry.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "jump-cutoff"
+      ]
+    },
+    {
+      "mechanic_slug": "resource-gated-weapon",
+      "role": "supporting",
+      "map_notes": "Special weapons consume weapon energy; refilled by picking up capsules.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Special weapons consume weapon energy; refilled by picking up capsules.",
+      "depends_on": [
+        "ability-loadout-switching"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Bosses wind up attacks visibly before launching projectiles or charges.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses wind up attacks visibly before launching projectiles or charges.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "unrestricted-primary-fire",
+      "role": "supporting",
+      "map_notes": "Mega Buster fires without consuming weapon energy.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Mega Buster fires without consuming weapon energy.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "instant-fire-attack"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "jump-n-shoot",
+      "label": "Jump'n'Shoot",
+      "filter": {
+        "genre_filter": "Jump'n'Shoot"
+      }
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Mega Man 2 through its core jump'n'shoot loop.",
+    "theme_tags": [
+      "jump-n-shoot",
+      "platformer",
+      "action",
+      "boss-weakness-network",
+      "boss-gated-abilities",
+      "non-linear-boss-selection"
+    ],
+    "design_pillars": [
+      "Boss Weakness Network",
+      "Boss Gated Abilities",
+      "Non Linear Boss Selection"
+    ]
+  },
+  "gdd_outline": {
+    "overview": "Dr. Wily returns with eight new Robot Masters threatening the world. Mega Man must choose which boss stages to tackle in any order, defeat each Robot Master to copy their weapon, and exploit the classic weakness cycle before assaulting Wily's fortress.",
+    "core_loop": "Pick a Robot Master stage from the select screen, platform through hazards and enemies, defeat the boss to earn their weapon, and use acquired weapons to exploit weaknesses on remaining bosses before the Wily stages.",
+    "player_goals": [
+      "Clear all Robot Masters",
+      "Exploit weakness cycle for efficient clears",
+      "Reach and defeat Dr. Wily"
+    ],
+    "constraints": [
+      "Limited lives per attempt",
+      "Weapon energy economy",
+      "Any-order boss selection with implicit routing cost"
+    ],
+    "progression_notes": "Boss-gated abilities permanently expand the weapon roster; weakness network shapes optimal order.",
+    "combat_notes": "Patterned Robot Master fights reward weakness weapons obtained from prior bosses.",
+    "economy_notes": "Weapon energy refills from pickups; E-Tanks extend health capacity."
+  },
+  "mechanic_relationships": [
+    {
+      "from_mechanic": "boss-gated-abilities",
+      "to_mechanic": "boss-weakness-network",
+      "relationship": "enables",
+      "notes": "Each defeated boss grants the weapon used in the weakness graph."
+    },
+    {
+      "from_mechanic": "non-linear-boss-selection",
+      "to_mechanic": "boss-weakness-network",
+      "relationship": "enables",
+      "notes": "Stage select makes routing order a player decision."
+    },
+    {
+      "from_mechanic": "boss-weakness-network",
+      "to_mechanic": "ability-loadout-switching",
+      "relationship": "requires",
+      "notes": "Players must equip the correct weakness weapon per encounter."
+    }
+  ]
+}

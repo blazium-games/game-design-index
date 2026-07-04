@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.1",
+  "slug": "zelda-breath-of-the-wild",
+  "title": "The Legend of Zelda: Breath of the Wild Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.metacritic.com/browse/game/all/all/all-time/metascore/",
+  "subject": {
+    "kind": "game",
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "genres": [
+      "Action-Adventure",
+      "Open World"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Breath of the Wild is an open-world action adventure emphasizing free exploration, shrine puzzles, and gear-based combat.",
+    "core_loop": "Explore Hyrule freely, complete shrines and towers, gather equipment and food, and tackle divine beasts and Ganon at your own pace.",
+    "skills_tested": [
+      "exploration",
+      "improvisation",
+      "resource gathering",
+      "combat adaptability"
+    ]
+  },
+  "signature_gameplay": [
+    "open-world-exploration",
+    "open-world-quest-log",
+    "equipment-loadout",
+    "exploration-gated-upgrades",
+    "optional-content-layering"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "open-world-exploration",
+      "role": "signature",
+      "map_notes": "In The Legend of Zelda: Breath of the Wild, minimal UI encourages discovery of landmarks and secrets across vast terrain.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In The Legend of Zelda: Breath of the Wild, minimal UI encourages discovery of landmarks and secrets across vast terrain.",
+      "depends_on": [
+        "exploration-gated-upgrades"
+      ]
+    },
+    {
+      "mechanic_slug": "open-world-quest-log",
+      "role": "signature",
+      "map_notes": "In The Legend of Zelda: Breath of the Wild, a persistent world offers main and side quests tracked in a log with flexible completion order.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In The Legend of Zelda: Breath of the Wild, a persistent world offers main and side quests tracked in a log with flexible completion order.",
+      "depends_on": [
+        "exploration-gated-upgrades"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "signature",
+      "map_notes": "In The Legend of Zelda: Breath of the Wild, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In The Legend of Zelda: Breath of the Wild, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities."
+    },
+    {
+      "mechanic_slug": "exploration-gated-upgrades",
+      "role": "signature",
+      "map_notes": "In The Legend of Zelda: Breath of the Wild, the character unlocks permanent upgrades obtained through spatial exploration and world interaction, rather than direct combat rewards.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In The Legend of Zelda: Breath of the Wild, the character unlocks permanent upgrades obtained through spatial exploration and world interaction, rather than direct combat rewards.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "signature",
+      "map_notes": "In The Legend of Zelda: Breath of the Wild, hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In The Legend of Zelda: Breath of the Wild, hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments.",
+      "depends_on": [
+        "exploration-gated-upgrades"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2017
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure",
+      "open-world-action"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience The Legend of Zelda: Breath of the Wild through its core action-adventure loop.",
+    "theme_tags": [
+      "action-adventure",
+      "open-world",
+      "open-world-exploration",
+      "open-world-quest-log",
+      "equipment-loadout"
+    ],
+    "design_pillars": [
+      "Open World Exploration",
+      "Open World Quest Log",
+      "Equipment Loadout"
+    ]
+  }
+}

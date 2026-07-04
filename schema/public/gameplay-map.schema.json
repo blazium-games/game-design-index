@@ -1,0 +1,28 @@
+{
+  "$id": "game-mechanics-index/public/gameplay-map.schema.json",
+  "title": "PublicGameplayMap",
+  "description": "Public gameplay map (provenance fields stripped at export)",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "slug",
+    "title",
+    "map_type",
+    "subject",
+    "narrative",
+    "signature_gameplay",
+    "mechanics",
+    "views"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.1", "1.2"] },
+    "slug": { "type": "string" },
+    "title": { "type": "string" },
+    "map_type": { "type": "string", "enum": ["game", "genre"] },
+    "subject": { "type": "object" },
+    "narrative": { "type": "object" },
+    "signature_gameplay": { "type": "array", "items": { "type": "string" } },
+    "mechanics": { "type": "array" },
+    "views": { "type": "array" }
+  }
+}

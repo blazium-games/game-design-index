@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.1",
+  "slug": "super-luckys-tale",
+  "title": "Super Lucky's Tale Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Super Lucky's Tale",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario 3D World",
+      "Banjo-Kazooie"
+    ]
+  },
+  "narrative": {
+    "description": "Playful's family platformer sends Lucky the fox through storybook diorama worlds with tight camera-relative platforming and classic collectathon structure.",
+    "core_loop": "Burrow and jump through storybook worlds, collect clovers and coins, defeat Jinx, and rescue Lucky's family.",
+    "skills_tested": [
+      "camera-relative jumps",
+      "burrow routing",
+      "collectible tracking"
+    ]
+  },
+  "signature_gameplay": [
+    "collectathon-token-gating",
+    "linear-stage-gauntlet",
+    "hub-world-stage-gates"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Clovers and coins gate world completion and secret exits.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Clovers and coins gate world completion and secret exits.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "signature",
+      "map_notes": "Storybook stages are themed gauntlets with clear forward goals.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Storybook stages are themed gauntlets with clear forward goals.",
+      "depends_on": [
+        "boss-gated-progression",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "signature",
+      "map_notes": "Overworld map connects to worlds gated by clover totals.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Overworld map connects to worlds gated by clover totals.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Tight jumps and burrow tunnels demand exact timing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Tight jumps and burrow tunnels demand exact timing.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Secret passages and bonus stages reward exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Secret passages and bonus stages reward exploration."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Spikes, crushers, and moving platforms test reflexes.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Spikes, crushers, and moving platforms test reflexes.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Jinx boss encounters gate story chapters.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Jinx boss encounters gate story chapters.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Checkpoint flags respawn Lucky mid-stage.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Checkpoint flags respawn Lucky mid-stage.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Tail spin clears enemies blocking paths.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Tail spin clears enemies blocking paths."
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses follow learnable jump-stomp patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses follow learnable jump-stomp patterns.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Lives or health gates retries on failure.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lives or health gates retries on failure.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Enemy attacks telegraph before striking.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemy attacks telegraph before striking.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health depletes on hazard and enemy contact.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health depletes on hazard and enemy contact.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2017
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-3d-world",
+      "banjo-kazooie"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Super Lucky's Tale through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "collectathon-token-gating",
+      "linear-stage-gauntlet",
+      "hub-world-stage-gates"
+    ],
+    "design_pillars": [
+      "Collectathon Token Gating",
+      "Linear Stage Gauntlet",
+      "Hub World Stage Gates"
+    ]
+  }
+}

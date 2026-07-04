@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.1",
+  "slug": "xcom-enemy-unknown",
+  "title": "XCOM: Enemy Unknown Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://meepleandthemoose.com/category/top-100-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "XCOM: Enemy Unknown",
+    "genres": [
+      "Strategy",
+      "Tactics"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "XCOM: Enemy Unknown is a turn-based tactics game about squad management, cover positioning, and permadeath tension against an alien invasion.",
+    "core_loop": "Manage base and research on the geoscape, deploy squads on tactical grids, use cover and abilities, and preserve veterans across missions.",
+    "skills_tested": [
+      "positioning",
+      "risk management",
+      "long-term planning",
+      "probability assessment"
+    ]
+  },
+  "signature_gameplay": [
+    "tactics-grid-movement",
+    "turn-based-party-combat",
+    "cover-based-positioning",
+    "permadeath-unit-loss",
+    "rpg-stat-progression"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "tactics-grid-movement",
+      "role": "signature",
+      "map_notes": "In XCOM: Enemy Unknown, units move on a discrete grid with action points, facing, and terrain modifiers.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In XCOM: Enemy Unknown, units move on a discrete grid with action points, facing, and terrain modifiers.",
+      "depends_on": [
+        "cover-based-positioning",
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "turn-based-party-combat",
+      "role": "signature",
+      "map_notes": "In XCOM: Enemy Unknown, battles resolve in turns with a party of characters selecting commands from menus.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In XCOM: Enemy Unknown, battles resolve in turns with a party of characters selecting commands from menus.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "cover-based-positioning",
+      "role": "signature",
+      "map_notes": "In XCOM: Enemy Unknown, units gain defensive bonuses from terrain cover and flanking angles on a tactical grid.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In XCOM: Enemy Unknown, units gain defensive bonuses from terrain cover and flanking angles on a tactical grid.",
+      "depends_on": [
+        "tactics-grid-movement",
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "permadeath-unit-loss",
+      "role": "signature",
+      "map_notes": "In XCOM: Enemy Unknown, fallen party members are permanently removed from the campaign roster.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In XCOM: Enemy Unknown, fallen party members are permanently removed from the campaign roster.",
+      "depends_on": [
+        "tactics-grid-movement",
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "signature",
+      "map_notes": "In XCOM: Enemy Unknown, defeating enemies or completing objectives grants experience that increases character stats such as HP, attack, or defense.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In XCOM: Enemy Unknown, defeating enemies or completing objectives grants experience that increases character stats such as HP, attack, or defense."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2012
+  },
+  "relationships": {
+    "genre_maps": [
+      "tactics-strategy"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience XCOM: Enemy Unknown through its core strategy loop.",
+    "theme_tags": [
+      "strategy",
+      "tactics",
+      "tactics-grid-movement",
+      "turn-based-party-combat",
+      "cover-based-positioning"
+    ],
+    "design_pillars": [
+      "Tactics Grid Movement",
+      "Turn Based Party Combat",
+      "Cover Based Positioning"
+    ]
+  }
+}

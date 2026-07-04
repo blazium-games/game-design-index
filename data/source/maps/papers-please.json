@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.1",
+  "slug": "papers-please",
+  "title": "Papers, Please Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://meepleandthemoose.com/category/top-100-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Papers, Please",
+    "genres": [
+      "Simulation",
+      "Puzzle",
+      "Narrative"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "An immigration officer in a fictional dystopian state inspects entry documents, balances a meager salary against family needs, and faces moral choices when rules conflict with humanity.",
+    "core_loop": "Review traveler documents against daily rule changes, stamp approve or deny, earn salary, pay rent and heat, and manage family health while uncovering story branches through border decisions.",
+    "skills_tested": [
+      "attention to detail",
+      "rule application",
+      "time pressure",
+      "moral judgment",
+      "resource management"
+    ]
+  },
+  "signature_gameplay": [
+    "document-inspection-stamping",
+    "dialogue-choice-consequences",
+    "resource-scarcity-management"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "document-inspection-stamping",
+      "role": "signature",
+      "map_notes": "In Papers, Please, approve or deny paperwork by cross-checking rules under time and moral pressure.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Papers, Please, approve or deny paperwork by cross-checking rules under time and moral pressure.",
+      "depends_on": [
+        "dialogue-choice-consequences",
+        "resource-scarcity-management"
+      ]
+    },
+    {
+      "mechanic_slug": "dialogue-choice-consequences",
+      "role": "signature",
+      "map_notes": "In Papers, Please, conversation branches alter relationships, story flags, and available quests.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Papers, Please, conversation branches alter relationships, story flags, and available quests."
+    },
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "map_notes": "In Papers, Please, limited ammo, healing, and save resources force careful risk assessment.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Papers, Please, limited ammo, healing, and save resources force careful risk assessment."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2013,
+    "platforms": [
+      "PC",
+      "Mac",
+      "Linux"
+    ],
+    "perspective": "first-person-desk",
+    "dimension": "2d",
+    "player_count": {
+      "min": 1,
+      "max": 1
+    },
+    "session_type": "session-based",
+    "world_structure": "linear-days"
+  },
+  "relationships": {
+    "genre_maps": [
+      "tycoon-simulation",
+      "life-sim",
+      "narrative-adventure"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Papers, Please through its core simulation loop.",
+    "theme_tags": [
+      "simulation",
+      "puzzle",
+      "narrative",
+      "document-inspection-stamping",
+      "dialogue-choice-consequences",
+      "resource-scarcity-management"
+    ],
+    "design_pillars": [
+      "Document Inspection Stamping",
+      "Dialogue Choice Consequences",
+      "Resource Scarcity Management"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "scarce"
+  }
+}

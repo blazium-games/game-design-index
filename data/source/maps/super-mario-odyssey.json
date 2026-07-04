@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.1",
+  "slug": "super-mario-odyssey",
+  "title": "Super Mario Odyssey Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Super Mario Odyssey",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario 64",
+      "Super Mario Galaxy"
+    ]
+  },
+  "narrative": {
+    "description": "Nintendo's Switch sandbox platformer pairs Mario with sentient cap Cappy across kingdom-sized open zones, enabling possession of enemies and objects via capture mechanics.",
+    "core_loop": "Explore kingdom hubs, capture enemies and objects with Cappy, collect Power Moons, and crash Bowser's wedding across globe-trotting kingdoms.",
+    "skills_tested": [
+      "capture routing",
+      "moon hunting",
+      "kingdom navigation",
+      "outfit utility"
+    ]
+  },
+  "signature_gameplay": [
+    "companion-possession-control",
+    "possession-hat-mechanic",
+    "collectathon-token-gating"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "companion-possession-control",
+      "role": "signature",
+      "map_notes": "Cappy capture lets Mario possess enemies, objects, and vehicles with unique moves.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Cappy capture lets Mario possess enemies, objects, and vehicles with unique moves.",
+      "depends_on": [
+        "free-camera-3d-movement",
+        "power-up-transformation-states"
+      ]
+    },
+    {
+      "mechanic_slug": "possession-hat-mechanic",
+      "role": "signature",
+      "map_notes": "Throwing Cappy onto targets transfers control with distinct ability sets per capture.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Throwing Cappy onto targets transfers control with distinct ability sets per capture.",
+      "depends_on": [
+        "companion-possession-control"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Power Moons gate kingdom progression and Odyssey ship upgrades.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Power Moons gate kingdom progression and Odyssey ship upgrades.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "free-camera-3d-movement",
+      "role": "supporting",
+      "map_notes": "Sandbox kingdoms support 360-degree exploration with fluid jumps.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Sandbox kingdoms support 360-degree exploration with fluid jumps.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Moon rocks, secret areas, and post-game kingdoms extend hundreds of moons.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Moon rocks, secret areas, and post-game kingdoms extend hundreds of moons."
+    },
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "supporting",
+      "map_notes": "Odyssey ship hub travels between kingdoms gated by moon totals.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Odyssey ship hub travels between kingdoms gated by moon totals.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Lava, poison, and electric kingdoms test capture-specific traversal.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lava, poison, and electric kingdoms test capture-specific traversal.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Multi-kingdom Bowser encounters gate wedding arc milestones.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Multi-kingdom Bowser encounters gate wedding arc milestones.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Bowser fights in Cloud, Luncheon, and Moon kingdoms span multi-phase arenas.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bowser fights in Cloud, Luncheon, and Moon kingdoms span multi-phase arenas.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Secret moon rooms and platformer kingdoms demand exact jumps.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Secret moon rooms and platformer kingdoms demand exact jumps.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "supporting",
+      "map_notes": "Outfits grant utility at specific kingdom locations.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Outfits grant utility at specific kingdom locations.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Moons persist; death respawns at kingdom entrance.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Moons persist; death respawns at kingdom entrance.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Broodals and RoboBrood follow learnable attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Broodals and RoboBrood follow learnable attack cycles.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Boss charge attacks telegraph with visible wind-up frames.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss charge attacks telegraph with visible wind-up frames.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Cap throw and roll combo clear fodder enemies.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Cap throw and roll combo clear fodder enemies."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Health wedges deplete on hazard hits; moons remain collected.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health wedges deplete on hazard hits; moons remain collected.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2017
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-64",
+      "super-mario-galaxy"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Super Mario Odyssey through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "companion-possession-control",
+      "possession-hat-mechanic",
+      "collectathon-token-gating"
+    ],
+    "design_pillars": [
+      "Companion Possession Control",
+      "Possession Hat Mechanic",
+      "Collectathon Token Gating"
+    ]
+  }
+}

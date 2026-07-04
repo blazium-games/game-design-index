@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.1",
+  "slug": "rayman-2",
+  "title": "Rayman 2: The Great Escape Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Rayman 2: The Great Escape",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Rayman",
+      "Banjo-Kazooie"
+    ]
+  },
+  "narrative": {
+    "description": "Ubisoft's Dreamcast/N64/PS1 classic follows Rayman through the Glade of Dreams with lums, helicopter hair, and cinematic set-piece platforming against the pirate invasion.",
+    "core_loop": "Free Teensies, collect lums, shoot magic spheres, and defeat Admiral Razorbeard across hub-connected dream worlds.",
+    "skills_tested": [
+      "lum quotas",
+      "shooting while platforming",
+      "helicopter timing"
+    ]
+  },
+  "signature_gameplay": [
+    "free-camera-3d-movement",
+    "collectathon-token-gating",
+    "ability-gated-exploration"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "free-camera-3d-movement",
+      "role": "signature",
+      "map_notes": "Rayman's helicopter hair and strafe-shoot define fluid 3D traversal.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Rayman's helicopter hair and strafe-shoot define fluid 3D traversal.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Lums and Teensies gate world progress and secret levels.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Lums and Teensies gate world progress and secret levels.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "signature",
+      "map_notes": "Magic spheres, swing chains, and rocket rides open new routes per world.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Magic spheres, swing chains, and rocket rides open new routes per world."
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Magic fist fires immediately while platforming.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Magic fist fires immediately while platforming."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Pirates, water, and chase sequences test movement mastery.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Pirates, water, and chase sequences test movement mastery.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Guardian bosses and Razorbeard gate story milestones.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Guardian bosses and Razorbeard gate story milestones.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses like Grolgoth follow learnable sphere-counter patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses like Grolgoth follow learnable sphere-counter patterns.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Final Razorbeard fight spans multiple arena configurations.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Final Razorbeard fight spans multiple arena configurations.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden lums and secret levels extend completion.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden lums and secret levels extend completion."
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Cage breaks save Teensie progress; death respawns at level start.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Cage breaks save Teensie progress; death respawns at level start.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Speed challenges and narrow ledges demand exact control.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Speed challenges and narrow ledges demand exact control.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Pirate wind-ups telegraph before cannon fire.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Pirate wind-ups telegraph before cannon fire.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "glide-traversal",
+      "role": "supporting",
+      "map_notes": "Helicopter hair extends jumps across chasms.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Helicopter hair extends jumps across chasms.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Health cages restore energy; death restarts from level entrance.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health cages restore energy; death restarts from level entrance.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1999
+  },
+  "relationships": {
+    "influence_slugs": [
+      "rayman",
+      "banjo-kazooie"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Rayman 2: The Great Escape through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "free-camera-3d-movement",
+      "collectathon-token-gating",
+      "ability-gated-exploration"
+    ],
+    "design_pillars": [
+      "Free Camera 3D Movement",
+      "Collectathon Token Gating",
+      "Ability Gated Exploration"
+    ]
+  }
+}

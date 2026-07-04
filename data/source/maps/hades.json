@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.1",
+  "slug": "hades",
+  "title": "Hades Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.metacritic.com/browse/game/all/all/all-time/metascore/",
+  "subject": {
+    "kind": "game",
+    "name": "Hades",
+    "genres": [
+      "Roguelike",
+      "Action"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Hades is a roguelike action game where Zagreus escapes the underworld through procedural runs, earning boons and narrative progression.",
+    "core_loop": "Fight through randomized chambers, choose boons and upgrades, die and return to the hub, and advance story with NPC interactions between runs.",
+    "skills_tested": [
+      "combat timing",
+      "build synergy",
+      "pattern recognition",
+      "resource routing"
+    ]
+  },
+  "signature_gameplay": [
+    "permadeath-run-structure",
+    "real-time-action-combat",
+    "roguelike-map-routing",
+    "dialogue-choice-consequences",
+    "fill-reward-progression-loop"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "permadeath-run-structure",
+      "role": "signature",
+      "map_notes": "In Hades, death ends the current run; meta-progression or knowledge carries between attempts.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Hades, death ends the current run; meta-progression or knowledge carries between attempts."
+    },
+    {
+      "mechanic_slug": "real-time-action-combat",
+      "role": "signature",
+      "map_notes": "In Hades, direct player control over attacks, dodges, and combos in real time.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Hades, direct player control over attacks, dodges, and combos in real time."
+    },
+    {
+      "mechanic_slug": "roguelike-map-routing",
+      "role": "signature",
+      "map_notes": "In Hades, choose branching paths across a run map with risk-reward nodes.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Hades, choose branching paths across a run map with risk-reward nodes.",
+      "depends_on": [
+        "permadeath-run-structure"
+      ]
+    },
+    {
+      "mechanic_slug": "dialogue-choice-consequences",
+      "role": "signature",
+      "map_notes": "In Hades, conversation branches alter relationships, story flags, and available quests.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Hades, conversation branches alter relationships, story flags, and available quests."
+    },
+    {
+      "mechanic_slug": "fill-reward-progression-loop",
+      "role": "signature",
+      "map_notes": "In Hades, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Hades, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2020
+  },
+  "relationships": {
+    "genre_maps": [
+      "roguelike-deckbuilder"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Hades through its core roguelike loop.",
+    "theme_tags": [
+      "roguelike",
+      "action",
+      "permadeath-run-structure",
+      "real-time-action-combat",
+      "roguelike-map-routing"
+    ],
+    "design_pillars": [
+      "Permadeath Run Structure",
+      "Real Time Action Combat",
+      "Roguelike Map Routing"
+    ]
+  },
+  "systems": {
+    "failure_model": "permadeath-or-lives",
+    "economy_tightness": "moderate",
+    "metaprogression": true
+  }
+}

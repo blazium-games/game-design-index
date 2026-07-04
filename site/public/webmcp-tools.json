@@ -1,0 +1,22 @@
+{
+  "tools": [
+    { "name": "get-catalog", "description": "Return corpus statistics, schema version, and genre list.", "inputSchema": { "type": "object", "properties": {} } },
+    { "name": "search-index", "description": "Search games and mechanics by title or slug.", "inputSchema": { "type": "object", "properties": { "query": { "type": "string" } }, "required": ["query"] } },
+    { "name": "list-games", "description": "List gameplay maps with optional filters.", "inputSchema": { "type": "object", "properties": { "genre": { "type": "string" }, "quality_tier": { "type": "string" } } } },
+    { "name": "get-game", "description": "Full gameplay map by slug.", "inputSchema": { "type": "object", "properties": { "slug": { "type": "string" } }, "required": ["slug"] } },
+    { "name": "list-mechanics", "description": "List mechanics with optional domain/flavor/tag filters.", "inputSchema": { "type": "object", "properties": { "domain": { "type": "string" }, "flavor": { "type": "string" }, "tag": { "type": "string" } } } },
+    { "name": "get-mechanic", "description": "Full mechanic entry by slug.", "inputSchema": { "type": "object", "properties": { "slug": { "type": "string" } }, "required": ["slug"] } },
+    { "name": "get-mechanic-formatted", "description": "Mechanic as md/yaml/txt from formats/v1.", "inputSchema": { "type": "object", "properties": { "slug": { "type": "string" }, "format": { "type": "string", "enum": ["md", "yaml", "txt"] } }, "required": ["slug"] } },
+    { "name": "list-genres", "description": "List genre recipe maps.", "inputSchema": { "type": "object", "properties": {} } },
+    { "name": "get-genre", "description": "Genre recipe map by slug.", "inputSchema": { "type": "object", "properties": { "slug": { "type": "string" } }, "required": ["slug"] } },
+    { "name": "get-mechanic-maps", "description": "Maps featuring a mechanic.", "inputSchema": { "type": "object", "properties": { "mechanic_slug": { "type": "string" } }, "required": ["mechanic_slug"] } },
+    { "name": "get-cooccurrence", "description": "Top mechanic co-occurrence pairs.", "inputSchema": { "type": "object", "properties": { "limit": { "type": "number" } } } },
+    { "name": "get-similar-games", "description": "Games sharing signatures with a reference.", "inputSchema": { "type": "object", "properties": { "slug": { "type": "string" } }, "required": ["slug"] } },
+    { "name": "compose-design-brief", "description": "Merge reference games into a design brief.", "inputSchema": { "type": "object", "properties": { "ref_slugs": { "type": "array", "items": { "type": "string" } } }, "required": ["ref_slugs"] } },
+    { "name": "list-tags", "description": "Controlled mechanic tag vocabulary.", "inputSchema": { "type": "object", "properties": {} } },
+    { "name": "navigate", "description": "Navigate catalog UI.", "inputSchema": { "type": "object", "properties": { "target": { "type": "string" }, "slug": { "type": "string" } }, "required": ["target"] } },
+    { "name": "filter-games-view", "description": "Filter games index view.", "inputSchema": { "type": "object", "properties": { "genre": { "type": "string" }, "quality_tier": { "type": "string" }, "query": { "type": "string" } } } },
+    { "name": "filter-mechanics-view", "description": "Filter mechanics index view.", "inputSchema": { "type": "object", "properties": { "domain": { "type": "string" }, "flavor": { "type": "string" }, "tag": { "type": "string" } } } },
+    { "name": "open-contribute", "description": "Open contribution flow.", "inputSchema": { "type": "object", "properties": { "kind": { "type": "string" } }, "required": ["kind"] } }
+  ]
+}

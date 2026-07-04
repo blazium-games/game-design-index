@@ -1,0 +1,28 @@
+name: Data correction
+description: Fix wrong genres, signatures, or map notes
+title: "Data correction: "
+labels: ["data", "correction"]
+body:
+  - type: input
+    id: slug
+    attributes:
+      label: Map or mechanic slug
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Entry type
+      options: [game, mechanic, genre]
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix

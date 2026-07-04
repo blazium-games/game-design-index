@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.1",
+  "slug": "space-raiders",
+  "title": "Space Raiders Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retroarcadia.blog/2026/03/18/top-ten-favourite-3d-shoot-em-ups/",
+  "subject": {
+    "kind": "game",
+    "name": "Space Raiders",
+    "genres": [
+      "Shooter",
+      "Arcade"
+    ],
+    "influences": [
+      "Space Invaders",
+      "Galaxian"
+    ]
+  },
+  "narrative": {
+    "description": "Taito's Dreamcast rail shooter casts the player as a squad leader defending Earth from an alien armada, combining first-person lock-on targeting with squad command prompts across cinematic invasion set pieces.",
+    "core_loop": "Scan formations for weak points, lock onto targets, issue squad orders, and survive escalating waves until the stage boss is destroyed.",
+    "skills_tested": [
+      "target prioritization",
+      "peripheral awareness",
+      "squad timing",
+      "pattern recognition"
+    ]
+  },
+  "signature_gameplay": [
+    "fixed-formation-shooter",
+    "sector-clear-progression",
+    "instant-fire-attack"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "fixed-formation-shooter",
+      "role": "signature",
+      "map_notes": "Enemy squadrons arrive in Space Invaders-style rows that the player must dismantle with lock-on bursts.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Enemy squadrons arrive in Space Invaders-style rows that the player must dismantle with lock-on bursts.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "sector-clear-progression",
+      "role": "signature",
+      "map_notes": "Campaign advances through discrete invasion sectors, each ending in a set-piece boss encounter.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Campaign advances through discrete invasion sectors, each ending in a set-piece boss encounter.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "signature",
+      "map_notes": "Lock-on reticle fires immediately once a target is acquired without charge delay.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Lock-on reticle fires immediately once a target is acquired without charge delay."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Squad health depletes from enemy fire; zero triggers mission failure.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Squad health depletes from enemy fire; zero triggers mission failure.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "supporting",
+      "map_notes": "Alien craft emit readable bullet curtains the player weaves through while targeting.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Alien craft emit readable bullet curtains the player weaves through while targeting.",
+      "depends_on": [
+        "decoupled-aim-control",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Stage bosses shift attack patterns after losing armor segments.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Stage bosses shift attack patterns after losing armor segments.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Large enemies wind up beam sweeps before firing.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Large enemies wind up beam sweeps before firing.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Limited continues restart the current sector from the beginning.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Limited continues restart the current sector from the beginning.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses cycle through learnable volley and dive patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses cycle through learnable volley and dive patterns.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "decoupled-aim-control",
+      "role": "supporting",
+      "map_notes": "Free reticle movement independent of squad facing on rails.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Free reticle movement independent of squad facing on rails.",
+      "depends_on": [
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Some sectors offer mid-mission save points between wave groups.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Some sectors offer mid-mission save points between wave groups.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Debris fields and planetary obstacles constrain safe firing lanes.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Debris fields and planetary obstacles constrain safe firing lanes."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2000
+  },
+  "relationships": {
+    "influence_slugs": [
+      "space-invaders"
+    ],
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Space Raiders through its core shooter loop.",
+    "theme_tags": [
+      "shooter",
+      "arcade",
+      "fixed-formation-shooter",
+      "sector-clear-progression",
+      "instant-fire-attack"
+    ],
+    "design_pillars": [
+      "Fixed Formation Shooter",
+      "Sector Clear Progression",
+      "Instant Fire Attack"
+    ]
+  }
+}

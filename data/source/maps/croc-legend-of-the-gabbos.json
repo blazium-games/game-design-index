@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.1",
+  "slug": "croc-legend-of-the-gabbos",
+  "title": "Croc: Legend of the Gobbos Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Croc: Legend of the Gobbos",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario 64",
+      "Crash Bandicoot"
+    ]
+  },
+  "narrative": {
+    "description": "Argonaut's mascot platformer follows Croc through Gobbo villages with tail-spin attacks, gummi savers, and collect-a-thon structure across whimsical themed islands.",
+    "core_loop": "Tail-spin through stages, rescue Gobbos, collect crystals and jigsaw pieces, and defeat Baron Dante to save the island.",
+    "skills_tested": [
+      "spin attack timing",
+      "collectible tracking",
+      "stomp precision"
+    ]
+  },
+  "signature_gameplay": [
+    "spin-attack-combat",
+    "collectathon-token-gating",
+    "linear-stage-gauntlet"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "signature",
+      "map_notes": "360-degree tail spin destroys enemies and breaks crates.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "360-degree tail spin destroys enemies and breaks crates."
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Gobbos, crystals, and jigsaw pieces drive completion goals.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Gobbos, crystals, and jigsaw pieces drive completion goals.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "signature",
+      "map_notes": "Stages are forward gauntlets ending at crystal doors.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Stages are forward gauntlets ending at crystal doors.",
+      "depends_on": [
+        "boss-gated-progression",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Gummi savers and lives gate retries.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Gummi savers and lives gate retries.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Lava, ice, and stomp pads test jump timing.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lava, ice, and stomp pads test jump timing.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Gummi saver checkpoints respawn Croc after death.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Gummi saver checkpoints respawn Croc after death.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Boss defeats unlock subsequent island areas.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss defeats unlock subsequent island areas.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Baron Dante minions follow learnable stomp cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Baron Dante minions follow learnable stomp cycles.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden caves and bonus Gobbos extend completion.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden caves and bonus Gobbos extend completion."
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Stomp attacks require exact positioning on enemies.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Stomp attacks require exact positioning on enemies.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Enemy wind-up telegraphs before lunging.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemy wind-up telegraphs before lunging.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "One hit costs a life unless invincibility pickup active.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "One hit costs a life unless invincibility pickup active.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1997
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-64",
+      "crash-bandicoot"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Croc: Legend of the Gobbos through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "spin-attack-combat",
+      "collectathon-token-gating",
+      "linear-stage-gauntlet"
+    ],
+    "design_pillars": [
+      "Spin Attack Combat",
+      "Collectathon Token Gating",
+      "Linear Stage Gauntlet"
+    ]
+  }
+}

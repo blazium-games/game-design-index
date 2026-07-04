@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.1",
+  "slug": "smt-strange-journey-redux",
+  "title": "Shin Megami Tensei: Strange Journey Redux Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.nintendolife.com/guides/50-best-nintendo-3ds-games-of-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Shin Megami Tensei: Strange Journey Redux",
+    "genres": [
+      "Dungeon Crawler"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Shin Megami Tensei: Strange Journey Redux (2017) is a acclaimed dungeon crawler title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Map grid dungeons, manage party stats, and defeat floor bosses.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "first-person-dungeon-grid",
+    "turn-based-party-combat",
+    "rpg-stat-progression"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "first-person-dungeon-grid",
+      "role": "signature",
+      "map_notes": "Core first person dungeon grid loop defines Shin Megami Tensei: Strange Journey Redux's identity.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Movement occurs on a discrete grid viewed from a first-person perspective.",
+      "depends_on": [
+        "progress-gated-dungeon-completion",
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "turn-based-party-combat",
+      "role": "signature",
+      "map_notes": "Core turn based party combat loop defines Shin Megami Tensei: Strange Journey Redux's identity.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Battles resolve in turns with a party of characters selecting commands from menus.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "signature",
+      "map_notes": "Core rpg stat progression loop defines Shin Megami Tensei: Strange Journey Redux's identity.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Defeating enemies or completing objectives grants experience that increases character stats such as HP, attack, or defense.",
+      "depends_on": [
+        "equipment-loadout",
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "supporting",
+      "map_notes": "Equipment Loadout supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "map-resource-monster-groups",
+      "role": "supporting",
+      "map_notes": "Map Resource Monster Groups supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Neutral hostile groups occupy fixed map locations, offering experience points and item rewards when defeated, enabling optional power scaling.",
+      "depends_on": [
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "progress-gated-dungeon-completion",
+      "role": "supporting",
+      "map_notes": "Progress Gated Dungeon Completion supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "The player must fully complete self-contained dungeons, each with unique challenges, in order to unlock new areas or abilities.",
+      "depends_on": [
+        "boss-gated-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Depletable Health Pool supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A survival mechanic where the player character possesses a finite quantity of health points that decrease when taking damage, with depletion resulting in failure.",
+      "depends_on": [
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Optional Content Layering supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments.",
+      "depends_on": [
+        "exploration-gated-upgrades"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Boss Gated Progression supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A progression structure in which access to subsequent content areas, abilities, or game states is conditionally locked behind the defeat of a designated boss.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "loot-based-economy",
+      "role": "supporting",
+      "map_notes": "Loot Based Economy supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Consumable resources such as health or ammunition are embedded within the game world as collectible pickups, either placed statically or dropped by enemies.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "exploration-gated-upgrades",
+      "role": "supporting",
+      "map_notes": "Exploration Gated Upgrades supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "The character unlocks permanent upgrades obtained through spatial exploration and world interaction, rather than direct combat rewards.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Telegraphed Threat Loop supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A combat encounter structure in which an enemy signals an incoming attack through a distinct visual or audio cue before the attack resolves."
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Multi Phase Boss Battle supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A combat structure where boss encounters transition through discrete stages with distinct attack patterns, behaviors, or environmental conditions when health thresholds are reached.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "bench-checkpoint",
+      "role": "supporting",
+      "map_notes": "Bench Checkpoint supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Designated rest points save progress, restore health or resources, and set respawn locations on death.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "health-capacity-upgrade",
+      "role": "supporting",
+      "map_notes": "Health Capacity Upgrade supports the main loop in Shin Megami Tensei: Strange Journey Redux.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Permanent pickups or purchases extend the maximum health pool beyond the starting value.",
+      "depends_on": [
+        "depletable-health-pool",
+        "loot-based-economy"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2017
+  },
+  "design_intent": {
+    "player_fantasy": "A dungeon crawler experience centered on Shin Megami Tensei: Strange Journey Redux.",
+    "theme_tags": [
+      "dungeon-crawler",
+      "first-person-dungeon-grid",
+      "turn-based-party-combat",
+      "rpg-stat-progression"
+    ],
+    "design_pillars": [
+      "First Person Dungeon Grid",
+      "Turn Based Party Combat",
+      "Rpg Stat Progression"
+    ]
+  }
+}

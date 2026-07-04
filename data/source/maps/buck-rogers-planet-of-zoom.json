@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.1",
+  "slug": "buck-rogers-planet-of-zoom",
+  "title": "Buck Rogers: Planet of Zoom Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retroarcadia.blog/2026/03/18/top-ten-favourite-3d-shoot-em-ups/",
+  "subject": {
+    "kind": "game",
+    "name": "Buck Rogers: Planet of Zoom",
+    "genres": [
+      "Shooter",
+      "Arcade"
+    ],
+    "influences": [
+      "Zaxxon",
+      "Star Wars arcade"
+    ]
+  },
+  "narrative": {
+    "description": "Sega's forward-scrolling space combat game follows Buck Rogers through scaling tunnel sequences and open space battles, using sprite scaling to simulate depth as enemies grow from the horizon.",
+    "core_loop": "Dodge incoming fire, destroy waves of scaling enemies, and survive tunnel gauntlets until the stage boss is cleared.",
+    "skills_tested": [
+      "depth perception",
+      "reaction timing",
+      "threat tracking",
+      "precision dodging"
+    ]
+  },
+  "signature_gameplay": [
+    "pseudo-3d-scroll-shooter",
+    "height-plane-shooting",
+    "linear-stage-gauntlet"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "pseudo-3d-scroll-shooter",
+      "role": "signature",
+      "map_notes": "Sprite scaling simulates forward flight into oncoming enemy formations.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Sprite scaling simulates forward flight into oncoming enemy formations.",
+      "depends_on": [
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "height-plane-shooting",
+      "role": "signature",
+      "map_notes": "Vertical movement selects which altitude band enemies occupy in the faux-3D field.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Vertical movement selects which altitude band enemies occupy in the faux-3D field.",
+      "depends_on": [
+        "pseudo-3d-scroll-shooter"
+      ]
+    },
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "signature",
+      "map_notes": "Stages are continuous forward-scroll gauntlets ending in a boss confrontation.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Stages are continuous forward-scroll gauntlets ending in a boss confrontation.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Ship weapons fire immediately on input.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Ship weapons fire immediately on input."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Hull integrity drops from collisions and enemy fire.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hull integrity drops from collisions and enemy fire.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Extra ships awarded at score thresholds.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Extra ships awarded at score thresholds.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "supporting",
+      "map_notes": "Enemies release expanding bullet fans as they scale closer.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemies release expanding bullet fans as they scale closer.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "End-of-stage bosses repeat learnable attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "End-of-stage bosses repeat learnable attack cycles.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Large craft flash before launching missile salvos.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Large craft flash before launching missile salvos.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Tunnel walls and narrow corridors force vertical lane changes.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Tunnel walls and narrow corridors force vertical lane changes."
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Some bosses transform attack patterns after taking damage.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Some bosses transform attack patterns after taking damage.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Stage select after clearing prior zones.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Stage select after clearing prior zones.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1982
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Buck Rogers: Planet of Zoom through its core shooter loop.",
+    "theme_tags": [
+      "shooter",
+      "arcade",
+      "pseudo-3d-scroll-shooter",
+      "height-plane-shooting",
+      "linear-stage-gauntlet"
+    ],
+    "design_pillars": [
+      "Pseudo 3D Scroll Shooter",
+      "Height Plane Shooting",
+      "Linear Stage Gauntlet"
+    ]
+  }
+}

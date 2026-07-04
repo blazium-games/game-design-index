@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.1",
+  "slug": "beamrider",
+  "title": "Beamrider Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retroarcadia.blog/2026/03/18/top-ten-favourite-3d-shoot-em-ups/",
+  "subject": {
+    "kind": "game",
+    "name": "Beamrider",
+    "genres": [
+      "Shooter",
+      "Arcade"
+    ],
+    "influences": [
+      "Zaxxon",
+      "Defender"
+    ]
+  },
+  "narrative": {
+    "description": "Activision's isometric space shooter tasks players with clearing twelve sectors of an orbital defense grid, flying above a force-beam surface while destroying alien factories and drones from a pseudo-3D perspective.",
+    "core_loop": "Pilot above the beam grid, destroy sector targets and factories, then defeat the sector sentinel to unlock the next orbital zone.",
+    "skills_tested": [
+      "isometric navigation",
+      "target tracking",
+      "threat prioritization",
+      "reaction speed"
+    ]
+  },
+  "signature_gameplay": [
+    "pseudo-3d-scroll-shooter",
+    "sector-clear-progression",
+    "height-plane-shooting"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "pseudo-3d-scroll-shooter",
+      "role": "signature",
+      "map_notes": "Isometric scrolling creates a faux-3D lane over the force-beam surface.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Isometric scrolling creates a faux-3D lane over the force-beam surface.",
+      "depends_on": [
+        "projectile-pattern-enemy-design",
+        "sector-clear-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "sector-clear-progression",
+      "role": "signature",
+      "map_notes": "Twelve numbered sectors each require destroying a quota of targets before the sentinel appears.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Twelve numbered sectors each require destroying a quota of targets before the sentinel appears.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "height-plane-shooting",
+      "role": "signature",
+      "map_notes": "Altitude shifts along the beam plane change which enemies and obstacles are hittable.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Altitude shifts along the beam plane change which enemies and obstacles are hittable.",
+      "depends_on": [
+        "pseudo-3d-scroll-shooter"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Laser fires on button press with no charge time.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Laser fires on button press with no charge time."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Ship shields deplete on contact and enemy hits.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Ship shields deplete on contact and enemy hits.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Three ships per credit with continue on game over.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Three ships per credit with continue on game over.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "supporting",
+      "map_notes": "Drones emit diagonal bullet streams across the isometric grid.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Drones emit diagonal bullet streams across the isometric grid.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Sector sentinels follow fixed movement and firing loops.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Sector sentinels follow fixed movement and firing loops.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Sentinel charge attacks telegraph with a brief glow before impact.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Sentinel charge attacks telegraph with a brief glow before impact.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Beam edges and factory structures constrain movement lanes.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Beam edges and factory structures constrain movement lanes."
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Final sector sentinel requires multiple destruction phases.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Final sector sentinel requires multiple destruction phases.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Sector select resumes progress after clearing each zone.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Sector select resumes progress after clearing each zone.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1983
+  },
+  "relationships": {
+    "influence_slugs": [
+      "defender"
+    ],
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Beamrider through its core shooter loop.",
+    "theme_tags": [
+      "shooter",
+      "arcade",
+      "pseudo-3d-scroll-shooter",
+      "sector-clear-progression",
+      "height-plane-shooting"
+    ],
+    "design_pillars": [
+      "Pseudo 3D Scroll Shooter",
+      "Sector Clear Progression",
+      "Height Plane Shooting"
+    ]
+  }
+}

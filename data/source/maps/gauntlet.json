@@ -1,0 +1,265 @@
+{
+  "schema_version": "1.1",
+  "slug": "gauntlet",
+  "title": "Gauntlet Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.lemon64.com/forum/viewtopic.php?t=84325",
+  "subject": {
+    "kind": "game",
+    "name": "Gauntlet",
+    "genres": [
+      "Action"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Gauntlet (1985) is a acclaimed action title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Clear stages of enemies and obstacles with responsive arcade controls.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "linear-stage-gauntlet",
+    "depletable-health-pool",
+    "instant-fire-attack"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "signature",
+      "map_notes": "Core linear stage gauntlet loop defines Gauntlet's identity.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Progression moves through a fixed sequence of confined stages without hub backtracking.",
+      "depends_on": [
+        "boss-gated-progression",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "signature",
+      "map_notes": "Core depletable health pool loop defines Gauntlet's identity.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "A survival mechanic where the player character possesses a finite quantity of health points that decrease when taking damage, with depletion resulting in failure.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "signature",
+      "map_notes": "Core instant fire attack loop defines Gauntlet's identity.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "The character executes an attack immediately upon input, with no charge, delay or conditional cost."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Life Based Retry System supports the main loop in Gauntlet.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A failure-buffer system in which the player is granted a limited number of retries, losing one life upon failure and restarting from a previous checkpoint.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "supporting",
+      "map_notes": "Projectile Pattern Enemy Design supports the main loop in Gauntlet.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemies emit projectiles arranged in deterministic spatial formations such as spreads, spirals, rings, or waves that the player must navigate.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Telegraphed Threat Loop supports the main loop in Gauntlet.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A combat encounter structure in which an enemy signals an incoming attack through a distinct visual or audio cue before the attack resolves.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Patterned Boss Encounter supports the main loop in Gauntlet.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A boss fight design in which the enemy executes a deterministic or semi-deterministic set of behaviors including telegraphed attacks and movement routines.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Boss Gated Progression supports the main loop in Gauntlet.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A progression structure in which access to subsequent content areas, abilities, or game states is conditionally locked behind the defeat of a designated boss.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Mid Level Checkpoint supports the main loop in Gauntlet.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A save point within a stage resets the player to that position on death rather than restarting the entire level.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Optional Content Layering supports the main loop in Gauntlet.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments."
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Multi Phase Boss Battle supports the main loop in Gauntlet.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A combat structure where boss encounters transition through discrete stages with distinct attack patterns, behaviors, or environmental conditions when health thresholds are reached.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Environmental Hazard Navigation supports the main loop in Gauntlet.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A traversal mechanic in which the level space contains persistent damaging or lethal obstacles that the player must avoid through precise movement."
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "supporting",
+      "map_notes": "Power Up Transformation States supports the main loop in Gauntlet.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Collectible items temporarily or persistently transform the player character, granting new movement or attack abilities.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "fixed-formation-shooter",
+      "role": "supporting",
+      "map_notes": "Fixed Formation Shooter supports the main loop in Gauntlet.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemies advance in predictable rows or grids toward the player, who must eliminate them before they reach a fail line.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "sector-clear-progression",
+      "role": "supporting",
+      "map_notes": "Sector Clear Progression supports the main loop in Gauntlet.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Levels advance when a quota of enemies is destroyed or a sector boss is defeated before moving to the next zone.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 1985
+  },
+  "design_intent": {
+    "player_fantasy": "A action experience centered on Gauntlet.",
+    "theme_tags": [
+      "action",
+      "linear-stage-gauntlet",
+      "depletable-health-pool",
+      "instant-fire-attack"
+    ],
+    "design_pillars": [
+      "Linear Stage Gauntlet",
+      "Depletable Health Pool",
+      "Instant Fire Attack"
+    ]
+  }
+}

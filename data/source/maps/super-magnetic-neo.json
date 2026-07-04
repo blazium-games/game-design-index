@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.1",
+  "slug": "super-magnetic-neo",
+  "title": "Super Magnetic Neo Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Super Magnetic Neo",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario 64",
+      "Rocket: Robot on Wheels"
+    ]
+  },
+  "narrative": {
+    "description": "Crave's N64 platformer centers on magnetic polarity combat\u2014attract and repel objects, enemies, and surfaces to solve traversal puzzles across colorful worlds.",
+    "core_loop": "Switch magnetic polarity to push and pull objects, traverse polarity-gated stages, and defeat Pico bandits across hub-linked worlds.",
+    "skills_tested": [
+      "polarity switching",
+      "physics prediction",
+      "combat spacing"
+    ]
+  },
+  "signature_gameplay": [
+    "magnetic-field-combat",
+    "hub-world-stage-gates",
+    "environmental-hazard-navigation"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "magnetic-field-combat",
+      "role": "signature",
+      "map_notes": "Polarity toggle attracts or repels metal objects and enemies.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Polarity toggle attracts or repels metal objects and enemies."
+    },
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "signature",
+      "map_notes": "Hub connects to worlds requiring polarity puzzle mastery.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Hub connects to worlds requiring polarity puzzle mastery.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "signature",
+      "map_notes": "Magnetic surfaces and pits constrain safe polarity use.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Magnetic surfaces and pits constrain safe polarity use.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Repel jumps require exact polarity timing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Repel jumps require exact polarity timing.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Bandit bosses unlock new hub regions.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bandit bosses unlock new hub regions.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses cycle polarity-vulnerable attack phases.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses cycle polarity-vulnerable attack phases.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "supporting",
+      "map_notes": "Neo coins and secrets gate completion percentage.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Neo coins and secrets gate completion percentage.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden polarity puzzles reward experimentation.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden polarity puzzles reward experimentation."
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Stage flags checkpoint progress.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Stage flags checkpoint progress.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Limited lives per stage attempt.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Limited lives per stage attempt.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Metal enemies telegraph before magnetic counter windows.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Metal enemies telegraph before magnetic counter windows.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Basic jump attack supplements polarity throws.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Basic jump attack supplements polarity throws."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2000
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-64",
+      "rocket-robot-on-wheels"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Super Magnetic Neo through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "magnetic-field-combat",
+      "hub-world-stage-gates",
+      "environmental-hazard-navigation"
+    ],
+    "design_pillars": [
+      "Magnetic Field Combat",
+      "Hub World Stage Gates",
+      "Environmental Hazard Navigation"
+    ]
+  }
+}

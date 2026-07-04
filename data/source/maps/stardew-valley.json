@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.1",
+  "slug": "stardew-valley",
+  "title": "Stardew Valley Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://meepleandthemoose.com/category/top-100-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Stardew Valley",
+    "genres": [
+      "Simulation",
+      "Life Sim",
+      "RPG"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Stardew Valley is a farming life sim with daily schedules, crop cycles, mining combat, and village relationships.",
+    "core_loop": "Plan each day to tend crops, mine resources, gift villagers, and progress community bundles and farm upgrades.",
+    "skills_tested": [
+      "time management",
+      "planning",
+      "relationship building",
+      "resource optimization"
+    ]
+  },
+  "signature_gameplay": [
+    "farming-crop-cycle",
+    "day-night-schedule-loop",
+    "social-relationship-meter",
+    "fill-reward-progression-loop",
+    "purchase-gated-upgrade"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "farming-crop-cycle",
+      "role": "signature",
+      "map_notes": "In Stardew Valley, plant, water, and harvest crops on daily cycles tied to in-game seasons.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Stardew Valley, plant, water, and harvest crops on daily cycles tied to in-game seasons."
+    },
+    {
+      "mechanic_slug": "day-night-schedule-loop",
+      "role": "signature",
+      "map_notes": "In Stardew Valley, calendar days cycle with timed activities, shops, and events.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Stardew Valley, calendar days cycle with timed activities, shops, and events.",
+      "depends_on": [
+        "farming-crop-cycle",
+        "social-relationship-meter"
+      ]
+    },
+    {
+      "mechanic_slug": "social-relationship-meter",
+      "role": "signature",
+      "map_notes": "In Stardew Valley, nPC affinity or friendship meters unlock dialogue, gifts, and story branches.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Stardew Valley, nPC affinity or friendship meters unlock dialogue, gifts, and story branches.",
+      "depends_on": [
+        "day-night-schedule-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "fill-reward-progression-loop",
+      "role": "signature",
+      "map_notes": "In Stardew Valley, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Stardew Valley, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "signature",
+      "map_notes": "In Stardew Valley, players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Stardew Valley, players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices.",
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2016
+  },
+  "relationships": {
+    "genre_maps": [
+      "tycoon-simulation",
+      "life-sim",
+      "turn-based-rpg"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Stardew Valley through its core simulation loop.",
+    "theme_tags": [
+      "simulation",
+      "life-sim",
+      "rpg",
+      "farming-crop-cycle",
+      "day-night-schedule-loop",
+      "social-relationship-meter"
+    ],
+    "design_pillars": [
+      "Farming Crop Cycle",
+      "Day Night Schedule Loop",
+      "Social Relationship Meter"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "metaprogression": true
+  }
+}

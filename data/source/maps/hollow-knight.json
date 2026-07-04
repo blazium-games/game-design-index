@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.1",
+  "slug": "hollow-knight",
+  "title": "Hollow Knight Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-2d-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Hollow Knight",
+    "genres": [
+      "Metroidvania",
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Metroid",
+      "Castlevania",
+      "Dark Souls"
+    ]
+  },
+  "narrative": {
+    "description": "A nameless knight explores the fallen kingdom of Hallownest, battling infected creatures and uncovering lore. Players acquire nail upgrades, spells, and movement abilities to traverse a vast interconnected map, rest at benches, and confront the source of the infection.",
+    "core_loop": "Explore Hallownest, fight enemies with nail melee and spells, collect geo currency, rest at benches to save and heal, purchase upgrades and charms, acquire movement abilities to reach gated areas, and defeat bosses to progress the story.",
+    "skills_tested": [
+      "exploration",
+      "combat timing",
+      "pattern recognition",
+      "resource management",
+      "backtracking navigation"
+    ]
+  },
+  "signature_gameplay": [
+    "ability-driven-backtracking",
+    "ability-gated-exploration",
+    "melee-primary-combat",
+    "bench-checkpoint"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "ability-driven-backtracking",
+      "role": "signature",
+      "map_notes": "Mothwing Cloak dash, Crystal Heart super dash, and Monarch Wings double jump reopen prior areas.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Mothwing Cloak dash, Crystal Heart super dash, and Monarch Wings double jump reopen prior areas.",
+      "depends_on": [
+        "ability-gated-exploration",
+        "exploration-gated-upgrades"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "signature",
+      "map_notes": "Acid pools, high ledges, and dark zones require specific abilities or items to pass.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Acid pools, high ledges, and dark zones require specific abilities or items to pass.",
+      "depends_on": [
+        "ability-driven-backtracking",
+        "exploration-gated-upgrades"
+      ]
+    },
+    {
+      "mechanic_slug": "melee-primary-combat",
+      "role": "signature",
+      "map_notes": "Nail sword strikes, nail arts, and directional slashes define all offensive combat.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Nail sword strikes, nail arts, and directional slashes define all offensive combat.",
+      "depends_on": [
+        "depletable-health-pool",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "bench-checkpoint",
+      "role": "signature",
+      "map_notes": "Benches save progress, refill health and soul, and serve as respawn points on death.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Benches save progress, refill health and soul, and serve as respawn points on death.",
+      "depends_on": [
+        "ability-driven-backtracking",
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Major bosses like False Knight and Hornet gate story and ability progression.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Major bosses like False Knight and Hornet gate story and ability progression.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Mask shards extend HP; damage depletes masks until death.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Mask shards extend HP; damage depletes masks until death.",
+      "depends_on": [
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Spikes, acid, saw blades, and environmental damage zones throughout Hallownest.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Spikes, acid, saw blades, and environmental damage zones throughout Hallownest.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "exploration-gated-upgrades",
+      "role": "supporting",
+      "map_notes": "Abilities, nail upgrades, and charm notches found through exploration and bosses.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Abilities, nail upgrades, and charm notches found through exploration and bosses.",
+      "depends_on": [
+        "ability-gated-exploration",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "fill-reward-progression-loop",
+      "role": "supporting",
+      "map_notes": "Essence collection unlocks ability upgrades at specific NPCs.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Essence collection unlocks ability upgrades at specific NPCs.",
+      "depends_on": [
+        "map-resource-monster-groups",
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "loot-based-economy",
+      "role": "supporting",
+      "map_notes": "Geo drops from enemies and breakable objects fund purchases.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Geo drops from enemies and breakable objects fund purchases.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Bosses like the Mantis Lords and Radiance shift attack patterns across phases.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses like the Mantis Lords and Radiance shift attack patterns across phases.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden paths, breakable walls, and optional boss arenas reward thorough exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden paths, breakable walls, and optional boss arenas reward thorough exploration.",
+      "depends_on": [
+        "exploration-gated-upgrades"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "All major bosses follow learnable telegraphed attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "All major bosses follow learnable telegraphed attack cycles.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Tight platforming sections require precise jump and dash timing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Tight platforming sections require precise jump and dash timing.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "jump-cutoff"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Geo spent at shops for charms, maps, pins, and nail upgrades.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Geo spent at shops for charms, maps, pins, and nail upgrades.",
+      "depends_on": [
+        "fill-reward-progression-loop",
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "spell-resource-meter",
+      "role": "supporting",
+      "map_notes": "Soul meter fills on nail hits and fuels Focus heal and spell casts.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Soul meter fills on nail hits and fuels Focus heal and spell casts.",
+      "depends_on": [
+        "bench-checkpoint"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Enemy and boss wind-ups clearly signal incoming attacks.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemy and boss wind-ups clearly signal incoming attacks.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "map-resource-monster-groups",
+      "role": "supporting",
+      "map_notes": "Optional enemy rooms and farming routes for geo and soul.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Optional enemy rooms and farming routes for geo and soul.",
+      "depends_on": [
+        "fill-reward-progression-loop",
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "jump-cutoff",
+      "role": "supporting",
+      "map_notes": "Variable jump height for platforming sections.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Variable jump height for platforming sections.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "encounter-containment",
+      "role": "supporting",
+      "map_notes": "Arena bosses lock the room until the encounter resolves.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Arena bosses lock the room until the encounter resolves.",
+      "depends_on": [
+        "boss-gated-progression",
+        "patterned-boss-encounter"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "influence_slugs": [
+      "metroid",
+      "castlevania-symphony-of-the-night",
+      "dark-souls"
+    ],
+    "genre_maps": [
+      "metroidvania",
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Hollow Knight through its core metroidvania loop.",
+    "theme_tags": [
+      "metroidvania",
+      "platformer",
+      "action",
+      "ability-driven-backtracking",
+      "ability-gated-exploration",
+      "melee-primary-combat"
+    ],
+    "design_pillars": [
+      "Ability Driven Backtracking",
+      "Ability Gated Exploration",
+      "Melee Primary Combat"
+    ]
+  },
+  "systems": {
+    "failure_model": "checkpoint-respawn"
+  }
+}

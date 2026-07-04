@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "tags": [
+    "ability-gate",
+    "asymmetric",
+    "checkpoint",
+    "co-op",
+    "combat",
+    "deck-building",
+    "economy",
+    "level-design",
+    "linear-stage",
+    "locomotion",
+    "multiplayer",
+    "open-world",
+    "permadeath",
+    "progression",
+    "puzzle-core",
+    "pvp",
+    "real-time",
+    "resource-scarcity",
+    "roguelike-run",
+    "session-flow",
+    "single-player",
+    "turn-based"
+  ]
+}

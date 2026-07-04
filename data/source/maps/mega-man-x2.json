@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.1",
+  "slug": "mega-man-x2",
+  "title": "Mega Man X2 Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://github.com/blazium-games/game-mechanics-index",
+  "subject": {
+    "kind": "game",
+    "name": "Mega Man X2",
+    "genres": [
+      "Jump'n'Shoot",
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Mega Man X"
+    ]
+  },
+  "narrative": {
+    "description": "Six months after the first Maverick war, X leads the Maverick Hunters. Players select maverick stages non-linearly, defeat bosses to gain abilities, and exploit boss weakness networks before confronting Sigma.",
+    "core_loop": "Select a maverick stage, navigate platforming hazards and enemies, defeat the stage boss to earn a new weapon, and use weaknesses to optimize subsequent boss order.",
+    "skills_tested": [
+      "timing",
+      "positioning",
+      "pattern recognition",
+      "boss order strategy"
+    ]
+  },
+  "signature_gameplay": [
+    "boss-weakness-network",
+    "boss-gated-abilities",
+    "non-linear-boss-selection"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "boss-weakness-network",
+      "role": "signature",
+      "map_notes": "Each maverick is weak to a weapon obtained from another boss.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Each maverick is weak to a weapon obtained from another boss.",
+      "depends_on": [
+        "boss-gated-abilities",
+        "non-linear-boss-selection"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-abilities",
+      "role": "signature",
+      "map_notes": "Defeating mavericks grants persistent special weapons.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Defeating mavericks grants persistent special weapons.",
+      "depends_on": [
+        "boss-weakness-network",
+        "non-linear-boss-selection"
+      ]
+    },
+    {
+      "mechanic_slug": "non-linear-boss-selection",
+      "role": "signature",
+      "map_notes": "Player chooses stage order from a stage-select map.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Player chooses stage order from a stage-select map.",
+      "depends_on": [
+        "boss-gated-abilities",
+        "boss-weakness-network"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-loadout-switching",
+      "role": "supporting",
+      "map_notes": "Switch between eight maverick weapons plus X-Buster.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Switch between eight maverick weapons plus X-Buster.",
+      "depends_on": [
+        "instant-fire-attack",
+        "resource-gated-weapon"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Sigma stages unlock after clearing maverick stages.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Sigma stages unlock after clearing maverick stages.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Life energy depletes on damage; sub-tanks extend survival.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Life energy depletes on damage; sub-tanks extend survival.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Spikes, pits, and stage-specific hazards throughout levels.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Spikes, pits, and stage-specific hazards throughout levels.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "facing-locked-shooting",
+      "role": "supporting",
+      "map_notes": "Core Jump'n'Shoot combat; aim tied to X's facing.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Core Jump'n'Shoot combat; aim tied to X's facing.",
+      "depends_on": [
+        "jump-cutoff",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "X-Buster and weapons fire on button press.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "X-Buster and weapons fire on button press.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "unrestricted-primary-fire"
+      ]
+    },
+    {
+      "mechanic_slug": "jump-cutoff",
+      "role": "supporting",
+      "map_notes": "Variable jump height for platforming and vertical shots.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Variable jump height for platforming and vertical shots.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Limited lives per stage with continue on depletion.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Limited lives per stage with continue on depletion.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Many mavericks change behavior at half health.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Many mavericks change behavior at half health.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Deterministic maverick attack cycles to learn.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Deterministic maverick attack cycles to learn.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Dash, wall jump, and air dash for precise traversal.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Dash, wall jump, and air dash for precise traversal.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "jump-cutoff"
+      ]
+    },
+    {
+      "mechanic_slug": "resource-gated-weapon",
+      "role": "supporting",
+      "map_notes": "Special weapons consume weapon energy.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Special weapons consume weapon energy.",
+      "depends_on": [
+        "ability-loadout-switching"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Enemy and boss attacks telegraph before resolving.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemy and boss attacks telegraph before resolving.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "time-charged-attack",
+      "role": "supporting",
+      "map_notes": "Hold fire for charged X-Buster shots.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hold fire for charged X-Buster shots.",
+      "depends_on": [
+        "unrestricted-primary-fire"
+      ]
+    },
+    {
+      "mechanic_slug": "unrestricted-primary-fire",
+      "role": "supporting",
+      "map_notes": "X-Buster has no ammo economy beyond charge timing.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "X-Buster has no ammo economy beyond charge timing.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "instant-fire-attack"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "jump-n-shoot",
+      "label": "Jump'n'Shoot",
+      "filter": {
+        "genre_filter": "Jump'n'Shoot"
+      }
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Mega Man X2 through its core jump'n'shoot loop.",
+    "theme_tags": [
+      "jump-n-shoot",
+      "platformer",
+      "action",
+      "boss-weakness-network",
+      "boss-gated-abilities",
+      "non-linear-boss-selection"
+    ],
+    "design_pillars": [
+      "Boss Weakness Network",
+      "Boss Gated Abilities",
+      "Non Linear Boss Selection"
+    ]
+  },
+  "gdd_outline": {
+    "overview": "Six months after the first Maverick war, X leads the Maverick Hunters. Players select maverick stages non-linearly, defeat bosses to gain abilities, and exploit boss weakness networks before confronting Sigma.",
+    "core_loop": "Select a maverick stage, navigate platforming hazards and enemies, defeat the stage boss to earn a new weapon, and use weaknesses to optimize subsequent boss order.",
+    "player_goals": [
+      "Hunt mavericks in chosen order",
+      "Build weapon toolkit via boss drops",
+      "Defeat Sigma"
+    ],
+    "constraints": [
+      "Weapon energy limits special weapon spam",
+      "Lives per stage",
+      "Maverick order affects difficulty curve"
+    ],
+    "progression_notes": "Maverick weapons persist for the campaign; weakness edges define macro routing.",
+    "combat_notes": "Maverick fights telegraph patterns; correct weakness weapon shortens encounters.",
+    "economy_notes": "Sub-tanks and weapon energy pickups support longer maverick runs."
+  },
+  "mechanic_relationships": [
+    {
+      "from_mechanic": "boss-gated-abilities",
+      "to_mechanic": "boss-weakness-network",
+      "relationship": "enables",
+      "notes": "Maverick defeats grant weapons for the weakness graph."
+    },
+    {
+      "from_mechanic": "non-linear-boss-selection",
+      "to_mechanic": "boss-weakness-network",
+      "relationship": "enables",
+      "notes": "Stage-select map exposes order as strategy."
+    },
+    {
+      "from_mechanic": "boss-weakness-network",
+      "to_mechanic": "resource-gated-weapon",
+      "relationship": "combines_with",
+      "notes": "Weakness weapons share ammo economy pressure."
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.1",
+  "slug": "soulslike",
+  "title": "Soulslike Gameplay Map",
+  "map_type": "genre",
+  "source_url": "https://github.com/blazium-games/game-mechanics-index",
+  "subject": {
+    "kind": "genre",
+    "name": "Soulslike",
+    "genres": [
+      "Action RPG",
+      "Soulslike"
+    ],
+    "influences": [
+      "Dark Souls",
+      "Demon's Souls"
+    ]
+  },
+  "narrative": {
+    "description": "Soulslike games emphasize deliberate melee combat, stamina-managed offense, and high-stakes death penalties anchored by checkpoint bonfires. Level design rewards cautious exploration and pattern mastery.",
+    "core_loop": "Explore hostile areas from a checkpoint hub, spend stamina on attacks and dodges, recover at bonfires, and defeat bosses to progress while managing risk of losing resources on death.",
+    "skills_tested": [
+      "combat timing",
+      "stamina management",
+      "pattern recognition",
+      "risk assessment",
+      "exploration"
+    ]
+  },
+  "signature_gameplay": [
+    "stamina-resource-management",
+    "melee-primary-combat",
+    "bench-checkpoint",
+    "depletable-health-pool",
+    "telegraphed-threat-loop"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "stamina-resource-management",
+      "role": "signature",
+      "map_notes": "Attack, dodge, and block actions consume a shared stamina pool.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Attack, dodge, and block actions consume a shared stamina pool.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "melee-primary-combat",
+      "role": "signature",
+      "map_notes": "Weighty melee exchanges define most encounters.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Weighty melee exchanges define most encounters.",
+      "depends_on": [
+        "depletable-health-pool",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "bench-checkpoint",
+      "role": "signature",
+      "map_notes": "Bonfire-style checkpoints heal, respawn enemies, and save progress.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 4,
+      "expression": "Bonfire-style checkpoints heal, respawn enemies, and save progress.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "signature",
+      "map_notes": "Limited healing between checkpoints raises stakes.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 4,
+      "expression": "Limited healing between checkpoints raises stakes."
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "signature",
+      "map_notes": "Enemy wind-ups must be read and punished or avoided.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 4,
+      "expression": "Enemy wind-ups must be read and punished or avoided.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses teach learnable attack patterns over repeated attempts.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 4,
+      "expression": "Bosses teach learnable attack patterns over repeated attempts.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Late bosses shift patterns across health thresholds.",
+      "domain": "combat",
+      "phase": "late",
+      "weight": 3,
+      "expression": "Late bosses shift patterns across health thresholds.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "exploration-gated-upgrades",
+      "role": "supporting",
+      "map_notes": "Stats and gear upgrades found through optional exploration.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Stats and gear upgrades found through optional exploration."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "context": {
+    "perspective": "third-person",
+    "dimension": "3d",
+    "session_type": "session-based",
+    "world_structure": "hub-and-spoke"
+  },
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "turn-based-rpg",
+      "soulslike"
+    ],
+    "influence_slugs": [
+      "dark-souls"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Soulslike through its core action rpg loop.",
+    "theme_tags": [
+      "action-rpg",
+      "soulslike",
+      "stamina-resource-management",
+      "melee-primary-combat",
+      "bench-checkpoint"
+    ],
+    "design_pillars": [
+      "Stamina Resource Management",
+      "Melee Primary Combat",
+      "Bench Checkpoint"
+    ]
+  },
+  "systems": {
+    "failure_model": "checkpoint-respawn",
+    "economy_tightness": "scarce"
+  }
+}

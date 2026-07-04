@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.1",
+  "slug": "among-us",
+  "title": "Among Us Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://en.wikipedia.org/wiki/List_of_best-selling_video_games",
+  "subject": {
+    "kind": "game",
+    "name": "Among Us",
+    "genres": [
+      "Party",
+      "Social Deduction"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Among Us is a multiplayer social deduction game where crewmates complete tasks while impostors sabotage and eliminate players without being caught.",
+    "core_loop": "Complete ship tasks as crewmates or secretly eliminate crew and sabotage systems as impostors, then debate and vote in emergency meetings to eject suspects.",
+    "skills_tested": [
+      "deception",
+      "observation",
+      "communication",
+      "deductive reasoning",
+      "task efficiency"
+    ]
+  },
+  "signature_gameplay": [
+    "asymmetric-multiplayer",
+    "evidence-deduction-puzzle",
+    "local-multiplayer-competition"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "asymmetric-multiplayer",
+      "role": "signature",
+      "map_notes": "In Among Us, players have different roles, abilities, or win conditions in the same match.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Among Us, players have different roles, abilities, or win conditions in the same match."
+    },
+    {
+      "mechanic_slug": "evidence-deduction-puzzle",
+      "role": "signature",
+      "map_notes": "In Among Us, players collect clues and deduce correct answers from constrained evidence sets.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Among Us, players collect clues and deduce correct answers from constrained evidence sets."
+    },
+    {
+      "mechanic_slug": "local-multiplayer-competition",
+      "role": "signature",
+      "map_notes": "In Among Us, same-screen or local wireless play pits players against each other in shared sessions.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Among Us, same-screen or local wireless play pits players against each other in shared sessions."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2018
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Among Us through its core party loop.",
+    "theme_tags": [
+      "party",
+      "social-deduction",
+      "asymmetric-multiplayer",
+      "evidence-deduction-puzzle",
+      "local-multiplayer-competition"
+    ],
+    "design_pillars": [
+      "Asymmetric Multiplayer",
+      "Evidence Deduction Puzzle",
+      "Local Multiplayer Competition"
+    ]
+  }
+}

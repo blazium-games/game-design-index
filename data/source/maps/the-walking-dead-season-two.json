@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.1",
+  "slug": "the-walking-dead-season-two",
+  "title": "The Walking Dead: Season Two Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.imdb.com/list/ls074825432/",
+  "subject": {
+    "kind": "game",
+    "name": "The Walking Dead: Season Two",
+    "genres": [
+      "Adventure"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "The Walking Dead: Season Two (2013) is a acclaimed adventure title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Click through scenes, combine inventory items, and solve story-driven puzzles.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "dialogue-choice-consequences",
+    "narrative-chapter-progression",
+    "environmental-trigger-switch"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "dialogue-choice-consequences",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from narrative-adventure recipe; customize for The Walking Dead: Season Two.",
+      "expression": "Branching conversations alter relationships and outcomes."
+    },
+    {
+      "mechanic_slug": "narrative-chapter-progression",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from narrative-adventure recipe; customize for The Walking Dead: Season Two.",
+      "expression": "Story advances through discrete chapters or acts."
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "signature",
+      "domain": "level",
+      "phase": "early",
+      "weight": 3,
+      "map_notes": "Uplifted from narrative-adventure recipe; customize for The Walking Dead: Season Two.",
+      "expression": "Inspectable objects and triggers reveal lore and unlock paths."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2013
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A adventure experience centered on The Walking Dead: Season Two.",
+    "theme_tags": [
+      "adventure",
+      "dialogue-choice-consequences",
+      "narrative-chapter-progression",
+      "environmental-trigger-switch"
+    ],
+    "design_pillars": [
+      "Dialogue Choice Consequences",
+      "Narrative Chapter Progression",
+      "Environmental Trigger Switch"
+    ]
+  }
+}

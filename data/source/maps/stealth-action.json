@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.1",
+  "slug": "stealth-action",
+  "title": "Stealth Action Gameplay Map",
+  "map_type": "genre",
+  "source_url": "https://github.com/blazium-games/game-mechanics-index",
+  "subject": {
+    "kind": "genre",
+    "name": "Stealth Action",
+    "genres": [
+      "Stealth",
+      "Action-Adventure"
+    ],
+    "influences": [
+      "Thief",
+      "Metal Gear Solid"
+    ]
+  },
+  "narrative": {
+    "description": "Stealth action games reward avoiding detection, planning routes, and executing silent takedowns or assassinations with escape routes.",
+    "core_loop": "Observe patrol patterns, infiltrate spaces, achieve objectives undetected or eliminate targets, then exfiltrate.",
+    "skills_tested": [
+      "observation",
+      "patience",
+      "route planning",
+      "risk assessment"
+    ],
+    "design_pillars": [
+      "player-authored approach",
+      "consequence of detection",
+      "multiple solutions"
+    ]
+  },
+  "signature_gameplay": [
+    "stealth-detection-loop",
+    "sandbox-assassination-puzzle",
+    "environmental-trigger-switch",
+    "optional-content-layering"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "stealth-detection-loop",
+      "role": "signature",
+      "map_notes": "Light, sound, and vision cones drive detection states.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Light, sound, and vision cones drive detection states."
+    },
+    {
+      "mechanic_slug": "sandbox-assassination-puzzle",
+      "role": "signature",
+      "map_notes": "Multiple approaches to eliminate or bypass targets.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 5,
+      "expression": "Multiple approaches to eliminate or bypass targets.",
+      "depends_on": [
+        "stealth-detection-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "signature",
+      "map_notes": "Doors, lights, and gadgets alter patrol routes.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 3,
+      "expression": "Doors, lights, and gadgets alter patrol routes.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "signature",
+      "map_notes": "Non-lethal and ghost run optional objectives.",
+      "domain": "level",
+      "phase": "optional",
+      "weight": 3,
+      "expression": "Non-lethal and ghost run optional objectives.",
+      "depends_on": [
+        "environmental-trigger-switch"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Combat failure punishes loud play.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 2,
+      "expression": "Combat failure punishes loud play.",
+      "optional": true
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "context": {
+    "perspective": "third-person",
+    "dimension": "3d",
+    "session_type": "mission-based",
+    "world_structure": "mission-sandbox"
+  },
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure",
+      "open-world-action"
+    ],
+    "influence_slugs": [
+      "thief-the-dark-project",
+      "dishonored-2",
+      "hitman-world-of-assassination"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Stealth Action through its core stealth loop.",
+    "theme_tags": [
+      "stealth",
+      "action-adventure",
+      "stealth-detection-loop",
+      "sandbox-assassination-puzzle",
+      "environmental-trigger-switch"
+    ],
+    "design_pillars": [
+      "player-authored approach",
+      "consequence of detection",
+      "multiple solutions"
+    ]
+  }
+}

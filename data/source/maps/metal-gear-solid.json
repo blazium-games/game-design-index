@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.1",
+  "slug": "metal-gear-solid",
+  "title": "Metal Gear Solid Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Metal Gear Solid",
+    "genres": [
+      "Stealth",
+      "Action"
+    ],
+    "influences": [
+      "Metal Gear",
+      "Syphon Filter"
+    ]
+  },
+  "narrative": {
+    "description": "Hideo Kojima's PS1 stealth landmark blends cinematic storytelling with Soliton radar evasion, codec conversations, boss duels, and multi-route infiltration of Shadow Moses Island.",
+    "core_loop": "Sneak through enemy patrols, avoid or neutralize guards, solve environmental puzzles, and confront FOXHOUND members in set-piece boss encounters.",
+    "skills_tested": [
+      "patrol timing",
+      "stealth routing",
+      "resource conservation",
+      "boss pattern mastery"
+    ]
+  },
+  "signature_gameplay": [
+    "stealth-detection-loop",
+    "mission-select-structure",
+    "telegraphed-threat-loop"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "stealth-detection-loop",
+      "role": "signature",
+      "map_notes": "Alert phases escalate from caution to combat based on sight and sound.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Alert phases escalate from caution to combat based on sight and sound.",
+      "depends_on": [
+        "mission-select-structure",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "mission-select-structure",
+      "role": "signature",
+      "map_notes": "Story advances through discrete infiltration chapters with unique objectives.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Story advances through discrete infiltration chapters with unique objectives.",
+      "depends_on": [
+        "boss-gated-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "signature",
+      "map_notes": "Bosses like Psycho Mantis and Sniper Wolf telegraph attack windows.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Bosses like Psycho Mantis and Sniper Wolf telegraph attack windows.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Each FOXHOUND fight demands unique counter-strategies.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Each FOXHOUND fight demands unique counter-strategies.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Metal Gear REX fight spans multiple arena configurations.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Metal Gear REX fight spans multiple arena configurations.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "melee-primary-combat",
+      "role": "supporting",
+      "map_notes": "CQC takedowns offer silent guard removal.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "CQC takedowns offer silent guard removal.",
+      "depends_on": [
+        "depletable-health-pool",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden items, codec secrets, and multiple difficulty modes extend replay.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden items, codec secrets, and multiple difficulty modes extend replay."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Infrared floors, gas chambers, and timed escapes constrain routes.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Infrared floors, gas chambers, and timed escapes constrain routes."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Life bar depletes from gunfire and boss hits.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Life bar depletes from gunfire and boss hits."
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Save stations with codec frequency checkpoint progress.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Save stations with codec frequency checkpoint progress.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Firearms fire on trigger with ammo scarcity pressure.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Firearms fire on trigger with ammo scarcity pressure."
+    },
+    {
+      "mechanic_slug": "special-move-command-input",
+      "role": "supporting",
+      "map_notes": "Codec and item menus require deliberate input during real-time play.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Codec and item menus require deliberate input during real-time play.",
+      "depends_on": [
+        "instant-fire-attack"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Defeating FOXHOUND members unlocks subsequent story areas.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Defeating FOXHOUND members unlocks subsequent story areas.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "first-person-platforming",
+      "role": "supporting",
+      "map_notes": "Vent crawling and precision jumps occur from first-person crawl spaces.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Vent crawling and precision jumps occur from first-person crawl spaces."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1998
+  },
+  "relationships": {
+    "genre_maps": [
+      "stealth-action"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Metal Gear Solid through its core stealth loop.",
+    "theme_tags": [
+      "stealth",
+      "action",
+      "stealth-detection-loop",
+      "mission-select-structure",
+      "telegraphed-threat-loop"
+    ],
+    "design_pillars": [
+      "Stealth Detection Loop",
+      "Mission Select Structure",
+      "Telegraphed Threat Loop"
+    ]
+  }
+}

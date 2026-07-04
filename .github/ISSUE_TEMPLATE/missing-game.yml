@@ -1,0 +1,31 @@
+name: Missing game
+description: Request indexing of a new title
+title: "Add game: "
+labels: ["data", "missing-game"]
+body:
+  - type: input
+    id: game_name
+    attributes:
+      label: Game name
+    validations:
+      required: true
+  - type: input
+    id: year
+    attributes:
+      label: Release year (optional)
+  - type: textarea
+    id: genres
+    attributes:
+      label: Genres
+      description: Primary genres for this title
+    validations:
+      required: true
+  - type: textarea
+    id: signatures
+    attributes:
+      label: Signature mechanics (if known)
+      description: Mechanic slugs or plain-language descriptions
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context

@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.1",
+  "slug": "gyruss",
+  "title": "Gyruss Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retroarcadia.blog/2026/03/18/top-ten-favourite-3d-shoot-em-ups/",
+  "subject": {
+    "kind": "game",
+    "name": "Gyruss",
+    "genres": [
+      "Shooter",
+      "Arcade"
+    ],
+    "influences": [
+      "Tempest",
+      "Galaga"
+    ]
+  },
+  "narrative": {
+    "description": "Konami's tube shooter sends the player's ship spiraling around a circular playfield toward planet targets, rotating through a cylindrical enemy formation while timing shots through incoming waves.",
+    "core_loop": "Rotate around the tube perimeter, destroy enemy waves spiraling inward, grab power-ups, and reach each planet stage boss.",
+    "skills_tested": [
+      "rotational timing",
+      "wave prioritization",
+      "peripheral tracking",
+      "power-up routing"
+    ]
+  },
+  "signature_gameplay": [
+    "tube-lane-rotation",
+    "fixed-formation-shooter",
+    "sector-clear-progression"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "tube-lane-rotation",
+      "role": "signature",
+      "map_notes": "Ship orbits a circular tube perimeter, rotating to face inward-spiraling enemies.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Ship orbits a circular tube perimeter, rotating to face inward-spiraling enemies.",
+      "depends_on": [
+        "sector-clear-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "fixed-formation-shooter",
+      "role": "signature",
+      "map_notes": "Enemies arrive in Galaga-style formations that spiral toward the player.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Enemies arrive in Galaga-style formations that spiral toward the player.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "sector-clear-progression",
+      "role": "signature",
+      "map_notes": "Progress through solar system planets as discrete stage gauntlets.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Progress through solar system planets as discrete stage gauntlets.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Dual cannons fire immediately while rotating.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Dual cannons fire immediately while rotating."
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "supporting",
+      "map_notes": "Double-shot and spread power-ups temporarily upgrade firepower.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Double-shot and spread power-ups temporarily upgrade firepower.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Ship destroyed on enemy contact or bullet hits.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Ship destroyed on enemy contact or bullet hits.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Bonus ships at score thresholds extend the solar run.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bonus ships at score thresholds extend the solar run.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "supporting",
+      "map_notes": "Enemies emit radial bullet spreads during spiral dives.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemies emit radial bullet spreads during spiral dives.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Planet bosses follow repeating orbit-and-volley cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Planet bosses follow repeating orbit-and-volley cycles.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Dive-bombing enemies telegraph with a brief pause before charging.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Dive-bombing enemies telegraph with a brief pause before charging.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Late-planet bosses accelerate pattern speed across phases.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Late-planet bosses accelerate pattern speed across phases.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Tube edges constrain rotation arc during dense waves.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Tube edges constrain rotation arc during dense waves."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1983
+  },
+  "relationships": {
+    "influence_slugs": [
+      "galaga"
+    ],
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Gyruss through its core shooter loop.",
+    "theme_tags": [
+      "shooter",
+      "arcade",
+      "tube-lane-rotation",
+      "fixed-formation-shooter",
+      "sector-clear-progression"
+    ],
+    "design_pillars": [
+      "Tube Lane Rotation",
+      "Fixed Formation Shooter",
+      "Sector Clear Progression"
+    ]
+  }
+}

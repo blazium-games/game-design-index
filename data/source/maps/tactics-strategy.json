@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.1",
+  "slug": "tactics-strategy",
+  "title": "Tactics Strategy Gameplay Map",
+  "map_type": "genre",
+  "source_url": "https://github.com/blazium-games/game-mechanics-index",
+  "subject": {
+    "kind": "genre",
+    "name": "Tactics Strategy",
+    "genres": [
+      "Strategy",
+      "Tactics"
+    ],
+    "influences": [
+      "XCOM",
+      "Fire Emblem"
+    ]
+  },
+  "narrative": {
+    "description": "Tactics games use grid or turn-based positioning where cover, unit roles, and permadeath tension drive each encounter.",
+    "core_loop": "Deploy units on a grid, take turns moving and attacking, use cover and abilities, and preserve squad through missions.",
+    "skills_tested": [
+      "positioning",
+      "team composition",
+      "risk management",
+      "long-term roster care"
+    ],
+    "design_pillars": [
+      "positioning is the puzzle",
+      "meaningful roster stakes",
+      "clear turn clarity"
+    ]
+  },
+  "signature_gameplay": [
+    "tactics-grid-movement",
+    "turn-based-party-combat",
+    "cover-based-positioning",
+    "permadeath-unit-loss"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "tactics-grid-movement",
+      "role": "signature",
+      "map_notes": "Tile grid constrains movement and range.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Tile grid constrains movement and range.",
+      "depends_on": [
+        "cover-based-positioning",
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "turn-based-party-combat",
+      "role": "signature",
+      "map_notes": "Side or phase turns for each unit.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Side or phase turns for each unit.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "cover-based-positioning",
+      "role": "signature",
+      "map_notes": "High cover and flanking modify hit chance.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 4,
+      "expression": "High cover and flanking modify hit chance.",
+      "depends_on": [
+        "tactics-grid-movement",
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "permadeath-unit-loss",
+      "role": "signature",
+      "map_notes": "Fallen units may be lost permanently.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 4,
+      "expression": "Fallen units may be lost permanently.",
+      "depends_on": [
+        "tactics-grid-movement",
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "supporting",
+      "map_notes": "Pre-mission loadout choices.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Pre-mission loadout choices.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "supporting",
+      "map_notes": "Level-ups between missions.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Level-ups between missions.",
+      "depends_on": [
+        "equipment-loadout"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "context": {
+    "perspective": "isometric",
+    "dimension": "2.5d",
+    "session_type": "campaign",
+    "world_structure": "mission-grid"
+  },
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "turn-based-rpg"
+    ],
+    "influence_slugs": [
+      "xcom-enemy-unknown",
+      "fire-emblem-three-houses",
+      "valkyria-chronicles"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Tactics Strategy through its core strategy loop.",
+    "theme_tags": [
+      "strategy",
+      "tactics",
+      "tactics-grid-movement",
+      "turn-based-party-combat",
+      "cover-based-positioning"
+    ],
+    "design_pillars": [
+      "positioning is the puzzle",
+      "meaningful roster stakes",
+      "clear turn clarity"
+    ]
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.1",
+  "slug": "zaxxon-atari-2600",
+  "title": "Zaxxon (Atari 2600) Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retroarcadia.blog/2026/03/18/top-ten-favourite-3d-shoot-em-ups/",
+  "subject": {
+    "kind": "game",
+    "name": "Zaxxon (Atari 2600)",
+    "genres": [
+      "Shooter",
+      "Arcade"
+    ],
+    "influences": [
+      "Zaxxon",
+      "Scramble"
+    ]
+  },
+  "narrative": {
+    "description": "The Atari 2600 port of Sega's isometric classic recreates the fortress assault loop with altitude-based dodging, fuel management, and diagonal scrolling through enemy turrets and fuel depots.",
+    "core_loop": "Fly through the isometric fortress, manage fuel by shooting depots, adjust altitude to pass walls, and destroy the Zaxxon robot at the end.",
+    "skills_tested": [
+      "altitude judgment",
+      "fuel management",
+      "isometric routing",
+      "turret timing"
+    ]
+  },
+  "signature_gameplay": [
+    "pseudo-3d-scroll-shooter",
+    "height-plane-shooting",
+    "sector-clear-progression"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "pseudo-3d-scroll-shooter",
+      "role": "signature",
+      "map_notes": "Diagonal isometric scroll creates depth illusion on the 2600 hardware.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Diagonal isometric scroll creates depth illusion on the 2600 hardware.",
+      "depends_on": [
+        "projectile-pattern-enemy-design",
+        "sector-clear-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "height-plane-shooting",
+      "role": "signature",
+      "map_notes": "Shadow altimeter shows whether the ship clears walls and ground targets.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Shadow altimeter shows whether the ship clears walls and ground targets.",
+      "depends_on": [
+        "pseudo-3d-scroll-shooter"
+      ]
+    },
+    {
+      "mechanic_slug": "sector-clear-progression",
+      "role": "signature",
+      "map_notes": "Three fortress sorties escalate difficulty before the Zaxxon confrontation.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Three fortress sorties escalate difficulty before the Zaxxon confrontation.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Ship destroyed on wall contact or sustained fire.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Ship destroyed on wall contact or sustained fire.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Limited lives with restart at sector beginning.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Limited lives with restart at sector beginning.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Laser fires continuously while button held.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Laser fires continuously while button held."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Fortress walls require precise altitude changes to pass.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Fortress walls require precise altitude changes to pass."
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "supporting",
+      "map_notes": "Turrets emit angled bullet streams across the playfield.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Turrets emit angled bullet streams across the playfield.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Zaxxon robot repeats a learnable sweep-and-fire pattern.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Zaxxon robot repeats a learnable sweep-and-fire pattern.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Missile launches preceded by brief targeting flashes.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Missile launches preceded by brief targeting flashes.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Final robot requires hitting a narrow weak point repeatedly.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Final robot requires hitting a narrow weak point repeatedly.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Sector boundaries act as implicit checkpoints between fortresses.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Sector boundaries act as implicit checkpoints between fortresses.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1982
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Zaxxon (Atari 2600) through its core shooter loop.",
+    "theme_tags": [
+      "shooter",
+      "arcade",
+      "pseudo-3d-scroll-shooter",
+      "height-plane-shooting",
+      "sector-clear-progression"
+    ],
+    "design_pillars": [
+      "Pseudo 3D Scroll Shooter",
+      "Height Plane Shooting",
+      "Sector Clear Progression"
+    ]
+  }
+}

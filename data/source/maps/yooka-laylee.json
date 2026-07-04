@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.1",
+  "slug": "yooka-laylee",
+  "title": "Yooka-Laylee Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Yooka-Laylee",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Banjo-Kazooie",
+      "Super Mario 64"
+    ]
+  },
+  "narrative": {
+    "description": "Playtonic's Banjo spiritual successor revives collectathon hub worlds with dual-character abilities, pagie collection, and corporate-satire themed stages.",
+    "core_loop": "Collect pagies and quills in sprawling hub worlds, purchase new abilities from Trowzer, and infiltrate Capital B's corporate tower.",
+    "skills_tested": [
+      "ability purchase routing",
+      "dual-character coordination",
+      "collectible quotas"
+    ]
+  },
+  "signature_gameplay": [
+    "collectathon-token-gating",
+    "purchase-gated-upgrade",
+    "character-swap-abilities"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Pagies gate world expansion; quills purchase ability upgrades.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Pagies gate world expansion; quills purchase ability upgrades.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "signature",
+      "map_notes": "Trowzer sells moves like buddy slam and air dash gating new areas.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Trowzer sells moves like buddy slam and air dash gating new areas."
+    },
+    {
+      "mechanic_slug": "character-swap-abilities",
+      "role": "signature",
+      "map_notes": "Yooka and Laylee combine for slams, rolls, and flight in tandem.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Yooka and Laylee combine for slams, rolls, and flight in tandem.",
+      "depends_on": [
+        "ability-gated-exploration",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "supporting",
+      "map_notes": "Hivory Towers hub expands as pagies unlock new world portals.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hivory Towers hub expands as pagies unlock new world portals.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "supporting",
+      "map_notes": "Reptile roll, buddy slam, and flight open backtrack routes.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Reptile roll, buddy slam, and flight open backtrack routes."
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Ghost writers, play coins, and arcade mini-games extend completion.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Ghost writers, play coins, and arcade mini-games extend completion."
+    },
+    {
+      "mechanic_slug": "glide-traversal",
+      "role": "supporting",
+      "map_notes": "Laylee flight extends traversal across large hub zones.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Laylee flight extends traversal across large hub zones.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "World bosses and Capital B gate story progress.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "World bosses and Capital B gate story progress.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Toxic pools and moving platforms test upgraded moves.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Toxic pools and moving platforms test upgraded moves.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Pagie gates save world state between sessions.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Pagie gates save world state between sessions.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses follow arena-specific learnable cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses follow arena-specific learnable cycles."
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Tail spin and buddy slam clear fodder enemies.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Tail spin and buddy slam clear fodder enemies."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Lives or health gates retries on failure.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lives or health gates retries on failure.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Platform sections demand accurate jump timing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Platform sections demand accurate jump timing.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2017
+  },
+  "relationships": {
+    "influence_slugs": [
+      "banjo-kazooie",
+      "super-mario-64"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Yooka-Laylee through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "collectathon-token-gating",
+      "purchase-gated-upgrade",
+      "character-swap-abilities"
+    ],
+    "design_pillars": [
+      "Collectathon Token Gating",
+      "Purchase Gated Upgrade",
+      "Character Swap Abilities"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "moderate"
+  }
+}

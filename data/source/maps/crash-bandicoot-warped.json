@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.1",
+  "slug": "crash-bandicoot-warped",
+  "title": "Crash Bandicoot: Warped Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Crash Bandicoot: Warped",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Crash Bandicoot",
+      "Super Mario 64"
+    ]
+  },
+  "narrative": {
+    "description": "Naughty Dog's time-traveling Crash sequel adds Coco playability, vehicle stages, and relic racing across Egyptian, medieval, and future eras.",
+    "core_loop": "Collect crystals across time periods, earn relics in time trials, use super powers from Uka Uka's sibling, and defeat N. Tropy.",
+    "skills_tested": [
+      "time trial routing",
+      "vehicle control",
+      "power-up timing"
+    ]
+  },
+  "signature_gameplay": [
+    "linear-stage-gauntlet",
+    "collectathon-token-gating",
+    "character-swap-abilities"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "signature",
+      "map_notes": "Time-themed stages are forward gauntlets ending in crystal goals.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Time-themed stages are forward gauntlets ending in crystal goals.",
+      "depends_on": [
+        "boss-gated-progression",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Crystals gate hub progression; gems and relics drive completion.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Crystals gate hub progression; gems and relics drive completion.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "character-swap-abilities",
+      "role": "signature",
+      "map_notes": "Crash and Coco swap for stages requiring distinct traversal profiles.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Crash and Coco swap for stages requiring distinct traversal profiles.",
+      "depends_on": [
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Spin and body slam clear enemies and break crates.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Spin and body slam clear enemies and break crates."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Lives from wumpa fruit gate retries.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lives from wumpa fruit gate retries.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Checkpoint crates activate mid-stage respawn.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Checkpoint crates activate mid-stage respawn.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Colored gem paths and death routes extend replay.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Colored gem paths and death routes extend replay."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Medieval traps, jetski courses, and tiger mounts vary hazards.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Medieval traps, jetski courses, and tiger mounts vary hazards.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Bosses like Tiny Tiger gate time hub expansion.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses like Tiny Tiger gate time hub expansion.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "N. Tropy and Cortex follow learnable attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "N. Tropy and Cortex follow learnable attack cycles.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Death routes and gem paths demand exact jump timing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Death routes and gem paths demand exact jump timing.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "supporting",
+      "map_notes": "Super belly flop, double jump, and death tornado alter traversal.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Super belly flop, double jump, and death tornado alter traversal.",
+      "depends_on": [
+        "depletable-health-pool",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Boss charge attacks telegraph with visible wind-up.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss charge attacks telegraph with visible wind-up.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health depletes on hazard and enemy contact.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health depletes on hazard and enemy contact.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1998
+  },
+  "relationships": {
+    "influence_slugs": [
+      "crash-bandicoot",
+      "super-mario-64"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Crash Bandicoot: Warped through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "linear-stage-gauntlet",
+      "collectathon-token-gating",
+      "character-swap-abilities"
+    ],
+    "design_pillars": [
+      "Linear Stage Gauntlet",
+      "Collectathon Token Gating",
+      "Character Swap Abilities"
+    ]
+  }
+}

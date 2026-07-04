@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.1",
+  "slug": "tonic-trouble",
+  "title": "Tonic Trouble Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Tonic Trouble",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Rayman",
+      "Banjo-Kazooie"
+    ]
+  },
+  "narrative": {
+    "description": "Ubisoft's N64 oddity stars Ed the worm through surreal worlds with gadget-assisted traversal and slapstick hazard navigation.",
+    "core_loop": "Use gadgets to solve environmental puzzles, collect missing pieces, and defeat the evil Hectic Pixel across hub-linked zones.",
+    "skills_tested": [
+      "gadget routing",
+      "puzzle sequencing",
+      "hazard timing"
+    ]
+  },
+  "signature_gameplay": [
+    "hub-world-stage-gates",
+    "ability-gated-exploration",
+    "collectathon-token-gating"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "signature",
+      "map_notes": "Zone hubs connect to linear stages gated by piece collection.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Zone hubs connect to linear stages gated by piece collection.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "signature",
+      "map_notes": "Fruit gadgets like helicopter and plunger open new traversal routes.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Fruit gadgets like helicopter and plunger open new traversal routes."
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Missing pieces and collectibles gate zone completion.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Missing pieces and collectibles gate zone completion.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Hazards and obstacles test traversal mastery in Tonic Trouble.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hazards and obstacles test traversal mastery in Tonic Trouble.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Checkpoints and stage boundaries save progress between attempts.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Checkpoints and stage boundaries save progress between attempts.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Lives or health gates retries on failure.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lives or health gates retries on failure.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Boss encounters follow learnable attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss encounters follow learnable attack cycles.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden collectibles reward thorough exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden collectibles reward thorough exploration."
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Platform sections demand accurate jump timing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Platform sections demand accurate jump timing.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Enemy attacks telegraph before striking.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemy attacks telegraph before striking.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health depletes on hazard and enemy contact.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health depletes on hazard and enemy contact.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Boss victories and key objectives unlock subsequent content. (Tonic Trouble)",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss victories and key objectives unlock subsequent content. (Tonic Trouble)",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1999
+  },
+  "relationships": {
+    "influence_slugs": [
+      "rayman",
+      "banjo-kazooie"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Tonic Trouble through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "hub-world-stage-gates",
+      "ability-gated-exploration",
+      "collectathon-token-gating"
+    ],
+    "design_pillars": [
+      "Hub World Stage Gates",
+      "Ability Gated Exploration",
+      "Collectathon Token Gating"
+    ]
+  }
+}

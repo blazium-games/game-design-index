@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.1",
+  "slug": "tetris",
+  "title": "Tetris Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-2d-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Tetris",
+    "genres": [
+      "Puzzle"
+    ],
+    "influences": [
+      "Puzzle Games",
+      "Arcade"
+    ]
+  },
+  "narrative": {
+    "description": "Tetromino shapes fall into a vertical well and the player rotates and positions them to complete horizontal lines. The Game Boy version pairs iconic music with endlessly escalating speed, challenging players to survive as long as possible and maximize score.",
+    "core_loop": "Pieces fall one at a time, player rotates and slides them to fit gaps, completed lines clear and award points, fall speed increases with level progression, and the game ends when the stack reaches the top.",
+    "skills_tested": [
+      "spatial reasoning",
+      "planning",
+      "reaction time",
+      "pattern recognition",
+      "speed adaptation"
+    ]
+  },
+  "signature_gameplay": [
+    "line-clear-scoring",
+    "tetromino-rotation",
+    "escalating-drop-speed"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "line-clear-scoring",
+      "role": "signature",
+      "map_notes": "Completing one to four horizontal lines at once clears them and awards escalating points.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Completing one to four horizontal lines at once clears them and awards escalating points.",
+      "depends_on": [
+        "escalating-drop-speed",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "tetromino-rotation",
+      "role": "signature",
+      "map_notes": "Each of seven piece shapes rotates in 90-degree increments to fit the well.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Each of seven piece shapes rotates in 90-degree increments to fit the well.",
+      "depends_on": [
+        "grid-placement-puzzle",
+        "line-clear-scoring"
+      ]
+    },
+    {
+      "mechanic_slug": "escalating-drop-speed",
+      "role": "signature",
+      "map_notes": "Fall speed increases with each level, compressing decision time.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Fall speed increases with each level, compressing decision time.",
+      "depends_on": [
+        "fill-reward-progression-loop",
+        "line-clear-scoring"
+      ]
+    },
+    {
+      "mechanic_slug": "grid-placement-puzzle",
+      "role": "supporting",
+      "map_notes": "Player slides and rotates pieces within a fixed grid to create contiguous rows.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Player slides and rotates pieces within a fixed grid to create contiguous rows.",
+      "depends_on": [
+        "line-clear-scoring",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "hard-drop-placement",
+      "role": "supporting",
+      "map_notes": "Instant drop input locks the piece at its current column immediately.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Instant drop input locks the piece at its current column immediately.",
+      "depends_on": [
+        "soft-drop-control",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "soft-drop-control",
+      "role": "supporting",
+      "map_notes": "Hold down to accelerate fall speed for faster placement at score cost.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hold down to accelerate fall speed for faster placement at score cost.",
+      "depends_on": [
+        "escalating-drop-speed",
+        "hard-drop-placement"
+      ]
+    },
+    {
+      "mechanic_slug": "next-piece-preview",
+      "role": "supporting",
+      "map_notes": "Preview window shows the upcoming tetromino for advance planning.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Preview window shows the upcoming tetromino for advance planning.",
+      "depends_on": [
+        "grid-placement-puzzle",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Game over when the stack tops out; player restarts from level 1.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Game over when the stack tops out; player restarts from level 1."
+    },
+    {
+      "mechanic_slug": "fill-reward-progression-loop",
+      "role": "supporting",
+      "map_notes": "Line clears fill the level meter; every 10 lines advances level and speed.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Line clears fill the level meter; every 10 lines advances level and speed."
+    },
+    {
+      "mechanic_slug": "lock-delay-placement",
+      "role": "supporting",
+      "map_notes": "Brief window after landing allows final horizontal adjustments before lock.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Brief window after landing allows final horizontal adjustments before lock.",
+      "depends_on": [
+        "hard-drop-placement",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-line-scoring-multiplier",
+      "role": "supporting",
+      "map_notes": "Clearing two, three, or four lines at once awards disproportionately higher scores.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Clearing two, three, or four lines at once awards disproportionately higher scores.",
+      "depends_on": [
+        "grid-placement-puzzle",
+        "line-clear-scoring"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Tetris through its core puzzle loop.",
+    "theme_tags": [
+      "puzzle",
+      "line-clear-scoring",
+      "tetromino-rotation",
+      "escalating-drop-speed"
+    ],
+    "design_pillars": [
+      "Line Clear Scoring",
+      "Tetromino Rotation",
+      "Escalating Drop Speed"
+    ]
+  }
+}

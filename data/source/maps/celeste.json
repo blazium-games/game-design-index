@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.1",
+  "slug": "celeste",
+  "title": "Celeste Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.metacritic.com/browse/game/all/all/all-time/metascore/",
+  "subject": {
+    "kind": "game",
+    "name": "Celeste",
+    "genres": [
+      "Platformer"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Celeste is a precision platformer about climbing a mountain through tight rooms, with optional assist modes for accessibility.",
+    "core_loop": "Navigate hazard-filled rooms, master dash and jump timing, reach checkpoints, and climb chapter-based stages toward the summit.",
+    "skills_tested": [
+      "timing",
+      "muscle memory",
+      "persistence",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "precision-platforming",
+    "assist-mode-accessibility",
+    "environmental-hazard-navigation",
+    "mid-level-checkpoint"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "signature",
+      "map_notes": "In Celeste, a character locomotion system in which movement responds immediately and exactly to player input, with no acceleration ramp-up, momentum carry, or analog smoothing.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Celeste, a character locomotion system in which movement responds immediately and exactly to player input, with no acceleration ramp-up, momentum carry, or analog smoothing.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "assist-mode-accessibility",
+      "role": "signature",
+      "map_notes": "In Celeste, optional modifiers reduce difficulty spikes for players who want narrative focus.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Celeste, optional modifiers reduce difficulty spikes for players who want narrative focus.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "signature",
+      "map_notes": "In Celeste, a traversal mechanic in which the level space contains persistent damaging or lethal obstacles that the player must avoid through precise movement.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Celeste, a traversal mechanic in which the level space contains persistent damaging or lethal obstacles that the player must avoid through precise movement.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "signature",
+      "map_notes": "In Celeste, a save point within a stage resets the player to that position on death rather than restarting the entire level.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Celeste, a save point within a stage resets the player to that position on death rather than restarting the entire level."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2018
+  },
+  "relationships": {
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Celeste through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "precision-platforming",
+      "assist-mode-accessibility",
+      "environmental-hazard-navigation"
+    ],
+    "design_pillars": [
+      "Precision Platforming",
+      "Assist Mode Accessibility",
+      "Environmental Hazard Navigation"
+    ]
+  },
+  "systems": {
+    "failure_model": "checkpoint-respawn"
+  }
+}

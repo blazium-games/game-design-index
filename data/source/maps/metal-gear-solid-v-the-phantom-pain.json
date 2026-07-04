@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.1",
+  "slug": "metal-gear-solid-v-the-phantom-pain",
+  "title": "Metal Gear Solid V: The Phantom Pain Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.imdb.com/list/ls074825432/",
+  "subject": {
+    "kind": "game",
+    "name": "Metal Gear Solid V: The Phantom Pain",
+    "genres": [
+      "Stealth"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Metal Gear Solid V: The Phantom Pain (2015) is a acclaimed stealth title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Engage core systems repeatedly to overcome challenges and advance.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "stealth-detection-loop",
+    "sandbox-assassination-puzzle",
+    "environmental-trigger-switch",
+    "optional-content-layering"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "stealth-detection-loop",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from stealth-action recipe; customize for Metal Gear Solid V: The Phantom Pain.",
+      "expression": "Light, sound, and vision cones drive detection states."
+    },
+    {
+      "mechanic_slug": "sandbox-assassination-puzzle",
+      "role": "signature",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 5,
+      "map_notes": "Uplifted from stealth-action recipe; customize for Metal Gear Solid V: The Phantom Pain.",
+      "expression": "Multiple approaches to eliminate or bypass targets.",
+      "depends_on": [
+        "stealth-detection-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "signature",
+      "domain": "level",
+      "phase": "early",
+      "weight": 3,
+      "map_notes": "Uplifted from stealth-action recipe; customize for Metal Gear Solid V: The Phantom Pain.",
+      "expression": "Doors, lights, and gadgets alter patrol routes.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "signature",
+      "domain": "level",
+      "phase": "optional",
+      "weight": 3,
+      "map_notes": "Uplifted from stealth-action recipe; customize for Metal Gear Solid V: The Phantom Pain.",
+      "expression": "Non-lethal and ghost run optional objectives.",
+      "depends_on": [
+        "environmental-trigger-switch"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 2,
+      "map_notes": "Uplifted from stealth-action recipe; customize for Metal Gear Solid V: The Phantom Pain.",
+      "optional": true,
+      "expression": "Combat failure punishes loud play."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2015
+  },
+  "relationships": {
+    "genre_maps": [
+      "stealth-action"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A stealth experience centered on Metal Gear Solid V: The Phantom Pain.",
+    "theme_tags": [
+      "stealth",
+      "stealth-detection-loop",
+      "sandbox-assassination-puzzle",
+      "environmental-trigger-switch"
+    ],
+    "design_pillars": [
+      "Stealth Detection Loop",
+      "Sandbox Assassination Puzzle",
+      "Environmental Trigger Switch"
+    ]
+  }
+}

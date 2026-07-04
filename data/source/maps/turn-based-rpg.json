@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.1",
+  "slug": "turn-based-rpg",
+  "title": "Turn-Based RPG Gameplay Map",
+  "map_type": "genre",
+  "source_url": "https://github.com/blazium-games/game-mechanics-index",
+  "subject": {
+    "kind": "genre",
+    "name": "Turn-Based RPG",
+    "genres": [
+      "RPG",
+      "JRPG"
+    ],
+    "influences": [
+      "Final Fantasy",
+      "Dragon Quest"
+    ]
+  },
+  "narrative": {
+    "description": "Turn-based RPGs alternate between overworld exploration and menu-driven party combat. Stat growth, equipment, and ability unlocks compound over a long campaign.",
+    "core_loop": "Explore overworld and dungeons, trigger turn-based battles, earn experience and loot, manage party loadouts at towns, and advance story through boss gates.",
+    "skills_tested": [
+      "team composition",
+      "resource management",
+      "pattern recognition",
+      "build planning"
+    ]
+  },
+  "signature_gameplay": [
+    "turn-based-party-combat",
+    "rpg-stat-progression",
+    "overworld-map-stage-selection",
+    "equipment-loadout",
+    "map-resource-monster-groups"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "turn-based-party-combat",
+      "role": "signature",
+      "map_notes": "Party members act in turns selecting skills and targets.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Party members act in turns selecting skills and targets.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "signature",
+      "map_notes": "Level-ups and stat curves define long-term power growth.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Level-ups and stat curves define long-term power growth.",
+      "depends_on": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "mechanic_slug": "overworld-map-stage-selection",
+      "role": "signature",
+      "map_notes": "World map or hub connects towns, dungeons, and story beats.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 4,
+      "expression": "World map or hub connects towns, dungeons, and story beats.",
+      "depends_on": [
+        "boss-gated-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "signature",
+      "map_notes": "Weapons, armor, and accessories customize party roles.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 4,
+      "expression": "Weapons, armor, and accessories customize party roles.",
+      "depends_on": [
+        "purchase-gated-upgrade",
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "map-resource-monster-groups",
+      "role": "signature",
+      "map_notes": "Random or visible encounters populate dungeons and overworld.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 3,
+      "expression": "Random or visible encounters populate dungeons and overworld."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Shops convert currency into gear and consumables.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Shops convert currency into gear and consumables."
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Story bosses gate new regions or abilities.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Story bosses gate new regions or abilities.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Late-game bosses introduce phase shifts and new abilities.",
+      "domain": "combat",
+      "phase": "late",
+      "weight": 3,
+      "expression": "Late-game bosses introduce phase shifts and new abilities."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "context": {
+    "perspective": "top-down",
+    "dimension": "2d",
+    "session_type": "campaign",
+    "world_structure": "overworld-and-dungeons"
+  },
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "genre_maps": [
+      "turn-based-rpg"
+    ],
+    "influence_slugs": [
+      "final-fantasy",
+      "dragon-quest"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Turn-Based RPG through its core rpg loop.",
+    "theme_tags": [
+      "rpg",
+      "jrpg",
+      "turn-based-party-combat",
+      "rpg-stat-progression",
+      "overworld-map-stage-selection"
+    ],
+    "design_pillars": [
+      "Turn Based Party Combat",
+      "Rpg Stat Progression",
+      "Overworld Map Stage Selection"
+    ]
+  }
+}
