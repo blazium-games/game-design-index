@@ -1,0 +1,306 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "side-view",
+    "world_structure": "interconnected-single-map"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "interconnected world",
+      "ability-gated routes",
+      "rewarding backtracking"
+    ],
+    "player_fantasy": "Experience Metroidvania through its core metroidvania loop.",
+    "theme_tags": [
+      "metroidvania",
+      "platformer",
+      "action-adventure",
+      "ability-gated-exploration",
+      "ability-driven-backtracking",
+      "exploration-gated-upgrades"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat pacing should match genre tempo and readable threat language.",
+    "constraints": [
+      "Failure model: checkpoint-respawn",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Explore interconnected regions, defeat bosses to gain abilities, backtrack to open shortcuts and secrets, and rest at checkpoints between combat encounters.",
+    "economy_notes": "Tune earn/spend to genre tension targets.",
+    "overview": "Metroidvania games combine interconnected world exploration with ability-gated progression. Players backtrack through a single large map as new movement and combat tools unlock previously inaccessible routes.",
+    "player_goals": [
+      "interconnected world",
+      "ability-gated routes",
+      "rewarding backtracking"
+    ],
+    "progression_notes": "Follow signature mechanic dependencies across early, mid, and late phases."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "depends_on": [
+        "ability-driven-backtracking",
+        "exploration-gated-upgrades"
+      ],
+      "domain": "progression",
+      "expression": "Hallmark spatial locks requiring specific movement or combat abilities.",
+      "map_notes": "Hallmark spatial locks requiring specific movement or combat abilities.",
+      "mechanic_slug": "ability-gated-exploration",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "ability-gated-exploration",
+        "exploration-gated-upgrades"
+      ],
+      "domain": "progression",
+      "expression": "Revisiting prior areas with new tools reveals secrets and shortcuts.",
+      "map_notes": "Revisiting prior areas with new tools reveals secrets and shortcuts.",
+      "mechanic_slug": "ability-driven-backtracking",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "ability-gated-exploration"
+      ],
+      "domain": "progression",
+      "expression": "Upgrades found through exploration rather than linear stage rewards.",
+      "map_notes": "Upgrades found through exploration rather than linear stage rewards.",
+      "mechanic_slug": "exploration-gated-upgrades",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "progression",
+      "expression": "Major bosses guard ability unlocks and story milestones.",
+      "map_notes": "Major bosses guard ability unlocks and story milestones.",
+      "mechanic_slug": "boss-gated-progression",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "ability-driven-backtracking",
+        "depletable-health-pool"
+      ],
+      "domain": "session",
+      "expression": "Safe rest points for save, heal, and respawn anchoring.",
+      "map_notes": "Safe rest points for save, heal, and respawn anchoring.",
+      "mechanic_slug": "bench-checkpoint",
+      "phase": "early",
+      "role": "signature",
+      "weight": 3
+    },
+    {
+      "domain": "economy",
+      "expression": "Health depletion creates tension between checkpoints.",
+      "map_notes": "Health depletion creates tension between checkpoints.",
+      "mechanic_slug": "depletable-health-pool",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "level",
+      "expression": "Optional combat rooms and resource farming routes.",
+      "map_notes": "Optional combat rooms and resource farming routes.",
+      "mechanic_slug": "map-resource-monster-groups",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 2
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Explore interconnected regions, defeat bosses to gain abilities, backtrack to open shortcuts and secrets, and rest at checkpoints between combat encounters.",
+    "description": "Metroidvania games combine interconnected world exploration with ability-gated progression. Players backtrack through a single large map as new movement and combat tools unlock previously inaccessible routes.",
+    "design_pillars": [
+      "interconnected world",
+      "ability-gated routes",
+      "rewarding backtracking"
+    ],
+    "skills_tested": [
+      "exploration",
+      "spatial navigation",
+      "combat timing",
+      "resource management"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "precision-platformer",
+      "soulslike"
+    ],
+    "influence_slugs": [
+      "metroid",
+      "castlevania-symphony-of-the-night"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "ability-gated-exploration",
+    "ability-driven-backtracking",
+    "exploration-gated-upgrades",
+    "boss-gated-progression",
+    "bench-checkpoint"
+  ],
+  "skill_slugs": [
+    "exploration",
+    "spatial-navigation",
+    "combat-timing",
+    "resource-management"
+  ],
+  "slug": "metroidvania",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Metroidvania",
+      "Platformer",
+      "Action-Adventure"
+    ],
+    "influences": [
+      "Metroid",
+      "Castlevania"
+    ],
+    "kind": "genre",
+    "name": "Metroidvania"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "checkpoint-respawn",
+    "metaprogression": false,
+    "pacing": {
+      "early": "Teach ability gated exploration with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Ability Gated Exploration",
+        "mechanics": [
+          "ability-gated-exploration"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Ability Driven Backtracking",
+        "mechanics": [
+          "ability-driven-backtracking"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Exploration Gated Upgrades",
+        "mechanics": [
+          "exploration-gated-upgrades"
+        ]
+      },
+      {
+        "id": "phase-4",
+        "label": "Boss Gated Progression",
+        "mechanics": [
+          "boss-gated-progression"
+        ]
+      }
+    ]
+  },
+  "title": "Metroidvania Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Interconnected world map with fog reveal.",
+      "menu_slug": "map-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Key items and consumables.",
+      "menu_slug": "inventory-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Charm or gear loadout at benches.",
+      "menu_slug": "equipment-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Pause and options branch.",
+      "menu_slug": "pause-menu",
+      "role": "contextual"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Health lost between benches drives tension.",
+      "role": "primary",
+      "variable_slug": "health"
+    },
+    {
+      "expression": "Currency for upgrades and gates.",
+      "role": "supporting",
+      "variable_slug": "geo"
+    },
+    {
+      "expression": "Loadout capacity for charms.",
+      "role": "supporting",
+      "variable_slug": "charm-notches"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [
+        "permadeath-run-structure",
+        "roguelike-map-routing"
+      ],
+      "drop_signatures": [
+        "bench-checkpoint"
+      ],
+      "id": "roguelite-metroidvania",
+      "label": "Roguelite Metroidvania",
+      "notes": "Run-based structure with ability gates per attempt."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

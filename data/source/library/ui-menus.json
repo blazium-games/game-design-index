@@ -1,0 +1,1205 @@
+{
+  "menus": [
+    {
+      "agent_context": {
+        "gdd_prompt": "Define boon choice UI: number of options, reroll rules, and preview of stat changes.",
+        "summary_for_agents": "Boon selection presents run upgrades with god tags and synergy hints."
+      },
+      "common_in": [
+        "Roguelike"
+      ],
+      "design_guidance": {
+        "designer_notes": "Show synergy tags and stat preview before confirm.",
+        "when_to_use": "When roguelike runs offer pick-one-of-three style upgrades mid-run.",
+        "where_to_use": "Post-chamber reward, shrine, god encounter."
+      },
+      "featured_in": [
+        "hades"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "boons",
+      "name": "Boons Menu",
+      "related_mechanics": [
+        "fill-reward-progression-loop",
+        "roguelike-map-routing"
+      ],
+      "related_menus": [
+        {
+          "relationship": "return_after_run",
+          "slug": "hub-menu"
+        }
+      ],
+      "related_variables": [
+        "currency-soft"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "God boon choice after chamber clears.",
+      "slug": "boons-menu",
+      "summary": "Choose run modifiers or blessings during escape.",
+      "tags": [
+        "progression",
+        "in_game"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "List rebindable actions, default bindings per platform, conflict rules, and reset-to-default.",
+        "implementation_checklist": [
+          "Listen for rebind capture mode",
+          "Validate no duplicate bindings",
+          "Persist bindings to profile"
+        ],
+        "summary_for_agents": "Controls remap captures per-action bindings for gamepad, keyboard, and touch."
+      },
+      "common_in": [
+        "All genres"
+      ],
+      "design_guidance": {
+        "designer_notes": "Show conflicts when two actions bind to the same key.",
+        "when_to_use": "When games support multiple input devices or accessibility remapping.",
+        "where_to_use": "Settings branch, first-launch prompt, pause options."
+      },
+      "featured_in": [
+        "hades"
+      ],
+      "input_context": "any",
+      "layer": "meta",
+      "menu_type": "controls_remap",
+      "name": "Controls Remap Menu",
+      "related_mechanics": [
+        "assist-mode-accessibility"
+      ],
+      "related_variables": [
+        "difficulty-tier"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Accessibility and player preference for input bindings across devices.",
+      "slug": "controls-remap-menu",
+      "summary": "Rebind inputs for gamepad, keyboard, or touch.",
+      "tags": [
+        "settings"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "List recipes, material costs, station requirements, and discovery rules.",
+        "implementation_checklist": [
+          "Validate inventory materials",
+          "Deduct costs on craft",
+          "Add output item and play feedback"
+        ],
+        "summary_for_agents": "Crafting menu validates material costs and outputs items; show recipes discovered vs hidden."
+      },
+      "common_in": [
+        "Adventure",
+        "RPG"
+      ],
+      "design_guidance": {
+        "designer_notes": "Grey out uncraftable recipes with material shortage hints.",
+        "when_to_avoid": [
+          "When loot is only vendor trash without combination rules"
+        ],
+        "when_to_use": "When players combine materials into items at stations or benches.",
+        "where_to_use": "Workbench UI, alchemy pot, cooking menu."
+      },
+      "featured_in": [
+        "zelda-breath-of-the-wild"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "crafting",
+      "name": "Crafting Menu",
+      "related_mechanics": [
+        "crafting-economy-loop",
+        "loot-based-economy"
+      ],
+      "related_variables": [
+        "inventory-slots"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Combine materials into gear or consumables.",
+      "slug": "crafting-menu",
+      "summary": "Combine materials into gear or consumables.",
+      "tags": [
+        "economy"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define credit sections, scroll speed, skip input, and music bed.",
+        "implementation_checklist": [
+          "Load credits text or timeline",
+          "Auto-scroll with skip input",
+          "Return to prior menu on end"
+        ],
+        "summary_for_agents": "Credits scroll displays team, licensors, and tools; skippable from main or ending flow."
+      },
+      "common_in": [
+        "All genres"
+      ],
+      "design_guidance": {
+        "designer_notes": "Support skip and auto-scroll speed; include licensed asset notices.",
+        "when_to_use": "When shipping a commercial or collaborative project needing attribution.",
+        "where_to_use": "Main menu branch, ending sequence, pause about screen."
+      },
+      "featured_in": [
+        "hades"
+      ],
+      "input_context": "any",
+      "layer": "meta",
+      "menu_type": "credits",
+      "name": "Credits Menu",
+      "related_mechanics": [
+        "narrative-chapter-progression"
+      ],
+      "related_variables": [
+        "score"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Staff attribution and legal notices after completion or from title.",
+      "slug": "credits-menu",
+      "summary": "Scroll staff and attribution.",
+      "tags": [
+        "meta"
+      ],
+      "typical_actions": [
+        "navigate"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define dialogue UI layout, choice count limits, flag setting, and skip/backlog behavior.",
+        "implementation_checklist": [
+          "Load dialogue graph node",
+          "Render choices with focus",
+          "Set flags on branch select"
+        ],
+        "summary_for_agents": "Dialogue menu presents lines and choices, setting story flags; pause world simulation as needed."
+      },
+      "common_in": [
+        "Adventure",
+        "RPG"
+      ],
+      "design_guidance": {
+        "designer_notes": "Flag consequential choices; support skip and backlog for repeat players.",
+        "when_to_avoid": [
+          "When narrative is environmental-only with no conversation UI"
+        ],
+        "when_to_use": "When NPC conversations present branching choices or linear barks.",
+        "where_to_use": "Speech boxes, choice wheels, visual novel layout."
+      },
+      "featured_in": [
+        "hades",
+        "stardew-valley"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "dialogue",
+      "name": "Dialogue Menu",
+      "related_mechanics": [
+        "dialogue-choice-consequences"
+      ],
+      "related_variables": [
+        "reputation"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Branching conversation choices with NPCs.",
+      "slug": "dialogue-menu",
+      "summary": "Branching conversation choices with NPCs.",
+      "tags": [
+        "in_game",
+        "social"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define equipment slots, compare stats, equip restrictions, and entry from pause or bench.",
+        "implementation_checklist": [
+          "Render slot grid with icons",
+          "Validate equip rules on select",
+          "Apply stat modifiers immediately"
+        ],
+        "summary_for_agents": "Equipment menu manages combat gear slots with validation against belt and armor rules."
+      },
+      "common_in": [
+        "Action RPG",
+        "Metroidvania"
+      ],
+      "design_guidance": {
+        "designer_notes": "Preview stat deltas and enforce slot compatibility rules.",
+        "when_to_use": "When gear slots are complex enough to warrant a screen separate from general inventory.",
+        "where_to_use": "Pause submenu, bench, pre-mission bay."
+      },
+      "featured_in": [
+        "hollow-knight",
+        "zelda-breath-of-the-wild"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "equipment",
+      "name": "Equipment Menu",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "related_menus": [
+        {
+          "relationship": "sibling",
+          "slug": "inventory-menu"
+        }
+      ],
+      "related_variables": [
+        "equipment-belt-slots",
+        "quick-slot-bar"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Dedicated loadout screen for weapons, armor, and accessories.",
+      "slug": "equipment-menu",
+      "summary": "Manage weapons, armor, and loadout slots.",
+      "tags": [
+        "inventory",
+        "combat"
+      ],
+      "typical_actions": [
+        "navigate",
+        "equip"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Map hub locations, available services after each run, meta currency displays, and run start flow.",
+        "implementation_checklist": [
+          "Load hub scene after run end",
+          "Unlock services based on meta flags",
+          "Transition to run start on confirm"
+        ],
+        "summary_for_agents": "Hub menu is the between-run home for meta upgrades, NPC dialogue, and starting the next attempt."
+      },
+      "common_in": [
+        "Roguelike"
+      ],
+      "design_guidance": {
+        "designer_notes": "Hub should surface new dialogue, upgrades, and run start in clear priority order.",
+        "when_to_avoid": [
+          "When sessions are single continuous levels without between-run home"
+        ],
+        "when_to_use": "When players return between runs to spend meta currency and advance narrative.",
+        "where_to_use": "Post-death hub, base camp, house interstitial."
+      },
+      "featured_in": [
+        "hades"
+      ],
+      "input_context": "any",
+      "layer": "meta",
+      "menu_type": "hub",
+      "name": "Hub Menu",
+      "related_mechanics": [
+        "metaprogression"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opens",
+          "slug": "mirror-menu"
+        },
+        {
+          "relationship": "opens",
+          "slug": "shop-menu"
+        }
+      ],
+      "related_variables": [
+        "currency-soft",
+        "meta-currency"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "House of Hades hub between escape attempts.",
+      "slug": "hub-menu",
+      "summary": "Between-run home base for meta progression.",
+      "tags": [
+        "hub",
+        "meta"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "List HUD elements, data bindings, hide rules during cinematics, and customization options.",
+        "implementation_checklist": [
+          "Bind variables to widgets",
+          "Update each frame or on event",
+          "Toggle visibility contexts"
+        ],
+        "summary_for_agents": "HUD overlay displays core variables and prompts without pausing; tune visibility per game mode."
+      },
+      "common_in": [
+        "Action",
+        "Adventure"
+      ],
+      "design_guidance": {
+        "designer_notes": "Minimize clutter; contextual hide during cutscenes or photo mode.",
+        "when_to_avoid": [
+          "When minimal UI is a core design pillar (immersive sim exploration)"
+        ],
+        "when_to_use": "When persistent on-screen status must stay visible during gameplay.",
+        "where_to_use": "Health bars, ammo, objectives, combo counters, minimap widgets."
+      },
+      "featured_in": [
+        "among-us",
+        "hollow-knight",
+        "zelda-breath-of-the-wild"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "hud_overlay",
+      "name": "HUD Overlay",
+      "related_mechanics": [
+        "depletable-health-pool",
+        "resource-scarcity-management"
+      ],
+      "related_variables": [
+        "health",
+        "ammo"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Persistent on-screen status and prompts.",
+      "slug": "hud-overlay",
+      "summary": "Persistent on-screen status and prompts.",
+      "tags": [
+        "in_game",
+        "overlay"
+      ],
+      "typical_actions": [
+        "display"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "List inventory categories, actions per item type, entry points (pause vs bench), and variables displayed.",
+        "implementation_checklist": [
+          "Pause or slow gameplay if required",
+          "Validate equip against slot rules",
+          "Refresh stats preview on selection change"
+        ],
+        "summary_for_agents": "Inventory menu lists carried items with equip, consume, and discard actions; must reflect slot limits and related variables."
+      },
+      "common_in": [
+        "Metroidvania",
+        "RPG"
+      ],
+      "design_guidance": {
+        "designer_notes": "Show slot limits and stat deltas on equip; support controller navigation patterns.",
+        "when_to_avoid": [
+          "When carried items are unlimited and need no inspection"
+        ],
+        "when_to_use": "When players manage carried items, equipment, or consumables during play.",
+        "where_to_use": "Pause submenu, bench interaction, dedicated inventory key."
+      },
+      "featured_in": [
+        "hollow-knight",
+        "zelda-breath-of-the-wild"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "inventory",
+      "name": "Inventory Menu",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opens",
+          "slug": "equipment-menu"
+        }
+      ],
+      "related_variables": [
+        "inventory-slots",
+        "charm-notches"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Charm and item management screen central to buildcrafting.",
+      "slug": "inventory-menu",
+      "summary": "Browse, equip, and consume carried items.",
+      "tags": [
+        "inventory",
+        "in_game"
+      ],
+      "typical_actions": [
+        "navigate",
+        "equip",
+        "consume"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "List lobby fields, host-only controls, ready gating, and match start transition.",
+        "implementation_checklist": [
+          "Sync player list over network",
+          "Track ready per player",
+          "Start match when conditions met"
+        ],
+        "summary_for_agents": "Lobby menu gathers players, settings, and ready flags before match start; host authority for rules."
+      },
+      "common_in": [
+        "Party"
+      ],
+      "design_guidance": {
+        "designer_notes": "Host controls, role toggles, and map vote belong here before match start.",
+        "when_to_avoid": [
+          "When matchmaking is fully automated with no pre-game configuration"
+        ],
+        "when_to_use": "When multiplayer sessions need pre-match player list, settings, and ready state.",
+        "where_to_use": "Among Us lobby, FPS prematch, co-op staging."
+      },
+      "featured_in": [
+        "among-us"
+      ],
+      "input_context": "any",
+      "layer": "meta",
+      "menu_type": "lobby",
+      "name": "Lobby Menu",
+      "related_mechanics": [
+        "asymmetric-multiplayer"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opens",
+          "slug": "map-overlay"
+        }
+      ],
+      "related_variables": [
+        "party-size",
+        "task-progress"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Pre-game role, color, and map voting.",
+      "slug": "lobby-menu",
+      "summary": "Pre-match room for roles, cosmetics, and ready-up.",
+      "tags": [
+        "social"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "List main menu entries, input focus order, continue gating, and transition targets.",
+        "implementation_checklist": [
+          "Detect save for continue visibility",
+          "Load target scene per selection",
+          "Apply title music and input context"
+        ],
+        "summary_for_agents": "Main menu routes to new game, continue, settings, and quit; gate continue on save presence."
+      },
+      "common_in": [
+        "All genres"
+      ],
+      "design_guidance": {
+        "designer_notes": "Continue should be disabled or hidden when no save exists; surface version and accessibility links.",
+        "when_to_avoid": [
+          "When launching directly into gameplay without title flow (arcade cabinets)"
+        ],
+        "when_to_use": "When the game needs a title entry point for new, continue, and settings flows.",
+        "where_to_use": "Boot flow, return from ending, demo title screen."
+      },
+      "featured_in": [
+        "hades",
+        "hollow-knight"
+      ],
+      "input_context": "any",
+      "layer": "meta",
+      "menu_type": "main",
+      "name": "Main Menu",
+      "related_mechanics": [
+        "bench-checkpoint",
+        "hub-world-stage-gates"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opens",
+          "slug": "settings-menu"
+        },
+        {
+          "relationship": "opens",
+          "slug": "credits-menu"
+        }
+      ],
+      "related_variables": [
+        "player-level",
+        "new-game-plus-flag"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Title screen hub for starting, continuing, or configuring a game.",
+      "slug": "main-menu",
+      "summary": "Title screen hub for starting, continuing, or configuring a game.",
+      "tags": [
+        "meta",
+        "navigation"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define map layers, fog rules, markers, fast travel nodes, and entry context.",
+        "implementation_checklist": [
+          "Render explored tiles from flags",
+          "Place objective markers",
+          "Handle fast travel validation"
+        ],
+        "summary_for_agents": "Map menu shows explored areas, objectives, and optional fast travel; sync with discovery flags."
+      },
+      "common_in": [
+        "Metroidvania"
+      ],
+      "design_guidance": {
+        "designer_notes": "Reveal fog progressively; pin custom markers if players set goals.",
+        "when_to_avoid": [
+          "When discovery depends on unmarked exploration without map UI"
+        ],
+        "when_to_use": "When players need full map view with markers, fast travel, or fog of war.",
+        "where_to_use": "Pause submenu, bench interaction, dedicated map key."
+      },
+      "featured_in": [
+        "hollow-knight",
+        "zelda-breath-of-the-wild"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "map",
+      "name": "Map Menu",
+      "related_mechanics": [
+        "ability-gated-exploration"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opened_from",
+          "slug": "pause-menu"
+        }
+      ],
+      "related_variables": [
+        "checkpoint-id"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Fog-of-war map with pins and bench fast travel.",
+      "slug": "map-menu",
+      "summary": "World or stage map with markers and fast travel.",
+      "tags": [
+        "navigation"
+      ],
+      "typical_actions": [
+        "navigate",
+        "filter"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define overlay elements, update rate, role-specific visibility, and input to open emergency actions.",
+        "implementation_checklist": [
+          "Render player and objective markers",
+          "Handle report button input if applicable",
+          "Sync task progress to overlay UI"
+        ],
+        "summary_for_agents": "Map overlay shows minimap, objectives, or player positions during play; tune visibility per game mode."
+      },
+      "common_in": [
+        "Social Deduction"
+      ],
+      "design_guidance": {
+        "designer_notes": "Decide what information is role-gated in asymmetric designs.",
+        "when_to_avoid": [
+          "When spatial information must stay hidden for deduction fairness"
+        ],
+        "when_to_use": "When players need spatial context during play without a full map screen.",
+        "where_to_use": "Minimap, task markers, fog-of-war exploration."
+      },
+      "featured_in": [
+        "among-us"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "map_overlay",
+      "name": "Map Overlay",
+      "related_mechanics": [
+        "evidence-deduction-puzzle"
+      ],
+      "related_menus": [
+        {
+          "relationship": "emergency_report",
+          "slug": "meeting-menu"
+        }
+      ],
+      "related_variables": [
+        "task-progress"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Ship minimap with task markers during play.",
+      "slug": "map-overlay",
+      "summary": "Minimap and task/route overlay during play.",
+      "tags": [
+        "navigation",
+        "overlay"
+      ],
+      "typical_actions": [
+        "display"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define meeting triggers, discussion timer, chat rules, and transition to voting menu.",
+        "implementation_checklist": [
+          "Freeze movement and tasks",
+          "Enable meeting chat channel",
+          "Auto-advance to vote on timer end"
+        ],
+        "summary_for_agents": "Meeting menu hosts discussion after reports; leads to voting and must pause normal play tasks."
+      },
+      "common_in": [
+        "Social Deduction"
+      ],
+      "design_guidance": {
+        "designer_notes": "Time-box discussion, mute dead players, and log chat for moderation if online.",
+        "when_to_avoid": [
+          "When conflict resolves purely through combat without discussion phase"
+        ],
+        "when_to_use": "When social deduction games need structured discussion after an event.",
+        "where_to_use": "Emergency meetings, body report flows, tribunal phases."
+      },
+      "featured_in": [
+        "among-us"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "meeting",
+      "name": "Meeting Menu",
+      "related_mechanics": [
+        "evidence-deduction-puzzle"
+      ],
+      "related_menus": [
+        {
+          "relationship": "leads_to",
+          "slug": "voting-menu"
+        }
+      ],
+      "related_variables": [
+        "task-progress"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Discussion phase after body report or emergency button.",
+      "slug": "meeting-menu",
+      "summary": "Emergency discussion UI after a body report.",
+      "tags": [
+        "social",
+        "overlay"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document talent nodes, costs, prerequisites, refund rules, and combat impact preview.",
+        "implementation_checklist": [
+          "Validate meta currency and prereqs",
+          "Persist purchased nodes",
+          "Apply talents on run initialization"
+        ],
+        "summary_for_agents": "Mirror menu spends meta currency on permanent talents; validate prerequisites and apply modifiers at run start."
+      },
+      "common_in": [
+        "Roguelike"
+      ],
+      "design_guidance": {
+        "designer_notes": "Show prerequisites and refund policy; preview stat impact before purchase.",
+        "when_to_avoid": [
+          "When all progression is run-scoped with no persistent talent tree"
+        ],
+        "when_to_use": "When permanent talent trees upgrade base stats between roguelike runs.",
+        "where_to_use": "Hub mirror, skill web, account-wide perk grid."
+      },
+      "featured_in": [
+        "hades"
+      ],
+      "input_context": "any",
+      "layer": "meta",
+      "menu_type": "mirror",
+      "name": "Mirror Menu",
+      "related_mechanics": [
+        "metaprogression"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opened_from",
+          "slug": "hub-menu"
+        }
+      ],
+      "related_variables": [
+        "meta-currency"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Permanent talent tree funded by darkness.",
+      "slug": "mirror-menu",
+      "summary": "Permanent meta upgrade tree between runs.",
+      "tags": [
+        "hub",
+        "meta"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Categorize settings (audio, video, controls, accessibility), note live vs restart apply, and defaults.",
+        "implementation_checklist": [
+          "Load settings from profile",
+          "Apply on change or confirm",
+          "Persist on save"
+        ],
+        "summary_for_agents": "Options menu groups settings with immediate or deferred apply; document categories and persistence."
+      },
+      "common_in": [
+        "Adventure"
+      ],
+      "design_guidance": {
+        "designer_notes": "Apply changes live where possible; mark options requiring restart.",
+        "when_to_avoid": [
+          "When settings are only editable outside the game executable"
+        ],
+        "when_to_use": "When players adjust audio, video, gameplay assists, or language mid-session or from title.",
+        "where_to_use": "Pause submenu, main menu branch, settings tab."
+      },
+      "featured_in": [
+        "zelda-breath-of-the-wild"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "options",
+      "name": "Options Menu",
+      "related_mechanics": [
+        "difficulty-accessibility-mode"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opens",
+          "slug": "controls-remap-menu"
+        }
+      ],
+      "related_variables": [
+        "difficulty-tier"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "System and gameplay toggles from pause.",
+      "slug": "options-menu",
+      "summary": "Quick in-run settings for audio, display, and controls.",
+      "tags": [
+        "in_game",
+        "settings"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "List pause menu entries, input context, and which submenus preserve game state.",
+        "implementation_checklist": [
+          "Freeze gameplay systems",
+          "Resume prior input map",
+          "Handle multiplayer pause policy"
+        ],
+        "summary_for_agents": "Pause menu pauses simulation and routes to inventory, map, and options without losing context."
+      },
+      "common_in": [
+        "Action"
+      ],
+      "design_guidance": {
+        "designer_notes": "Clarify multiplayer pause policy in UI copy.",
+        "when_to_use": "When players need to halt simulation and access subsystems mid-session.",
+        "where_to_use": "Universal pause input during gameplay."
+      },
+      "featured_in": [
+        "hades",
+        "hollow-knight",
+        "mega-man-2",
+        "zelda-breath-of-the-wild"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "pause",
+      "name": "Pause Menu",
+      "related_mechanics": [
+        "bench-checkpoint"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opens",
+          "slug": "inventory-menu"
+        },
+        {
+          "relationship": "opens",
+          "slug": "map-menu"
+        },
+        {
+          "relationship": "opens",
+          "slug": "options-menu"
+        }
+      ],
+      "related_variables": [
+        "health"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Universal session break that hosts inventory, map, and options.",
+      "slug": "pause-menu",
+      "summary": "In-game overlay to halt play and access sub-screens.",
+      "tags": [
+        "in_game",
+        "overlay"
+      ],
+      "typical_actions": [
+        "navigate",
+        "resume"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define slot count, autosave policy, manual save locations, and delete confirm flow.",
+        "implementation_checklist": [
+          "Serialize game state to slot",
+          "Display slot metadata",
+          "Confirm overwrite and delete"
+        ],
+        "summary_for_agents": "Save/load menu reads and writes save slots with metadata preview."
+      },
+      "common_in": [
+        "Metroidvania"
+      ],
+      "design_guidance": {
+        "designer_notes": "Show slot metadata: playtime, location, thumbnail if available.",
+        "when_to_use": "When players manage multiple save slots or manual save at checkpoints.",
+        "where_to_use": "Bench interaction, main menu continue, pause save."
+      },
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "save_load",
+      "name": "Save / Load Menu",
+      "related_mechanics": [
+        "bench-checkpoint"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opened_from",
+          "slug": "pause-menu"
+        }
+      ],
+      "related_variables": [
+        "checkpoint-id"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Bench interaction saves progress and heals.",
+      "slug": "save-load-menu",
+      "summary": "Checkpoint and slot management.",
+      "tags": [
+        "in_game",
+        "progression"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Categorize settings, defaults, live-apply vs restart-required, and cloud sync if any.",
+        "implementation_checklist": [
+          "Load settings profile on open",
+          "Apply or stage changes",
+          "Persist on confirm or live toggle"
+        ],
+        "summary_for_agents": "Settings menu persists graphics, audio, language, and accessibility preferences."
+      },
+      "common_in": [
+        "All genres"
+      ],
+      "design_guidance": {
+        "designer_notes": "Group settings; mark options requiring restart.",
+        "when_to_use": "When audio, video, language, and accessibility need a dedicated meta screen.",
+        "where_to_use": "Main menu, pause branch, launcher options."
+      },
+      "featured_in": [
+        "zelda-breath-of-the-wild"
+      ],
+      "input_context": "any",
+      "layer": "meta",
+      "menu_type": "settings",
+      "name": "Settings Menu",
+      "related_mechanics": [
+        "difficulty-accessibility-mode"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opens",
+          "slug": "controls-remap-menu"
+        }
+      ],
+      "related_variables": [
+        "difficulty-tier"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Persistent player preferences spanning sessions and devices.",
+      "slug": "settings-menu",
+      "summary": "Persistent configuration from main menu or pause.",
+      "tags": [
+        "meta",
+        "settings"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define stock list, prices, currency type, purchase limits, and entry context (in-run vs hub).",
+        "implementation_checklist": [
+          "Check currency balance on buy",
+          "Deduct currency and add item",
+          "Mark sold-out or owned items"
+        ],
+        "summary_for_agents": "Shop menu presents purchasable items against soft or hard currency; validate funds and update inventory on confirm."
+      },
+      "common_in": [
+        "Metroidvania"
+      ],
+      "design_guidance": {
+        "designer_notes": "Preview owned state and affordability before purchase confirm; rotate stock for roguelikes.",
+        "when_to_avoid": [
+          "When economy is barter-only without currency display"
+        ],
+        "when_to_use": "When players spend currency on upgrades, maps, keys, or consumables.",
+        "where_to_use": "NPC vendors, between-room shops, hub merchants."
+      },
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "shop",
+      "name": "Shop Menu",
+      "related_mechanics": [
+        "loot-based-economy",
+        "purchase-gated-upgrade"
+      ],
+      "related_menus": [
+        {
+          "relationship": "receives_items",
+          "slug": "inventory-menu"
+        }
+      ],
+      "related_variables": [
+        "geo",
+        "gold",
+        "currency-soft"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Vendor UI spending geo on maps, charms, and keys.",
+      "slug": "shop-menu",
+      "summary": "Purchase upgrades and consumables with currency.",
+      "tags": [
+        "economy",
+        "in_game"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define grid layout, unlock rules, cleared indicators, and preview info per stage.",
+        "implementation_checklist": [
+          "Render completion flags",
+          "Block locked stages",
+          "Load stage scene on confirm"
+        ],
+        "summary_for_agents": "Stage select presents choosable levels with completion state; loads selected stage on confirm."
+      },
+      "common_in": [
+        "Platformer"
+      ],
+      "design_guidance": {
+        "designer_notes": "Show cleared, available, and locked states; play selection sting on confirm.",
+        "when_to_avoid": [
+          "When story mandates strict linear order with no player routing"
+        ],
+        "when_to_use": "When players choose levels or bosses in non-linear order.",
+        "where_to_use": "World map, robot master grid, mission board."
+      },
+      "featured_in": [
+        "mega-man-2"
+      ],
+      "input_context": "any",
+      "layer": "meta",
+      "menu_type": "stage_select",
+      "name": "Stage Select Menu",
+      "related_mechanics": [
+        "non-linear-boss-selection"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opened_from",
+          "slug": "main-menu"
+        }
+      ],
+      "related_variables": [
+        "lives"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Robot master grid with cleared stage indicators.",
+      "slug": "stage-select-menu",
+      "summary": "Pick levels or bosses in non-linear order.",
+      "tags": [
+        "meta",
+        "navigation"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Specify vote options, timer, tie behavior, reveal rules, and post-vote game state changes.",
+        "implementation_checklist": [
+          "Collect votes per player",
+          "Resolve majority or tie rule",
+          "Eject or skip and close overlay"
+        ],
+        "summary_for_agents": "Voting menu collects player eject votes with skip option; apply elimination rules and resume play."
+      },
+      "common_in": [
+        "Social Deduction"
+      ],
+      "design_guidance": {
+        "designer_notes": "Always offer skip/no-vote; reveal tallies clearly to reduce perceived unfairness.",
+        "when_to_avoid": [
+          "When elimination is skill-based duel without group vote"
+        ],
+        "when_to_use": "When groups must eliminate a suspect or skip after discussion.",
+        "where_to_use": "Post-meeting vote, tribunal verdict, kick voting."
+      },
+      "featured_in": [
+        "among-us"
+      ],
+      "input_context": "any",
+      "layer": "in_game",
+      "menu_type": "voting",
+      "name": "Voting Menu",
+      "related_mechanics": [
+        "evidence-deduction-puzzle"
+      ],
+      "related_menus": [
+        {
+          "relationship": "opened_from",
+          "slug": "meeting-menu"
+        }
+      ],
+      "related_variables": [
+        "task-progress"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Eject vote tally and skip option.",
+      "slug": "voting-menu",
+      "summary": "Cast eject votes on suspected players.",
+      "tags": [
+        "social",
+        "overlay"
+      ],
+      "typical_actions": [
+        "confirm"
+      ]
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define input for open/select, weapon list source, energy display, and whether gameplay pauses.",
+        "implementation_checklist": [
+          "Open overlay on input",
+          "Highlight current weapon",
+          "Apply selection and close overlay"
+        ],
+        "summary_for_agents": "Weapon select overlay swaps active weapon and displays per-weapon energy; may pause or slow combat."
+      },
+      "common_in": [
+        "Platformer"
+      ],
+      "design_guidance": {
+        "designer_notes": "Show energy or ammo per weapon; optional slow-mo during selection for accessibility.",
+        "when_to_avoid": [
+          "When single-weapon design avoids mid-combat loadout changes"
+        ],
+        "when_to_use": "When players swap active weapons without leaving combat context.",
+        "where_to_use": "Pause weapon wheel, L1/R1 cycle, quick-slot overlay."
+      },
+      "featured_in": [
+        "mega-man-2"
+      ],
+      "input_context": "gamepad",
+      "layer": "combat_overlay",
+      "menu_type": "weapon_select",
+      "name": "Weapon Select Overlay",
+      "related_mechanics": [
+        "resource-gated-weapon"
+      ],
+      "related_menus": [
+        {
+          "relationship": "alternate_to",
+          "slug": "pause-menu"
+        }
+      ],
+      "related_variables": [
+        "weapon-energy",
+        "quick-slot-bar"
+      ],
+      "schema_version": "1.1",
+      "shared_rationale": "Boss fight weapon wheel without leaving combat.",
+      "slug": "weapon-select-overlay",
+      "summary": "Combat overlay to swap active weapons.",
+      "tags": [
+        "combat",
+        "overlay"
+      ],
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ]
+    }
+  ],
+  "schema_version": "1.0"
+}

@@ -1,0 +1,220 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Grip, drift, and racing lines.",
+      "Time trial and ghost chasing."
+    ],
+    "player_fantasy": "Experience Racing through its signature loop.",
+    "theme_tags": [
+      "racing",
+      "vehicle-physics-racing",
+      "arcade-cabinet-timing"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: lap-retry",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Grip, drift, and racing lines.",
+    "economy_notes": "light",
+    "overview": "Racing genre recipe anchored on vehicle-physics-racing, arcade-cabinet-timing.",
+    "player_goals": [
+      "Grip, drift, and racing lines.",
+      "Time trial and ghost chasing."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "combat",
+      "expression": "Grip, drift, and racing lines.",
+      "map_notes": "Grip, drift, and racing lines.",
+      "mechanic_slug": "vehicle-physics-racing",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "combat",
+      "expression": "Time trial and ghost chasing.",
+      "map_notes": "Time trial and ghost chasing.",
+      "mechanic_slug": "arcade-cabinet-timing",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "progression",
+      "expression": "Cup structure across tracks.",
+      "map_notes": "Cup structure across tracks.",
+      "mechanic_slug": "linear-stage-gauntlet",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "session",
+      "expression": "Retries or qualifying heats.",
+      "map_notes": "Retries or qualifying heats.",
+      "mechanic_slug": "life-based-retry-system",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 2
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Grip, drift, and racing lines.",
+    "description": "Racing games center on grip, drift, and racing lines.",
+    "design_pillars": [
+      "Grip, drift, and racing lines.",
+      "Time trial and ghost chasing."
+    ],
+    "skills_tested": [
+      "precision movement",
+      "pattern recognition",
+      "risk evaluation"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "precision-platformer",
+      "party-game"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "vehicle-physics-racing",
+    "arcade-cabinet-timing"
+  ],
+  "skill_slugs": [
+    "precision-movement",
+    "pattern-recognition",
+    "risk-evaluation"
+  ],
+  "slug": "racing",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Racing",
+      "Arcade"
+    ],
+    "influences": [
+      "Mario Kart",
+      "Forza"
+    ],
+    "kind": "genre",
+    "name": "Racing"
+  },
+  "systems": {
+    "economy_tightness": "light",
+    "failure_model": "lap-retry",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach vehicle physics racing with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Vehicle Physics Racing",
+        "mechanics": [
+          "vehicle-physics-racing"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Arcade Cabinet Timing",
+        "mechanics": [
+          "arcade-cabinet-timing"
+        ]
+      }
+    ]
+  },
+  "title": "Racing Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Track and cup selection.",
+      "menu_slug": "stage-select-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Assist and driving assists.",
+      "menu_slug": "options-menu",
+      "role": "optional"
+    },
+    {
+      "map_notes": "Pause during time trial.",
+      "menu_slug": "pause-menu",
+      "role": "contextual"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Lap and split times.",
+      "role": "primary",
+      "variable_slug": "timer"
+    },
+    {
+      "expression": "Placement and drift points.",
+      "role": "supporting",
+      "variable_slug": "score"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-racing",
+      "label": "Hardcore Racing",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

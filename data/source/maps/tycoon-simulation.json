@@ -1,0 +1,252 @@
+{
+  "context": {
+    "dimension": "2.5d",
+    "perspective": "isometric",
+    "session_type": "open-ended",
+    "world_structure": "sandbox-map"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "City Building Simulation",
+      "City Building Economy",
+      "Resource Scarcity Management"
+    ],
+    "player_fantasy": "Experience Tycoon Simulation through its core simulation loop.",
+    "theme_tags": [
+      "simulation",
+      "strategy",
+      "tycoon",
+      "city-building-simulation",
+      "city-building-economy",
+      "resource-scarcity-management"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat pacing should match genre tempo and readable threat language.",
+    "constraints": [
+      "Failure model: design-specific",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Place infrastructure, tune economy and throughput, respond to feedback meters, and expand the map while balancing cost against growth targets.",
+    "economy_notes": "scarce",
+    "overview": "Tycoon simulations task players with building and optimizing systems—parks, cities, or businesses—under budget constraints and guest or citizen satisfaction metrics.",
+    "player_goals": [
+      "Master signature mechanics",
+      "Complete core progression arc"
+    ],
+    "progression_notes": "Follow signature mechanic dependencies across early, mid, and late phases."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "progression",
+      "expression": "Core loop of placing and connecting functional buildings or rides.",
+      "map_notes": "Core loop of placing and connecting functional buildings or rides.",
+      "mechanic_slug": "city-building-simulation",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "economy",
+      "expression": "Income and upkeep drive expansion decisions.",
+      "map_notes": "Income and upkeep drive expansion decisions.",
+      "mechanic_slug": "city-building-economy",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "economy",
+      "expression": "Budget, staff, and space are limited build resources.",
+      "map_notes": "Budget, staff, and space are limited build resources.",
+      "mechanic_slug": "resource-scarcity-management",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ],
+      "domain": "economy",
+      "expression": "New attractions or zones unlock via spending milestones.",
+      "map_notes": "New attractions or zones unlock via spending milestones.",
+      "mechanic_slug": "purchase-gated-upgrade",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 3
+    },
+    {
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ],
+      "domain": "progression",
+      "expression": "Scenario goals reward meeting guest or citizen quotas.",
+      "map_notes": "Scenario goals reward meeting guest or citizen quotas.",
+      "mechanic_slug": "fill-reward-progression-loop",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 2
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Place infrastructure, tune economy and throughput, respond to feedback meters, and expand the map while balancing cost against growth targets.",
+    "description": "Tycoon simulations task players with building and optimizing systems—parks, cities, or businesses—under budget constraints and guest or citizen satisfaction metrics.",
+    "skills_tested": [
+      "resource management",
+      "run planning",
+      "risk evaluation",
+      "crafting planning"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "tycoon-simulation",
+      "life-sim",
+      "tactics-strategy"
+    ],
+    "influence_slugs": [
+      "simcity"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "city-building-simulation",
+    "city-building-economy",
+    "resource-scarcity-management",
+    "purchase-gated-upgrade"
+  ],
+  "skill_slugs": [
+    "resource-management",
+    "run-planning",
+    "risk-evaluation"
+  ],
+  "slug": "tycoon-simulation",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Simulation",
+      "Strategy",
+      "Tycoon"
+    ],
+    "influences": [
+      "RollerCoaster Tycoon",
+      "SimCity"
+    ],
+    "kind": "genre",
+    "name": "Tycoon Simulation"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "bankruptcy-or-loan",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach city building simulation with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "City Building Simulation",
+        "mechanics": [
+          "city-building-simulation"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "City Building Economy",
+        "mechanics": [
+          "city-building-economy"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Resource Scarcity Management",
+        "mechanics": [
+          "resource-scarcity-management"
+        ]
+      },
+      {
+        "id": "phase-4",
+        "label": "Purchase Gated Upgrade",
+        "mechanics": [
+          "purchase-gated-upgrade"
+        ]
+      }
+    ]
+  },
+  "title": "Tycoon Simulation Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Business dashboards and reports.",
+      "menu_slug": "hub-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Upgrades and supply purchases.",
+      "menu_slug": "shop-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Business revenue and expenses.",
+      "role": "primary",
+      "variable_slug": "currency-soft"
+    },
+    {
+      "expression": "Brand or citizen satisfaction.",
+      "role": "supporting",
+      "variable_slug": "reputation"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-tycoon-simulation",
+      "label": "Hardcore Tycoon Simulation",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

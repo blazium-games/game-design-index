@@ -1,0 +1,321 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "top-down",
+    "session_type": "run-based",
+    "world_structure": "procedural-run-map"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Roguelike Map Routing",
+      "Permadeath Run Structure",
+      "Rpg Stat Progression"
+    ],
+    "player_fantasy": "Experience Roguelike Deckbuilder through its core roguelike loop.",
+    "theme_tags": [
+      "roguelike",
+      "deckbuilder",
+      "strategy",
+      "roguelike-map-routing",
+      "permadeath-run-structure",
+      "rpg-stat-progression"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat pacing should match genre tempo and readable threat language.",
+    "constraints": [
+      "Failure model: permadeath-or-lives",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Choose a path on a procedural map, fight encounters with a growing deck, spend resources at shops and events, and attempt a final boss before permadeath resets the run.",
+    "economy_notes": "scarce",
+    "overview": "Roguelike deckbuilders combine procedural run structure with composable card or ability loadouts. Each run routes through branching paths, builds a synergistic deck, and resets on failure with metaprogression unlocks.",
+    "player_goals": [
+      "Master signature mechanics",
+      "Complete core progression arc"
+    ],
+    "progression_notes": "Follow signature mechanic dependencies across early, mid, and late phases."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "depends_on": [
+        "permadeath-run-structure"
+      ],
+      "domain": "progression",
+      "expression": "Branching path selection between combat, rest, shop, and event nodes.",
+      "map_notes": "Branching path selection between combat, rest, shop, and event nodes.",
+      "mechanic_slug": "roguelike-map-routing",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "locomotion",
+      "expression": "Run ends on defeat; build resets for the next attempt.",
+      "map_notes": "Run ends on defeat; build resets for the next attempt.",
+      "mechanic_slug": "permadeath-run-structure",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "progression",
+      "expression": "In-run stat growth via cards, relics, or upgrades.",
+      "map_notes": "In-run stat growth via cards, relics, or upgrades.",
+      "mechanic_slug": "rpg-stat-progression",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "economy",
+      "expression": "Energy, gold, or HP are tight resources each turn or node.",
+      "map_notes": "Energy, gold, or HP are tight resources each turn or node.",
+      "mechanic_slug": "resource-scarcity-management",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "economy",
+      "expression": "Shops convert run currency into deck improvements.",
+      "map_notes": "Shops convert run currency into deck improvements.",
+      "mechanic_slug": "purchase-gated-upgrade",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 3
+    },
+    {
+      "domain": "level",
+      "expression": "Elite fights and optional paths trade risk for reward.",
+      "map_notes": "Elite fights and optional paths trade risk for reward.",
+      "mechanic_slug": "optional-content-layering",
+      "phase": "optional",
+      "role": "supporting",
+      "weight": 2
+    },
+    {
+      "domain": "combat",
+      "expression": "Act and final bosses test the completed build.",
+      "map_notes": "Act and final bosses test the completed build.",
+      "mechanic_slug": "multi-phase-boss-battle",
+      "phase": "late",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "depends_on": [
+        "card-draw-hand-management",
+        "roguelike-map-routing"
+      ],
+      "domain": "progression",
+      "expression": "Add and remove cards to shape each run build.",
+      "map_notes": "Add and remove cards to shape each run build.",
+      "mechanic_slug": "deck-composition-roguelike",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "deck-composition-roguelike",
+        "resource-scarcity-management"
+      ],
+      "domain": "economy",
+      "expression": "Draw, play, and discard with hand size limits.",
+      "map_notes": "Draw, play, and discard with hand size limits.",
+      "mechanic_slug": "card-draw-hand-management",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "deck-composition-roguelike",
+        "rpg-stat-progression"
+      ],
+      "domain": "progression",
+      "expression": "Passive relics define run synergies.",
+      "map_notes": "Passive relics define run synergies.",
+      "mechanic_slug": "relic-passive-synergy",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Choose a path on a procedural map, fight encounters with a growing deck, spend resources at shops and events, and attempt a final boss before permadeath resets the run.",
+    "description": "Roguelike deckbuilders combine procedural run structure with composable card or ability loadouts. Each run routes through branching paths, builds a synergistic deck, and resets on failure with metaprogression unlocks.",
+    "skills_tested": [
+      "deck building",
+      "run planning",
+      "risk evaluation",
+      "pattern recognition"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "turn-based-rpg"
+    ],
+    "influence_slugs": [
+      "slay-the-spire",
+      "hades"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "roguelike-map-routing",
+    "permadeath-run-structure",
+    "rpg-stat-progression",
+    "resource-scarcity-management",
+    "purchase-gated-upgrade",
+    "deck-composition-roguelike",
+    "card-draw-hand-management",
+    "relic-passive-synergy"
+  ],
+  "skill_slugs": [
+    "deck-building",
+    "run-planning",
+    "risk-evaluation",
+    "pattern-recognition"
+  ],
+  "slug": "roguelike-deckbuilder",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Roguelike",
+      "Deckbuilder",
+      "Strategy"
+    ],
+    "influences": [
+      "Slay the Spire",
+      "Hades"
+    ],
+    "kind": "genre",
+    "name": "Roguelike Deckbuilder"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "run-reset",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach roguelike map routing with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Roguelike Map Routing",
+        "mechanics": [
+          "roguelike-map-routing"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Permadeath Run Structure",
+        "mechanics": [
+          "permadeath-run-structure"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Rpg Stat Progression",
+        "mechanics": [
+          "rpg-stat-progression"
+        ]
+      },
+      {
+        "id": "phase-4",
+        "label": "Resource Scarcity Management",
+        "mechanics": [
+          "resource-scarcity-management"
+        ]
+      }
+    ]
+  },
+  "title": "Roguelike Deckbuilder Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Pick-one-of-three rewards.",
+      "menu_slug": "boons-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Meta progression between runs.",
+      "menu_slug": "hub-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Build preview or loadout mirror.",
+      "menu_slug": "mirror-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Run currency for shops and events.",
+      "role": "primary",
+      "variable_slug": "currency-soft"
+    },
+    {
+      "expression": "Run health until defeat.",
+      "role": "primary",
+      "variable_slug": "health"
+    },
+    {
+      "expression": "Persistent unlock currency.",
+      "role": "supporting",
+      "variable_slug": "meta-currency"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [
+        "real-time-action-combat"
+      ],
+      "id": "action-roguelike-deck",
+      "label": "Action Roguelike Deckbuilder",
+      "notes": "Slay the Spire style routing with real-time combat variants."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

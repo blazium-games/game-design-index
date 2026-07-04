@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.1",
+  "slug": "resident-evil-4",
+  "title": "Resident Evil 4 Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.lemon64.com/forum/viewtopic.php?t=84325",
+  "subject": {
+    "kind": "game",
+    "name": "Resident Evil 4",
+    "genres": [
+      "Horror",
+      "Action",
+      "Survival"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Resident Evil 4 blends over-the-shoulder action combat with resource-scarce survival horror in a rural European setting.",
+    "core_loop": "Explore villages and compounds, manage limited ammo and healing, fight infected enemies, solve locks, and survive set-piece boss encounters.",
+    "skills_tested": [
+      "resource management",
+      "aim control",
+      "positioning",
+      "calm under pressure"
+    ]
+  },
+  "signature_gameplay": [
+    "resource-scarcity-management",
+    "depletable-health-pool",
+    "telegraphed-threat-loop",
+    "aim-down-sights-shooting",
+    "bench-checkpoint"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "map_notes": "In Resident Evil 4, limited ammo, healing, and save resources force careful risk assessment.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Resident Evil 4, limited ammo, healing, and save resources force careful risk assessment.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "signature",
+      "map_notes": "In Resident Evil 4, a survival mechanic where the player character possesses a finite quantity of health points that decrease when taking damage, with depletion resulting in failure.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Resident Evil 4, a survival mechanic where the player character possesses a finite quantity of health points that decrease when taking damage, with depletion resulting in failure."
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "signature",
+      "map_notes": "In Resident Evil 4, a combat encounter structure in which an enemy signals an incoming attack through a distinct visual or audio cue before the attack resolves.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Resident Evil 4, a combat encounter structure in which an enemy signals an incoming attack through a distinct visual or audio cue before the attack resolves."
+    },
+    {
+      "mechanic_slug": "aim-down-sights-shooting",
+      "role": "signature",
+      "map_notes": "In Resident Evil 4, zoomed aim mode trades movement speed for accuracy and range.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Resident Evil 4, zoomed aim mode trades movement speed for accuracy and range.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "bench-checkpoint",
+      "role": "signature",
+      "map_notes": "In Resident Evil 4, designated rest points save progress, restore health or resources, and set respawn locations on death.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Resident Evil 4, designated rest points save progress, restore health or resources, and set respawn locations on death.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2005
+  },
+  "relationships": {
+    "genre_maps": [
+      "horror-survival"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Resident Evil 4 through its core horror loop.",
+    "theme_tags": [
+      "horror",
+      "action",
+      "survival",
+      "resource-scarcity-management",
+      "depletable-health-pool",
+      "telegraphed-threat-loop"
+    ],
+    "design_pillars": [
+      "Resource Scarcity Management",
+      "Depletable Health Pool",
+      "Telegraphed Threat Loop"
+    ]
+  },
+  "systems": {
+    "failure_model": "checkpoint-respawn",
+    "economy_tightness": "scarce"
+  }
+}

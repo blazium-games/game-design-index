@@ -1,0 +1,260 @@
+{
+  "schema_version": "1.1",
+  "slug": "spyro-reignited-trilogy",
+  "title": "Spyro Reignited Trilogy Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Spyro Reignited Trilogy",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Spyro the Dragon",
+      "Crash Bandicoot"
+    ]
+  },
+  "narrative": {
+    "description": "Activision's remaster bundles Spyro's three PS1 adventures with rebuilt geometry and modern lighting while preserving glide traversal, gem collectathons, and whimsical dragon rescue objectives.",
+    "core_loop": "Glide and flame through hub worlds, collect gems and dragons, defeat bosses to unlock new realms, and revisit levels for 100% completion.",
+    "skills_tested": [
+      "glide routing",
+      "combat spacing",
+      "collectible tracking",
+      "boss weak-point timing"
+    ]
+  },
+  "signature_gameplay": [
+    "remaster-collection-format",
+    "glide-traversal",
+    "collectathon-token-gating"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "remaster-collection-format",
+      "role": "signature",
+      "map_notes": "Three remastered Spyro games packaged as a unified collection.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Three remastered Spyro games packaged as a unified collection.",
+      "depends_on": [
+        "hub-world-stage-gates"
+      ]
+    },
+    {
+      "mechanic_slug": "glide-traversal",
+      "role": "signature",
+      "map_notes": "Spyro's glide extends jumps across chasms and enables aerial repositioning.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Spyro's glide extends jumps across chasms and enables aerial repositioning."
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Gems, dragons, and eggs gate realm access and completion percentage.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Gems, dragons, and eggs gate realm access and completion percentage.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "supporting",
+      "map_notes": "Artisans and subsequent hubs unlock via boss clears and gem totals.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Artisans and subsequent hubs unlock via boss clears and gem totals.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Balloonists and portals require defeating realm bosses.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Balloonists and portals require defeating realm bosses.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "melee-primary-combat",
+      "role": "supporting",
+      "map_notes": "Flame breath and charge attacks destroy enemies and break chests.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Flame breath and charge attacks destroy enemies and break chests.",
+      "depends_on": [
+        "depletable-health-pool",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Thieves, skill points, and hidden areas extend replay value.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Thieves, skill points, and hidden areas extend replay value."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Lava, water, and cliff edges punish mis-timed glides.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lava, water, and cliff edges punish mis-timed glides."
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses like Gnasty Gnorc follow learnable attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses like Gnasty Gnorc follow learnable attack cycles.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Late-game bosses shift arenas and attack patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Late-game bosses shift arenas and attack patterns.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Sparx dragonfly absorbs hits before Spyro takes damage.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Sparx dragonfly absorbs hits before Spyro takes damage."
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Fairy checkpoints respawn Spyro after death.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Fairy checkpoints respawn Spyro after death.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Large enemies wind up before charge attacks.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Large enemies wind up before charge attacks.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Roll charge clears lines of fodder enemies.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Roll charge clears lines of fodder enemies."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2018
+  },
+  "relationships": {
+    "influence_slugs": [
+      "spyro-the-dragon",
+      "crash-bandicoot"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Spyro Reignited Trilogy through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "remaster-collection-format",
+      "glide-traversal",
+      "collectathon-token-gating"
+    ],
+    "design_pillars": [
+      "Remaster Collection Format",
+      "Glide Traversal",
+      "Collectathon Token Gating"
+    ]
+  }
+}

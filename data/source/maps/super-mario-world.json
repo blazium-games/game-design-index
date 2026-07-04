@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.1",
+  "slug": "super-mario-world",
+  "title": "Super Mario World Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-2d-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Super Mario World",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario Bros. 3"
+    ]
+  },
+  "narrative": {
+    "description": "Mario, Luigi, and Princess Toadstool vacation in Dinosaur Land when Bowser kidnaps the princess again. Players explore a large interconnected overworld, ride Yoshi, discover secret paths, and defeat the seven Koopalings before confronting Bowser in his castle.",
+    "core_loop": "Traverse the Dinosaur Land overworld to enter levels, platform through stages using power-ups and Yoshi, find secret exits to unlock hidden areas, defeat Koopalings to open new regions, and rescue the princess.",
+    "skills_tested": [
+      "timing",
+      "precision platforming",
+      "exploration",
+      "secret discovery",
+      "momentum control"
+    ]
+  },
+  "signature_gameplay": [
+    "mount-companion-control",
+    "secret-exit-branching",
+    "power-up-transformation-states"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "mount-companion-control",
+      "role": "signature",
+      "map_notes": "Yoshi can be mounted for extended jumps, flutter kicks, tongue grabs, and color-coded swallow abilities.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Yoshi can be mounted for extended jumps, flutter kicks, tongue grabs, and color-coded swallow abilities.",
+      "depends_on": [
+        "power-up-transformation-states",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "secret-exit-branching",
+      "role": "signature",
+      "map_notes": "Key-and-keyhole pairs and alternate goal posts unlock hidden paths and Star Road areas.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Key-and-keyhole pairs and alternate goal posts unlock hidden paths and Star Road areas.",
+      "depends_on": [
+        "optional-content-layering",
+        "overworld-map-stage-selection"
+      ]
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "signature",
+      "map_notes": "Cape Feather enables flight and spin attack; other power-ups include Super Mushroom, Fire Flower, and Star.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Cape Feather enables flight and spin attack; other power-ups include Super Mushroom, Fire Flower, and Star.",
+      "depends_on": [
+        "depletable-health-pool",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "overworld-map-stage-selection",
+      "role": "supporting",
+      "map_notes": "Large branching overworld with multiple routes, locked paths, and switch palaces.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Large branching overworld with multiple routes, locked paths, and switch palaces.",
+      "depends_on": [
+        "boss-gated-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "glide-traversal",
+      "role": "supporting",
+      "map_notes": "Cape Feather allows sustained flight and controlled descent for secret access.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Cape Feather allows sustained flight and controlled descent for secret access.",
+      "depends_on": [
+        "power-up-transformation-states",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Responsive Mario physics with spin jump and cape-assisted aerial control.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Responsive Mario physics with spin jump and cape-assisted aerial control.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "jump-cutoff"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Koopalings guard fortresses that unlock further overworld regions.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Koopalings guard fortresses that unlock further overworld regions.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Small Mario dies in one hit; powered-up forms absorb extra hits.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Small Mario dies in one hit; powered-up forms absorb extra hits.",
+      "depends_on": [
+        "life-based-retry-system",
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Pits, lava, spikes, and autoscroll levels throughout Dinosaur Land.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Pits, lava, spikes, and autoscroll levels throughout Dinosaur Land.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Fire Flower grants immediate fireball attacks.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Fire Flower grants immediate fireball attacks."
+    },
+    {
+      "mechanic_slug": "jump-cutoff",
+      "role": "supporting",
+      "map_notes": "Variable jump height for precise platforming sections.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Variable jump height for precise platforming sections.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Lives counter with continue on game over.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lives counter with continue on game over.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "loot-based-economy",
+      "role": "supporting",
+      "map_notes": "Coins, dragon coins, and 1-Up mushrooms reward exploration.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Coins, dragon coins, and 1-Up mushrooms reward exploration.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Midway gates and ghost houses save progress within longer stages.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Midway gates and ghost houses save progress within longer stages.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Bowser fight uses multiple mech forms and attack phases.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bowser fight uses multiple mech forms and attack phases.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Star Road, switch palaces, and hidden levels off main paths.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Star Road, switch palaces, and hidden levels off main paths."
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Reznor, Koopalings, and Bowser follow learnable attack patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Reznor, Koopalings, and Bowser follow learnable attack patterns.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Charging enemies and boss wind-ups signal incoming attacks.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Charging enemies and boss wind-ups signal incoming attacks.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-bros-3"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Super Mario World through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "mount-companion-control",
+      "secret-exit-branching",
+      "power-up-transformation-states"
+    ],
+    "design_pillars": [
+      "Mount Companion Control",
+      "Secret Exit Branching",
+      "Power Up Transformation States"
+    ]
+  }
+}

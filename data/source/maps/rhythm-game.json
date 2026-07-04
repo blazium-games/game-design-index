@@ -1,0 +1,219 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Inputs mapped to beats with graded timing windows.",
+      "Directional step charts tied to music phrases."
+    ],
+    "player_fantasy": "Experience Rhythm Game through its signature loop.",
+    "theme_tags": [
+      "rhythm-game",
+      "rhythm-tap-timing",
+      "rhythm-foot-panel",
+      "arcade-cabinet-timing"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: song-retry",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Inputs mapped to beats with graded timing windows.",
+    "economy_notes": "light",
+    "overview": "Rhythm Game genre recipe anchored on rhythm-tap-timing, rhythm-foot-panel.",
+    "player_goals": [
+      "Inputs mapped to beats with graded timing windows.",
+      "Directional step charts tied to music phrases."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "combat",
+      "expression": "Inputs mapped to beats with graded timing windows.",
+      "map_notes": "Inputs mapped to beats with graded timing windows.",
+      "mechanic_slug": "rhythm-tap-timing",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "rhythm-tap-timing"
+      ],
+      "domain": "combat",
+      "expression": "Directional step charts tied to music phrases.",
+      "map_notes": "Directional step charts tied to music phrases.",
+      "mechanic_slug": "rhythm-foot-panel",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "combat",
+      "expression": "Score chasing and rank targets per song.",
+      "map_notes": "Score chasing and rank targets per song.",
+      "mechanic_slug": "arcade-cabinet-timing",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "session",
+      "expression": "Limited retries or continues per setlist.",
+      "map_notes": "Limited retries or continues per setlist.",
+      "mechanic_slug": "life-based-retry-system",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 2
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Inputs mapped to beats with graded timing windows.",
+    "description": "Rhythm Game games center on inputs mapped to beats with graded timing windows.",
+    "design_pillars": [
+      "Inputs mapped to beats with graded timing windows.",
+      "Directional step charts tied to music phrases."
+    ],
+    "skills_tested": [
+      "rhythm timing",
+      "pattern recognition",
+      "precision movement"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "party-game",
+      "bullet-hell"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "rhythm-tap-timing",
+    "rhythm-foot-panel"
+  ],
+  "skill_slugs": [
+    "rhythm-timing",
+    "pattern-recognition",
+    "precision-movement"
+  ],
+  "slug": "rhythm-game",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Rhythm",
+      "Arcade"
+    ],
+    "influences": [
+      "Dance Dance Revolution",
+      "Beat Saber"
+    ],
+    "kind": "genre",
+    "name": "Rhythm Game"
+  },
+  "systems": {
+    "economy_tightness": "light",
+    "failure_model": "song-retry",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach rhythm tap timing with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Rhythm Tap Timing",
+        "mechanics": [
+          "rhythm-tap-timing"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Rhythm Foot Panel",
+        "mechanics": [
+          "rhythm-foot-panel"
+        ]
+      }
+    ]
+  },
+  "title": "Rhythm Game Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Song and difficulty select.",
+      "menu_slug": "stage-select-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Offset calibration and assists.",
+      "menu_slug": "options-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Score multiplier chain.",
+      "role": "primary",
+      "variable_slug": "combo-counter"
+    },
+    {
+      "expression": "Ranking and grade targets.",
+      "role": "primary",
+      "variable_slug": "score"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-rhythm-game",
+      "label": "Hardcore Rhythm Game",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

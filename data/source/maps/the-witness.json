@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.1",
+  "slug": "the-witness",
+  "title": "The Witness Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.polygon.com/features/2019/11/4/20944265/best-games-2019-2010-ps4-switch-xbox-pc-100-51/",
+  "subject": {
+    "kind": "game",
+    "name": "The Witness",
+    "genres": [
+      "Puzzle",
+      "Exploration"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "The Witness is an open-world puzzle game set on a mysterious island where line-drawing panels encode rules that must be learned and applied across hundreds of environmental puzzles.",
+    "core_loop": "Explore biomes freely, discover panel puzzles, infer rules from environmental clues, and unlock new areas by mastering progressively harder rule sets.",
+    "skills_tested": [
+      "deductive reasoning",
+      "observation",
+      "pattern inference",
+      "patience"
+    ]
+  },
+  "signature_gameplay": [
+    "evidence-deduction-puzzle",
+    "open-world-exploration",
+    "puzzle-room-exploration"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "evidence-deduction-puzzle",
+      "role": "signature",
+      "map_notes": "In The Witness, players collect clues and deduce correct answers from constrained evidence sets.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In The Witness, players collect clues and deduce correct answers from constrained evidence sets."
+    },
+    {
+      "mechanic_slug": "open-world-exploration",
+      "role": "signature",
+      "map_notes": "In The Witness, minimal UI encourages discovery of landmarks and secrets across vast terrain.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In The Witness, minimal UI encourages discovery of landmarks and secrets across vast terrain."
+    },
+    {
+      "mechanic_slug": "puzzle-room-exploration",
+      "role": "signature",
+      "map_notes": "In The Witness, interconnected rooms hide switches, keys, and environmental secrets.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In The Witness, interconnected rooms hide switches, keys, and environmental secrets."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2005
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience The Witness through its core puzzle loop.",
+    "theme_tags": [
+      "puzzle",
+      "exploration",
+      "evidence-deduction-puzzle",
+      "open-world-exploration",
+      "puzzle-room-exploration"
+    ],
+    "design_pillars": [
+      "Evidence Deduction Puzzle",
+      "Open World Exploration",
+      "Puzzle Room Exploration"
+    ]
+  }
+}

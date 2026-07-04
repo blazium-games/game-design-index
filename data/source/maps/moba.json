@@ -1,0 +1,231 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Three-lane map with structure objectives.",
+      "Gold and XP from creep last hits."
+    ],
+    "player_fantasy": "Experience MOBA through its signature loop.",
+    "theme_tags": [
+      "moba",
+      "lane-push-moba",
+      "last-hit-farming",
+      "ability-loadout-switching"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: match-loss",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Three-lane map with structure objectives.",
+    "economy_notes": "moderate",
+    "overview": "MOBA genre recipe anchored on lane-push-moba, last-hit-farming.",
+    "player_goals": [
+      "Three-lane map with structure objectives.",
+      "Gold and XP from creep last hits."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "progression",
+      "expression": "Three-lane map with structure objectives.",
+      "map_notes": "Three-lane map with structure objectives.",
+      "mechanic_slug": "lane-push-moba",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "lane-push-moba"
+      ],
+      "domain": "economy",
+      "expression": "Gold and XP from creep last hits.",
+      "map_notes": "Gold and XP from creep last hits.",
+      "mechanic_slug": "last-hit-farming",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "progression",
+      "expression": "Skill kits with cooldown teamfight roles.",
+      "map_notes": "Skill kits with cooldown teamfight roles.",
+      "mechanic_slug": "ability-loadout-switching",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 4
+    },
+    {
+      "domain": "economy",
+      "expression": "Item spikes timed to power windows.",
+      "map_notes": "Item spikes timed to power windows.",
+      "mechanic_slug": "equipment-loadout",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Three-lane map with structure objectives.",
+    "description": "MOBA games center on three-lane map with structure objectives.",
+    "design_pillars": [
+      "Three-lane map with structure objectives.",
+      "Gold and XP from creep last hits."
+    ],
+    "skills_tested": [
+      "territory control",
+      "team coordination",
+      "loadout optimization",
+      "risk evaluation"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "tactics-strategy",
+      "fighting-game"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "lane-push-moba",
+    "last-hit-farming"
+  ],
+  "skill_slugs": [
+    "territory-control",
+    "team-coordination",
+    "loadout-optimization",
+    "risk-evaluation"
+  ],
+  "slug": "moba",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "MOBA",
+      "Strategy"
+    ],
+    "influences": [
+      "League of Legends",
+      "Dota 2"
+    ],
+    "kind": "genre",
+    "name": "MOBA"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "match-loss",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach lane push moba with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Lane Push Moba",
+        "mechanics": [
+          "lane-push-moba"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Last Hit Farming",
+        "mechanics": [
+          "last-hit-farming"
+        ]
+      }
+    ]
+  },
+  "title": "MOBA Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Queue and party setup.",
+      "menu_slug": "lobby-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "In-match item shop.",
+      "menu_slug": "shop-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Pre-match loadout if applicable.",
+      "menu_slug": "weapon-select-overlay",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Lane gold for item spikes.",
+      "role": "primary",
+      "variable_slug": "currency-soft"
+    },
+    {
+      "expression": "Level advantage timing.",
+      "role": "primary",
+      "variable_slug": "experience"
+    },
+    {
+      "expression": "Ability readiness in fights.",
+      "role": "supporting",
+      "variable_slug": "cooldown-timer"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-moba",
+      "label": "Hardcore MOBA",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.1",
+  "slug": "monument-valley",
+  "title": "Monument Valley Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.avclub.com/best-videogames-of-the-decade",
+  "subject": {
+    "kind": "game",
+    "name": "Monument Valley",
+    "genres": [
+      "Puzzle"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Monument Valley is an isometric puzzle game where players manipulate impossible architecture and perspective to guide a silent princess through surreal monuments.",
+    "core_loop": "Rotate and slide architectural elements to create traversable paths, guide Ida through optical-illusion levels, and interact with crow people and sacred geometry.",
+    "skills_tested": [
+      "spatial reasoning",
+      "perspective shifting",
+      "patience",
+      "visual inference"
+    ]
+  },
+  "signature_gameplay": [
+    "perspective-rotation-puzzle",
+    "puzzle-room-exploration",
+    "environmental-trigger-switch"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "perspective-rotation-puzzle",
+      "role": "signature",
+      "map_notes": "In Monument Valley, rotate the world to reveal hidden paths and align platforms.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Monument Valley, rotate the world to reveal hidden paths and align platforms."
+    },
+    {
+      "mechanic_slug": "puzzle-room-exploration",
+      "role": "signature",
+      "map_notes": "In Monument Valley, interconnected rooms hide switches, keys, and environmental secrets.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Monument Valley, interconnected rooms hide switches, keys, and environmental secrets."
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "signature",
+      "map_notes": "In Monument Valley, a mechanic where the player interacts with a fixed element in the environment to produce a state change such as opening a door or activating a bridge.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Monument Valley, a mechanic where the player interacts with a fixed element in the environment to produce a state change such as opening a door or activating a bridge."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2014
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Monument Valley through its core puzzle loop.",
+    "theme_tags": [
+      "puzzle",
+      "perspective-rotation-puzzle",
+      "puzzle-room-exploration",
+      "environmental-trigger-switch"
+    ],
+    "design_pillars": [
+      "Perspective Rotation Puzzle",
+      "Puzzle Room Exploration",
+      "Environmental Trigger Switch"
+    ]
+  }
+}

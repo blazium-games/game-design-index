@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blazium-games.github.io/game-design-index/schema/public/enrichment-patch.schema.json",
+  "title": "Enrichment cohort patch",
+  "description": "Sidecar patch merged into library catalogs and maps by scripts/apply_enrichment",
+  "type": "object",
+  "properties": {
+    "_meta": {
+      "type": "object",
+      "properties": {
+        "cohort": { "type": "string" },
+        "description": { "type": "string" },
+        "schema_targets": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "mechanics": {
+      "type": "object",
+      "additionalProperties": { "type": "object" }
+    },
+    "variables": {
+      "type": "object",
+      "additionalProperties": { "type": "object" }
+    },
+    "ui_menus": {
+      "type": "object",
+      "additionalProperties": { "type": "object" }
+    },
+    "skills": {
+      "type": "object",
+      "additionalProperties": { "type": "object" }
+    },
+    "skills_add": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "maps": {
+      "type": "object",
+      "additionalProperties": { "type": "object" }
+    },
+    "maps_add": {
+      "type": "object",
+      "additionalProperties": { "type": "object" }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,2335 @@
+{
+  "schema_version": "1.0",
+  "variables": [
+    {
+      "agent_context": {
+        "gdd_prompt": "Define ammo types, max carry, sources, consumption per shot, and UI warnings at low ammo.",
+        "implementation_checklist": [
+          "Decrement on fire",
+          "Block fire at zero with feedback",
+          "Sync ammo count to HUD and inventory"
+        ],
+        "summary_for_agents": "Ranged weapons consume ammo from inventory; tune carry caps, craft sources, and fallback melee."
+      },
+      "category": "resource",
+      "common_in": [
+        "Adventure"
+      ],
+      "design_guidance": {
+        "designer_notes": "Ammo tension works when melee remains viable so players are never hard-stuck at zero.",
+        "when_to_avoid": [
+          "When tracking ammo would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When ranged attacks require consumable or limited ammunition.",
+        "where_to_use": "Inventory, crafting, shop restocks, combat HUD."
+      },
+      "featured_in": [
+        "zelda-breath-of-the-wild"
+      ],
+      "name": "Ammo",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for ammo.",
+          "name": "max_value",
+          "range": "0–999 per type"
+        },
+        {
+          "effect": "How quickly ammo refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Craft or buy ammo before encounters.",
+      "related_mechanics": [
+        "aim-down-sights-shooting",
+        "cover-based-positioning",
+        "instant-fire-attack"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Ranged weapons consume arrows and bombs from inventory.",
+      "slug": "ammo",
+      "summary": "Consumable ammunition for ranged weapons.",
+      "tags": [
+        "combat"
+      ],
+      "typical_range": "0–999 per type",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define phase HP thresholds, attack set per phase, and transition feedback.",
+        "implementation_checklist": [
+          "Monitor HP against thresholds",
+          "Fire phase transition event",
+          "Swap boss behavior table"
+        ],
+        "summary_for_agents": "Boss HP phases trigger behavior changes at thresholds; document breakpoints and per-phase rules."
+      },
+      "category": "meter",
+      "design_guidance": {
+        "designer_notes": "Display phase markers on boss bar when multiple phases exist.",
+        "when_to_avoid": [
+          "When tracking boss hp phases would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When boss behavior should shift at defined health thresholds.",
+        "where_to_use": "Boss HP bar segments, phase transition scripts."
+      },
+      "featured_in": [
+        "soulslike",
+        "fighting-game",
+        "bullet-hell"
+      ],
+      "name": "Boss HP Phases",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for boss hp phases.",
+          "name": "max_value",
+          "range": "0–100% fill"
+        },
+        {
+          "effect": "How quickly boss hp phases refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Watch HP breakpoints to anticipate new attack patterns.",
+      "related_mechanics": [
+        "multi-phase-boss-battle",
+        "boss-weakness-network"
+      ],
+      "reset_behavior": "per_level",
+      "schema_version": "1.1",
+      "scope": "session",
+      "shared_rationale": "Segmented boss health drives phase transitions and attack table swaps.",
+      "slug": "boss-hp-phases",
+      "summary": "Segmented boss health triggering phase shifts.",
+      "tags": [
+        "combat"
+      ],
+      "typical_range": "0–100% fill",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define notch capacity progression, charm costs, and one example build tradeoff.",
+        "implementation_checklist": [
+          "Track equipped charm cost sum",
+          "Validate on equip UI",
+          "Show notch usage in loadout screen"
+        ],
+        "summary_for_agents": "Charm notches cap passive loadout power; players trade quantity of effects for stronger builds."
+      },
+      "category": "slot",
+      "common_in": [
+        "Metroidvania"
+      ],
+      "design_guidance": {
+        "designer_notes": "Tune charm notches alongside player-scoped systems.",
+        "when_to_use": "When equip capacity for passive charm modifiers.",
+        "where_to_use": "Slot UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "name": "Charm Notches",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for charm notches.",
+          "name": "max_value",
+          "range": "3–11 notches"
+        },
+        {
+          "effect": "How quickly charm notches refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Equip charms within notch budget.",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "related_variables": [
+        {
+          "relationship": "capacity_constraint",
+          "slug": "inventory-slots"
+        }
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Loadout capacity forces charm build choices without unlimited passives.",
+      "slug": "charm-notches",
+      "summary": "Equip capacity for passive charm modifiers.",
+      "tags": [
+        "capacity",
+        "progression"
+      ],
+      "typical_range": "3–11 notches",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document checkpoint id: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize checkpoint-id on session start",
+          "Update checkpoint-id on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Last saved bench or respawn anchor."
+      },
+      "category": "flag",
+      "design_guidance": {
+        "designer_notes": "Tune checkpoint id alongside player-scoped systems.",
+        "when_to_use": "When last saved bench or respawn anchor.",
+        "where_to_use": "Flag UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "precision-platformer"
+      ],
+      "name": "Checkpoint ID",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for checkpoint id.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly checkpoint id refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Respawn location after death depends on last activated checkpoint.",
+      "related_mechanics": [
+        "bench-checkpoint"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Stores last bench or respawn anchor for death recovery.",
+      "slug": "checkpoint-id",
+      "summary": "Last saved bench or respawn anchor.",
+      "tags": [
+        "session",
+        "progression"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "enum"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Specify combo increment rules, reset triggers, timeout window, and rewards per tier.",
+        "implementation_checklist": [
+          "Increment on valid hit",
+          "Reset on break condition",
+          "Update HUD and apply reward tiers"
+        ],
+        "summary_for_agents": "Combo counter tracks consecutive hits or actions; document increment, reset, and reward scaling."
+      },
+      "category": "counter",
+      "design_guidance": {
+        "designer_notes": "Reset rules must be clear—on hit taken, on timeout, or on whiff.",
+        "when_to_avoid": [
+          "When tracking combo counter would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When chaining hits should reward escalating score or damage.",
+        "where_to_use": "Fighting game juggle counters, action combo meters, style ranks."
+      },
+      "featured_in": [
+        "rhythm-game"
+      ],
+      "name": "Combo Counter",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for combo counter.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly combo counter refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Maintain chains without taking hits or whiffing attacks.",
+      "related_mechanics": [
+        "combo-chain-system",
+        "rhythm-tap-timing",
+        "arcade-cabinet-timing"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "session",
+      "shared_rationale": "Chains consecutive hits into escalating style or damage rewards.",
+      "slug": "combo-counter",
+      "summary": "Streak counter rewarding sustained offense.",
+      "tags": [
+        "combat"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "List abilities with cooldown durations, whether timers run in combat only, and CDR sources.",
+        "implementation_checklist": [
+          "Start timer on ability use",
+          "Block input until expired",
+          "Render cooldown overlay on HUD"
+        ],
+        "summary_for_agents": "Cooldown timers gate ability reuse; document duration per ability, UI display, and modifier rules."
+      },
+      "category": "meter",
+      "common_in": [
+        "Multiplayer"
+      ],
+      "design_guidance": {
+        "designer_notes": "Show cooldown fill in HUD; consider haste stats that modify timer.",
+        "when_to_avoid": [
+          "When tracking cooldown timer would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When abilities need refractory periods between uses.",
+        "where_to_use": "Skill bars, dodge cooldowns, ultimate meters."
+      },
+      "featured_in": [
+        "among-us"
+      ],
+      "name": "Cooldown Timer",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for cooldown timer.",
+          "name": "max_value",
+          "range": "10–60 seconds"
+        },
+        {
+          "effect": "How quickly cooldown timer refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Time kills and sabotage around cooldowns.",
+      "related_mechanics": [
+        "lane-push-moba",
+        "ability-loadout-switching"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Ability pacing prevents spam in asymmetric roles.",
+      "slug": "cooldown-timer",
+      "summary": "Seconds until ability or action is available again.",
+      "tags": [
+        "combat",
+        "multiplayer"
+      ],
+      "typical_range": "10–60 seconds",
+      "value_kind": "float"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document premium currency: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize currency-premium on session start",
+          "Update currency-premium on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Optional paid or rare meta currency."
+      },
+      "category": "currency",
+      "design_guidance": {
+        "designer_notes": "Tune premium currency alongside player-scoped systems.",
+        "when_to_use": "When optional paid or rare meta currency.",
+        "where_to_use": "Currency UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "roguelike-deckbuilder",
+        "idle-incremental",
+        "moba"
+      ],
+      "name": "Premium Currency",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for premium currency.",
+          "name": "max_value",
+          "range": "0–9999 per scope"
+        },
+        {
+          "effect": "How quickly premium currency refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Separate premium purchases from earnable soft currency mentally.",
+      "related_mechanics": [
+        "purchase-gated-upgrade",
+        "metaprogression"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Real-money or rare premium currency for cosmetics and convenience.",
+      "slug": "currency-premium",
+      "summary": "Optional paid or rare meta currency.",
+      "tags": [
+        "economy",
+        "meta"
+      ],
+      "typical_range": "0–9999 per scope",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define earn rate, shop prices, death penalty, and distinction from persistent meta currency.",
+        "implementation_checklist": [
+          "Track run-scoped balance",
+          "Clear on death if designed",
+          "Validate purchase affordability in shop UI"
+        ],
+        "summary_for_agents": "Soft currency is earned and spent within a run; death may wipe it—document sources, sinks, and loss rules."
+      },
+      "category": "currency",
+      "common_in": [
+        "Roguelike"
+      ],
+      "design_guidance": {
+        "designer_notes": "Separate soft currency from meta currency in UI labels to avoid player confusion on death loss.",
+        "when_to_avoid": [
+          "When tracking soft currency would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When in-run earnings fund temporary power or services without persisting after death.",
+        "where_to_use": "Shops between rooms, NPC vendors, reward nodes."
+      },
+      "featured_in": [
+        "hades"
+      ],
+      "name": "Soft Currency",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for soft currency.",
+          "name": "max_value",
+          "range": "0–999 per run"
+        },
+        {
+          "effect": "How quickly soft currency refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Spend bones before chamber ends.",
+      "related_mechanics": [
+        "fill-reward-progression-loop",
+        "roguelike-map-routing",
+        "purchase-gated-upgrade"
+      ],
+      "reset_behavior": "per_death",
+      "schema_version": "1.1",
+      "scope": "run",
+      "shared_rationale": "In-run bones buy mid-escape boons and wells.",
+      "slug": "currency-soft",
+      "summary": "Earnable in-run currency for upgrades and consumables.",
+      "tags": [
+        "economy",
+        "meta"
+      ],
+      "typical_range": "0–999 per run",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define max charges, earn sources, on-proc behavior (heal %, invuln frames), and HUD display.",
+        "implementation_checklist": [
+          "Intercept fatal damage when charges \u003e 0",
+          "Decrement charge and apply recovery",
+          "Show charge count in combat HUD"
+        ],
+        "summary_for_agents": "Death defiance charges let players survive fatal damage a limited number of times per run."
+      },
+      "category": "counter",
+      "common_in": [
+        "Roguelike"
+      ],
+      "design_guidance": {
+        "designer_notes": "Charges should be scarce enough that players still play carefully; surface remaining charges in HUD.",
+        "when_to_avoid": [
+          "When tracking death defiance charges would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When roguelikes need a safety valve without removing permadeath entirely.",
+        "where_to_use": "Meta upgrades, rare relics, difficulty modifiers."
+      },
+      "featured_in": [
+        "hades"
+      ],
+      "name": "Death Defiance Charges",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for death defiance charges.",
+          "name": "max_value",
+          "range": "0–3 charges"
+        },
+        {
+          "effect": "How quickly death defiance charges refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Spend charges on lethal mistakes.",
+      "related_mechanics": [
+        "permadeath-run-structure",
+        "fill-reward-progression-loop"
+      ],
+      "reset_behavior": "per_death",
+      "schema_version": "1.1",
+      "scope": "run",
+      "shared_rationale": "Extra revives extend high-difficulty escape attempts.",
+      "slug": "death-defiance-charges",
+      "summary": "Extra death saves before run failure.",
+      "tags": [
+        "combat",
+        "progression"
+      ],
+      "typical_range": "0–3 charges",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document difficulty tier: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize difficulty-tier on session start",
+          "Update difficulty-tier on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Selected challenge modifier or heat level."
+      },
+      "category": "flag",
+      "design_guidance": {
+        "designer_notes": "Tune difficulty tier alongside session-scoped systems.",
+        "when_to_use": "When selected challenge modifier or heat level.",
+        "where_to_use": "Flag UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "soulslike",
+        "precision-platformer",
+        "fighting-game"
+      ],
+      "name": "Difficulty Tier",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for difficulty tier.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly difficulty tier refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Pick a tier matching desired challenge and accessibility needs.",
+      "related_mechanics": [
+        "difficulty-accessibility-mode",
+        "bench-checkpoint"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "session",
+      "shared_rationale": "Selectable difficulty modifies enemy stats, assists, or reward multipliers.",
+      "slug": "difficulty-tier",
+      "summary": "Selected challenge modifier or heat level.",
+      "tags": [
+        "session",
+        "progression"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "enum"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document durability: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize durability on session start",
+          "Update durability on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Item wear before repair or breakage."
+      },
+      "category": "meter",
+      "design_guidance": {
+        "designer_notes": "Tune durability alongside player-scoped systems.",
+        "when_to_use": "When item wear before repair or breakage.",
+        "where_to_use": "Meter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "survival-crafting",
+        "open-world-action"
+      ],
+      "name": "Durability",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for durability.",
+          "name": "max_value",
+          "range": "0–100% fill"
+        },
+        {
+          "effect": "How quickly durability refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Rotate gear before breakage during long expeditions.",
+      "related_mechanics": [
+        "crafting-economy-loop",
+        "equipment-loadout"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Equipment wears down with use until repair or replacement.",
+      "slug": "durability",
+      "summary": "Item wear before repair or breakage.",
+      "tags": [
+        "economy",
+        "crafting"
+      ],
+      "typical_range": "0–100% fill",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document energy: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize energy on session start",
+          "Update energy on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Generic secondary resource for gadgets or shields."
+      },
+      "category": "resource",
+      "design_guidance": {
+        "designer_notes": "Tune energy alongside player-scoped systems.",
+        "when_to_use": "When generic secondary resource for gadgets or shields.",
+        "where_to_use": "Resource UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "soulslike",
+        "open-world-action",
+        "survival-crafting"
+      ],
+      "name": "Energy",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for energy.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly energy refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Budget energy across turns or rooms before refilling.",
+      "related_mechanics": [
+        "stamina-resource-management",
+        "glide-traversal"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Action points or stamina-like pool limiting special moves per encounter.",
+      "slug": "energy",
+      "summary": "Generic secondary resource for gadgets or shields.",
+      "tags": [
+        "combat"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document equipment belt slots: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize equipment-belt-slots on session start",
+          "Update equipment-belt-slots on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Quick-access weapon or tool slots."
+      },
+      "category": "slot",
+      "common_in": [
+        "Adventure"
+      ],
+      "design_guidance": {
+        "designer_notes": "Tune equipment belt slots alongside player-scoped systems.",
+        "when_to_use": "When quick-access weapon or tool slots.",
+        "where_to_use": "Slot UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "zelda-breath-of-the-wild"
+      ],
+      "name": "Equipment Belt Slots",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for equipment belt slots.",
+          "name": "max_value",
+          "range": "1–8 slots"
+        },
+        {
+          "effect": "How quickly equipment belt slots refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Assign swords, bows, and shields to belt.",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Weapon/tool wheel limits mid-combat swaps.",
+      "slug": "equipment-belt-slots",
+      "summary": "Quick-access weapon or tool slots.",
+      "tags": [
+        "capacity",
+        "combat"
+      ],
+      "typical_range": "1–8 slots",
+      "value_kind": "slot_list"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Specify XP sources, level curve, rewards per level, and overflow behavior.",
+        "implementation_checklist": [
+          "Add XP on defined events",
+          "Evaluate level-up thresholds",
+          "Grant rewards and notify UI on level up"
+        ],
+        "summary_for_agents": "Experience accumulates toward level thresholds; document earn sources, curve formula, and level-up rewards."
+      },
+      "category": "counter",
+      "design_guidance": {
+        "designer_notes": "Publish XP curve early so designers can pace content gates against level thresholds.",
+        "when_to_avoid": [
+          "When tracking experience would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When numeric progression unlocks levels, skills, or stat points over time.",
+        "where_to_use": "Combat rewards, quest completion, exploration milestones."
+      },
+      "featured_in": [
+        "moba"
+      ],
+      "name": "Experience",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for experience.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly experience refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Farm XP in zones matching current level band efficiently.",
+      "related_mechanics": [
+        "rpg-stat-progression",
+        "last-hit-farming",
+        "lane-push-moba"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "XP accumulation unlocks levels, skills, or stat points.",
+      "slug": "experience",
+      "summary": "Accumulated progress toward level or skill unlocks.",
+      "tags": [
+        "progression"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document focus meter: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize focus-meter on session start",
+          "Update focus-meter on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Build-up resource spent on specials."
+      },
+      "category": "meter",
+      "design_guidance": {
+        "designer_notes": "Tune focus meter alongside player-scoped systems.",
+        "when_to_use": "When build-up resource spent on specials.",
+        "where_to_use": "Meter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "fighting-game",
+        "soulslike"
+      ],
+      "name": "Focus Meter",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for focus meter.",
+          "name": "max_value",
+          "range": "0.0–1.0 or meter fill"
+        },
+        {
+          "effect": "How quickly focus meter refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Build focus through successful actions then spend on spike damage.",
+      "related_mechanics": [
+        "combo-chain-system",
+        "stamina-resource-management"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Build-up meter spent on powerful specials or finishers.",
+      "slug": "focus-meter",
+      "summary": "Build-up resource spent on specials.",
+      "tags": [
+        "combat"
+      ],
+      "typical_range": "0.0–1.0 or meter fill",
+      "value_kind": "float"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Specify geo sources, sinks, death penalty, and one shop price curve.",
+        "summary_for_agents": "Geo is run currency lost on death, creating risk/reward on spending before benches."
+      },
+      "category": "currency",
+      "common_in": [
+        "Metroidvania"
+      ],
+      "design_guidance": {
+        "designer_notes": "Tune geo alongside player-scoped systems.",
+        "when_to_use": "When primary soft currency for shops and upgrades.",
+        "where_to_use": "Currency UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "name": "Geo",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for geo.",
+          "name": "max_value",
+          "range": "0–99999 per run"
+        },
+        {
+          "effect": "How quickly geo refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Bank geo safely at benches; spend on maps, charms, and upgrades.",
+      "related_mechanics": [
+        "bench-checkpoint",
+        "map-resource-monster-groups",
+        "purchase-gated-upgrade"
+      ],
+      "reset_behavior": "per_death",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Soft currency ties exploration rewards to bench-risk and shade recovery.",
+      "slug": "geo",
+      "summary": "Primary soft currency for shops and upgrades.",
+      "tags": [
+        "economy"
+      ],
+      "typical_range": "0–99999 per run",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define gold earn rate per activity, major sinks, and whether gold persists through death.",
+        "implementation_checklist": [
+          "Add gold on rewards",
+          "Validate on purchase",
+          "Update HUD and shop displays"
+        ],
+        "summary_for_agents": "Gold is general-purpose currency; document earn sources, sinks, death loss rules, and display."
+      },
+      "category": "currency",
+      "design_guidance": {
+        "designer_notes": "Separate gold from premium currency in labels and earn rates.",
+        "when_to_avoid": [
+          "When tracking gold would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When a universal currency funds shops, upgrades, and crafting.",
+        "where_to_use": "Vendor UI, loot drops, quest rewards."
+      },
+      "featured_in": [
+        "turn-based-rpg",
+        "city-builder",
+        "life-sim"
+      ],
+      "name": "Gold",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for gold.",
+          "name": "max_value",
+          "range": "0–9999 per scope"
+        },
+        {
+          "effect": "How quickly gold refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Balance saving for big purchases vs buying consumables now.",
+      "related_mechanics": [
+        "crafting-economy-loop",
+        "city-building-economy"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Universal gold funds shops, upgrades, and crafting.",
+      "slug": "gold",
+      "summary": "Classic soft currency for vendors and crafting.",
+      "tags": [
+        "economy"
+      ],
+      "typical_range": "0–9999 per scope",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document starting health, heal sources, and checkpoint restore behavior.",
+        "summary_for_agents": "Health is the primary failure meter; tuning max HP and heal cadence sets difficulty."
+      },
+      "category": "stat",
+      "common_in": [
+        "Action",
+        "Metroidvania"
+      ],
+      "design_guidance": {
+        "designer_notes": "Tune health alongside player-scoped systems.",
+        "when_to_use": "When primary survivability pool depleted by damage.",
+        "where_to_use": "Stat UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "hades",
+        "hollow-knight",
+        "mega-man-2",
+        "zelda-breath-of-the-wild"
+      ],
+      "name": "Health",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for health.",
+          "name": "max_value",
+          "range": "1–9 masks / 3–20 hearts"
+        },
+        {
+          "effect": "How quickly health refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Survive encounters without depleting the pool.",
+      "related_mechanics": [
+        "depletable-health-pool"
+      ],
+      "reset_behavior": "per_death",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Nearly every action game needs a failure boundary the player can read at a glance.",
+      "slug": "health",
+      "summary": "Primary survivability pool depleted by damage.",
+      "tags": [
+        "combat",
+        "progression"
+      ],
+      "typical_range": "1–9 masks / 3–20 hearts",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document heat: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize heat on session start",
+          "Update heat on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Escalating difficulty modifier within a run."
+      },
+      "category": "meter",
+      "design_guidance": {
+        "designer_notes": "Tune heat alongside run-scoped systems.",
+        "when_to_use": "When escalating difficulty modifier within a run.",
+        "where_to_use": "Meter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "stealth-action",
+        "open-world-action"
+      ],
+      "name": "Heat",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for heat.",
+          "name": "max_value",
+          "range": "0–100% fill"
+        },
+        {
+          "effect": "How quickly heat refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Manage heat through stealth, downtime, or consumable clears.",
+      "related_mechanics": [
+        "stealth-detection-loop",
+        "open-world-exploration"
+      ],
+      "reset_behavior": "per_death",
+      "schema_version": "1.1",
+      "scope": "run",
+      "shared_rationale": "Heat or wanted level escalates challenge as player disturbs systems.",
+      "slug": "heat",
+      "summary": "Escalating difficulty modifier within a run.",
+      "tags": [
+        "progression",
+        "combat"
+      ],
+      "typical_range": "0–100% fill",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document hunger: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize hunger on session start",
+          "Update hunger on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Survival need forcing resource consumption."
+      },
+      "category": "meter",
+      "design_guidance": {
+        "designer_notes": "Tune hunger alongside player-scoped systems.",
+        "when_to_use": "When survival need forcing resource consumption.",
+        "where_to_use": "Meter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "life-sim",
+        "survival-crafting"
+      ],
+      "name": "Hunger",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for hunger.",
+          "name": "max_value",
+          "range": "0.0–1.0 or meter fill"
+        },
+        {
+          "effect": "How quickly hunger refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Carry food before long trips; cook or buy before starving penalties.",
+      "related_mechanics": [
+        "farming-crop-cycle",
+        "day-night-schedule-loop",
+        "resource-scarcity-management"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Hunger meter forces food consumption during exploration or survival loops.",
+      "slug": "hunger",
+      "summary": "Survival need forcing resource consumption.",
+      "tags": [
+        "survival"
+      ],
+      "typical_range": "0.0–1.0 or meter fill",
+      "value_kind": "float"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Specify slot count, stack sizes, overflow behavior, and bag upgrade sources.",
+        "implementation_checklist": [
+          "Enforce slot limit on pickup",
+          "Block pickup with full inventory feedback",
+          "Expand slots on upgrade"
+        ],
+        "summary_for_agents": "Inventory slots cap carried items; document max slots, stack rules, and upgrade paths."
+      },
+      "category": "slot",
+      "common_in": [
+        "Adventure",
+        "RPG"
+      ],
+      "design_guidance": {
+        "designer_notes": "Slot upgrades make good progression rewards; avoid deleting items without player consent.",
+        "when_to_avoid": [
+          "When tracking inventory slots would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When carried item count must stay bounded to force prioritization.",
+        "where_to_use": "Inventory grid, bag upgrades, stash vs pocket."
+      },
+      "featured_in": [
+        "hollow-knight",
+        "zelda-breath-of-the-wild"
+      ],
+      "name": "Inventory Slots",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for inventory slots.",
+          "name": "max_value",
+          "range": "3–40 slots"
+        },
+        {
+          "effect": "How quickly inventory slots refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Prioritize key items and consumables.",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Item caps prevent hoarding and keep UI scannable.",
+      "slug": "inventory-slots",
+      "summary": "Capacity for carried items and equipment.",
+      "tags": [
+        "capacity",
+        "progression"
+      ],
+      "typical_range": "3–40 slots",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document key items: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize key-items on session start",
+          "Update key-items on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Story or access flags represented as inventory."
+      },
+      "category": "flag",
+      "design_guidance": {
+        "designer_notes": "Tune key items alongside player-scoped systems.",
+        "when_to_use": "When story or access flags represented as inventory.",
+        "where_to_use": "Flag UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "puzzle-game",
+        "narrative-adventure",
+        "visual-novel"
+      ],
+      "name": "Key Items",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for key items.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly key items refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Verify key items before attempting gated doors or quests.",
+      "related_mechanics": [
+        "ability-gated-exploration",
+        "evidence-deduction-puzzle",
+        "puzzle-room-exploration"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Quest and progression items tracked separately from consumables.",
+      "slug": "key-items",
+      "summary": "Story or access flags represented as inventory.",
+      "tags": [
+        "progression",
+        "exploration"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "slot_list"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document starting lives, loss conditions, continue rules, and display location.",
+        "implementation_checklist": [
+          "Initialize lives at stage or session start",
+          "Decrement on defined death",
+          "Trigger game over flow at zero"
+        ],
+        "summary_for_agents": "Lives track remaining attempts; specify decrement triggers, pickups, and game-over at zero."
+      },
+      "category": "counter",
+      "common_in": [
+        "Platformer"
+      ],
+      "design_guidance": {
+        "designer_notes": "Clarify whether lives are per-stage or per-session to set player expectations.",
+        "when_to_avoid": [
+          "When tracking lives would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When stage-based sessions need a retry buffer before game over.",
+        "where_to_use": "HUD counter, continue screen, difficulty settings."
+      },
+      "featured_in": [
+        "among-us",
+        "mega-man-2"
+      ],
+      "name": "Lives",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for lives.",
+          "name": "max_value",
+          "range": "0–3 per stage"
+        },
+        {
+          "effect": "How quickly lives refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Preserve lives through boss patterns.",
+      "related_mechanics": [
+        "life-based-retry-system",
+        "linear-stage-gauntlet"
+      ],
+      "reset_behavior": "per_level",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Extra attempts soften difficulty in stage-based action games.",
+      "slug": "lives",
+      "summary": "Remaining attempts before session or stage failure.",
+      "tags": [
+        "session",
+        "combat"
+      ],
+      "typical_range": "0–3 per stage",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define mana max, regen rate, spell costs, and refill sources.",
+        "implementation_checklist": [
+          "Drain on cast",
+          "Regen over time",
+          "Block cast at insufficient mana"
+        ],
+        "summary_for_agents": "Mana fuels spell casts; document max pool, costs per spell, regen, and on-zero behavior."
+      },
+      "category": "resource",
+      "design_guidance": {
+        "designer_notes": "Regen rate and max MP shape pacing between encounters.",
+        "when_to_avoid": [
+          "When tracking mana would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When spells or specials draw from a regenerating or refillable pool.",
+        "where_to_use": "MP bar, spell costs, channel abilities."
+      },
+      "featured_in": [
+        "tactics-strategy",
+        "turn-based-rpg"
+      ],
+      "name": "Mana",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for mana.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly mana refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Conserve mana for elites; use basic attacks when pool is low.",
+      "related_mechanics": [
+        "turn-based-party-combat",
+        "active-time-battle"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "MP pool fuels spells with regen or refill between encounters.",
+      "slug": "mana",
+      "summary": "Spell or ability resource consumed by magic attacks.",
+      "tags": [
+        "combat",
+        "progression"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define meta currency sources, upgrade costs, and how it displays in hub vs run HUD.",
+        "implementation_checklist": [
+          "Credit meta currency on run end",
+          "Persist on profile",
+          "Deduct on meta purchase"
+        ],
+        "summary_for_agents": "Meta currency persists across runs for permanent upgrades; document earn, spend, and UI separation from run loot."
+      },
+      "category": "currency",
+      "common_in": [
+        "Roguelike"
+      ],
+      "design_guidance": {
+        "designer_notes": "Never confuse meta currency with run currency in UI copy.",
+        "when_to_avoid": [
+          "When tracking meta currency would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When persistent currency funds account-wide upgrades between runs.",
+        "where_to_use": "Hub vendors, talent trees, permanent unlock shops."
+      },
+      "featured_in": [
+        "hades"
+      ],
+      "name": "Meta Currency",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for meta currency.",
+          "name": "max_value",
+          "range": "0–99999 persistent"
+        },
+        {
+          "effect": "How quickly meta currency refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Invest in hub mirror for long-term power.",
+      "related_mechanics": [
+        "metaprogression"
+      ],
+      "related_variables": [
+        {
+          "relationship": "complements",
+          "slug": "currency-soft"
+        }
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Darkness funds permanent mirror upgrades between runs.",
+      "slug": "meta-currency",
+      "summary": "Persistent currency for between-run upgrades.",
+      "tags": [
+        "meta",
+        "economy"
+      ],
+      "typical_range": "0–99999 persistent",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document new game plus flag: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize new-game-plus-flag on session start",
+          "Update new-game-plus-flag on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Whether post-completion run modifiers apply."
+      },
+      "category": "flag",
+      "design_guidance": {
+        "designer_notes": "Tune new game plus flag alongside world-scoped systems.",
+        "when_to_use": "When whether post-completion run modifiers apply.",
+        "where_to_use": "Flag UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "soulslike",
+        "turn-based-rpg",
+        "metroidvania"
+      ],
+      "name": "New Game Plus Flag",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for new game plus flag.",
+          "name": "max_value",
+          "range": "true / false"
+        },
+        {
+          "effect": "How quickly new game plus flag refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Expect higher difficulty and optional exclusive rewards in NG+.",
+      "related_mechanics": [
+        "metaprogression",
+        "non-linear-boss-selection"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "world",
+      "shared_rationale": "Marks post-completion runs with scaled enemies or carried progress.",
+      "slug": "new-game-plus-flag",
+      "summary": "Whether post-completion run modifiers apply.",
+      "tags": [
+        "meta",
+        "progression"
+      ],
+      "typical_range": "true / false",
+      "value_kind": "boolean"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document oxygen: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize oxygen on session start",
+          "Update oxygen on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Breath timer in hazardous environments."
+      },
+      "category": "meter",
+      "design_guidance": {
+        "designer_notes": "Tune oxygen alongside player-scoped systems.",
+        "when_to_use": "When breath timer in hazardous environments.",
+        "where_to_use": "Meter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "survival-crafting",
+        "horror-survival"
+      ],
+      "name": "Oxygen",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for oxygen.",
+          "name": "max_value",
+          "range": "0.0–1.0 or meter fill"
+        },
+        {
+          "effect": "How quickly oxygen refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Plan dive routes with air pockets or speed boosts.",
+      "related_mechanics": [
+        "environmental-hazard-navigation",
+        "open-world-exploration"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Breath timer underwater or in hazard zones until surfacing.",
+      "slug": "oxygen",
+      "summary": "Breath timer in hazardous environments.",
+      "tags": [
+        "survival",
+        "exploration"
+      ],
+      "typical_range": "0.0–1.0 or meter fill",
+      "value_kind": "float"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document party size: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize party-size on session start",
+          "Update party-size on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Number of active party members."
+      },
+      "category": "counter",
+      "design_guidance": {
+        "designer_notes": "Tune party size alongside party-scoped systems.",
+        "when_to_use": "When number of active party members.",
+        "where_to_use": "Counter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "tactics-strategy"
+      ],
+      "name": "Party Size",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for party size.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly party size refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Bench or swap members to match encounter needs.",
+      "related_mechanics": [
+        "turn-based-party-combat",
+        "co-op-horde-survival"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "party",
+      "shared_rationale": "Active party member count affects combat roles and UI.",
+      "slug": "party-size",
+      "summary": "Number of active party members.",
+      "tags": [
+        "multiplayer",
+        "progression"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document player level: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize player-level on session start",
+          "Update player-level on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Discrete tier gating stats, gear, or abilities."
+      },
+      "category": "counter",
+      "design_guidance": {
+        "designer_notes": "Tune player level alongside player-scoped systems.",
+        "when_to_use": "When discrete tier gating stats, gear, or abilities.",
+        "where_to_use": "Counter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "turn-based-rpg"
+      ],
+      "name": "Player Level",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for player level.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly player level refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Grind or quest in level-appropriate content before bosses.",
+      "related_mechanics": [
+        "rpg-stat-progression",
+        "exploration-gated-upgrades"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Character level gates gear, zones, and damage scaling.",
+      "slug": "player-level",
+      "summary": "Discrete tier gating stats, gear, or abilities.",
+      "tags": [
+        "progression"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document quick slot bar: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize quick-slot-bar on session start",
+          "Update quick-slot-bar on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Hotbar slots for active items or weapons."
+      },
+      "category": "slot",
+      "common_in": [
+        "Action"
+      ],
+      "design_guidance": {
+        "designer_notes": "Tune quick slot bar alongside player-scoped systems.",
+        "when_to_use": "When hotbar slots for active items or weapons.",
+        "where_to_use": "Slot UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "mega-man-2"
+      ],
+      "name": "Quick Slot Bar",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for quick slot bar.",
+          "name": "max_value",
+          "range": "1–8 slots"
+        },
+        {
+          "effect": "How quickly quick slot bar refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Swap to weakness weapon mid-fight.",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Hotbar exposes active weapon without pausing combat.",
+      "slug": "quick-slot-bar",
+      "summary": "Hotbar slots for active items or weapons.",
+      "tags": [
+        "capacity",
+        "ui"
+      ],
+      "typical_range": "1–8 slots",
+      "value_kind": "slot_list"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document renown: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize renown on session start",
+          "Update renown on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Seasonal or account-wide prestige score."
+      },
+      "category": "counter",
+      "design_guidance": {
+        "designer_notes": "Tune renown alongside player-scoped systems.",
+        "when_to_use": "When seasonal or account-wide prestige score.",
+        "where_to_use": "Counter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "life-sim",
+        "open-world-action"
+      ],
+      "name": "Renown",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for renown.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly renown refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Complete faction activities to raise renown thresholds.",
+      "related_mechanics": [
+        "dialogue-choice-consequences",
+        "social-relationship-meter"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Faction renown unlocks vendors, quests, and discounts.",
+      "slug": "renown",
+      "summary": "Seasonal or account-wide prestige score.",
+      "tags": [
+        "meta",
+        "progression"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document reputation: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize reputation on session start",
+          "Update reputation on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Faction standing affecting prices and quests."
+      },
+      "category": "counter",
+      "design_guidance": {
+        "designer_notes": "Tune reputation alongside player-scoped systems.",
+        "when_to_use": "When faction standing affecting prices and quests.",
+        "where_to_use": "Counter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "life-sim",
+        "city-builder",
+        "narrative-adventure",
+        "tycoon-simulation"
+      ],
+      "name": "Reputation",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for reputation.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly reputation refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Avoid hostile actions with factions you need for services.",
+      "related_mechanics": [
+        "dialogue-choice-consequences",
+        "social-relationship-meter"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "NPC or faction standing alters prices, dialogue, and hostility.",
+      "slug": "reputation",
+      "summary": "Faction standing affecting prices and quests.",
+      "tags": [
+        "progression",
+        "economy"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document sanity: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize sanity on session start",
+          "Update sanity on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Psychological stress meter affecting abilities."
+      },
+      "category": "meter",
+      "design_guidance": {
+        "designer_notes": "Tune sanity alongside player-scoped systems.",
+        "when_to_use": "When psychological stress meter affecting abilities.",
+        "where_to_use": "Meter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "horror-survival"
+      ],
+      "name": "Sanity",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for sanity.",
+          "name": "max_value",
+          "range": "0.0–1.0 or meter fill"
+        },
+        {
+          "effect": "How quickly sanity refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Seek safe light or items before sanity breaks critical thresholds.",
+      "related_mechanics": [
+        "stealth-detection-loop",
+        "resource-scarcity-management"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Sanity meter triggers hallucinations or penalties in horror contexts.",
+      "slug": "sanity",
+      "summary": "Psychological stress meter affecting abilities.",
+      "tags": [
+        "survival",
+        "combat"
+      ],
+      "typical_range": "0.0–1.0 or meter fill",
+      "value_kind": "float"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document score: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize score on session start",
+          "Update score on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Session points for ranking or rewards."
+      },
+      "category": "counter",
+      "design_guidance": {
+        "designer_notes": "Tune score alongside session-scoped systems.",
+        "when_to_use": "When session points for ranking or rewards.",
+        "where_to_use": "Counter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "rhythm-game",
+        "racing",
+        "party-game",
+        "bullet-hell"
+      ],
+      "name": "Score",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for score.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly score refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Chain combos and secrets for high-score routes.",
+      "related_mechanics": [
+        "arcade-cabinet-timing",
+        "life-based-retry-system"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "session",
+      "shared_rationale": "Arcade score drives rankings, continues, and stage grading.",
+      "slug": "score",
+      "summary": "Session points for ranking or rewards.",
+      "tags": [
+        "progression"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document shield: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize shield on session start",
+          "Update shield on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Secondary damage buffer before health depletes."
+      },
+      "category": "stat",
+      "design_guidance": {
+        "designer_notes": "Tune shield alongside player-scoped systems.",
+        "when_to_use": "When secondary damage buffer before health depletes.",
+        "where_to_use": "Stat UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "first-person-shooter"
+      ],
+      "name": "Shield",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for shield.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly shield refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Block telegraphed hits; release guard before guard-break attacks.",
+      "related_mechanics": [
+        "aim-down-sights-shooting",
+        "cover-based-positioning",
+        "telegraphed-threat-loop"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Shield or guard meter absorbs damage until break or stamina depletion.",
+      "slug": "shield",
+      "summary": "Secondary damage buffer before health depletes.",
+      "tags": [
+        "combat"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Specify soul earn, drop location on death, recovery rules, and loss on second death.",
+        "implementation_checklist": [
+          "Track soul balance",
+          "Spawn pickup at death",
+          "Clear on recovery or second death"
+        ],
+        "summary_for_agents": "Souls represent XP and currency at risk on death; document drop, recovery, and loss on second death."
+      },
+      "category": "currency",
+      "common_in": [
+        "Roguelike"
+      ],
+      "design_guidance": {
+        "designer_notes": "Recovery loop must be challenging but fair—don't place stain in unreachable pits.",
+        "when_to_avoid": [
+          "When tracking souls would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When death drops accumulated XP/currency at the death site for recovery risk.",
+        "where_to_use": "Soulslike death stains, bloodstains, runaway currency."
+      },
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "name": "Souls",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for souls.",
+          "name": "max_value",
+          "range": "0–5000 per escape"
+        },
+        {
+          "effect": "How quickly souls refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Spend before dying or recover shade pile.",
+      "related_mechanics": [
+        "permadeath-run-structure",
+        "bench-checkpoint"
+      ],
+      "related_variables": [
+        {
+          "relationship": "parallel_currency",
+          "slug": "geo"
+        }
+      ],
+      "reset_behavior": "per_death",
+      "schema_version": "1.1",
+      "scope": "run",
+      "shared_rationale": "Run-scoped souls fund shade recovery and vendor purchases in roguelikes.",
+      "slug": "souls",
+      "summary": "Run-scoped currency earned from combat, spent at vendors.",
+      "tags": [
+        "economy",
+        "progression"
+      ],
+      "typical_range": "0–5000 per escape",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document spell slots: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize spell-slots on session start",
+          "Update spell-slots on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Equipped active spell or ability slots."
+      },
+      "category": "slot",
+      "common_in": [
+        "Action"
+      ],
+      "design_guidance": {
+        "designer_notes": "Tune spell slots alongside player-scoped systems.",
+        "when_to_use": "When equipped active spell or ability slots.",
+        "where_to_use": "Slot UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "name": "Spell Slots",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for spell slots.",
+          "name": "max_value",
+          "range": "1–4 slots"
+        },
+        {
+          "effect": "How quickly spell slots refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Assign spells to face buttons.",
+      "related_mechanics": [
+        "turn-based-party-combat",
+        "equipment-loadout"
+      ],
+      "reset_behavior": "persistent",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Limited spell bindings make focus/soul management tactical.",
+      "slug": "spell-slots",
+      "summary": "Equipped active spell or ability slots.",
+      "tags": [
+        "capacity",
+        "combat"
+      ],
+      "typical_range": "1–4 slots",
+      "value_kind": "slot_list"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Specify stamina max, costs for sprint/dodge/attack, regen delay, and UI feedback when depleted.",
+        "implementation_checklist": [
+          "Drain on gated actions",
+          "Block actions at zero",
+          "Regen after delay with HUD update"
+        ],
+        "summary_for_agents": "Stamina gates repeated actions; document max pool, per-action cost, regen rate, and exhaustion penalty."
+      },
+      "category": "meter",
+      "common_in": [
+        "Adventure"
+      ],
+      "design_guidance": {
+        "designer_notes": "Regen delay after exertion prevents infinite kiting; tune per action cost.",
+        "when_to_avoid": [
+          "When tracking stamina would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When sustained sprint, climb, dodge, or attack chains need pacing.",
+        "where_to_use": "Combat stamina bar, climb grip meter, exploration sprint."
+      },
+      "featured_in": [
+        "zelda-breath-of-the-wild"
+      ],
+      "name": "Stamina",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for stamina.",
+          "name": "max_value",
+          "range": "0–3 wheels"
+        },
+        {
+          "effect": "How quickly stamina refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Manage stamina while climbing and gliding.",
+      "related_mechanics": [
+        "stamina-resource-management",
+        "glide-traversal"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Climb and sprint economy gates vertical exploration.",
+      "slug": "stamina",
+      "summary": "Short-term exertion meter for sprint, dodge, or climb.",
+      "tags": [
+        "combat",
+        "exploration"
+      ],
+      "typical_range": "0–3 wheels",
+      "value_kind": "float"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document stamina regen delay: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize stamina-regen-delay on session start",
+          "Update stamina-regen-delay on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Cooldown before stamina refills after exertion."
+      },
+      "category": "meter",
+      "design_guidance": {
+        "designer_notes": "Tune stamina regen delay alongside player-scoped systems.",
+        "when_to_use": "When cooldown before stamina refills after exertion.",
+        "where_to_use": "Meter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "soulslike",
+        "open-world-action"
+      ],
+      "name": "Stamina Regen Delay",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for stamina regen delay.",
+          "name": "max_value",
+          "range": "0.0–1.0 or meter fill"
+        },
+        {
+          "effect": "How quickly stamina regen delay refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Pause exertion briefly to regain stamina before next action.",
+      "related_mechanics": [
+        "stamina-resource-management",
+        "colossus-climb-combat"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Delay before stamina refills after sprint, climb, or dodge.",
+      "slug": "stamina-regen-delay",
+      "summary": "Cooldown before stamina refills after exertion.",
+      "tags": [
+        "combat"
+      ],
+      "typical_range": "0.0–1.0 or meter fill",
+      "value_kind": "float"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document super meter: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize super-meter on session start",
+          "Update super-meter on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Team or player ultimate charge."
+      },
+      "category": "meter",
+      "design_guidance": {
+        "designer_notes": "Tune super meter alongside player-scoped systems.",
+        "when_to_use": "When team or player ultimate charge.",
+        "where_to_use": "Meter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "fighting-game"
+      ],
+      "name": "Super Meter",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for super meter.",
+          "name": "max_value",
+          "range": "0.0–1.0 or meter fill"
+        },
+        {
+          "effect": "How quickly super meter refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Spend super on checkmate moments or save for boss phases.",
+      "related_mechanics": [
+        "combo-chain-system",
+        "arena-fighter-combos"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Super gauge fills from offense or damage taken for ultimates.",
+      "slug": "super-meter",
+      "summary": "Team or player ultimate charge.",
+      "tags": [
+        "combat",
+        "multiplayer"
+      ],
+      "typical_range": "0.0–1.0 or meter fill",
+      "value_kind": "float"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "List tasks, completion time, progress increment, win threshold, and what UI exposes to each role.",
+        "implementation_checklist": [
+          "Increment on task completion",
+          "Check win at threshold",
+          "Mirror progress to HUD and map overlay"
+        ],
+        "summary_for_agents": "Task progress tracks completed crew objectives toward win; tune task count, duration, and visibility to impostors."
+      },
+      "category": "counter",
+      "common_in": [
+        "Social Deduction"
+      ],
+      "design_guidance": {
+        "designer_notes": "Make progress visible to all roles where asymmetric information is part of the design.",
+        "when_to_avoid": [
+          "When tracking task progress would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When crew or team objectives must complete before time or elimination ends the match.",
+        "where_to_use": "HUD progress bar, meeting discussion, win condition checks."
+      },
+      "featured_in": [
+        "among-us"
+      ],
+      "name": "Task Progress",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for task progress.",
+          "name": "max_value",
+          "range": "0–100%"
+        },
+        {
+          "effect": "How quickly task progress refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Complete tasks before elimination quota.",
+      "related_mechanics": [
+        "evidence-deduction-puzzle",
+        "asymmetric-multiplayer"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "session",
+      "shared_rationale": "Crew win condition visible to both teams.",
+      "slug": "task-progress",
+      "summary": "Fraction of crew objectives completed.",
+      "tags": [
+        "multiplayer",
+        "progression"
+      ],
+      "typical_range": "0–100%",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document timer: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize timer on session start",
+          "Update timer on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Countdown or elapsed time pressure."
+      },
+      "category": "meter",
+      "design_guidance": {
+        "designer_notes": "Tune timer alongside session-scoped systems.",
+        "when_to_use": "When countdown or elapsed time pressure.",
+        "where_to_use": "Meter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "puzzle-game",
+        "battle-royale",
+        "racing"
+      ],
+      "name": "Timer",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for timer.",
+          "name": "max_value",
+          "range": "0.0–1.0 or meter fill"
+        },
+        {
+          "effect": "How quickly timer refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Prioritize objective when timer is low; avoid optional detours.",
+      "related_mechanics": [
+        "battle-royale-zone-shrink",
+        "day-night-schedule-loop"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "session",
+      "shared_rationale": "Countdown or elapsed timer pressures objectives and round ends.",
+      "slug": "timer",
+      "summary": "Countdown or elapsed time pressure.",
+      "tags": [
+        "session"
+      ],
+      "typical_range": "0.0–1.0 or meter fill",
+      "value_kind": "float"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Document wave number: range, reset behavior, UI display, and spend or gain triggers.",
+        "implementation_checklist": [
+          "Initialize wave-number on session start",
+          "Update wave-number on defined game events",
+          "Bind value to HUD or menu displays"
+        ],
+        "summary_for_agents": "Current enemy wave in horde modes."
+      },
+      "category": "counter",
+      "design_guidance": {
+        "designer_notes": "Tune wave number alongside session-scoped systems.",
+        "when_to_use": "When current enemy wave in horde modes.",
+        "where_to_use": "Counter UI, related mechanics, and balance spreadsheets."
+      },
+      "featured_in": [
+        "horror-survival",
+        "top-down-shooter"
+      ],
+      "name": "Wave Number",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for wave number.",
+          "name": "max_value",
+          "range": "0–99 typical"
+        },
+        {
+          "effect": "How quickly wave number refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Save resources for later waves with higher threat density.",
+      "related_mechanics": [
+        "co-op-horde-survival",
+        "patterned-boss-encounter"
+      ],
+      "reset_behavior": "per_session",
+      "schema_version": "1.1",
+      "scope": "session",
+      "shared_rationale": "Horde wave index escalates enemy count or elite spawns.",
+      "slug": "wave-number",
+      "summary": "Current enemy wave in horde modes.",
+      "tags": [
+        "combat",
+        "session"
+      ],
+      "typical_range": "0–99 typical",
+      "value_kind": "integer"
+    },
+    {
+      "agent_context": {
+        "gdd_prompt": "Define energy per weapon, refill pickups, consumption per use, and pause-menu display.",
+        "implementation_checklist": [
+          "Track array of per-weapon energy",
+          "Decrement on special fire",
+          "Refill from stage pickups"
+        ],
+        "summary_for_agents": "Weapon energy is per-weapon ammo for specials; document caps, refill sources, and HUD per weapon."
+      },
+      "category": "resource",
+      "common_in": [
+        "Platformer"
+      ],
+      "design_guidance": {
+        "designer_notes": "Per-weapon pools encourage routing—players cannot spam one solution for every encounter.",
+        "when_to_avoid": [
+          "When tracking weapon energy would add UI noise without meaningful decisions"
+        ],
+        "when_to_use": "When each special weapon has its own limited use pool distinct from shared mana.",
+        "where_to_use": "Weapon select UI, boss fights, stage pickups."
+      },
+      "featured_in": [
+        "mega-man-2"
+      ],
+      "name": "Weapon Energy",
+      "parameter_knobs": [
+        {
+          "effect": "Upper bound or capacity for weapon energy.",
+          "name": "max_value",
+          "range": "0–28 units per weapon"
+        },
+        {
+          "effect": "How quickly weapon energy refills or increments.",
+          "name": "gain_rate",
+          "range": "per event or tick"
+        }
+      ],
+      "player_focus": "Match weapon to boss weakness without starving others.",
+      "related_mechanics": [
+        "resource-gated-weapon"
+      ],
+      "reset_behavior": "per_level",
+      "schema_version": "1.1",
+      "scope": "player",
+      "shared_rationale": "Distinct ammo per boss weapon creates routing puzzles.",
+      "slug": "weapon-energy",
+      "summary": "Ammo pool for special weapons distinct from health.",
+      "tags": [
+        "combat"
+      ],
+      "typical_range": "0–28 units per weapon",
+      "value_kind": "integer"
+    }
+  ]
+}

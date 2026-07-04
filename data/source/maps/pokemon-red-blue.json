@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.1",
+  "slug": "pokemon-red-blue",
+  "title": "Pok\u00e9mon Red/Blue Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Pok\u00e9mon Red/Blue",
+    "genres": [
+      "RPG",
+      "Adventure"
+    ],
+    "influences": [
+      "Dragon Quest",
+      "EarthBound"
+    ]
+  },
+  "narrative": {
+    "description": "Game Freak's portable RPG launched a global phenomenon by combining creature collection, turn-based battles, and gym-badge progression across the Kanto region with link-cable trading as a social mechanic.",
+    "core_loop": "Catch and train Pok\u00e9mon, defeat gym leaders for badges, counter type weaknesses in battles, and challenge the Elite Four after completing the Pok\u00e9dex route.",
+    "skills_tested": [
+      "type matchup knowledge",
+      "team composition",
+      "resource budgeting",
+      "exploration routing"
+    ]
+  },
+  "signature_gameplay": [
+    "turn-based-party-combat",
+    "license-progression-gates",
+    "collectathon-token-gating"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "turn-based-party-combat",
+      "role": "signature",
+      "map_notes": "Six-Pok\u00e9mon party battles resolve in turn order with type effectiveness tables.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Six-Pok\u00e9mon party battles resolve in turn order with type effectiveness tables.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "license-progression-gates",
+      "role": "signature",
+      "map_notes": "Eight gym badges and HMs gate route access across Kanto.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Eight gym badges and HMs gate route access across Kanto.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Pok\u00e9dex completion and badge collection drive optional and mandatory progression.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Pok\u00e9dex completion and badge collection drive optional and mandatory progression.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "supporting",
+      "map_notes": "Experience points level Pok\u00e9mon stats and unlock new moves.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Experience points level Pok\u00e9mon stats and unlock new moves.",
+      "depends_on": [
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "overworld-map-stage-selection",
+      "role": "supporting",
+      "map_notes": "Route-based overworld connects towns, caves, and gyms freely after gating clears.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Route-based overworld connects towns, caves, and gyms freely after gating clears."
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Legendary Pok\u00e9mon, items, and side areas reward thorough exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Legendary Pok\u00e9mon, items, and side areas reward thorough exploration."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Pok\u00e9 Marts sell balls, potions, and TMs expanding capture and battle options.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Pok\u00e9 Marts sell balls, potions, and TMs expanding capture and battle options.",
+      "depends_on": [
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "loot-based-economy",
+      "role": "supporting",
+      "map_notes": "Trainer battles and item finds fund team maintenance and supplies.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Trainer battles and item finds fund team maintenance and supplies.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "supporting",
+      "map_notes": "Cut, Surf, and Strength HMs open new traversal routes.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Cut, Surf, and Strength HMs open new traversal routes."
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Gym leaders use signature teams with predictable type themes.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Gym leaders use signature teams with predictable type themes.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Elite Four gauntlet chains six consecutive boss-level battles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Elite Four gauntlet chains six consecutive boss-level battles.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "HP pools deplete in battle; fainted Pok\u00e9mon require healing.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "HP pools deplete in battle; fainted Pok\u00e9mon require healing.",
+      "depends_on": [
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Pok\u00e9mon Centers heal and save progress between routes.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Pok\u00e9mon Centers heal and save progress between routes.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Caves and water routes require HM tools and item management.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Caves and water routes require HM tools and item management."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1996
+  },
+  "relationships": {
+    "influence_slugs": [
+      "dragon-quest",
+      "earthbound"
+    ],
+    "genre_maps": [
+      "turn-based-rpg",
+      "narrative-adventure"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Pok\u00e9mon Red/Blue through its core rpg loop.",
+    "theme_tags": [
+      "rpg",
+      "adventure",
+      "turn-based-party-combat",
+      "license-progression-gates",
+      "collectathon-token-gating"
+    ],
+    "design_pillars": [
+      "Turn Based Party Combat",
+      "License Progression Gates",
+      "Collectathon Token Gating"
+    ]
+  }
+}

@@ -1,0 +1,1003 @@
+{
+  "schema_version": "1.0",
+  "skills": [
+    {
+      "category": "cognitive",
+      "design_guidance": {
+        "designer_notes": "Gate rewards with readable affordances so exploration feels fair, not arbitrary.",
+        "when_to_avoid": [
+          "When a linear narrative cannot tolerate optional detours",
+          "When map scale cannot support meaningful secrets or rewards"
+        ],
+        "when_to_use": "When discovery and player agency are core to the fantasy.",
+        "where_to_use": "Open worlds, metroidvania maps, optional POI layers, and reward-dense detours."
+      },
+      "learning_outcome": "Players learn to read environmental cues, map topology, and reward density when choosing where to go next.",
+      "name": "Exploration",
+      "practice_activities": [
+        "Backtrack after acquiring new traversal abilities",
+        "Mark or remember optional paths for later",
+        "Balance main objective vs side content",
+        "Prioritize landmarks visible from multiple routes",
+        "Return to hub before tackling newly unlocked side areas"
+      ],
+      "related_mechanics": [
+        "ability-driven-backtracking",
+        "ability-gated-exploration",
+        "open-world-exploration",
+        "optional-content-layering",
+        "collectathon-token-gating",
+        "procedural-dungeon-generation",
+        "hub-world-stage-gates",
+        "glide-traversal"
+      ],
+      "related_variables": [
+        "key-items"
+      ],
+      "schema_version": "1.0",
+      "slug": "exploration",
+      "summary": "Discovering routes, secrets, and optional content in a game space.",
+      "tags": [
+        "exploration",
+        "navigation"
+      ]
+    },
+    {
+      "category": "motor",
+      "design_guidance": {
+        "designer_notes": "Match telegraph length to reaction window; scale generously for first encounters.",
+        "when_to_avoid": [
+          "When accessibility requires generous i-frames without telegraphs",
+          "When input latency or touch controls cannot support tight reaction windows"
+        ],
+        "when_to_use": "When mastery should feel earned through repetition and readable threats.",
+        "where_to_use": "Boss fights, elite enemies, parry tutorials, and dodge-heavy encounter design."
+      },
+      "learning_outcome": "Players internalize enemy tell rhythms and commit to actions at the right moment.",
+      "name": "Combat Timing",
+      "practice_activities": [
+        "Dodge through telegraphed attacks",
+        "Punish recovery frames",
+        "Chain light attacks without over-committing",
+        "Practice parry timing on slow telegraphs first",
+        "Learn i-frame dodge distance per attack type"
+      ],
+      "related_mechanics": [
+        "telegraphed-threat-loop",
+        "melee-primary-combat",
+        "depletable-health-pool",
+        "patterned-boss-encounter",
+        "multi-phase-boss-battle",
+        "boss-gated-progression",
+        "life-based-retry-system",
+        "turn-based-party-combat"
+      ],
+      "related_variables": [
+        "health",
+        "shield"
+      ],
+      "schema_version": "1.0",
+      "slug": "combat-timing",
+      "summary": "Executing attacks, dodges, and counters within telegraphed windows.",
+      "tags": [
+        "combat",
+        "timing"
+      ]
+    },
+    {
+      "category": "cognitive",
+      "design_guidance": {
+        "designer_notes": "Introduce patterns one at a time before combinations.",
+        "when_to_avoid": [
+          "When randomness should dominate over learnable patterns",
+          "When accessibility needs simplified single-phase encounters"
+        ],
+        "when_to_use": "When mastery depends on learning repeating enemy, boss, or puzzle patterns.",
+        "where_to_use": "Boss rushes, puzzle floors, telegraphed combat curricula."
+      },
+      "learning_outcome": "Players build mental models of systems and predict upcoming states.",
+      "name": "Pattern Recognition",
+      "practice_activities": [
+        "Learn boss phase transitions",
+        "Decode weakness cycles",
+        "Map puzzle rule interactions",
+        "Identify safe zones during repeating bullet patterns",
+        "Note phase-shift audio or visual cues before combos"
+      ],
+      "related_mechanics": [
+        "boss-weakness-network",
+        "telegraphed-threat-loop",
+        "evidence-deduction-puzzle",
+        "patterned-boss-encounter",
+        "block-placement-tetromino",
+        "environmental-trigger-switch",
+        "narrative-chapter-progression",
+        "multi-phase-boss-battle"
+      ],
+      "related_variables": [
+        "boss-hp-phases"
+      ],
+      "schema_version": "1.0",
+      "slug": "pattern-recognition",
+      "summary": "Identifying repeating enemy behaviors, puzzle rules, or boss phases.",
+      "tags": [
+        "combat",
+        "puzzle"
+      ]
+    },
+    {
+      "category": "strategic",
+      "design_guidance": {
+        "designer_notes": "Make scarcity readable on HUD at all times.",
+        "when_to_avoid": [
+          "When power fantasy requires abundant consumables without tradeoffs",
+          "When onboarding should hide economy systems until mid-game"
+        ],
+        "when_to_use": "When limited heals, currency, or slots force planning across encounters.",
+        "where_to_use": "Roguelike routes, survival loops, shop-before-boss decisions."
+      },
+      "learning_outcome": "Players weigh short-term survival against long-term progression.",
+      "name": "Resource Management",
+      "practice_activities": [
+        "Spend currency before checkpoints",
+        "Reserve healing for boss rooms",
+        "Choose loadout within slot limits",
+        "Track earn rate versus upcoming shop prices",
+        "Hoard key items until multiple locks appear"
+      ],
+      "related_mechanics": [
+        "bench-checkpoint",
+        "depletable-health-pool",
+        "equipment-loadout",
+        "crafting-economy-loop",
+        "resource-scarcity-management",
+        "purchase-gated-upgrade",
+        "rpg-stat-progression",
+        "vehicle-tuning-economy"
+      ],
+      "related_variables": [
+        "geo",
+        "health",
+        "charm-notches",
+        "currency-soft"
+      ],
+      "schema_version": "1.0",
+      "slug": "resource-management",
+      "summary": "Allocating limited resources across encounters, runs, or sessions.",
+      "tags": [
+        "economy",
+        "progression"
+      ]
+    },
+    {
+      "category": "cognitive",
+      "design_guidance": {
+        "designer_notes": "Landmarks should be visible from multiple angles.",
+        "when_to_avoid": [
+          "When levels are isolated rooms without meaningful interconnection",
+          "When instant fast travel removes the need for route planning"
+        ],
+        "when_to_use": "When interconnected maps reward mental mapping and route optimization.",
+        "where_to_use": "Metroidvania worlds, hubs with portals, backtracking routes."
+      },
+      "learning_outcome": "Players develop mental maps and optimize traversal after gaining new abilities.",
+      "name": "Spatial Navigation",
+      "practice_activities": [
+        "Revisit areas with new movement tools",
+        "Use map UI to plan routes",
+        "Shortcut through unlocked doors",
+        "Memorize shortcut unlocks after gaining new abilities",
+        "Compare route length with and without new traversal tools"
+      ],
+      "related_mechanics": [
+        "ability-driven-backtracking",
+        "ability-gated-exploration",
+        "environmental-hazard-navigation",
+        "precision-platforming",
+        "mid-level-checkpoint",
+        "collectathon-token-gating",
+        "hub-world-stage-gates",
+        "glide-traversal"
+      ],
+      "related_variables": [
+        "checkpoint-id"
+      ],
+      "schema_version": "1.0",
+      "slug": "spatial-navigation",
+      "summary": "Orienting in interconnected spaces and planning efficient routes.",
+      "tags": [
+        "exploration",
+        "navigation"
+      ]
+    },
+    {
+      "category": "strategic",
+      "design_guidance": {
+        "designer_notes": "Expose failure cost before committing to risky nodes.",
+        "when_to_avoid": [
+          "Onboarding where failure cost is opaque",
+          "When punishment for curiosity undermines the core fantasy"
+        ],
+        "when_to_use": "When players choose whether to push optional risk for upside rewards.",
+        "where_to_use": "Roguelike pathing, optional elites, low-health shop visits."
+      },
+      "learning_outcome": "Players calibrate aggression against failure cost and reward upside.",
+      "name": "Risk Evaluation",
+      "practice_activities": [
+        "Enter optional combat rooms for rewards",
+        "Retreat to bench before boss attempts",
+        "Choose roguelike paths with unknown rewards",
+        "Compare reward preview against current health or lives",
+        "Abort optional challenges when build is misaligned"
+      ],
+      "related_mechanics": [
+        "permadeath-run-structure",
+        "fill-reward-progression-loop",
+        "roguelike-map-routing",
+        "bench-checkpoint",
+        "optional-content-layering",
+        "environmental-trigger-switch",
+        "narrative-chapter-progression",
+        "boss-gated-progression"
+      ],
+      "related_variables": [
+        "health",
+        "death-defiance-charges"
+      ],
+      "schema_version": "1.0",
+      "slug": "risk-evaluation",
+      "summary": "Judging whether to push forward, retreat, or spend limited resources.",
+      "tags": [
+        "planning",
+        "progression"
+      ]
+    },
+    {
+      "category": "strategic",
+      "design_guidance": {
+        "designer_notes": "Tag synergies without auto-solving optimal picks.",
+        "when_to_avoid": [
+          "When build identity should remain fixed per character or class",
+          "When synergy complexity overwhelms new players in the first act"
+        ],
+        "when_to_use": "When run identity emerges from offered upgrade choices.",
+        "where_to_use": "Boon picks, card drafts, charm loadouts."
+      },
+      "learning_outcome": "Players evaluate synergies and constraints when composing a build.",
+      "name": "Deck Building",
+      "practice_activities": [
+        "Pick boons that complement weapon aspect",
+        "Avoid conflicting modifiers",
+        "Plan around slot or notch limits",
+        "Identify core synergy tags before picking passives",
+        "Remove dead picks when draft offers direct upgrades"
+      ],
+      "related_mechanics": [
+        "fill-reward-progression-loop",
+        "equipment-loadout",
+        "card-draw-hand-management",
+        "relic-passive-synergy",
+        "deck-composition-roguelike",
+        "roguelike-map-routing"
+      ],
+      "related_variables": [
+        "charm-notches",
+        "currency-soft"
+      ],
+      "schema_version": "1.0",
+      "slug": "deck-building",
+      "summary": "Assembling synergistic ability sets from offered choices.",
+      "tags": [
+        "progression",
+        "planning"
+      ]
+    },
+    {
+      "category": "social",
+      "design_guidance": {
+        "designer_notes": "Ensure evidence is citeable in voice or text chat.",
+        "when_to_avoid": [
+          "When voice or text discussion is unavailable for async sessions",
+          "When player count is too low for meaningful accusation loops"
+        ],
+        "when_to_use": "When hidden roles and group discussion resolve conflict.",
+        "where_to_use": "Meeting phases, voting, accusation UI."
+      },
+      "learning_outcome": "Players practice reading social signals and constructing evidence-based accusations.",
+      "name": "Social Deduction",
+      "practice_activities": [
+        "Track player movements on mental map",
+        "Cross-reference task completion claims",
+        "Present timing evidence in meetings",
+        "Note alibis that contradict observed paths",
+        "Vote only when the evidence chain is complete"
+      ],
+      "related_mechanics": [
+        "evidence-deduction-puzzle",
+        "asymmetric-multiplayer",
+        "stealth-detection-loop",
+        "local-multiplayer-competition",
+        "microgame-rapid-challenges",
+        "lane-push-moba",
+        "co-op-couch-chaos",
+        "last-hit-farming"
+      ],
+      "related_variables": [
+        "task-progress"
+      ],
+      "schema_version": "1.0",
+      "slug": "social-deduction",
+      "summary": "Inferring hidden roles from behavior, alibis, and group discussion.",
+      "tags": [
+        "social",
+        "deduction"
+      ]
+    },
+    {
+      "category": "motor",
+      "design_guidance": {
+        "designer_notes": "Offer assist or practice modes without shaming players.",
+        "when_to_avoid": [
+          "When narrative or accessibility should not gate progress on frame-perfect input",
+          "When inconsistent frame pacing undermines jump and dodge timing"
+        ],
+        "when_to_use": "When fine motor timing is the primary skill test.",
+        "where_to_use": "Platform gauntlets, bullet patterns, dodge windows."
+      },
+      "learning_outcome": "Players refine input timing and spatial judgment under pressure.",
+      "name": "Precision Movement",
+      "practice_activities": [
+        "Clear platform gauntlets",
+        "Dodge bullet patterns",
+        "Maintain momentum through chained jumps",
+        "Practice jump timing on static hazards before moving ones",
+        "Use short respawn loops to drill one hard segment"
+      ],
+      "related_mechanics": [
+        "melee-primary-combat",
+        "telegraphed-threat-loop",
+        "precision-platforming",
+        "environmental-hazard-navigation",
+        "jump-cutoff",
+        "life-based-retry-system",
+        "multi-phase-boss-battle",
+        "mid-level-checkpoint"
+      ],
+      "related_variables": [
+        "lives"
+      ],
+      "schema_version": "1.0",
+      "slug": "precision-movement",
+      "summary": "Executing tight platforming or dodge windows with fine motor control.",
+      "tags": [
+        "combat",
+        "timing"
+      ]
+    },
+    {
+      "category": "creative",
+      "design_guidance": {
+        "designer_notes": "Foreshadow consequences within two interactions when possible.",
+        "when_to_avoid": [
+          "When story is explicitly told without ambiguity or player interpretation",
+          "When consequences must remain opaque for horror or mystery tone"
+        ],
+        "when_to_use": "When story outcomes depend on reading dialogue and environmental clues.",
+        "where_to_use": "Branching dialogue, investigation boards, lore items."
+      },
+      "learning_outcome": "Players connect story beats to mechanics and predict consequence branches.",
+      "name": "Narrative Inference",
+      "practice_activities": [
+        "Weigh dialogue choices with known character goals",
+        "Infer lore from item descriptions",
+        "Predict outcomes from faction relationships",
+        "Track faction reputation changes after key choices",
+        "Cross-reference environmental props with dialogue hints"
+      ],
+      "related_mechanics": [
+        "dialogue-choice-consequences",
+        "evidence-deduction-puzzle",
+        "metaprogression",
+        "puzzle-room-exploration",
+        "asymmetric-multiplayer"
+      ],
+      "related_variables": [
+        "reputation",
+        "key-items"
+      ],
+      "schema_version": "1.0",
+      "slug": "narrative-inference",
+      "summary": "Drawing conclusions from dialogue, environmental storytelling, and player choices.",
+      "tags": [
+        "puzzle",
+        "deduction"
+      ]
+    },
+    {
+      "category": "strategic",
+      "design_guidance": {
+        "designer_notes": "Preview upcoming area threats to inform loadout choices.",
+        "when_to_avoid": [
+          "When all equipment should remain viable without meaningful tradeoffs",
+          "When lengthy pre-fight menus break combat pacing"
+        ],
+        "when_to_use": "When slot limits require cutting options before challenges.",
+        "where_to_use": "Pre-boss benches, equipment menus, charm notches."
+      },
+      "learning_outcome": "Players trade off power spikes against flexibility for upcoming content.",
+      "name": "Loadout Optimization",
+      "practice_activities": [
+        "Swap charms before boss fights",
+        "Equip elemental weapons for weaknesses",
+        "Balance offense vs survivability slots",
+        "Swap to elemental gear when weakness hints appear",
+        "Drop situational charms for generalist boss kits"
+      ],
+      "related_mechanics": [
+        "equipment-loadout",
+        "exploration-gated-upgrades",
+        "rpg-stat-progression",
+        "ability-loadout-switching",
+        "resource-gated-weapon",
+        "loot-based-economy"
+      ],
+      "related_variables": [
+        "charm-notches",
+        "equipment-belt-slots"
+      ],
+      "schema_version": "1.0",
+      "slug": "loadout-optimization",
+      "summary": "Selecting equipment, charms, or abilities within capacity constraints.",
+      "tags": [
+        "progression",
+        "planning"
+      ]
+    },
+    {
+      "category": "strategic",
+      "design_guidance": {
+        "designer_notes": "Node icons must be learnable within one act.",
+        "when_to_avoid": [
+          "When sessions are short and fixed-length without branching routes",
+          "When procedural maps hide node information entirely until entry"
+        ],
+        "when_to_use": "When procedural routes demand mid-run path decisions.",
+        "where_to_use": "Act maps, chamber doors, node graphs."
+      },
+      "learning_outcome": "Players evaluate path risk, reward type, and build synergy mid-run.",
+      "name": "Run Planning",
+      "practice_activities": [
+        "Choose chamber type in roguelike routes",
+        "Skip shops when low on currency",
+        "Target god boons for build direction",
+        "Favor reward nodes that advance current build tags",
+        "Skip combat chambers when low on recovery resources"
+      ],
+      "related_mechanics": [
+        "roguelike-map-routing",
+        "fill-reward-progression-loop",
+        "permadeath-run-structure",
+        "deck-composition-roguelike",
+        "relic-passive-synergy",
+        "metaprogression",
+        "non-linear-boss-selection",
+        "purchase-gated-upgrade"
+      ],
+      "related_variables": [
+        "currency-soft",
+        "death-defiance-charges"
+      ],
+      "schema_version": "1.0",
+      "slug": "run-planning",
+      "summary": "Routing through procedural or branching sessions to maximize rewards.",
+      "tags": [
+        "planning",
+        "progression"
+      ]
+    },
+    {
+      "category": "cognitive",
+      "design_guidance": {
+        "designer_notes": "Reward scanning without mandatory slow-walk everywhere.",
+        "when_to_avoid": [
+          "When action-first pacing cannot afford scouting or observation beats",
+          "When UI already surfaces all hidden information without player effort"
+        ],
+        "when_to_use": "When observation before action prevents costly mistakes.",
+        "where_to_use": "Stealth loops, deduction phases, scouting open worlds."
+      },
+      "learning_outcome": "Players prioritize observation and note-taking over immediate reaction.",
+      "name": "Information Gathering",
+      "practice_activities": [
+        "Scan rooms for task progress",
+        "Observe enemy patrol routes",
+        "Read UI feedback before spending resources",
+        "Pause before entering new zones to scan patrol routes",
+        "Review quest log clues before spending currency"
+      ],
+      "related_mechanics": [
+        "evidence-deduction-puzzle",
+        "open-world-exploration",
+        "stealth-detection-loop",
+        "optional-content-layering",
+        "dialogue-choice-consequences",
+        "collectathon-token-gating",
+        "asymmetric-multiplayer"
+      ],
+      "related_variables": [
+        "task-progress"
+      ],
+      "schema_version": "1.0",
+      "slug": "information-gathering",
+      "summary": "Collecting clues from the environment before committing to action.",
+      "tags": [
+        "deduction",
+        "exploration"
+      ]
+    },
+    {
+      "category": "motor",
+      "design_guidance": {
+        "designer_notes": "Show regen delay clearly after exhaustive actions.",
+        "when_to_avoid": [
+          "When traversal fantasy should never be limited by exertion meters",
+          "When stamina tax frustrates exploration more than it adds tension"
+        ],
+        "when_to_use": "When sustained actions deplete a regenerating exertion pool.",
+        "where_to_use": "Climbing, sprinting, combo-heavy combat."
+      },
+      "learning_outcome": "Players pace climbs, sprints, and attacks to avoid exhaustion penalties.",
+      "name": "Stamina Management",
+      "practice_activities": [
+        "Climb surfaces in planned segments",
+        "Rest on ledges during traversal puzzles",
+        "Alternate heavy attacks with recovery",
+        "Plan climb routes with mid-way ledge rests",
+        "Pace sprint bursts between cover in open areas"
+      ],
+      "related_mechanics": [
+        "exploration-gated-upgrades",
+        "open-world-exploration",
+        "stamina-resource-management",
+        "colossus-climb-combat",
+        "combo-chain-system",
+        "glide-traversal"
+      ],
+      "related_variables": [
+        "energy",
+        "focus-meter",
+        "stamina",
+        "stamina-regen-delay"
+      ],
+      "schema_version": "1.0",
+      "slug": "stamina-management",
+      "summary": "Balancing sustained actions against recovery periods.",
+      "tags": [
+        "exploration",
+        "timing"
+      ]
+    },
+    {
+      "category": "cognitive",
+      "design_guidance": {
+        "designer_notes": "Wrong-tool feedback should educate, not hard-lock.",
+        "when_to_avoid": [
+          "When enemies should be defeated without explicit counter systems",
+          "When mid-fight tool swapping breaks combat flow or readability"
+        ],
+        "when_to_use": "When targets have explicit counters players must discover or equip.",
+        "where_to_use": "Boss weakness cycles, elemental shields, tool-gated obstacles."
+      },
+      "learning_outcome": "Players experiment with tools and observe feedback until optimal damage appears.",
+      "name": "Weakness Exploitation",
+      "practice_activities": [
+        "Cycle weapons against boss immunities",
+        "Acquire keys before attempting locks",
+        "Use elemental counters in combat",
+        "Test weapon types against shielded enemies in safe rooms",
+        "Stock counter items before entering boss arenas"
+      ],
+      "related_mechanics": [
+        "boss-weakness-network",
+        "equipment-loadout",
+        "boss-gated-abilities",
+        "non-linear-boss-selection",
+        "resource-gated-weapon",
+        "ability-loadout-switching"
+      ],
+      "related_variables": [
+        "weapon-energy",
+        "boss-hp-phases"
+      ],
+      "schema_version": "1.0",
+      "slug": "weakness-exploitation",
+      "summary": "Identifying and applying the correct counter to a resistant target.",
+      "tags": [
+        "combat",
+        "puzzle"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "aim-precision",
+      "name": "Aim Precision",
+      "summary": "Stabilizing reticles and leading targets to land shots under pressure.",
+      "category": "motor",
+      "learning_outcome": "Players control recoil, track movement, and commit shots within effective range windows.",
+      "practice_activities": [
+        "Practice tracking strafing targets at medium range",
+        "Tap-fire for recoil control before full-auto bursts",
+        "Pre-aim common angles before peeking cover",
+        "Lead projectile shots on moving targets"
+      ],
+      "related_mechanics": [
+        "aim-down-sights-shooting",
+        "cover-based-positioning",
+        "instant-fire-attack",
+        "telegraphed-threat-loop"
+      ],
+      "related_variables": [
+        "ammo",
+        "health",
+        "shield"
+      ],
+      "design_guidance": {
+        "when_to_use": "When hit confirmation and target tracking are primary skill tests.",
+        "where_to_use": "FPS/TPS arenas, twin-stick shooters, and precision weapon tiers.",
+        "when_to_avoid": [
+          "When aim assist must fully automate targeting for accessibility",
+          "When projectile travel time cannot be read clearly"
+        ],
+        "designer_notes": "Expose readable hit feedback and optional practice ranges."
+      },
+      "tags": [
+        "combat",
+        "timing"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "combo-execution",
+      "name": "Combo Execution",
+      "summary": "Linking attacks and cancels within timing windows for extended pressure.",
+      "category": "motor",
+      "learning_outcome": "Players memorize routes and execute inputs without breaking chain rules.",
+      "practice_activities": [
+        "Drill bread-and-butter strings on training dummies",
+        "Practice cancel windows from normals into specials",
+        "Punish whiffed enemy attacks with max-damage routes",
+        "Adapt routes when resources or meter are low"
+      ],
+      "related_mechanics": [
+        "combo-chain-system",
+        "arena-fighter-combos",
+        "melee-primary-combat",
+        "character-switch-combos"
+      ],
+      "related_variables": [
+        "super-meter",
+        "focus-meter",
+        "health"
+      ],
+      "design_guidance": {
+        "when_to_use": "When mastery depth should scale through attack linking.",
+        "where_to_use": "Fighting games, action combat, and boss rush modes.",
+        "when_to_avoid": [
+          "When input complexity would block onboarding in a narrative-first game",
+          "When latency makes link timing unreliable"
+        ],
+        "designer_notes": "Teach one link at a time; show frame advantage on hit."
+      },
+      "tags": [
+        "combat",
+        "timing"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "turn-order-planning",
+      "name": "Turn Order Planning",
+      "summary": "Sequencing actions across units or turns to maximize tempo and resources.",
+      "category": "strategic",
+      "learning_outcome": "Players forecast initiative, setup turns, and spend actions before windows close.",
+      "practice_activities": [
+        "Plan buffs before burst damage turns",
+        "Hold interrupts for enemy charge attacks",
+        "Rotate party roles to cover weakness phases",
+        "Bank resources for boss vulnerability windows"
+      ],
+      "related_mechanics": [
+        "active-time-battle",
+        "turn-based-party-combat",
+        "brave-default-resource",
+        "dual-layer-air-ground-targeting"
+      ],
+      "related_variables": [
+        "mana",
+        "spell-slots",
+        "party-size"
+      ],
+      "design_guidance": {
+        "when_to_use": "When turn structure creates planning puzzles each round.",
+        "where_to_use": "Tactics RPGs, ATB systems, and party-based boss fights.",
+        "when_to_avoid": [
+          "When real-time chaos is the core fantasy",
+          "When turn UI obscures upcoming enemy intents"
+        ],
+        "designer_notes": "Surface turn order and telegraphed enemy intents clearly."
+      },
+      "tags": [
+        "planning",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "territory-control",
+      "name": "Territory Control",
+      "summary": "Claiming, holding, and contesting map space for strategic advantage.",
+      "category": "strategic",
+      "learning_outcome": "Players read map pressure, rotate to objectives, and deny enemy resources.",
+      "practice_activities": [
+        "Track minion wave timing before objective contests",
+        "Trade small objectives for high-value map control",
+        "Ward or scout fog-of-war before committing",
+        "Collapse on overextended opponents as a team"
+      ],
+      "related_mechanics": [
+        "lane-push-moba",
+        "last-hit-farming",
+        "battle-royale-zone-shrink",
+        "base-management-recruitment"
+      ],
+      "related_variables": [
+        "currency-soft",
+        "experience",
+        "timer"
+      ],
+      "design_guidance": {
+        "when_to_use": "When map ownership changes win conditions over time.",
+        "where_to_use": "MOBAs, RTS lanes, zone-shrink battle royales.",
+        "when_to_avoid": [
+          "When matches should remain purely duel-focused without map layers",
+          "When UI cannot communicate contested objectives"
+        ],
+        "designer_notes": "Make ownership states readable at a glance on the minimap."
+      },
+      "tags": [
+        "planning",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "team-coordination",
+      "name": "Team Coordination",
+      "summary": "Aligning roles, timing, and communication to achieve group objectives.",
+      "category": "social",
+      "learning_outcome": "Players assign roles, call plays, and synchronize ability timing with allies.",
+      "practice_activities": [
+        "Assign focus targets before engagements",
+        "Time crowd control with ally burst windows",
+        "Rotate as a squad when objectives spawn",
+        "Share resource pickups based on role priority"
+      ],
+      "related_mechanics": [
+        "co-op-couch-chaos",
+        "co-op-horde-survival",
+        "asymmetric-multiplayer",
+        "lane-push-moba"
+      ],
+      "related_variables": [
+        "party-size",
+        "task-progress",
+        "health"
+      ],
+      "design_guidance": {
+        "when_to_use": "When success depends on complementary player roles.",
+        "where_to_use": "Co-op horde modes, MOBA teams, and asymmetric multiplayer.",
+        "when_to_avoid": [
+          "When solo play cannot be supported at all",
+          "When voice comms are unavailable and pinging is too weak"
+        ],
+        "designer_notes": "Provide non-verbal callouts and role clarity in UI."
+      },
+      "tags": [
+        "social",
+        "planning"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "crafting-planning",
+      "name": "Crafting Planning",
+      "summary": "Gathering inputs and scheduling crafts to meet upcoming challenges.",
+      "category": "strategic",
+      "learning_outcome": "Players forecast material needs and pipeline crafts before deadlines.",
+      "practice_activities": [
+        "Stock consumables before biome shifts",
+        "Chain refinery steps to avoid idle stations",
+        "Prioritize tools that unlock new resource nodes",
+        "Balance crafting time against daylight or hazard timers"
+      ],
+      "related_mechanics": [
+        "crafting-economy-loop",
+        "resource-scarcity-management",
+        "farming-crop-cycle",
+        "purchase-gated-upgrade"
+      ],
+      "related_variables": [
+        "inventory-slots",
+        "currency-soft",
+        "hunger"
+      ],
+      "design_guidance": {
+        "when_to_use": "When crafting loops gate exploration or combat readiness.",
+        "where_to_use": "Survival sandboxes, RPG crafting, and colony sims.",
+        "when_to_avoid": [
+          "When instant loot should fully replace player-side production",
+          "When recipe trees overwhelm early sessions"
+        ],
+        "designer_notes": "Stage recipe discovery near relevant biomes or bosses."
+      },
+      "tags": [
+        "economy",
+        "planning"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "relationship-building",
+      "name": "Relationship Building",
+      "summary": "Investing time and gifts to grow bonds that unlock story and perks.",
+      "category": "social",
+      "learning_outcome": "Players track preferences, schedule social time, and avoid relationship decay.",
+      "practice_activities": [
+        "Gift items matching character preferences",
+        "Attend scheduled events before deadlines",
+        "Balance farm work with social visits each day",
+        "Resolve heart-event prompts with prior lore knowledge"
+      ],
+      "related_mechanics": [
+        "social-relationship-meter",
+        "dialogue-choice-consequences",
+        "day-night-schedule-loop",
+        "farming-crop-cycle"
+      ],
+      "related_variables": [
+        "reputation",
+        "currency-soft",
+        "key-items"
+      ],
+      "design_guidance": {
+        "when_to_use": "When long-term NPC bonds are a primary progression axis.",
+        "where_to_use": "Life sims, dating sim layers, and faction reputation systems.",
+        "when_to_avoid": [
+          "When narrative should remain impersonal or purely systemic",
+          "When missed events hard-lock content without recovery"
+        ],
+        "designer_notes": "Telegraph gift preferences and event windows on calendar UI."
+      },
+      "tags": [
+        "social",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "tension-management",
+      "name": "Tension Management",
+      "summary": "Regulating exposure to threat while pursuing objectives under fear pressure.",
+      "category": "cognitive",
+      "learning_outcome": "Players ration light, ammo, and safe routes while monitoring escalating danger.",
+      "practice_activities": [
+        "Listen for audio cues before entering new rooms",
+        "Retreat to safe rooms when resource pools are low",
+        "Route around optional haunts when objective is near",
+        "Use distraction tools to break pursuit loops"
+      ],
+      "related_mechanics": [
+        "stealth-detection-loop",
+        "resource-scarcity-management",
+        "depletable-health-pool",
+        "bench-checkpoint"
+      ],
+      "related_variables": [
+        "sanity",
+        "ammo",
+        "health",
+        "oxygen"
+      ],
+      "design_guidance": {
+        "when_to_use": "When fear and scarcity combine to pressure decision-making.",
+        "where_to_use": "Horror survival, stealth horror, and limited-save campaigns.",
+        "when_to_avoid": [
+          "When power fantasy requires constant aggressive empowerment",
+          "When jumpscares replace readable threat buildup"
+        ],
+        "designer_notes": "Give players reliable relief valves after sustained tension."
+      },
+      "tags": [
+        "deduction",
+        "planning"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "rhythm-timing",
+      "name": "Rhythm Timing",
+      "summary": "Executing inputs on musical beats and charted note lanes.",
+      "category": "motor",
+      "learning_outcome": "Players internalize tempo, anticipate chart density, and recover from miss chains.",
+      "practice_activities": [
+        "Practice slow charts before high-density sections",
+        "Memorize recurring fill patterns in boss choruses",
+        "Alternate lanes without breaking combo multiplier",
+        "Use audio cues when visual indicators lag"
+      ],
+      "related_mechanics": [
+        "rhythm-tap-timing",
+        "rhythm-foot-panel",
+        "arcade-cabinet-timing",
+        "patterned-boss-encounter"
+      ],
+      "related_variables": [
+        "combo-counter",
+        "score",
+        "lives"
+      ],
+      "design_guidance": {
+        "when_to_use": "When music-driven timing is the core interaction loop.",
+        "where_to_use": "Rhythm action, dance pads, and chart-driven mini-games.",
+        "when_to_avoid": [
+          "When music licensing cannot support consistent beat mapping",
+          "When input latency varies widely across platforms"
+        ],
+        "designer_notes": "Calibrate note windows per platform; offer offset calibration."
+      },
+      "tags": [
+        "timing",
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "puzzle-logic",
+      "name": "Puzzle Logic",
+      "summary": "Deducing rules and manipulating systems to reach valid puzzle states.",
+      "category": "cognitive",
+      "learning_outcome": "Players hypothesize rules, test interactions, and chain deductions across rooms.",
+      "practice_activities": [
+        "Encode and test one rule change at a time",
+        "Map symbol interactions before committing moves",
+        "Backtrack with new information from partial solutions",
+        "Explain the rule aloud before executing long chains"
+      ],
+      "related_mechanics": [
+        "evidence-deduction-puzzle",
+        "block-placement-tetromino",
+        "grid-deduction-mines",
+        "aeon-flux-puzzle-chains",
+        "puzzle-room-exploration"
+      ],
+      "related_variables": [
+        "key-items",
+        "timer",
+        "lives"
+      ],
+      "design_guidance": {
+        "when_to_use": "When player-driven deduction is the primary reward.",
+        "where_to_use": "Logic puzzles, rule-bending games, and investigation boards.",
+        "when_to_avoid": [
+          "When trial-and-error would feel arbitrary without feedback",
+          "When puzzles gate urgent action pacing without opt-out"
+        ],
+        "designer_notes": "Give incremental feedback for partial correct states."
+      },
+      "tags": [
+        "puzzle",
+        "deduction"
+      ]
+    }
+  ]
+}

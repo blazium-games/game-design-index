@@ -1,0 +1,27 @@
+# Build
+data/dist/
+site/dist/
+site/node_modules/
+site/public/api/v1/
+*.exe
+*.zip
+
+# Local enrichment patches (apply with scripts/apply_enrichment)
+data/source/enrichment/cohorts/*.json
+
+# Local bulk cohort generators (not part of the public repo)
+scripts/generate_*.py
+scripts/analyze_*.py
+
+# Env
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

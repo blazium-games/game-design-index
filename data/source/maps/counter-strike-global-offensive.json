@@ -1,0 +1,170 @@
+{
+  "context": {
+    "year": 2005
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Round Based Health Duel",
+      "Resource Scarcity Management",
+      "Aim Down Sights Shooting"
+    ],
+    "player_fantasy": "Experience Counter-Strike: Global Offensive through its core tactical fps loop.",
+    "theme_tags": [
+      "tactical-fps",
+      "shooter",
+      "round-based-health-duel",
+      "resource-scarcity-management",
+      "aim-down-sights-shooting"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "First-shot accuracy and recoil control define gunplay; grenades control space and timing.",
+    "constraints": [
+      "One life per round",
+      "Buy menu limited by round money",
+      "Bomb timer forces site commitment"
+    ],
+    "core_loop": "Win rounds via eliminations or objective completion, earn money for guns armor and utility, coordinate executes and retakes on fixed maps, and reach 16 round wins.",
+    "economy_notes": "Loss bonus, kill rewards, and save rounds shape buy strategy; force buys vs eco decisions each round.",
+    "overview": "CS:GO is a round-based tactical FPS where terrorists and counter-terrorists fight bomb plants, defusals, and eliminations with economy-driven weapon buys each round.",
+    "player_goals": [
+      "Win 16 rounds in competitive match",
+      "Optimize team economy across rounds",
+      "Master map callouts and utility lineups"
+    ],
+    "progression_notes": "No persistent RPG progression in competitive; skill is player mastery."
+  },
+  "map_type": "game",
+  "mechanics": [
+    {
+      "domain": "combat",
+      "expression": "In Counter-Strike: Global Offensive, matches are divided into rounds with separate health pools; winning a set number of rounds wins the match.",
+      "map_notes": "In Counter-Strike: Global Offensive, matches are divided into rounds with separate health pools; winning a set number of rounds wins the match.",
+      "mechanic_slug": "round-based-health-duel",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "economy",
+      "expression": "In Counter-Strike: Global Offensive, limited ammo, healing, and save resources force careful risk assessment.",
+      "map_notes": "In Counter-Strike: Global Offensive, limited ammo, healing, and save resources force careful risk assessment.",
+      "mechanic_slug": "resource-scarcity-management",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "combat",
+      "expression": "In Counter-Strike: Global Offensive, zoomed aim mode trades movement speed for accuracy and range.",
+      "map_notes": "In Counter-Strike: Global Offensive, zoomed aim mode trades movement speed for accuracy and range.",
+      "mechanic_slug": "aim-down-sights-shooting",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "economy",
+      "expression": "In Counter-Strike: Global Offensive, units gain defensive bonuses from terrain cover and flanking angles on a tactical grid.",
+      "map_notes": "In Counter-Strike: Global Offensive, units gain defensive bonuses from terrain cover and flanking angles on a tactical grid.",
+      "mechanic_slug": "cover-based-positioning",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "economy",
+      "expression": "In Counter-Strike: Global Offensive, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "map_notes": "In Counter-Strike: Global Offensive, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "mechanic_slug": "equipment-loadout",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Win rounds through precise gunplay and utility usage, earn money for weapons and gear, coordinate site executes or retakes, and win 16 rounds to take the match.",
+    "description": "Counter-Strike: Global Offensive is a round-based tactical shooter where terrorists and counter-terrorists fight over bomb plants, defusals, and hostage rescues with economy management.",
+    "skills_tested": [
+      "aim precision",
+      "utility usage",
+      "economy management",
+      "team tactics",
+      "map control"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "schema_version": "1.1",
+  "signature_gameplay": [
+    "round-based-health-duel",
+    "resource-scarcity-management",
+    "aim-down-sights-shooting",
+    "cover-based-positioning",
+    "equipment-loadout"
+  ],
+  "skill_slugs": [
+    "resource-management",
+    "risk-evaluation",
+    "precision-movement",
+    "information-gathering",
+    "pattern-recognition"
+  ],
+  "slug": "counter-strike-global-offensive",
+  "source_url": "https://www.polygon.com/features/2019/11/4/20944265/best-games-2019-2010-ps4-switch-xbox-pc-100-51/",
+  "subject": {
+    "genres": [
+      "Tactical FPS",
+      "Shooter"
+    ],
+    "influences": [],
+    "kind": "game",
+    "name": "Counter-Strike: Global Offensive"
+  },
+  "systems": {
+    "economy_tightness": "scarce"
+  },
+  "title": "Counter-Strike: Global Offensive Gameplay Map",
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

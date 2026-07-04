@@ -1,0 +1,285 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "side-view",
+    "session_type": "match-based",
+    "world_structure": "arena-match"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "readable telegraphs",
+      "execution depth",
+      "competitive fairness"
+    ],
+    "player_fantasy": "Experience Fighting Game through its core fighting loop.",
+    "theme_tags": [
+      "fighting",
+      "action",
+      "round-based-health-duel",
+      "combo-chain-system",
+      "special-move-command-input"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat pacing should match genre tempo and readable threat language.",
+    "constraints": [
+      "Failure model: Round loss resets health; match loss ends set",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Win rounds by depleting opponent health through combos, special moves, and reads; first to take the set wins the match.",
+    "economy_notes": "tight",
+    "overview": "Fighting games center on one-on-one duels where players read telegraphs, execute combos, and manage super resources within round timers.",
+    "player_goals": [
+      "readable telegraphs",
+      "execution depth",
+      "competitive fairness"
+    ],
+    "progression_notes": "Follow signature mechanic dependencies across early, mid, and late phases."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "combat",
+      "expression": "Best-of rounds with discrete health pools per round.",
+      "map_notes": "Best-of rounds with discrete health pools per round.",
+      "mechanic_slug": "round-based-health-duel",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "frame-punish-engagement",
+        "special-move-command-input"
+      ],
+      "domain": "combat",
+      "expression": "Link attacks into escalating combo routes.",
+      "map_notes": "Link attacks into escalating combo routes.",
+      "mechanic_slug": "combo-chain-system",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "combo-chain-system"
+      ],
+      "domain": "combat",
+      "expression": "Directional or button sequences unlock special attacks.",
+      "map_notes": "Directional or button sequences unlock special attacks.",
+      "mechanic_slug": "special-move-command-input",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "combo-chain-system",
+        "telegraphed-threat-loop"
+      ],
+      "domain": "economy",
+      "expression": "Punish unsafe moves during recovery frames.",
+      "map_notes": "Punish unsafe moves during recovery frames.",
+      "mechanic_slug": "frame-punish-engagement",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "combo-chain-system"
+      ],
+      "domain": "economy",
+      "expression": "Meter builds toward super or EX moves.",
+      "map_notes": "Meter builds toward super or EX moves.",
+      "mechanic_slug": "super-meter-resource",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "combat",
+      "expression": "Startup and recovery frames telegraph risk.",
+      "map_notes": "Startup and recovery frames telegraph risk.",
+      "mechanic_slug": "telegraphed-threat-loop",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "progression",
+      "expression": "Arcade mode stage progression between rivals.",
+      "map_notes": "Arcade mode stage progression between rivals.",
+      "mechanic_slug": "mission-select-structure",
+      "optional": true,
+      "phase": "optional",
+      "role": "supporting",
+      "weight": 2
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Win rounds by depleting opponent health through combos, special moves, and reads; first to take the set wins the match.",
+    "description": "Fighting games center on one-on-one duels where players read telegraphs, execute combos, and manage super resources within round timers.",
+    "design_pillars": [
+      "readable telegraphs",
+      "execution depth",
+      "competitive fairness"
+    ],
+    "skills_tested": [
+      "combat timing",
+      "pattern recognition",
+      "combo execution",
+      "precision movement"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell"
+    ],
+    "influence_slugs": [
+      "super-smash-bros-melee",
+      "street-fighter-iv",
+      "tekken-3"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "round-based-health-duel",
+    "combo-chain-system",
+    "special-move-command-input",
+    "frame-punish-engagement",
+    "super-meter-resource"
+  ],
+  "skill_slugs": [
+    "combat-timing",
+    "pattern-recognition",
+    "precision-movement"
+  ],
+  "slug": "fighting-game",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Fighting",
+      "Action"
+    ],
+    "influences": [
+      "Street Fighter",
+      "Tekken"
+    ],
+    "kind": "genre",
+    "name": "Fighting Game"
+  },
+  "systems": {
+    "economy_tightness": "light",
+    "failure_model": "round-loss",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach round based health duel with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Round Based Health Duel",
+        "mechanics": [
+          "round-based-health-duel"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Combo Chain System",
+        "mechanics": [
+          "combo-chain-system"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Special Move Command Input",
+        "mechanics": [
+          "special-move-command-input"
+        ]
+      },
+      {
+        "id": "phase-4",
+        "label": "Frame Punish Engagement",
+        "mechanics": [
+          "frame-punish-engagement"
+        ]
+      }
+    ]
+  },
+  "title": "Fighting Game Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Character and stage select.",
+      "menu_slug": "stage-select-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Frame data and input settings.",
+      "menu_slug": "options-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Meter for supers and ex moves.",
+      "role": "primary",
+      "variable_slug": "super-meter"
+    },
+    {
+      "expression": "Round life totals.",
+      "role": "primary",
+      "variable_slug": "health"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [
+        "environmental-hazard-navigation"
+      ],
+      "id": "platform-fighter",
+      "label": "Platform Fighter",
+      "notes": "Smash-style ring-outs and stage hazards layered on duel structure."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

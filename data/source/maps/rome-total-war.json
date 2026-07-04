@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.1",
+  "slug": "rome-total-war",
+  "title": "Rome: Total War Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://digitaldreamdoor.com/pages/best_video-games-2000s.html",
+  "subject": {
+    "kind": "game",
+    "name": "Rome: Total War",
+    "genres": [
+      "Strategy"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Rome: Total War (2004) is a acclaimed strategy title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Plan turns on a grid, manage resources, and outmaneuver the opponent.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "tactics-grid-movement",
+    "turn-based-party-combat",
+    "cover-based-positioning",
+    "permadeath-unit-loss"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "tactics-grid-movement",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from tactics-strategy recipe; customize for Rome: Total War.",
+      "expression": "Tile grid constrains movement and range.",
+      "depends_on": [
+        "cover-based-positioning",
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "turn-based-party-combat",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from tactics-strategy recipe; customize for Rome: Total War.",
+      "expression": "Side or phase turns for each unit.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "cover-based-positioning",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from tactics-strategy recipe; customize for Rome: Total War.",
+      "expression": "High cover and flanking modify hit chance.",
+      "depends_on": [
+        "tactics-grid-movement",
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "permadeath-unit-loss",
+      "role": "signature",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from tactics-strategy recipe; customize for Rome: Total War.",
+      "expression": "Fallen units may be lost permanently.",
+      "depends_on": [
+        "tactics-grid-movement",
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "supporting",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "map_notes": "Uplifted from tactics-strategy recipe; customize for Rome: Total War.",
+      "expression": "Pre-mission loadout choices.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "supporting",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "map_notes": "Uplifted from tactics-strategy recipe; customize for Rome: Total War.",
+      "expression": "Level-ups between missions.",
+      "depends_on": [
+        "equipment-loadout"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2004
+  },
+  "relationships": {
+    "genre_maps": [
+      "tactics-strategy"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A strategy experience centered on Rome: Total War.",
+    "theme_tags": [
+      "strategy",
+      "tactics-grid-movement",
+      "turn-based-party-combat",
+      "cover-based-positioning"
+    ],
+    "design_pillars": [
+      "Tactics Grid Movement",
+      "Turn Based Party Combat",
+      "Cover Based Positioning"
+    ]
+  }
+}

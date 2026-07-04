@@ -1,0 +1,285 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "top-down",
+    "session_type": "open-ended",
+    "world_structure": "persistent-town"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "cozy daily rhythm",
+      "meaningful long-term goals",
+      "social warmth"
+    ],
+    "player_fantasy": "Experience Life Sim through its core simulation loop.",
+    "theme_tags": [
+      "simulation",
+      "life-sim",
+      "farming-crop-cycle",
+      "day-night-schedule-loop",
+      "social-relationship-meter"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat pacing should match genre tempo and readable threat language.",
+    "constraints": [
+      "Failure model: design-specific",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Plan each in-game day: tend crops or tasks, talk to villagers, earn currency, upgrade tools, and advance seasonal goals.",
+    "economy_notes": "moderate",
+    "overview": "Life sims loop daily schedules, relationship building, and long-term farm or town progression with low-pressure failure.",
+    "player_goals": [
+      "cozy daily rhythm",
+      "meaningful long-term goals",
+      "social warmth"
+    ],
+    "progression_notes": "Follow signature mechanic dependencies across early, mid, and late phases."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "progression",
+      "expression": "Plant, water, harvest cycles drive daily rhythm.",
+      "map_notes": "Plant, water, harvest cycles drive daily rhythm.",
+      "mechanic_slug": "farming-crop-cycle",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "farming-crop-cycle",
+        "social-relationship-meter"
+      ],
+      "domain": "session",
+      "expression": "Calendar days structure activities and events.",
+      "map_notes": "Calendar days structure activities and events.",
+      "mechanic_slug": "day-night-schedule-loop",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "day-night-schedule-loop",
+        "dialogue-choice-consequences"
+      ],
+      "domain": "progression",
+      "expression": "Friendship meters unlock gifts and story.",
+      "map_notes": "Friendship meters unlock gifts and story.",
+      "mechanic_slug": "social-relationship-meter",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ],
+      "domain": "progression",
+      "expression": "Museum, bundles, or town projects reward collection.",
+      "map_notes": "Museum, bundles, or town projects reward collection.",
+      "mechanic_slug": "fill-reward-progression-loop",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ],
+      "domain": "economy",
+      "expression": "Tool and farm upgrades purchased with earned currency.",
+      "map_notes": "Tool and farm upgrades purchased with earned currency.",
+      "mechanic_slug": "purchase-gated-upgrade",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 3
+    },
+    {
+      "domain": "progression",
+      "expression": "Optional dialogue branches in social events.",
+      "map_notes": "Optional dialogue branches in social events.",
+      "mechanic_slug": "dialogue-choice-consequences",
+      "optional": true,
+      "phase": "optional",
+      "role": "supporting",
+      "weight": 2
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Plan each in-game day: tend crops or tasks, talk to villagers, earn currency, upgrade tools, and advance seasonal goals.",
+    "description": "Life sims loop daily schedules, relationship building, and long-term farm or town progression with low-pressure failure.",
+    "design_pillars": [
+      "cozy daily rhythm",
+      "meaningful long-term goals",
+      "social warmth"
+    ],
+    "skills_tested": [
+      "resource management",
+      "run planning",
+      "relationship building"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "tycoon-simulation",
+      "narrative-adventure"
+    ],
+    "influence_slugs": [
+      "stardew-valley",
+      "animal-crossing-new-horizons",
+      "the-sims"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "farming-crop-cycle",
+    "day-night-schedule-loop",
+    "social-relationship-meter",
+    "fill-reward-progression-loop",
+    "purchase-gated-upgrade"
+  ],
+  "skill_slugs": [
+    "resource-management",
+    "run-planning",
+    "narrative-inference"
+  ],
+  "slug": "life-sim",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Simulation",
+      "Life Sim"
+    ],
+    "influences": [
+      "Stardew Valley",
+      "Animal Crossing"
+    ],
+    "kind": "genre",
+    "name": "Life Sim"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "next-day-recovery",
+    "metaprogression": false,
+    "pacing": {
+      "early": "Teach farming crop cycle with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Farming Crop Cycle",
+        "mechanics": [
+          "farming-crop-cycle"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Day Night Schedule Loop",
+        "mechanics": [
+          "day-night-schedule-loop"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Social Relationship Meter",
+        "mechanics": [
+          "social-relationship-meter"
+        ]
+      },
+      {
+        "id": "phase-4",
+        "label": "Fill Reward Progression Loop",
+        "mechanics": [
+          "fill-reward-progression-loop"
+        ]
+      }
+    ]
+  },
+  "title": "Life Sim Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Tools, crops, and gifts.",
+      "menu_slug": "inventory-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Seed and upgrade purchases.",
+      "menu_slug": "shop-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "NPC conversations and heart events.",
+      "menu_slug": "dialogue-menu",
+      "role": "contextual"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Farm and shop earnings.",
+      "role": "primary",
+      "variable_slug": "currency-soft"
+    },
+    {
+      "expression": "Villager relationship standing.",
+      "role": "supporting",
+      "variable_slug": "reputation"
+    },
+    {
+      "expression": "Optional stamina-like day planning.",
+      "role": "hidden",
+      "variable_slug": "hunger"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-life-sim",
+      "label": "Hardcore Life Sim",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

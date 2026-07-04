@@ -1,0 +1,28 @@
+name: Enrich variable
+description: Add shared rationale, player focus, or example games for a catalog variable
+title: "Enrich variable: "
+labels: ["data", "variables"]
+body:
+  - type: input
+    id: slug
+    attributes:
+      label: Variable slug
+    validations:
+      required: true
+  - type: textarea
+    id: shared_rationale
+    attributes:
+      label: Shared rationale
+      description: Why many games converge on this variable
+  - type: textarea
+    id: player_focus
+    attributes:
+      label: Player focus
+  - type: input
+    id: typical_range
+    attributes:
+      label: Typical range (e.g. 0–9999, 3–20 slots)
+  - type: textarea
+    id: example_games
+    attributes:
+      label: Example game map slugs (one per line)

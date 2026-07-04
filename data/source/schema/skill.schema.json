@@ -1,0 +1,39 @@
+{
+  "$id": "game-design-index/skill.schema.json",
+  "title": "DesignSkill",
+  "description": "Reusable player skill developed through game mechanics",
+  "type": "object",
+  "required": ["schema_version", "slug", "name", "summary", "category", "learning_outcome", "tags"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0"] },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string", "minLength": 1 },
+    "category": {
+      "type": "string",
+      "enum": ["motor", "cognitive", "strategic", "social", "creative"]
+    },
+    "learning_outcome": { "type": "string", "minLength": 1 },
+    "practice_activities": { "type": "array", "items": { "type": "string" } },
+    "related_mechanics": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+    },
+    "related_variables": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+    },
+    "design_guidance": {
+      "type": "object",
+      "properties": {
+        "when_to_use": { "type": "string" },
+        "where_to_use": { "type": "string" },
+        "when_to_avoid": { "type": "array", "items": { "type": "string" } },
+        "designer_notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+  },
+  "additionalProperties": false
+}

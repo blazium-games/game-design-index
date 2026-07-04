@@ -1,0 +1,307 @@
+{
+  "schema_version": "1.1",
+  "slug": "super-mario-bros-3",
+  "title": "Super Mario Bros. 3 Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-2d-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Super Mario Bros. 3",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario Bros.",
+      "Super Mario Bros. 2"
+    ]
+  },
+  "narrative": {
+    "description": "Bowser's Koopalings have transformed the Mushroom World's kings into animals. Mario and Luigi traverse eight themed kingdoms on an overworld map, enter action stages and fortresses, and use power-ups to reach each Koopaling and ultimately Bowser.",
+    "core_loop": "Navigate the overworld map to pick stages, run and jump through side-scrolling levels collecting power-ups and coins, defeat fortress bosses and Koopalings to restore kings, and advance toward Bowser's castle.",
+    "skills_tested": [
+      "timing",
+      "precision platforming",
+      "pattern recognition",
+      "resource management",
+      "route planning"
+    ]
+  },
+  "signature_gameplay": [
+    "overworld-map-stage-selection",
+    "power-up-transformation-states",
+    "precision-platforming"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "overworld-map-stage-selection",
+      "role": "signature",
+      "map_notes": "Eight kingdom overworlds with branching paths, locked areas, and player-chosen stage order.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Eight kingdom overworlds with branching paths, locked areas, and player-chosen stage order.",
+      "depends_on": [
+        "boss-gated-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "signature",
+      "map_notes": "Super Mushroom, Fire Flower, Super Leaf, Tanooki Suit, Frog Suit, and Hammer Suit each change abilities and appearance.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Super Mushroom, Fire Flower, Super Leaf, Tanooki Suit, Frog Suit, and Hammer Suit each change abilities and appearance.",
+      "depends_on": [
+        "depletable-health-pool",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "signature",
+      "map_notes": "Snappy Mario physics with variable jump height and no momentum carry.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Snappy Mario physics with variable jump height and no momentum carry.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "jump-cutoff"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Airship fortresses and Koopalings gate kingdom completion and king restoration.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Airship fortresses and Koopalings gate kingdom completion and king restoration.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Small Mario dies in one hit; powered-up forms absorb an extra hit before shrinking.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Small Mario dies in one hit; powered-up forms absorb an extra hit before shrinking.",
+      "depends_on": [
+        "life-based-retry-system",
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Pits, lava, spikes, and autoscroll sections test traversal skill.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Pits, lava, spikes, and autoscroll sections test traversal skill.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Fire Flower grants immediate fireball projectiles on button press.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Fire Flower grants immediate fireball projectiles on button press.",
+      "depends_on": [
+        "unrestricted-primary-fire"
+      ]
+    },
+    {
+      "mechanic_slug": "jump-cutoff",
+      "role": "supporting",
+      "map_notes": "Releasing jump early produces shorter hops for tight platforming.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Releasing jump early produces shorter hops for tight platforming.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Lives counter decrements on death; game over when lives reach zero.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lives counter decrements on death; game over when lives reach zero.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "loot-based-economy",
+      "role": "supporting",
+      "map_notes": "Coins and 1-Up mushrooms scattered in levels and on the overworld map.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Coins and 1-Up mushrooms scattered in levels and on the overworld map.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Fortress mid-bosses and certain stage markers act as progress anchors.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Fortress mid-bosses and certain stage markers act as progress anchors.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Bowser and several Koopalings shift attack patterns across phases.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bowser and several Koopalings shift attack patterns across phases.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden white blocks, secret exits, and warp whistles reward thorough exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden white blocks, secret exits, and warp whistles reward thorough exploration."
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Koopalings and Boom Boom follow learnable attack and movement cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Koopalings and Boom Boom follow learnable attack and movement cycles.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Toad Houses and spade panels offer power-ups and bonus minigames for coins.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Toad Houses and spade panels offer power-ups and bonus minigames for coins.",
+      "depends_on": [
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Thwomps, Boo circles, and boss wind-ups telegraph before striking.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Thwomps, Boo circles, and boss wind-ups telegraph before striking.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "unrestricted-primary-fire",
+      "role": "supporting",
+      "map_notes": "Fireballs from Fire Flower state have no ammo limit.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Fireballs from Fire Flower state have no ammo limit.",
+      "depends_on": [
+        "instant-fire-attack"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-bros"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Super Mario Bros. 3 through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "overworld-map-stage-selection",
+      "power-up-transformation-states",
+      "precision-platforming"
+    ],
+    "design_pillars": [
+      "Overworld Map Stage Selection",
+      "Power Up Transformation States",
+      "Precision Platforming"
+    ]
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "schema_version": "1.0",
+  "_comment": "Append a new entry before tagging a release. Keep entries newest-first.",
+  "entries": [
+    {
+      "version": "1.8.1",
+      "date": "2026-07-04",
+      "title": "Repo hygiene: local-only enrichment workflow",
+      "highlights": [
+        "Cohort patch JSON and bulk generator scripts are gitignored; canonical data lives in library/ and maps/",
+        "CI rejects accidentally committed local-only enrichment assets"
+      ],
+      "sections": [
+        {
+          "heading": "Changed",
+          "items": [
+            "Enrichment cohort files under enrichment/cohorts/ are local-only (.gitkeep placeholder in repo)",
+            "Bulk generate_*.py and analyze_*.py scripts removed from version control",
+            "Contributor docs and Contribute page describe apply_enrichment → PR merged catalogs workflow",
+            "Repository history squashed to a single release commit"
+          ]
+        }
+      ],
+      "release_url": "https://github.com/blazium-games/game-design-index/releases/tag/v1.8.1"
+    },
+    {
+      "version": "1.8.0",
+      "date": "2026-07-04",
+      "title": "Full catalog enrichment and genre expansion",
+      "highlights": [
+        "Apply full-catalog, skills, and catalog-expansion cohorts across 1401 maps and 25 design skills",
+        "Genre recipe pages show the same enriched sections as game maps (GDD outline, mechanics, variables, menus)"
+      ],
+      "sections": [
+        {
+          "heading": "Added",
+          "items": [
+            "Seven new enrichment cohorts: full-catalog v1.6.0–v1.6.4, skills v1.7.0, catalog-expansion v1.8.0",
+            "Twelve new genre recipe maps (battle royale, MOBA, FPS, survival crafting, and others)",
+            "apply_enrichment skills_add and maps_add patch operations",
+            "MapDetailSections shared component for game and genre detail pages",
+            "Catalog gap analysis and cohort generator scripts"
+          ]
+        },
+        {
+          "heading": "Changed",
+          "items": [
+            "Mechanics, variables, UI menus, and maps enriched to 100% cohort coverage",
+            "Variable and UI menu detail pages show when_to_avoid design guidance"
+          ]
+        }
+      ],
+      "release_url": "https://github.com/blazium-games/game-design-index/releases/tag/v1.8.0"
+    },
+    {
+      "version": "1.5.1",
+      "date": "2026-07-04",
+      "title": "Full library enrichment and pedagogy coverage",
+      "highlights": [
+        "Apply expansion, gap-fill, and pedagogy cohorts across mechanics, variables, menus, skills, and maps",
+        "Detail pages show examples, GDD outlines, and design guidance for all entity types"
+      ],
+      "sections": [
+        {
+          "heading": "Added",
+          "items": [
+            "Eight enrichment cohorts from pilot through pedagogy v1.5.1",
+            "generate_pedagogy_cohort.py and generate_gap_fill_cohort.py helpers",
+            "apply_enrichment skills catalog support and tests",
+            "Frontend sections for mechanic examples, map GDD outlines, variable/menu/skill design guidance"
+          ]
+        }
+      ],
+      "release_url": "https://github.com/blazium-games/game-design-index/releases/tag/v1.5.1"
+    },
+    {
+      "version": "1.3.1",
+      "date": "2026-07-04",
+      "title": "Fix direct-link 404s on GitHub Pages",
+      "highlights": [
+        "Add 404.html SPA fallback and .nojekyll for GitHub Pages routing",
+        "Fix favicon base path for project-site deployment"
+      ],
+      "sections": [
+        {
+          "heading": "Fixed",
+          "items": [
+            "Direct URLs like /explore/analytics now load instead of GitHub 404",
+            "generate-seo writes 404.html (SPA shell) and .nojekyll after prerender"
+          ]
+        }
+      ],
+      "release_url": "https://github.com/blazium-games/game-design-index/releases/tag/v1.3.1"
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-07-04",
+      "title": "SEO, AEO, GEO, and Discord embed support",
+      "highlights": [
+        "Build-time prerendered Open Graph HTML for all detail routes",
+        "Client-side meta tags and JSON-LD via react-helmet-async",
+        "sitemap.xml, robots.txt, llms.txt, and section share deep links"
+      ],
+      "sections": [
+        {
+          "heading": "Added",
+          "items": [
+            "cmd/generate-seo prerenders OG/Twitter meta for ~1,700 routes after Vite build",
+            "site/src/seo module with PageMeta, JSON-LD builders, and usePageMeta hook",
+            "ShareSectionLink component and hash scroll on detail pages",
+            "Default og-default.png social preview image",
+            "X (@BlaziumGames) links in site header, footer, and README"
+          ]
+        }
+      ],
+      "release_url": "https://github.com/blazium-games/game-design-index/releases/tag/v1.3.0"
+    },
+    {
+      "version": "1.2.1",
+      "date": "2026-07-04",
+      "title": "Analytics resilience and enrichment status UI",
+      "highlights": [
+        "Fix analytics page crash on stale API payloads",
+        "Unified enrichment status chips across catalog list pages",
+        "Route error fallback with retry on analytics"
+      ],
+      "sections": [
+        {
+          "heading": "Fixed",
+          "items": [
+            "Analytics page no longer crashes when mechanic_stats or skill_stats are missing from cached analytics.json",
+            "Mechanics and skills pages show human-readable needs info status with warning chips",
+            "Enrichment filters treat missing API status as needs_info consistently"
+          ]
+        },
+        {
+          "heading": "Added",
+          "items": [
+            "normalizeAnalyticsSnapshot helper with legacy payload defaults",
+            "EnrichmentStatusChip shared component",
+            "Analytics fetch error state with retry and raw JSON link",
+            "Route errorElement fallback on /explore/analytics"
+          ]
+        }
+      ],
+      "release_url": "https://github.com/blazium-games/game-design-index/releases/tag/v1.2.1"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-07-04",
+      "title": "Enrichment infrastructure and issue-driven mechanic backfill",
+      "highlights": [
+        "Mechanic enrichment_status on API and analytics dashboard",
+        "Enrichment cohort patch workflow with documented folder layout",
+        "WebMCP list-skills and get-skill tools",
+        "GitHub enrich-mechanic issue template"
+      ],
+      "sections": [
+        {
+          "heading": "Added",
+          "items": [
+            "Enrichment patches under data/source/enrichment/cohorts/ with README and apply_enrichment script",
+            "Mechanic and skill enrichment stats in analytics.json and /explore/analytics",
+            "Mechanics index enrichment_status field",
+            "GitHub issue template: enrich-mechanic.yml",
+            "WebMCP tools: list-skills, get-skill; search-index skill type filter"
+          ]
+        },
+        {
+          "heading": "Site",
+          "items": [
+            "Mechanics page enrichment filter and status column",
+            "Mechanic detail CTA links to enrich-mechanic issue template",
+            "Home hero shows mechanic enrichment percentage",
+            "Contribute page documents mechanic enrichment workflow"
+          ]
+        },
+        {
+          "heading": "Fixed",
+          "items": [
+            "Pilot cohort re-applied with design_exercises on all 10 enriched mechanics"
+          ]
+        }
+      ],
+      "release_url": "https://github.com/blazium-games/game-design-index/releases/tag/v1.2.0"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-07-04",
+      "title": "Skills catalog and design pedagogy enrichment",
+      "highlights": [
+        "15 design skills catalog",
+        "Mechanic schema 1.3 with learning objectives and design exercises",
+        "Pilot enrichment for 10 mechanics and 5 curated maps",
+        "Discord and GitHub community links on site"
+      ],
+      "sections": [
+        {
+          "heading": "Added",
+          "items": [
+            "Design skills catalog (`library/skills.json`) with categories: motor, cognitive, strategic, social, creative",
+            "API: GET /api/v1/skills/index.json and /skills/{slug}.json",
+            "Index: skill-to-mechanics.json",
+            "Mechanic schema 1.3: learning_objectives, design_exercises, skills_developed",
+            "Variable and UI menu schema 1.1: agent_context for GDD prompts",
+            "Gameplay maps: optional skill_slugs[] linked to skills catalog",
+            "Site: /skills list and detail pages; design guidance on mechanic pages"
+          ]
+        },
+        {
+          "heading": "Enriched",
+          "items": [
+            "10 pilot mechanics with design_guidance, agent_context, and exercises",
+            "5 pilot maps with structured skill_slugs",
+            "3 variables and 2 UI menus with agent_context"
+          ]
+        },
+        {
+          "heading": "Site",
+          "items": [
+            "Prominent GitHub and Discord community links in header, home, footer, and contribute page"
+          ]
+        },
+        {
+          "heading": "API",
+          "items": [
+            "catalog.json skill_count field",
+            "Release zips: design-index-api-1.1.0.zip and design-index-formats-1.1.0.zip"
+          ]
+        }
+      ],
+      "release_url": "https://github.com/blazium-games/game-design-index/releases/tag/v1.1.0"
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-07-04",
+      "title": "Game Design Index — initial release",
+      "highlights": [
+        "1389 gameplay maps",
+        "248 reusable mechanics",
+        "44 game variables and 23 UI menus",
+        "16 genre recipes",
+        "GitHub Pages site, static JSON API, and WebMCP tools"
+      ],
+      "sections": [
+        {
+          "heading": "Added",
+          "items": [
+            "Game Design Index: open MIT-licensed corpus of gameplay maps, mechanics, variables, and UI menus",
+            "Mechanics library schema 1.2 with 248 entries",
+            "Gameplay maps for games and genre recipes",
+            "Variables catalog with categories, scopes, and enrichment tracking",
+            "UI menus catalog with menu types, layers, and flow edges",
+            "Static JSON API export pipeline with multi-format release zips",
+            "Browse site: games, mechanics, genres, variables, UI menus, co-occurrence, analytics, changelog",
+            "WebMCP query tools for AI agents",
+            "GitHub issue templates for contributions"
+          ]
+        },
+        {
+          "heading": "API",
+          "items": [
+            "GET /api/v1/catalog.json, analytics.json, changelog.json",
+            "GET /api/v1/maps/, mechanics/, genres/, variables/, ui-menus/",
+            "Release zips: design-index-api-1.0.0.zip and design-index-formats-1.0.0.zip"
+          ]
+        },
+        {
+          "heading": "Site",
+          "items": [
+            "Home page with corpus stats and curated highlights",
+            "Co-occurrence explorer and analytics dashboard",
+            "API and WebMCP documentation pages",
+            "ExportDropdown for per-entity JSON/MD/YAML/XML/TXT"
+          ]
+        }
+      ],
+      "release_url": "https://github.com/blazium-games/game-design-index/releases/tag/v1.0.0"
+    }
+  ]
+}

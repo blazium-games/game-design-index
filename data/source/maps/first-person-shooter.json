@@ -1,0 +1,230 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "ADS, recoil, and TTK gunplay.",
+      "Peek and reposition around cover lanes."
+    ],
+    "player_fantasy": "Experience First-Person Shooter through its signature loop.",
+    "theme_tags": [
+      "first-person-shooter",
+      "aim-down-sights-shooting",
+      "cover-based-positioning"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: round-respawn",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "ADS, recoil, and TTK gunplay.",
+    "economy_notes": "moderate",
+    "overview": "First-Person Shooter genre recipe anchored on aim-down-sights-shooting, cover-based-positioning.",
+    "player_goals": [
+      "ADS, recoil, and TTK gunplay.",
+      "Peek and reposition around cover lanes."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "combat",
+      "expression": "ADS, recoil, and TTK gunplay.",
+      "map_notes": "ADS, recoil, and TTK gunplay.",
+      "mechanic_slug": "aim-down-sights-shooting",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "aim-down-sights-shooting"
+      ],
+      "domain": "economy",
+      "expression": "Peek and reposition around cover lanes.",
+      "map_notes": "Peek and reposition around cover lanes.",
+      "mechanic_slug": "cover-based-positioning",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "economy",
+      "expression": "Health and regen cadence define duels.",
+      "map_notes": "Health and regen cadence define duels.",
+      "mechanic_slug": "depletable-health-pool",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "economy",
+      "expression": "Pre-round or mid-match loadout choices.",
+      "map_notes": "Pre-round or mid-match loadout choices.",
+      "mechanic_slug": "equipment-loadout",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "ADS, recoil, and TTK gunplay.",
+    "description": "First-Person Shooter games center on aDS, recoil, and TTK gunplay.",
+    "design_pillars": [
+      "ADS, recoil, and TTK gunplay.",
+      "Peek and reposition around cover lanes."
+    ],
+    "skills_tested": [
+      "aim precision",
+      "combat timing",
+      "team coordination",
+      "loadout optimization"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "battle-royale",
+      "stealth-action"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "aim-down-sights-shooting",
+    "cover-based-positioning"
+  ],
+  "skill_slugs": [
+    "aim-precision",
+    "combat-timing",
+    "team-coordination",
+    "loadout-optimization"
+  ],
+  "slug": "first-person-shooter",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "influences": [
+      "Counter-Strike",
+      "Call of Duty"
+    ],
+    "kind": "genre",
+    "name": "First-Person Shooter"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "round-respawn",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach aim down sights shooting with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Aim Down Sights Shooting",
+        "mechanics": [
+          "aim-down-sights-shooting"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Cover Based Positioning",
+        "mechanics": [
+          "cover-based-positioning"
+        ]
+      }
+    ]
+  },
+  "title": "First-Person Shooter Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Loadout before match.",
+      "menu_slug": "weapon-select-overlay",
+      "role": "core"
+    },
+    {
+      "map_notes": "Scoreboard and options.",
+      "menu_slug": "pause-menu",
+      "role": "contextual"
+    },
+    {
+      "map_notes": "Sensitivity and accessibility.",
+      "menu_slug": "settings-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "TTK and heal item scarcity.",
+      "role": "primary",
+      "variable_slug": "health"
+    },
+    {
+      "expression": "Magazine and resupply cadence.",
+      "role": "supporting",
+      "variable_slug": "ammo"
+    },
+    {
+      "expression": "Regenerating buffer before health.",
+      "role": "supporting",
+      "variable_slug": "shield"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-first-person-shooter",
+      "label": "Hardcore First-Person Shooter",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

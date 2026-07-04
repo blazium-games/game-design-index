@@ -1,0 +1,210 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Player-set goals without forced fail states.",
+      "Open crafting and building pipelines."
+    ],
+    "player_fantasy": "Experience Sandbox Creative through its signature loop.",
+    "theme_tags": [
+      "sandbox-creative",
+      "sandbox-goal-optional",
+      "crafting-economy-loop"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: creative-reset",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Player-set goals without forced fail states.",
+    "economy_notes": "light",
+    "overview": "Sandbox Creative genre recipe anchored on sandbox-goal-optional, crafting-economy-loop.",
+    "player_goals": [
+      "Player-set goals without forced fail states.",
+      "Open crafting and building pipelines."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "progression",
+      "expression": "Player-set goals without forced fail states.",
+      "map_notes": "Player-set goals without forced fail states.",
+      "mechanic_slug": "sandbox-goal-optional",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "economy",
+      "expression": "Open crafting and building pipelines.",
+      "map_notes": "Open crafting and building pipelines.",
+      "mechanic_slug": "crafting-economy-loop",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "level",
+      "expression": "Emergent physics playgrounds.",
+      "map_notes": "Emergent physics playgrounds.",
+      "mechanic_slug": "physics-ragdoll-puzzle",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "progression",
+      "expression": "Large spaces for player-made projects.",
+      "map_notes": "Large spaces for player-made projects.",
+      "mechanic_slug": "open-world-exploration",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Player-set goals without forced fail states.",
+    "description": "Sandbox Creative games center on player-set goals without forced fail states.",
+    "design_pillars": [
+      "Player-set goals without forced fail states.",
+      "Open crafting and building pipelines."
+    ],
+    "skills_tested": [
+      "crafting planning",
+      "exploration",
+      "puzzle logic"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "survival-crafting",
+      "life-sim"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "sandbox-goal-optional",
+    "crafting-economy-loop"
+  ],
+  "skill_slugs": [
+    "crafting-planning",
+    "exploration",
+    "puzzle-logic"
+  ],
+  "slug": "sandbox-creative",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Sandbox",
+      "Creative"
+    ],
+    "influences": [
+      "Minecraft Creative",
+      "Garry's Mod"
+    ],
+    "kind": "genre",
+    "name": "Sandbox Creative"
+  },
+  "systems": {
+    "economy_tightness": "light",
+    "failure_model": "creative-reset",
+    "metaprogression": false,
+    "pacing": {
+      "early": "Teach sandbox goal optional with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Sandbox Goal Optional",
+        "mechanics": [
+          "sandbox-goal-optional"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Crafting Economy Loop",
+        "mechanics": [
+          "crafting-economy-loop"
+        ]
+      }
+    ]
+  },
+  "title": "Sandbox Creative Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Block or tool palette.",
+      "menu_slug": "inventory-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Creative crafting if applicable.",
+      "menu_slug": "crafting-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Material palette in creative modes.",
+      "role": "supporting",
+      "variable_slug": "inventory-slots"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-sandbox-creative",
+      "label": "Hardcore Sandbox Creative",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

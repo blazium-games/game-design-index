@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.1",
+  "slug": "lemmings",
+  "title": "Lemmings Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.lemon64.com/forum/viewtopic.php?t=84325",
+  "subject": {
+    "kind": "game",
+    "name": "Lemmings",
+    "genres": [
+      "Puzzle"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Lemmings (1991) is a acclaimed puzzle title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Place or match pieces under pressure to clear objectives and chase high scores.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "unit-assignment-puzzle",
+    "fill-reward-progression-loop",
+    "life-based-retry-system"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "unit-assignment-puzzle",
+      "role": "signature",
+      "map_notes": "Core unit assignment puzzle loop defines Lemmings's identity.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Assign abilities to autonomous units to navigate hazards toward an exit.",
+      "depends_on": [
+        "fill-reward-progression-loop",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "fill-reward-progression-loop",
+      "role": "signature",
+      "map_notes": "Core fill reward progression loop loop defines Lemmings's identity.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "A progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "signature",
+      "map_notes": "Core life based retry system loop defines Lemmings's identity.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "A failure-buffer system in which the player is granted a limited number of retries, losing one life upon failure and restarting from a previous checkpoint."
+    },
+    {
+      "mechanic_slug": "lock-delay-placement",
+      "role": "supporting",
+      "map_notes": "Lock Delay Placement supports the main loop in Lemmings.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "After a piece lands, a brief grace period allows final horizontal adjustments before it locks permanently.",
+      "depends_on": [
+        "hard-drop-placement",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "next-piece-preview",
+      "role": "supporting",
+      "map_notes": "Next Piece Preview supports the main loop in Lemmings.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A display shows the upcoming piece or pieces, enabling advance planning of placement strategy.",
+      "depends_on": [
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "soft-drop-control",
+      "role": "supporting",
+      "map_notes": "Soft Drop Control supports the main loop in Lemmings.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Holding a direction accelerates piece descent without instant lock, allowing faster placement at a score or risk tradeoff.",
+      "depends_on": [
+        "escalating-drop-speed",
+        "hard-drop-placement"
+      ]
+    },
+    {
+      "mechanic_slug": "hard-drop-placement",
+      "role": "supporting",
+      "map_notes": "Hard Drop Placement supports the main loop in Lemmings.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "An instant-drop input locks the current piece at its horizontal position immediately.",
+      "depends_on": [
+        "soft-drop-control",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "tetromino-rotation",
+      "role": "supporting",
+      "map_notes": "Tetromino Rotation supports the main loop in Lemmings.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Falling polyomino pieces rotate in fixed increments to fit into the playfield grid."
+    },
+    {
+      "mechanic_slug": "multi-line-scoring-multiplier",
+      "role": "supporting",
+      "map_notes": "Multi Line Scoring Multiplier supports the main loop in Lemmings.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Clearing multiple lines simultaneously awards disproportionately higher scores than single-line clears."
+    },
+    {
+      "mechanic_slug": "escalating-drop-speed",
+      "role": "supporting",
+      "map_notes": "Escalating Drop Speed supports the main loop in Lemmings.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "The rate at which pieces fall increases over time or level, compressing decision windows as the session progresses.",
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 1991
+  },
+  "design_intent": {
+    "player_fantasy": "A puzzle experience centered on Lemmings.",
+    "theme_tags": [
+      "puzzle",
+      "unit-assignment-puzzle",
+      "fill-reward-progression-loop",
+      "life-based-retry-system"
+    ],
+    "design_pillars": [
+      "Unit Assignment Puzzle",
+      "Fill Reward Progression Loop",
+      "Life Based Retry System"
+    ]
+  }
+}

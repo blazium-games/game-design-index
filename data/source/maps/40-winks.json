@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.1",
+  "slug": "40-winks",
+  "title": "40 Winks Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "40 Winks",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Crash Bandicoot",
+      "Spyro the Dragon"
+    ]
+  },
+  "narrative": {
+    "description": "Eurocom's dream-themed platformer sends Tim and his dog through pajama-clad worlds collecting winks, night caps, and dream keys across linear and hub-linked stages.",
+    "core_loop": "Bounce through dream worlds, collect 40 winks per stage, defeat nightmare bosses, and restore bedtime balance.",
+    "skills_tested": [
+      "bounce timing",
+      "combat spacing",
+      "collectible quotas"
+    ]
+  },
+  "signature_gameplay": [
+    "collectathon-token-gating",
+    "linear-stage-gauntlet",
+    "power-up-transformation-states"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "40 winks per stage gate completion and world progress.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "40 winks per stage gate completion and world progress.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "signature",
+      "map_notes": "Dream stages are themed gauntlets ending in boss confrontations.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Dream stages are themed gauntlets ending in boss confrontations.",
+      "depends_on": [
+        "boss-gated-progression",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "power-up-transformation-states",
+      "role": "signature",
+      "map_notes": "Costume power-ups grant hover, attack, and traversal variants.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Costume power-ups grant hover, attack, and traversal variants.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Spin and bounce attacks clear nightmare enemies.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Spin and bounce attacks clear nightmare enemies."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Night caps act as lives for stage retries.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Night caps act as lives for stage retries.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Nightmare hazards and moving platforms test timing.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Nightmare hazards and moving platforms test timing.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Nightmare bosses guard dream keys for next worlds.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Nightmare bosses guard dream keys for next worlds.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden winks and bonus rooms reward exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden winks and bonus rooms reward exploration."
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Checkpoint beds respawn Tim mid-stage.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Checkpoint beds respawn Tim mid-stage.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses cycle through dream-themed attack patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses cycle through dream-themed attack patterns.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Bounce pads require exact landing angles.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bounce pads require exact landing angles.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Nightmare enemies telegraph before charging.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Nightmare enemies telegraph before charging.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1999
+  },
+  "relationships": {
+    "influence_slugs": [
+      "crash-bandicoot",
+      "spyro-the-dragon"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience 40 Winks through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "collectathon-token-gating",
+      "linear-stage-gauntlet",
+      "power-up-transformation-states"
+    ],
+    "design_pillars": [
+      "Collectathon Token Gating",
+      "Linear Stage Gauntlet",
+      "Power Up Transformation States"
+    ]
+  }
+}

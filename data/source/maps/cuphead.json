@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.1",
+  "slug": "cuphead",
+  "title": "Cuphead Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-2d-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Cuphead",
+    "genres": [
+      "Run-and-Gun",
+      "Platformer",
+      "Boss Rush"
+    ],
+    "influences": [
+      "1930s Cartoons",
+      "Contra",
+      "Mega Man"
+    ]
+  },
+  "narrative": {
+    "description": "Cuphead and Mugman lose a dice game to the Devil and must collect soul contracts from runaway debtors. Players traverse an overworld map of boss and run-and-gun stages, mastering bullet patterns and parries to defeat cartoon bosses and repay the Devil.",
+    "core_loop": "Select a stage from the inkwell map, fight multi-phase cartoon bosses or run-and-gun levels, parry pink objects for super meter and dodge bullet patterns, earn grades and coins, purchase charms and weapons, and collect all soul contracts.",
+    "skills_tested": [
+      "pattern recognition",
+      "reaction time",
+      "parry timing",
+      "dodging",
+      "memorization"
+    ]
+  },
+  "signature_gameplay": [
+    "parry-counter-attack",
+    "boss-rush-progression",
+    "projectile-pattern-enemy-design"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "parry-counter-attack",
+      "role": "signature",
+      "map_notes": "Pink objects can be parried for super meter buildup and aerial repositioning; core skill expression.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Pink objects can be parried for super meter buildup and aerial repositioning; core skill expression.",
+      "depends_on": [
+        "projectile-pattern-enemy-design",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-rush-progression",
+      "role": "signature",
+      "map_notes": "Most content is individual multi-phase boss gauntlets selected from an overworld map.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Most content is individual multi-phase boss gauntlets selected from an overworld map.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "signature",
+      "map_notes": "Bullet hell formations from bosses define the primary challenge in every encounter.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Bullet hell formations from bosses define the primary challenge in every encounter.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "overworld-map-stage-selection",
+      "role": "supporting",
+      "map_notes": "Inkwell Isle maps let players choose boss and run-and-gun stages in flexible order.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Inkwell Isle maps let players choose boss and run-and-gun stages in flexible order."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Three HP by default; damage removes a point; zero HP fails the attempt.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Three HP by default; damage removes a point; zero HP fails the attempt.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "difficulty-accessibility-mode",
+      "role": "supporting",
+      "map_notes": "Simple Mode reduces boss HP and simplifies patterns for players who want to finish the story.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Simple Mode reduces boss HP and simplifies patterns for players who want to finish the story.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "facing-locked-shooting",
+      "role": "supporting",
+      "map_notes": "Peashooter and weapons fire in the direction Cuphead faces.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Peashooter and weapons fire in the direction Cuphead faces.",
+      "depends_on": [
+        "jump-cutoff",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Primary weapon fires immediately on button press.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Primary weapon fires immediately on button press.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "unrestricted-primary-fire"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Every boss transitions through multiple distinct attack phases.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Every boss transitions through multiple distinct attack phases.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Boss attack sequences are deterministic and learnable through repetition.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss attack sequences are deterministic and learnable through repetition.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Snappy run-and-jump movement during run-and-gun stages and boss arenas.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Snappy run-and-jump movement during run-and-gun stages and boss arenas.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "jump-cutoff"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Coins buy new weapons, charms, and super arts from Porkrind's shop.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Coins buy new weapons, charms, and super arts from Porkrind's shop."
+    },
+    {
+      "mechanic_slug": "super-meter-resource",
+      "role": "supporting",
+      "map_notes": "Parries and successful hits fill a super meter for powerful super art attacks.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Parries and successful hits fill a super meter for powerful super art attacks.",
+      "depends_on": [
+        "parry-counter-attack"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Boss wind-ups and color-coded projectiles telegraph attack timing.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss wind-ups and color-coded projectiles telegraph attack timing.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-loadout-switching",
+      "role": "supporting",
+      "map_notes": "Switch between purchased weapons and equipped charms before each stage.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Switch between purchased weapons and equipped charms before each stage.",
+      "depends_on": [
+        "instant-fire-attack"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Failed attempts restart the boss or stage from the beginning.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Failed attempts restart the boss or stage from the beginning.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "jump-cutoff",
+      "role": "supporting",
+      "map_notes": "Variable jump height for dodging patterns and platforming sections.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Variable jump height for dodging patterns and platforming sections.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "unrestricted-primary-fire",
+      "role": "supporting",
+      "map_notes": "Peashooter has no ammo limit.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Peashooter has no ammo limit.",
+      "depends_on": [
+        "facing-locked-shooting",
+        "instant-fire-attack"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Run-and-gun stages include platform hazards alongside enemy fire.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Run-and-gun stages include platform hazards alongside enemy fire.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "influence_slugs": [
+      "contra",
+      "mega-man-2"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Cuphead through its core run-and-gun loop.",
+    "theme_tags": [
+      "run-and-gun",
+      "platformer",
+      "boss-rush",
+      "parry-counter-attack",
+      "boss-rush-progression",
+      "projectile-pattern-enemy-design"
+    ],
+    "design_pillars": [
+      "Parry Counter Attack",
+      "Boss Rush Progression",
+      "Projectile Pattern Enemy Design"
+    ]
+  }
+}

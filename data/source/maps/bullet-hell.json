@@ -1,0 +1,271 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "top-down",
+    "session_type": "arcade-run",
+    "world_structure": "linear-stage-gauntlet"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Projectile Pattern Enemy Design",
+      "Telegraphed Threat Loop",
+      "Instant Fire Attack"
+    ],
+    "player_fantasy": "Experience Bullet Hell through its core shooter loop.",
+    "theme_tags": [
+      "shooter",
+      "arcade",
+      "projectile-pattern-enemy-design",
+      "telegraphed-threat-loop",
+      "instant-fire-attack"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat pacing should match genre tempo and readable threat language.",
+    "constraints": [
+      "Failure model: permadeath-or-lives",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Navigate dense bullet patterns, damage bosses and waves with focused fire, collect power-ups, and survive stage gauntlets with limited lives or continues.",
+    "economy_notes": "Tune earn/spend to genre tension targets.",
+    "overview": "Bullet hell shooters flood the screen with patterned projectiles while players weave through tight gaps. Mastery depends on memorizing enemy volleys and optimizing shot placement.",
+    "player_goals": [
+      "Master signature mechanics",
+      "Complete core progression arc"
+    ],
+    "progression_notes": "Follow signature mechanic dependencies across early, mid, and late phases."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ],
+      "domain": "combat",
+      "expression": "Enemies emit readable but dense bullet curtains.",
+      "map_notes": "Enemies emit readable but dense bullet curtains.",
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ],
+      "domain": "combat",
+      "expression": "Wind-ups and pattern cycles create learnable dodge windows.",
+      "map_notes": "Wind-ups and pattern cycles create learnable dodge windows.",
+      "mechanic_slug": "telegraphed-threat-loop",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "combat",
+      "expression": "Responsive player shots reward positioning without charge delay.",
+      "map_notes": "Responsive player shots reward positioning without charge delay.",
+      "mechanic_slug": "instant-fire-attack",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "session",
+      "expression": "Limited lives or continues cap run length and raise stakes.",
+      "map_notes": "Limited lives or continues cap run length and raise stakes.",
+      "mechanic_slug": "life-based-retry-system",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "life-based-retry-system"
+      ],
+      "domain": "progression",
+      "expression": "Sequential stages escalate pattern complexity.",
+      "map_notes": "Sequential stages escalate pattern complexity.",
+      "mechanic_slug": "linear-stage-gauntlet",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ],
+      "domain": "combat",
+      "expression": "Boss spell cards or phases test accumulated pattern knowledge.",
+      "map_notes": "Boss spell cards or phases test accumulated pattern knowledge.",
+      "mechanic_slug": "patterned-boss-encounter",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 4
+    },
+    {
+      "domain": "combat",
+      "expression": "Shot power tiers reward survival without dying.",
+      "map_notes": "Shot power tiers reward survival without dying.",
+      "mechanic_slug": "power-up-transformation-states",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 2
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Navigate dense bullet patterns, damage bosses and waves with focused fire, collect power-ups, and survive stage gauntlets with limited lives or continues.",
+    "description": "Bullet hell shooters flood the screen with patterned projectiles while players weave through tight gaps. Mastery depends on memorizing enemy volleys and optimizing shot placement.",
+    "skills_tested": [
+      "precision movement",
+      "pattern recognition",
+      "combat timing"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "projectile-pattern-enemy-design",
+    "telegraphed-threat-loop",
+    "instant-fire-attack",
+    "life-based-retry-system",
+    "linear-stage-gauntlet"
+  ],
+  "skill_slugs": [
+    "precision-movement",
+    "pattern-recognition",
+    "combat-timing"
+  ],
+  "slug": "bullet-hell",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Shooter",
+      "Arcade"
+    ],
+    "influences": [
+      "Touhou",
+      "Ikaruga"
+    ],
+    "kind": "genre",
+    "name": "Bullet Hell"
+  },
+  "systems": {
+    "economy_tightness": "light",
+    "failure_model": "permadeath-or-lives",
+    "metaprogression": false,
+    "pacing": {
+      "early": "Teach projectile pattern enemy design with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Projectile Pattern Enemy Design",
+        "mechanics": [
+          "projectile-pattern-enemy-design"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Telegraphed Threat Loop",
+        "mechanics": [
+          "telegraphed-threat-loop"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Instant Fire Attack",
+        "mechanics": [
+          "instant-fire-attack"
+        ]
+      },
+      {
+        "id": "phase-4",
+        "label": "Life Based Retry System",
+        "mechanics": [
+          "life-based-retry-system"
+        ]
+      }
+    ]
+  },
+  "title": "Bullet Hell Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Stage and difficulty route.",
+      "menu_slug": "stage-select-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Pause and practice modes.",
+      "menu_slug": "pause-menu",
+      "role": "contextual"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Continue pressure in stage gauntlets.",
+      "role": "primary",
+      "variable_slug": "lives"
+    },
+    {
+      "expression": "Rank chasing and extends.",
+      "role": "supporting",
+      "variable_slug": "score"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-bullet-hell",
+      "label": "Hardcore Bullet Hell",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

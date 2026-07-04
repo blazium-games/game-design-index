@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.1",
+  "slug": "super-mario-galaxy-2",
+  "title": "Super Mario Galaxy 2 Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Super Mario Galaxy 2",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario 64"
+    ]
+  },
+  "narrative": {
+    "description": "Nintendo's Wii sequel streamlines hub structure while adding Yoshi, drill, and cloud caps across dense planetoid stages.",
+    "core_loop": "Collect Power Stars on Starship Mario, use Yoshi and power-ups, and defeat Bowser across compact galactic courses.",
+    "skills_tested": [
+      "gravity routing",
+      "Yoshi coordination",
+      "star quotas"
+    ]
+  },
+  "signature_gameplay": [
+    "planet-gravity-platforming",
+    "collectathon-token-gating",
+    "mount-companion-control"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "planet-gravity-platforming",
+      "role": "signature",
+      "map_notes": "Core planet gravity platforming defines Super Mario Galaxy 2 stage design.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Core planet gravity platforming defines Super Mario Galaxy 2 stage design.",
+      "depends_on": [
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Super Mario Galaxy 2 uses collectathon token gating for world structure.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Super Mario Galaxy 2 uses collectathon token gating for world structure.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "mount-companion-control",
+      "role": "signature",
+      "map_notes": "mount companion control drives progression in Super Mario Galaxy 2.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "mount companion control drives progression in Super Mario Galaxy 2.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Hazards and obstacles test traversal mastery in Super Mario Galaxy 2.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hazards and obstacles test traversal mastery in Super Mario Galaxy 2.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Checkpoints and stage boundaries save progress between attempts.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Checkpoints and stage boundaries save progress between attempts.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Lives or health gates retries on failure.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lives or health gates retries on failure.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Boss encounters follow learnable attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss encounters follow learnable attack cycles.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden collectibles reward thorough exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden collectibles reward thorough exploration."
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Platform sections demand accurate jump timing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Platform sections demand accurate jump timing.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Enemy attacks telegraph before striking.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemy attacks telegraph before striking.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health depletes on hazard and enemy contact.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health depletes on hazard and enemy contact.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Boss victories and key objectives unlock subsequent content. (Super Mario Galaxy 2)",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss victories and key objectives unlock subsequent content. (Super Mario Galaxy 2)",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2010
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-64"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Super Mario Galaxy 2 through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "planet-gravity-platforming",
+      "collectathon-token-gating",
+      "mount-companion-control"
+    ],
+    "design_pillars": [
+      "Planet Gravity Platforming",
+      "Collectathon Token Gating",
+      "Mount Companion Control"
+    ]
+  }
+}

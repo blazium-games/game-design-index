@@ -1,0 +1,268 @@
+{
+  "context": {
+    "year": 2020
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Permadeath Run Structure",
+      "Real Time Action Combat",
+      "Roguelike Map Routing"
+    ],
+    "player_fantasy": "Experience Hades through its core roguelike loop.",
+    "theme_tags": [
+      "roguelike",
+      "action",
+      "permadeath-run-structure",
+      "real-time-action-combat",
+      "roguelike-map-routing"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Dash-i-frame combat with god boon tags stacking into build archetypes; boss patterns telegraph clearly per attempt.",
+    "constraints": [
+      "Death ends current escape attempt",
+      "Boon choices are offer-limited per chamber",
+      "Heat modifiers optional for veteran challenge"
+    ],
+    "core_loop": "Choose chamber routes, fight real-time encounters, pick boons and upgrades, die and return to the House, spend meta currency on mirror talents and weapons, and push farther with story unlocks.",
+    "economy_notes": "Darkness and gems fund meta; bones and chamber rewards fund mid-run shops and wells.",
+    "overview": "Hades is a roguelike action game where Zagreus escapes the underworld through procedural chambers, building boon synergies each run while advancing relationships in the House between deaths.",
+    "player_goals": [
+      "Reach and defeat final bosses",
+      "Unlock weapon aspects and mirror talents",
+      "Advance NPC storylines and endings"
+    ],
+    "progression_notes": "Mirror of Night and weapon aspects persist; boons and chamber rewards are run-scoped."
+  },
+  "map_type": "game",
+  "mechanics": [
+    {
+      "domain": "locomotion",
+      "expression": "In Hades, death ends the current run; meta-progression or knowledge carries between attempts.",
+      "map_notes": "In Hades, death ends the current run; meta-progression or knowledge carries between attempts.",
+      "mechanic_slug": "permadeath-run-structure",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "combat",
+      "expression": "In Hades, direct player control over attacks, dodges, and combos in real time.",
+      "map_notes": "In Hades, direct player control over attacks, dodges, and combos in real time.",
+      "mechanic_slug": "real-time-action-combat",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "permadeath-run-structure"
+      ],
+      "domain": "progression",
+      "expression": "In Hades, choose branching paths across a run map with risk-reward nodes.",
+      "map_notes": "In Hades, choose branching paths across a run map with risk-reward nodes.",
+      "mechanic_slug": "roguelike-map-routing",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "progression",
+      "expression": "In Hades, conversation branches alter relationships, story flags, and available quests.",
+      "map_notes": "In Hades, conversation branches alter relationships, story flags, and available quests.",
+      "mechanic_slug": "dialogue-choice-consequences",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "progression",
+      "expression": "In Hades, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "map_notes": "In Hades, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "mechanic_slug": "fill-reward-progression-loop",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    }
+  ],
+  "menu_flow": [
+    {
+      "from_menu": "hub-menu",
+      "relationship": "opens",
+      "to_menu": "mirror-menu"
+    },
+    {
+      "from_menu": "hub-menu",
+      "notes": "Boon choice during escape.",
+      "relationship": "in_run",
+      "to_menu": "boons-menu"
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Fight through randomized chambers, choose boons and upgrades, die and return to the hub, and advance story with NPC interactions between runs.",
+    "description": "Hades is a roguelike action game where Zagreus escapes the underworld through procedural runs, earning boons and narrative progression.",
+    "skills_tested": [
+      "combat timing",
+      "build synergy",
+      "pattern recognition",
+      "resource routing"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "roguelike-deckbuilder"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "permadeath-run-structure",
+    "real-time-action-combat",
+    "roguelike-map-routing",
+    "dialogue-choice-consequences",
+    "fill-reward-progression-loop"
+  ],
+  "skill_slugs": [
+    "combat-timing",
+    "pattern-recognition",
+    "resource-management",
+    "risk-evaluation",
+    "run-planning",
+    "deck-building"
+  ],
+  "slug": "hades",
+  "source_url": "https://www.metacritic.com/browse/game/all/all/all-time/metascore/",
+  "subject": {
+    "genres": [
+      "Roguelike",
+      "Action"
+    ],
+    "kind": "game",
+    "name": "Hades"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "permadeath-or-lives",
+    "metaprogression": true
+  },
+  "title": "Hades Gameplay Map",
+  "ui_menus": [
+    {
+      "displays_variables": [
+        "currency-soft",
+        "meta-currency"
+      ],
+      "map_notes": "House hub between escape attempts.",
+      "menu_slug": "hub-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "God boon selection after rooms.",
+      "menu_slug": "boons-menu",
+      "role": "core",
+      "supports_mechanics": [
+        "metaprogression"
+      ]
+    },
+    {
+      "displays_variables": [
+        "meta-currency"
+      ],
+      "map_notes": "Permanent upgrades.",
+      "menu_slug": "mirror-menu",
+      "opens_from": [
+        "hub-menu"
+      ],
+      "role": "core",
+      "supports_mechanics": [
+        "metaprogression"
+      ]
+    },
+    {
+      "map_notes": "In-chamber pause and settings.",
+      "menu_slug": "pause-menu",
+      "role": "optional"
+    }
+  ],
+  "variable_relationships": [
+    {
+      "from_variable": "currency-soft",
+      "notes": "Fountain chambers restore health.",
+      "relationship": "well_heal",
+      "to_variable": "health"
+    },
+    {
+      "from_variable": "meta-currency",
+      "notes": "Mirror can grant extra defiance.",
+      "relationship": "unlocks",
+      "to_variable": "death-defiance-charges"
+    }
+  ],
+  "variables": [
+    {
+      "map_notes": "Death defiance extends effective health pool.",
+      "related_mechanics": [
+        "depletable-health-pool"
+      ],
+      "role": "primary",
+      "variable_slug": "health"
+    },
+    {
+      "expression": "Mirror and keepsake sources.",
+      "map_notes": "Extra kills before chamber failure.",
+      "role": "primary",
+      "variable_slug": "death-defiance-charges"
+    },
+    {
+      "expression": "Earned from chambers and sells.",
+      "map_notes": "Bones spent at wells and mid-run shops.",
+      "role": "primary",
+      "variable_slug": "currency-soft"
+    },
+    {
+      "map_notes": "Darkness for Mirror of Night.",
+      "related_mechanics": [
+        "metaprogression"
+      ],
+      "role": "primary",
+      "variable_slug": "meta-currency"
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

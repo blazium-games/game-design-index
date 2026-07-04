@@ -1,0 +1,163 @@
+{
+  "context": {
+    "year": 2018
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Precision Platforming",
+      "Assist Mode Accessibility",
+      "Environmental Hazard Navigation"
+    ],
+    "player_fantasy": "Experience Celeste through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "precision-platforming",
+      "assist-mode-accessibility",
+      "environmental-hazard-navigation"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "No traditional combat; hazards and timing are the opposition.",
+    "constraints": [
+      "Mid-level checkpoints reset to berry or room start",
+      "Dash refills on ground or specific objects",
+      "Assist mode toggles affect speed and invulnerability"
+    ],
+    "core_loop": "Navigate hazard rooms using instant-response movement and an eight-direction dash, reach chapter checkpoints on death, and climb toward the summit with optional strawberry collectibles.",
+    "economy_notes": "No currency; progression is spatial and narrative.",
+    "overview": "Celeste is a precision platformer about climbing a mountain through tight single-screen rooms, with optional assist modes lowering difficulty without removing mechanical clarity.",
+    "player_goals": [
+      "Reach each chapter summit",
+      "Collect optional strawberries and cassettes",
+      "Complete B-side and farewell challenges optionally"
+    ],
+    "progression_notes": "Chapters gate story beats; advanced routes unlock after main path clears."
+  },
+  "map_type": "game",
+  "mechanics": [
+    {
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ],
+      "domain": "locomotion",
+      "expression": "In Celeste, a character locomotion system in which movement responds immediately and exactly to player input, with no acceleration ramp-up, momentum carry, or analog smoothing.",
+      "map_notes": "In Celeste, a character locomotion system in which movement responds immediately and exactly to player input, with no acceleration ramp-up, momentum carry, or analog smoothing.",
+      "mechanic_slug": "precision-platforming",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "precision-platforming"
+      ],
+      "domain": "combat",
+      "expression": "In Celeste, optional modifiers reduce difficulty spikes for players who want narrative focus.",
+      "map_notes": "In Celeste, optional modifiers reduce difficulty spikes for players who want narrative focus.",
+      "mechanic_slug": "assist-mode-accessibility",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "precision-platforming"
+      ],
+      "domain": "level",
+      "expression": "In Celeste, a traversal mechanic in which the level space contains persistent damaging or lethal obstacles that the player must avoid through precise movement.",
+      "map_notes": "In Celeste, a traversal mechanic in which the level space contains persistent damaging or lethal obstacles that the player must avoid through precise movement.",
+      "mechanic_slug": "environmental-hazard-navigation",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "session",
+      "expression": "In Celeste, a save point within a stage resets the player to that position on death rather than restarting the entire level.",
+      "map_notes": "In Celeste, a save point within a stage resets the player to that position on death rather than restarting the entire level.",
+      "mechanic_slug": "mid-level-checkpoint",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Navigate hazard-filled rooms, master dash and jump timing, reach checkpoints, and climb chapter-based stages toward the summit.",
+    "description": "Celeste is a precision platformer about climbing a mountain through tight rooms, with optional assist modes for accessibility.",
+    "skills_tested": [
+      "timing",
+      "muscle memory",
+      "persistence",
+      "spatial awareness"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "schema_version": "1.1",
+  "signature_gameplay": [
+    "precision-platforming",
+    "assist-mode-accessibility",
+    "environmental-hazard-navigation",
+    "mid-level-checkpoint"
+  ],
+  "skill_slugs": [
+    "precision-movement",
+    "spatial-navigation",
+    "pattern-recognition"
+  ],
+  "slug": "celeste",
+  "source_url": "https://www.metacritic.com/browse/game/all/all/all-time/metascore/",
+  "subject": {
+    "genres": [
+      "Platformer"
+    ],
+    "influences": [],
+    "kind": "game",
+    "name": "Celeste"
+  },
+  "systems": {
+    "failure_model": "checkpoint-respawn"
+  },
+  "title": "Celeste Gameplay Map",
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

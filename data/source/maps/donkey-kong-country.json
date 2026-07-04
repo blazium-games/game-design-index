@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.1",
+  "slug": "donkey-kong-country",
+  "title": "Donkey Kong Country Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Donkey Kong Country",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Donkey Kong",
+      "Super Mario"
+    ]
+  },
+  "narrative": {
+    "description": "Rare's pre-rendered SNES platformer pairs DK and Diddy through jungle, mine, and temple stages with buddy swapping, barrel cannons, and Kremling boss gauntlets.",
+    "core_loop": "Run and roll through stages, swap between DK and Diddy, collect K-O-N-G letters and bananas, and defeat area bosses to restore the banana hoard.",
+    "skills_tested": [
+      "partner swapping",
+      "barrel aiming",
+      "secret routing",
+      "boss timing"
+    ]
+  },
+  "signature_gameplay": [
+    "character-swap-abilities",
+    "mount-companion-control",
+    "collectathon-token-gating"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "character-swap-abilities",
+      "role": "signature",
+      "map_notes": "DK and Diddy swap with distinct jump and run capabilities.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "DK and Diddy swap with distinct jump and run capabilities.",
+      "depends_on": [
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "mount-companion-control",
+      "role": "signature",
+      "map_notes": "Animal buddies like Rambi and Enguarde alter movement and attack.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Animal buddies like Rambi and Enguarde alter movement and attack.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "K-O-N-G letters, bananas, and bonus rooms gate completion.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "K-O-N-G letters, bananas, and bonus rooms gate completion.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Mine carts, rope vines, and barrel sequences test timing.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Mine carts, rope vines, and barrel sequences test timing.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Area bosses like Very Gnawty gate map progression.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Area bosses like Very Gnawty gate map progression.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses follow learnable jump-and-stomp cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses follow learnable jump-and-stomp cycles.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden bonus rooms and warp barrels reward exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden bonus rooms and warp barrels reward exploration."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Extra lives from bananas and bonus games gate retries.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Extra lives from bananas and bonus games gate retries.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Buddy barrels and level flags checkpoint progress.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Buddy barrels and level flags checkpoint progress.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Tight rope and barrel sequences demand exact timing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Tight rope and barrel sequences demand exact timing.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Roll attack clears enemies and breaks certain walls.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Roll attack clears enemies and breaks certain walls."
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Kremling wind-up telegraphs before charge attacks.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Kremling wind-up telegraphs before charge attacks.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "One hit loses current Kong unless invincibility barrel active.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "One hit loses current Kong unless invincibility barrel active.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1994
+  },
+  "relationships": {
+    "influence_slugs": [
+      "donkey-kong"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Donkey Kong Country through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "character-swap-abilities",
+      "mount-companion-control",
+      "collectathon-token-gating"
+    ],
+    "design_pillars": [
+      "Character Swap Abilities",
+      "Mount Companion Control",
+      "Collectathon Token Gating"
+    ]
+  }
+}

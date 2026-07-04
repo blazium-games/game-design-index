@@ -1,0 +1,166 @@
+{
+  "$id": "game-design-index/mechanic-entry.schema.json",
+  "title": "MechanicEntry",
+  "description": "Reusable gameplay mechanic entry from the mechanics library",
+  "type": "object",
+  "required": ["schema_version", "slug", "name", "flavor", "domain", "summary", "tags"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.2", "1.3"] },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "flavor": { "type": "string", "enum": ["action", "adventure", "strategy"] },
+    "domain": { "type": "string", "enum": ["locomotion", "combat", "progression", "economy", "level", "session"] },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "summary": { "type": "string", "minLength": 1 },
+    "problem_solved": { "type": "string" },
+    "conflicts": { "type": "array", "items": { "type": "string" } },
+    "synergies": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" } },
+    "prerequisites": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" } },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "ref"],
+        "properties": {
+          "kind": { "type": "string", "enum": ["mechanic", "domain", "tag"] },
+          "ref": { "type": "string" },
+          "optional": { "type": "boolean", "default": false },
+          "note": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "anti_patterns": { "type": "array", "items": { "type": "string" } },
+    "parameter_knobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "range": { "type": "string" },
+          "effect": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "signature_of": {
+      "type": "object",
+      "properties": {
+        "games": { "type": "array", "items": { "type": "string" } },
+        "genres": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "featured_in": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" } },
+    "common_in": { "type": "array", "items": { "type": "string" } },
+    "implementation": {
+      "type": "object",
+      "properties": {
+        "godot_asset_available": { "type": "boolean" },
+        "tutorial_url": { "type": ["string", "null"], "format": "uri" },
+        "asset_url": { "type": ["string", "null"], "format": "uri" },
+        "implementation_complexity": { "type": "string", "enum": ["S", "M", "L"] }
+      },
+      "additionalProperties": false
+    },
+    "flavor_rationale": { "type": "string" },
+    "design_guidance": {
+      "type": "object",
+      "properties": {
+        "when_to_use": { "type": "string" },
+        "where_to_use": { "type": "string" },
+        "when_to_avoid": { "type": "array", "items": { "type": "string" } },
+        "designer_notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "synergy_notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["slug"],
+        "properties": {
+          "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "note": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "player_experience": { "type": "string" },
+    "complexity": { "type": "string", "enum": ["S", "M", "L"] },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": { "type": "string" },
+          "description": { "type": "string" },
+          "map_slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "relationship_model": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["directed_cycle", "graph"] },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["from", "to"],
+            "properties": {
+              "from": { "type": "string" },
+              "to": { "type": "string" },
+              "relationship": { "type": "string" },
+              "notes": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "agent_context": {
+      "type": "object",
+      "properties": {
+        "summary_for_agents": { "type": "string" },
+        "gdd_prompt": { "type": "string" },
+        "implementation_checklist": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "learning_objectives": { "type": "array", "items": { "type": "string" } },
+    "design_exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["prompt"],
+        "properties": {
+          "prompt": { "type": "string" },
+          "constraints": { "type": "array", "items": { "type": "string" } },
+          "success_criteria": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    },
+    "skills_developed": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+    },
+    "media": {
+      "type": "object",
+      "properties": {
+        "snippet_path": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

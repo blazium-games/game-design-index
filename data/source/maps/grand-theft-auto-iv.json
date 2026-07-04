@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.1",
+  "slug": "grand-theft-auto-iv",
+  "title": "Grand Theft Auto IV Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Grand Theft Auto IV",
+    "genres": [
+      "Action-Adventure",
+      "Open World"
+    ],
+    "influences": [
+      "GTA III",
+      "Saints Row"
+    ]
+  },
+  "narrative": {
+    "description": "Rockstar's grounded Liberty City epic follows Niko Bellic through a cover-shooter open world with Euphoria physics, moral choice missions, and a satirical take on the American dream.",
+    "core_loop": "Take missions from contacts, drive and shoot through Liberty City, manage wanted levels, and progress Niko's story through branching moral choices.",
+    "skills_tested": [
+      "cover positioning",
+      "driving control",
+      "mission routing",
+      "combat resource management"
+    ]
+  },
+  "signature_gameplay": [
+    "open-world-quest-log",
+    "mission-select-structure",
+    "stealth-detection-loop"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "open-world-quest-log",
+      "role": "signature",
+      "map_notes": "Free-roam Liberty City with mission markers and phone-initiated jobs.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Free-roam Liberty City with mission markers and phone-initiated jobs.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "mission-select-structure",
+      "role": "signature",
+      "map_notes": "Story and side missions unlock via phone contacts and location visits.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Story and side missions unlock via phone contacts and location visits."
+    },
+    {
+      "mechanic_slug": "stealth-detection-loop",
+      "role": "signature",
+      "map_notes": "Wanted levels escalate police response based on visible crimes.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Wanted levels escalate police response based on visible crimes.",
+      "depends_on": [
+        "mission-select-structure",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health depletes from gunfire; rest and food restore pools.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health depletes from gunfire; rest and food restore pools.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "melee-primary-combat",
+      "role": "supporting",
+      "map_notes": "Hand-to-hand and melee weapons offer close-range options.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hand-to-hand and melee weapons offer close-range options.",
+      "depends_on": [
+        "depletable-health-pool",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Cover-based shooting fires on aim with recoil and reload cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Cover-based shooting fires on aim with recoil and reload cycles."
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Side activities, collectibles, and random events fill the open world.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Side activities, collectibles, and random events fill the open world."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Traffic, water, and fall damage constrain traversal choices.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Traffic, water, and fall damage constrain traversal choices."
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Enemy aim-down-sights telegraphs incoming fire.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Enemy aim-down-sights telegraphs incoming fire.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Key story confrontations span chase and shootout phases.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Key story confrontations span chase and shootout phases.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Mission retry from last checkpoint on failure.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Mission retry from last checkpoint on failure.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Safehouse saves and weapon pickups gate combat readiness.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Safehouse saves and weapon pickups gate combat readiness."
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Gang shootouts follow cover-and-flank encounter loops.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Gang shootouts follow cover-and-flank encounter loops.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Hospital respawn on death with mission restart options.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hospital respawn on death with mission restart options.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2008
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure",
+      "open-world-action"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Grand Theft Auto IV through its core action-adventure loop.",
+    "theme_tags": [
+      "action-adventure",
+      "open-world",
+      "open-world-quest-log",
+      "mission-select-structure",
+      "stealth-detection-loop"
+    ],
+    "design_pillars": [
+      "Open World Quest Log",
+      "Mission Select Structure",
+      "Stealth Detection Loop"
+    ]
+  }
+}

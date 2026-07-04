@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.1",
+  "slug": "final-fantasy-ix",
+  "title": "Final Fantasy IX Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Final Fantasy IX",
+    "genres": [
+      "RPG",
+      "Adventure"
+    ],
+    "influences": [
+      "Final Fantasy",
+      "Dragon Quest"
+    ]
+  },
+  "narrative": {
+    "description": "Square's PS1 swan song returns to high fantasy with Active Time Events, ability-learning equipment, and a ensemble cast journey from Alexandria to the Iifa Tree and Memoria.",
+    "core_loop": "Travel the world map, equip gear to learn abilities permanently, fight in ATB battles with Trance limits, and unravel Kuja's plot across four discs.",
+    "skills_tested": [
+      "ability planning",
+      "ATB timing",
+      "equipment management",
+      "boss weakness exploitation"
+    ]
+  },
+  "signature_gameplay": [
+    "active-time-battle",
+    "rpg-stat-progression",
+    "equipment-loadout"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "active-time-battle",
+      "role": "signature",
+      "map_notes": "ATB gauges fill while players select commands under time pressure.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "ATB gauges fill while players select commands under time pressure.",
+      "depends_on": [
+        "turn-based-party-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "signature",
+      "map_notes": "Levels, stats, and permanently learned abilities grow through combat and AP.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Levels, stats, and permanently learned abilities grow through combat and AP.",
+      "depends_on": [
+        "equipment-loadout",
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "signature",
+      "map_notes": "Weapons and armor teach abilities via AP before mastery unlocks permanently.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Weapons and armor teach abilities via AP before mastery unlocks permanently.",
+      "depends_on": [
+        "purchase-gated-upgrade",
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "turn-based-party-combat",
+      "role": "supporting",
+      "map_notes": "Four-character party rotates through command menus each turn.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Four-character party rotates through command menus each turn.",
+      "depends_on": [
+        "active-time-battle",
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Story bosses unlock airships, continents, and narrative chapters.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Story bosses unlock airships, continents, and narrative chapters.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Trance and boss transformations shift combat mid-fight.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Trance and boss transformations shift combat mid-fight.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Chocobo hot spots, tetra master, and side quests extend play.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Chocobo hot spots, tetra master, and side quests extend play."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Shops sell gear that gates ability learning speed.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Shops sell gear that gates ability learning speed.",
+      "depends_on": [
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "loot-based-economy",
+      "role": "supporting",
+      "map_notes": "Gil and item drops fund equipment progression.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Gil and item drops fund equipment progression.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses like Beatrix and Hades follow phase-based patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses like Beatrix and Hades follow phase-based patterns.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "HP and MP pools require rest and consumables.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "HP and MP pools require rest and consumables.",
+      "depends_on": [
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Mognet saves and world map access checkpoint runs.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Mognet saves and world map access checkpoint runs.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Boss charge attacks display visible wind-up frames.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss charge attacks display visible wind-up frames.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "special-move-command-input",
+      "role": "supporting",
+      "map_notes": "Trance limits trigger automatically at full gauge.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Trance limits trigger automatically at full gauge."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2000
+  },
+  "relationships": {
+    "influence_slugs": [
+      "final-fantasy",
+      "dragon-quest"
+    ],
+    "genre_maps": [
+      "turn-based-rpg",
+      "narrative-adventure"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Final Fantasy IX through its core rpg loop.",
+    "theme_tags": [
+      "rpg",
+      "adventure",
+      "active-time-battle",
+      "rpg-stat-progression",
+      "equipment-loadout"
+    ],
+    "design_pillars": [
+      "Active Time Battle",
+      "Rpg Stat Progression",
+      "Equipment Loadout"
+    ]
+  }
+}

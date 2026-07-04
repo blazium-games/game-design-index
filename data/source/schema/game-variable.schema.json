@@ -1,0 +1,97 @@
+{
+  "$id": "gameplay_maps/game-variable.schema.json",
+  "title": "GameVariable",
+  "description": "Reusable tracked game state variable",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "slug",
+    "name",
+    "summary",
+    "category",
+    "scope",
+    "value_kind",
+    "tags"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0", "1.1"] },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string", "minLength": 1 },
+    "category": {
+      "type": "string",
+      "enum": ["stat", "resource", "currency", "slot", "meter", "counter", "flag"]
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["player", "party", "world", "session", "run"]
+    },
+    "value_kind": {
+      "type": "string",
+      "enum": ["integer", "float", "boolean", "enum", "slot_list", "grid"]
+    },
+    "shared_rationale": { "type": "string" },
+    "player_focus": { "type": "string" },
+    "typical_range": { "type": "string" },
+    "reset_behavior": {
+      "type": "string",
+      "enum": ["per_death", "per_level", "per_session", "persistent"]
+    },
+    "related_mechanics": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+    },
+    "related_variables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["slug"],
+        "properties": {
+          "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "relationship": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "featured_in": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+    },
+    "common_in": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "parameter_knobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "range": { "type": "string" },
+          "effect": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "design_guidance": {
+      "type": "object",
+      "properties": {
+        "when_to_use": { "type": "string" },
+        "where_to_use": { "type": "string" },
+        "when_to_avoid": { "type": "array", "items": { "type": "string" } },
+        "designer_notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "agent_context": {
+      "type": "object",
+      "properties": {
+        "summary_for_agents": { "type": "string" },
+        "gdd_prompt": { "type": "string" },
+        "implementation_checklist": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

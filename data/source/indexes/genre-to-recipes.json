@@ -1,0 +1,86 @@
+{
+  "rules": {
+    "Metroidvania": [
+      "metroidvania"
+    ],
+    "Platformer": [
+      "precision-platformer"
+    ],
+    "Action-Platformer": [
+      "jump-and-shoot",
+      "precision-platformer"
+    ],
+    "Soulslike": [
+      "soulslike"
+    ],
+    "Roguelike": [
+      "roguelike-deckbuilder"
+    ],
+    "Deckbuilder": [
+      "roguelike-deckbuilder"
+    ],
+    "Simulation": [
+      "tycoon-simulation",
+      "life-sim"
+    ],
+    "Tycoon": [
+      "tycoon-simulation"
+    ],
+    "Life Sim": [
+      "life-sim"
+    ],
+    "Farming": [
+      "life-sim"
+    ],
+    "Narrative": [
+      "narrative-adventure"
+    ],
+    "Adventure": [
+      "narrative-adventure"
+    ],
+    "JRPG": [
+      "turn-based-rpg"
+    ],
+    "RPG": [
+      "turn-based-rpg"
+    ],
+    "Shooter": [
+      "bullet-hell",
+      "top-down-shooter"
+    ],
+    "Bullet Hell": [
+      "bullet-hell"
+    ],
+    "Top-Down Shooter": [
+      "top-down-shooter",
+      "bullet-hell"
+    ],
+    "Fighting": [
+      "fighting-game"
+    ],
+    "Stealth": [
+      "stealth-action"
+    ],
+    "Horror": [
+      "horror-survival"
+    ],
+    "Survival": [
+      "horror-survival"
+    ],
+    "Open World": [
+      "open-world-action"
+    ],
+    "Tactics": [
+      "tactics-strategy"
+    ],
+    "Strategy": [
+      "tactics-strategy"
+    ],
+    "XCOM": [
+      "tactics-strategy"
+    ],
+    "MOBA": [
+      "lane-push-moba"
+    ]
+  }
+}

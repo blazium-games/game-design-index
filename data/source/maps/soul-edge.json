@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.1",
+  "slug": "soul-edge",
+  "title": "Soul Edge Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://digitaldreamdoor.com/pages/best_video-games-1990s.html",
+  "subject": {
+    "kind": "game",
+    "name": "Soul Edge",
+    "genres": [
+      "Fighting"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Soul Edge (1995) is a acclaimed fighting title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Read opponent patterns, land combos, and deplete the rival's health bar.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "round-based-health-duel",
+    "combo-chain-system",
+    "special-move-command-input",
+    "frame-punish-engagement",
+    "super-meter-resource"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "round-based-health-duel",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from fighting-game recipe; customize for Soul Edge.",
+      "expression": "Best-of rounds with discrete health pools per round."
+    },
+    {
+      "mechanic_slug": "combo-chain-system",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from fighting-game recipe; customize for Soul Edge.",
+      "expression": "Link attacks into escalating combo routes.",
+      "depends_on": [
+        "frame-punish-engagement",
+        "special-move-command-input"
+      ]
+    },
+    {
+      "mechanic_slug": "special-move-command-input",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from fighting-game recipe; customize for Soul Edge.",
+      "expression": "Directional or button sequences unlock special attacks.",
+      "depends_on": [
+        "combo-chain-system"
+      ]
+    },
+    {
+      "mechanic_slug": "frame-punish-engagement",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from fighting-game recipe; customize for Soul Edge.",
+      "expression": "Punish unsafe moves during recovery frames.",
+      "depends_on": [
+        "combo-chain-system",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "super-meter-resource",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from fighting-game recipe; customize for Soul Edge.",
+      "expression": "Meter builds toward super or EX moves.",
+      "depends_on": [
+        "combo-chain-system"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 3,
+      "map_notes": "Uplifted from fighting-game recipe; customize for Soul Edge.",
+      "expression": "Startup and recovery frames telegraph risk."
+    },
+    {
+      "mechanic_slug": "mission-select-structure",
+      "role": "supporting",
+      "domain": "progression",
+      "phase": "optional",
+      "weight": 2,
+      "map_notes": "Uplifted from fighting-game recipe; customize for Soul Edge.",
+      "optional": true,
+      "expression": "Arcade mode stage progression between rivals."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 1995
+  },
+  "relationships": {
+    "genre_maps": [
+      "fighting-game"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A fighting experience centered on Soul Edge.",
+    "theme_tags": [
+      "fighting",
+      "round-based-health-duel",
+      "combo-chain-system",
+      "special-move-command-input"
+    ],
+    "design_pillars": [
+      "Round Based Health Duel",
+      "Combo Chain System",
+      "Special Move Command Input"
+    ]
+  }
+}

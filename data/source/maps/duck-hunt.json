@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.1",
+  "slug": "duck-hunt",
+  "title": "Duck Hunt Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Duck Hunt",
+    "genres": [
+      "Shooter",
+      "Arcade"
+    ],
+    "influences": [
+      "Wild Gunman",
+      " Hogan's Alley"
+    ]
+  },
+  "narrative": {
+    "description": "Nintendo's Zapper light-gun classic tasks players with shooting ducks flushed from the grass before they escape, with the dog's reactions providing iconic feedback across increasing difficulty rounds.",
+    "core_loop": "Aim the Zapper at flying ducks, lead targets across the screen, and meet the round quota before three escapes fail the stage.",
+    "skills_tested": [
+      "target leading",
+      "reaction speed",
+      "accuracy under pressure",
+      "round quota management"
+    ]
+  },
+  "signature_gameplay": [
+    "instant-fire-attack",
+    "life-based-retry-system",
+    "sector-clear-progression"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "signature",
+      "map_notes": "Zapper trigger fires immediately at screen coordinates.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Zapper trigger fires immediately at screen coordinates."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "signature",
+      "map_notes": "Three misses per round fail the stage; ten-round structure per game.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Three misses per round fail the stage; ten-round structure per game.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "sector-clear-progression",
+      "role": "signature",
+      "map_notes": "Rounds advance with faster ducks and tighter quotas.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Rounds advance with faster ducks and tighter quotas."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Miss counter acts as failure pool before round ends.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Miss counter acts as failure pool before round ends.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Ducks arc predictably once flight pattern begins.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Ducks arc predictably once flight pattern begins.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Clay shooting bonus rounds follow fixed launch angles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Clay shooting bonus rounds follow fixed launch angles.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "supporting",
+      "map_notes": "Two-duck volleys create cross-screen target priority decisions.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Two-duck volleys create cross-screen target priority decisions.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Bonus round clay pigeons reward accuracy streaks.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bonus round clay pigeons reward accuracy streaks."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Tree and bush occlusion forces target reacquisition.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Tree and bush occlusion forces target reacquisition.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Round completion saves progress within the ten-round set.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Round completion saves progress within the ten-round set.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "escalating-drop-speed",
+      "role": "supporting",
+      "map_notes": "Duck speed increases in later rounds.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Duck speed increases in later rounds."
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Platform sections demand accurate jump and movement timing. (Duck Hunt)",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Platform sections demand accurate jump and movement timing. (Duck Hunt)",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1984
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Duck Hunt through its core shooter loop.",
+    "theme_tags": [
+      "shooter",
+      "arcade",
+      "instant-fire-attack",
+      "life-based-retry-system",
+      "sector-clear-progression"
+    ],
+    "design_pillars": [
+      "Instant Fire Attack",
+      "Life Based Retry System",
+      "Sector Clear Progression"
+    ]
+  },
+  "systems": {
+    "failure_model": "permadeath-or-lives"
+  }
+}

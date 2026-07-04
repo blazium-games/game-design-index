@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.1",
+  "slug": "professor-layton-vs-phoenix-wright",
+  "title": "Professor Layton vs. Phoenix Wright: Ace Attorney Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.nintendolife.com/guides/50-best-nintendo-3ds-games-of-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Professor Layton vs. Phoenix Wright: Ace Attorney",
+    "genres": [
+      "Puzzle Adventure"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Professor Layton vs. Phoenix Wright: Ace Attorney (2012) is a acclaimed puzzle adventure title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Solve logic puzzles across locations to unravel a narrative mystery.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "dialogue-choice-consequences",
+    "narrative-chapter-progression",
+    "environmental-trigger-switch"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "dialogue-choice-consequences",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from narrative-adventure recipe; customize for Professor Layton vs. Phoenix Wright: Ace Attorney.",
+      "expression": "Branching conversations alter relationships and outcomes."
+    },
+    {
+      "mechanic_slug": "narrative-chapter-progression",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from narrative-adventure recipe; customize for Professor Layton vs. Phoenix Wright: Ace Attorney.",
+      "expression": "Story advances through discrete chapters or acts."
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "signature",
+      "domain": "level",
+      "phase": "early",
+      "weight": 3,
+      "map_notes": "Uplifted from narrative-adventure recipe; customize for Professor Layton vs. Phoenix Wright: Ace Attorney.",
+      "expression": "Inspectable objects and triggers reveal lore and unlock paths."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2012
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A puzzle adventure experience centered on Professor Layton vs. Phoenix Wright: Ace Attorney.",
+    "theme_tags": [
+      "puzzle-adventure",
+      "dialogue-choice-consequences",
+      "narrative-chapter-progression",
+      "environmental-trigger-switch"
+    ],
+    "design_pillars": [
+      "Dialogue Choice Consequences",
+      "Narrative Chapter Progression",
+      "Environmental Trigger Switch"
+    ]
+  }
+}

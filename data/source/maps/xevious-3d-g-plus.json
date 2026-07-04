@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.1",
+  "slug": "xevious-3d-g-plus",
+  "title": "Xevious 3D/G+ Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retroarcadia.blog/2026/03/18/top-ten-favourite-3d-shoot-em-ups/",
+  "subject": {
+    "kind": "game",
+    "name": "Xevious 3D/G+",
+    "genres": [
+      "Shooter",
+      "Arcade"
+    ],
+    "influences": [
+      "Xevious",
+      "Star Fox"
+    ]
+  },
+  "narrative": {
+    "description": "Namco's polygon revival of the Xevious formula layers air-and-ground dual targeting over forward-scrolling 3D valleys, tasking pilots with bombing surface installations while dogfighting aerial Solvalou threats.",
+    "core_loop": "Fly through 3D valleys, fire air-to-air shots at flying enemies and bombs at ground targets simultaneously, then defeat area guardians to advance.",
+    "skills_tested": [
+      "dual-target management",
+      "bomb timing",
+      "valley navigation",
+      "boss weak-point reading"
+    ]
+  },
+  "signature_gameplay": [
+    "dual-layer-air-ground-targeting",
+    "height-plane-shooting",
+    "sector-clear-progression"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "dual-layer-air-ground-targeting",
+      "role": "signature",
+      "map_notes": "Separate air laser and ground bomb reticles must be managed concurrently.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Separate air laser and ground bomb reticles must be managed concurrently."
+    },
+    {
+      "mechanic_slug": "height-plane-shooting",
+      "role": "signature",
+      "map_notes": "Altitude over valleys determines which ground targets and aerial threats are in range.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Altitude over valleys determines which ground targets and aerial threats are in range."
+    },
+    {
+      "mechanic_slug": "sector-clear-progression",
+      "role": "signature",
+      "map_notes": "Areas clear when hidden Andor Genesis cores and surface targets are destroyed.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Areas clear when hidden Andor Genesis cores and surface targets are destroyed.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Air and ground weapons fire on separate instant triggers.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Air and ground weapons fire on separate instant triggers."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Solvalou shield energy depletes from enemy hits.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Solvalou shield energy depletes from enemy hits.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "supporting",
+      "map_notes": "Classic Xevious craft emit the series' signature bullet curtains.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Classic Xevious craft emit the series' signature bullet curtains.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Area guardians reuse iconic Xevious boss movement loops in 3D.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Area guardians reuse iconic Xevious boss movement loops in 3D.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Large turrets charge visible beam sweeps before firing.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Large turrets charge visible beam sweeps before firing.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Final bosses transition between aerial and ground assault modes.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Final bosses transition between aerial and ground assault modes.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Valley walls and terrain force altitude adjustments.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Valley walls and terrain force altitude adjustments."
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Area select resumes from last cleared zone.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Area select resumes from last cleared zone.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Continues restart the current area.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Continues restart the current area.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1995
+  },
+  "relationships": {
+    "influence_slugs": [
+      "star-fox"
+    ],
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Xevious 3D/G+ through its core shooter loop.",
+    "theme_tags": [
+      "shooter",
+      "arcade",
+      "dual-layer-air-ground-targeting",
+      "height-plane-shooting",
+      "sector-clear-progression"
+    ],
+    "design_pillars": [
+      "Dual Layer Air Ground Targeting",
+      "Height Plane Shooting",
+      "Sector Clear Progression"
+    ]
+  }
+}

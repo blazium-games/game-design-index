@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.1",
+  "slug": "tommy-lasorda-baseball-genesis",
+  "title": "Tommy Lasorda Baseball Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.retrogames.cz/zebricky.php",
+  "subject": {
+    "kind": "game",
+    "name": "Tommy Lasorda Baseball",
+    "genres": [
+      "Sports"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Tommy Lasorda Baseball (1989) on Genesis is a acclaimed sports title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Chain tricks or plays, beat the clock, and chase high scores across events.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "combo-trick-scoring",
+    "mission-select-structure",
+    "input-aligned-movement"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "combo-trick-scoring",
+      "role": "signature",
+      "map_notes": "Core combo trick scoring loop defines Tommy Lasorda Baseball's identity.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Chained tricks and aerial maneuvers multiply score within a combo timer during skating or stunt gameplay."
+    },
+    {
+      "mechanic_slug": "mission-select-structure",
+      "role": "signature",
+      "map_notes": "Core mission select structure loop defines Tommy Lasorda Baseball's identity.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "A menu or hub lets the player choose missions or levels in flexible order with difficulty ratings."
+    },
+    {
+      "mechanic_slug": "input-aligned-movement",
+      "role": "signature",
+      "map_notes": "Core input aligned movement loop defines Tommy Lasorda Baseball's identity.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Movement responds directly and immediately to input direction with minimal inertia, optimized for top-down or free-aim combat spaces."
+    },
+    {
+      "mechanic_slug": "round-based-health-duel",
+      "role": "supporting",
+      "map_notes": "Round Based Health Duel supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Matches are divided into rounds with separate health pools; winning a set number of rounds wins the match.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Optional Content Layering supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Life Based Retry System supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A failure-buffer system in which the player is granted a limited number of retries, losing one life upon failure and restarting from a previous checkpoint.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Depletable Health Pool supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A survival mechanic where the player character possesses a finite quantity of health points that decrease when taking damage, with depletion resulting in failure.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Telegraphed Threat Loop supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A combat encounter structure in which an enemy signals an incoming attack through a distinct visual or audio cue before the attack resolves.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "license-progression-gates",
+      "role": "supporting",
+      "map_notes": "License Progression Gates supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Structured license tests or certifications unlock higher vehicle tiers and race categories.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Multi Phase Boss Battle supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A combat structure where boss encounters transition through discrete stages with distinct attack patterns, behaviors, or environmental conditions when health thresholds are reached.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Patterned Boss Encounter supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A boss fight design in which the enemy executes a deterministic or semi-deterministic set of behaviors including telegraphed attacks and movement routines.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "vehicle-tuning-economy",
+      "role": "supporting",
+      "map_notes": "Vehicle Tuning Economy supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Currency earned from races funds parts and tuning upgrades that modify vehicle performance.",
+      "depends_on": [
+        "license-progression-gates",
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "supporting",
+      "map_notes": "Linear Stage Gauntlet supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Progression moves through a fixed sequence of confined stages without hub backtracking.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Mid Level Checkpoint supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A save point within a stage resets the player to that position on death rather than restarting the entire level.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Purchase Gated Upgrade supports the main loop in Tommy Lasorda Baseball.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 1989
+  },
+  "design_intent": {
+    "player_fantasy": "A sports experience centered on Tommy Lasorda Baseball.",
+    "theme_tags": [
+      "sports",
+      "combo-trick-scoring",
+      "mission-select-structure",
+      "input-aligned-movement"
+    ],
+    "design_pillars": [
+      "Combo Trick Scoring",
+      "Mission Select Structure",
+      "Input Aligned Movement"
+    ]
+  }
+}

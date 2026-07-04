@@ -1,0 +1,209 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Short competitive microgames per round.",
+      "Couch play with shared-screen chaos."
+    ],
+    "player_fantasy": "Experience Party Game through its signature loop.",
+    "theme_tags": [
+      "party-game",
+      "microgame-rapid-challenges",
+      "local-multiplayer-competition"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: microgame-retry",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Short competitive microgames per round.",
+    "economy_notes": "light",
+    "overview": "Party Game genre recipe anchored on microgame-rapid-challenges, local-multiplayer-competition.",
+    "player_goals": [
+      "Short competitive microgames per round.",
+      "Couch play with shared-screen chaos."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "combat",
+      "expression": "Short competitive microgames per round.",
+      "map_notes": "Short competitive microgames per round.",
+      "mechanic_slug": "microgame-rapid-challenges",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "microgame-rapid-challenges"
+      ],
+      "domain": "combat",
+      "expression": "Couch play with shared-screen chaos.",
+      "map_notes": "Couch play with shared-screen chaos.",
+      "mechanic_slug": "local-multiplayer-competition",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "session",
+      "expression": "Optional hidden-role party modes.",
+      "map_notes": "Optional hidden-role party modes.",
+      "mechanic_slug": "asymmetric-multiplayer",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Short competitive microgames per round.",
+    "description": "Party Game games center on short competitive microgames per round.",
+    "design_pillars": [
+      "Short competitive microgames per round.",
+      "Couch play with shared-screen chaos."
+    ],
+    "skills_tested": [
+      "team coordination",
+      "social deduction",
+      "precision movement"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "life-sim",
+      "rhythm-game"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "microgame-rapid-challenges",
+    "local-multiplayer-competition"
+  ],
+  "skill_slugs": [
+    "team-coordination",
+    "social-deduction",
+    "precision-movement"
+  ],
+  "slug": "party-game",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Party",
+      "Multiplayer"
+    ],
+    "influences": [
+      "Mario Party",
+      "WarioWare"
+    ],
+    "kind": "genre",
+    "name": "Party Game"
+  },
+  "systems": {
+    "economy_tightness": "light",
+    "failure_model": "microgame-retry",
+    "metaprogression": false,
+    "pacing": {
+      "early": "Teach microgame rapid challenges with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Microgame Rapid Challenges",
+        "mechanics": [
+          "microgame-rapid-challenges"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Local Multiplayer Competition",
+        "mechanics": [
+          "local-multiplayer-competition"
+        ]
+      }
+    ]
+  },
+  "title": "Party Game Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Local player join.",
+      "menu_slug": "lobby-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Board or mini-game select.",
+      "menu_slug": "stage-select-menu",
+      "role": "core"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Mini-game victory points.",
+      "role": "primary",
+      "variable_slug": "score"
+    },
+    {
+      "expression": "Elimination in party brackets.",
+      "role": "supporting",
+      "variable_slug": "lives"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-party-game",
+      "label": "Hardcore Party Game",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

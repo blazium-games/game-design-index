@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.1",
+  "slug": "year-walk",
+  "title": "Year Walk Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.avclub.com/best-videogames-of-the-decade",
+  "subject": {
+    "kind": "game",
+    "name": "Year Walk",
+    "genres": [
+      "Adventure",
+      "Horror",
+      "Puzzle"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Year Walk is a first-person horror adventure inspired by Swedish folklore, where a vision quest through a forest reveals unsettling puzzles and supernatural encounters.",
+    "core_loop": "Walk through a stylized forest, interact with folklore creatures, solve environmental and logic puzzles, and uncover the consequences of a forbidden year walk ritual.",
+    "skills_tested": [
+      "observation",
+      "logical reasoning",
+      "atmosphere interpretation",
+      "puzzle solving"
+    ]
+  },
+  "signature_gameplay": [
+    "evidence-deduction-puzzle",
+    "environmental-trigger-switch",
+    "puzzle-room-exploration"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "evidence-deduction-puzzle",
+      "role": "signature",
+      "map_notes": "In Year Walk, players collect clues and deduce correct answers from constrained evidence sets.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Year Walk, players collect clues and deduce correct answers from constrained evidence sets."
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "signature",
+      "map_notes": "In Year Walk, a mechanic where the player interacts with a fixed element in the environment to produce a state change such as opening a door or activating a bridge.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Year Walk, a mechanic where the player interacts with a fixed element in the environment to produce a state change such as opening a door or activating a bridge."
+    },
+    {
+      "mechanic_slug": "puzzle-room-exploration",
+      "role": "signature",
+      "map_notes": "In Year Walk, interconnected rooms hide switches, keys, and environmental secrets.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Year Walk, interconnected rooms hide switches, keys, and environmental secrets."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2013
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure",
+      "horror-survival"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Year Walk through its core adventure loop.",
+    "theme_tags": [
+      "adventure",
+      "horror",
+      "puzzle",
+      "evidence-deduction-puzzle",
+      "environmental-trigger-switch",
+      "puzzle-room-exploration"
+    ],
+    "design_pillars": [
+      "Evidence Deduction Puzzle",
+      "Environmental Trigger Switch",
+      "Puzzle Room Exploration"
+    ]
+  }
+}

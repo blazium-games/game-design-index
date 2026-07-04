@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.1",
+  "slug": "starcraft",
+  "title": "StarCraft Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.lemon64.com/forum/viewtopic.php?t=84325",
+  "subject": {
+    "kind": "game",
+    "name": "StarCraft",
+    "genres": [
+      "RTS"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "StarCraft (1998) is a acclaimed rts title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Harvest resources, build bases, and command armies to destroy the enemy.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "resource-gathering-base-build",
+    "real-time-unit-command",
+    "tech-tree-unlocks"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "resource-gathering-base-build",
+      "role": "signature",
+      "map_notes": "Core resource gathering base build loop defines StarCraft's identity.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Harvest resources from the map to construct bases and produce military units.",
+      "depends_on": [
+        "real-time-unit-command",
+        "tech-tree-unlocks"
+      ]
+    },
+    {
+      "mechanic_slug": "real-time-unit-command",
+      "role": "signature",
+      "map_notes": "Core real time unit command loop defines StarCraft's identity.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Players select and direct multiple units simultaneously during live combat.",
+      "depends_on": [
+        "resource-gathering-base-build",
+        "tech-tree-unlocks"
+      ]
+    },
+    {
+      "mechanic_slug": "tech-tree-unlocks",
+      "role": "signature",
+      "map_notes": "Core tech tree unlocks loop defines StarCraft's identity.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Research or building prerequisites gate access to advanced units and abilities.",
+      "depends_on": [
+        "purchase-gated-upgrade",
+        "resource-gathering-base-build"
+      ]
+    },
+    {
+      "mechanic_slug": "mission-select-structure",
+      "role": "supporting",
+      "map_notes": "Mission Select Structure supports the main loop in StarCraft.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A menu or hub lets the player choose missions or levels in flexible order with difficulty ratings.",
+      "depends_on": [
+        "boss-gated-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Optional Content Layering supports the main loop in StarCraft.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments."
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Boss Gated Progression supports the main loop in StarCraft.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A progression structure in which access to subsequent content areas, abilities, or game states is conditionally locked behind the defeat of a designated boss.",
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ]
+    },
+    {
+      "mechanic_slug": "map-resource-monster-groups",
+      "role": "supporting",
+      "map_notes": "Map Resource Monster Groups supports the main loop in StarCraft.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Neutral hostile groups occupy fixed map locations, offering experience points and item rewards when defeated, enabling optional power scaling."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Depletable Health Pool supports the main loop in StarCraft.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A survival mechanic where the player character possesses a finite quantity of health points that decrease when taking damage, with depletion resulting in failure."
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Telegraphed Threat Loop supports the main loop in StarCraft.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A combat encounter structure in which an enemy signals an incoming attack through a distinct visual or audio cue before the attack resolves."
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Multi Phase Boss Battle supports the main loop in StarCraft.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A combat structure where boss encounters transition through discrete stages with distinct attack patterns, behaviors, or environmental conditions when health thresholds are reached.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "progress-gated-dungeon-completion",
+      "role": "supporting",
+      "map_notes": "Progress Gated Dungeon Completion supports the main loop in StarCraft.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "The player must fully complete self-contained dungeons, each with unique challenges, in order to unlock new areas or abilities.",
+      "depends_on": [
+        "boss-gated-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Purchase Gated Upgrade supports the main loop in StarCraft.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Environmental Hazard Navigation supports the main loop in StarCraft.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A traversal mechanic in which the level space contains persistent damaging or lethal obstacles that the player must avoid through precise movement."
+    },
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "supporting",
+      "map_notes": "Linear Stage Gauntlet supports the main loop in StarCraft.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Progression moves through a fixed sequence of confined stages without hub backtracking.",
+      "depends_on": [
+        "boss-gated-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "supporting",
+      "map_notes": "Equipment Loadout supports the main loop in StarCraft.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 1998
+  },
+  "design_intent": {
+    "player_fantasy": "A rts experience centered on StarCraft.",
+    "theme_tags": [
+      "rts",
+      "resource-gathering-base-build",
+      "real-time-unit-command",
+      "tech-tree-unlocks"
+    ],
+    "design_pillars": [
+      "Resource Gathering Base Build",
+      "Real Time Unit Command",
+      "Tech Tree Unlocks"
+    ]
+  }
+}

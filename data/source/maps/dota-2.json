@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.1",
+  "slug": "dota-2",
+  "title": "Dota 2 Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://digitaldreamdoor.com/pages/best_video-games-2010s.html",
+  "subject": {
+    "kind": "game",
+    "name": "Dota 2",
+    "genres": [
+      "MOBA",
+      "Strategy"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Dota 2 is a team-based MOBA where two five-player teams destroy the enemy Ancient by pushing lanes, farming gold, and coordinating hero abilities.",
+    "core_loop": "Select a hero, last-hit creeps for gold and experience, buy items, coordinate team fights and objectives, and push lanes to destroy enemy structures.",
+    "skills_tested": [
+      "team coordination",
+      "map awareness",
+      "mechanical execution",
+      "draft strategy",
+      "resource timing"
+    ]
+  },
+  "signature_gameplay": [
+    "lane-push-moba",
+    "equipment-loadout",
+    "rpg-stat-progression",
+    "real-time-action-combat",
+    "resource-scarcity-management"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "lane-push-moba",
+      "role": "signature",
+      "map_notes": "In Dota 2, teams push minion waves along lanes toward enemy structures.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Dota 2, teams push minion waves along lanes toward enemy structures.",
+      "depends_on": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "signature",
+      "map_notes": "In Dota 2, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Dota 2, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "depends_on": [
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "rpg-stat-progression",
+      "role": "signature",
+      "map_notes": "In Dota 2, defeating enemies or completing objectives grants experience that increases character stats such as HP, attack, or defense.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Dota 2, defeating enemies or completing objectives grants experience that increases character stats such as HP, attack, or defense.",
+      "depends_on": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "mechanic_slug": "real-time-action-combat",
+      "role": "signature",
+      "map_notes": "In Dota 2, direct player control over attacks, dodges, and combos in real time.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Dota 2, direct player control over attacks, dodges, and combos in real time.",
+      "depends_on": [
+        "equipment-loadout",
+        "rpg-stat-progression"
+      ]
+    },
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "map_notes": "In Dota 2, limited ammo, healing, and save resources force careful risk assessment.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Dota 2, limited ammo, healing, and save resources force careful risk assessment."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2013
+  },
+  "relationships": {
+    "genre_maps": [
+      "tactics-strategy"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Dota 2 through its core moba loop.",
+    "theme_tags": [
+      "moba",
+      "strategy",
+      "lane-push-moba",
+      "equipment-loadout",
+      "rpg-stat-progression"
+    ],
+    "design_pillars": [
+      "Lane Push Moba",
+      "Equipment Loadout",
+      "Rpg Stat Progression"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "scarce"
+  }
+}

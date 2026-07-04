@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.1",
+  "slug": "no-man-s-sky",
+  "title": "No Man\u2019s Sky Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.avclub.com/best-videogames-of-the-decade",
+  "subject": {
+    "kind": "game",
+    "name": "No Man\u2019s Sky",
+    "genres": [
+      "Open World",
+      "Survival",
+      "Exploration"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "No Man's Sky is a procedural space exploration game where players discover planets, gather resources, upgrade ships and bases, and uncover a galaxy-spanning mystery.",
+    "core_loop": "Explore procedurally generated planets, mine resources and catalog fauna, upgrade multitool and ship, build bases, and follow the Atlas path or play freely.",
+    "skills_tested": [
+      "exploration",
+      "resource management",
+      "crafting planning",
+      "survival awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "open-world-exploration",
+    "fill-reward-progression-loop",
+    "resource-scarcity-management",
+    "purchase-gated-upgrade",
+    "optional-content-layering"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "open-world-exploration",
+      "role": "signature",
+      "map_notes": "In No Man\u2019s Sky, minimal UI encourages discovery of landmarks and secrets across vast terrain.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In No Man\u2019s Sky, minimal UI encourages discovery of landmarks and secrets across vast terrain."
+    },
+    {
+      "mechanic_slug": "fill-reward-progression-loop",
+      "role": "signature",
+      "map_notes": "In No Man\u2019s Sky, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In No Man\u2019s Sky, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "map_notes": "In No Man\u2019s Sky, limited ammo, healing, and save resources force careful risk assessment.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In No Man\u2019s Sky, limited ammo, healing, and save resources force careful risk assessment."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "signature",
+      "map_notes": "In No Man\u2019s Sky, players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In No Man\u2019s Sky, players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices.",
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "signature",
+      "map_notes": "In No Man\u2019s Sky, hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In No Man\u2019s Sky, hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2016
+  },
+  "relationships": {
+    "genre_maps": [
+      "open-world-action",
+      "horror-survival"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience No Man\u2019s Sky through its core open world loop.",
+    "theme_tags": [
+      "open-world",
+      "survival",
+      "exploration",
+      "open-world-exploration",
+      "fill-reward-progression-loop",
+      "resource-scarcity-management"
+    ],
+    "design_pillars": [
+      "Open World Exploration",
+      "Fill Reward Progression Loop",
+      "Resource Scarcity Management"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "scarce"
+  }
+}

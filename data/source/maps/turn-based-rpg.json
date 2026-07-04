@@ -1,0 +1,297 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "top-down",
+    "session_type": "campaign",
+    "world_structure": "overworld-and-dungeons"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Turn Based Party Combat",
+      "Rpg Stat Progression",
+      "Overworld Map Stage Selection"
+    ],
+    "player_fantasy": "Experience Turn-Based RPG through its core rpg loop.",
+    "theme_tags": [
+      "rpg",
+      "jrpg",
+      "turn-based-party-combat",
+      "rpg-stat-progression",
+      "overworld-map-stage-selection"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat pacing should match genre tempo and readable threat language.",
+    "constraints": [
+      "Failure model: design-specific",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Explore overworld and dungeons, trigger turn-based battles, earn experience and loot, manage party loadouts at towns, and advance story through boss gates.",
+    "economy_notes": "Tune earn/spend to genre tension targets.",
+    "overview": "Turn-based RPGs alternate between overworld exploration and menu-driven party combat. Stat growth, equipment, and ability unlocks compound over a long campaign.",
+    "player_goals": [
+      "Master signature mechanics",
+      "Complete core progression arc"
+    ],
+    "progression_notes": "Follow signature mechanic dependencies across early, mid, and late phases."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "depends_on": [
+        "rpg-stat-progression"
+      ],
+      "domain": "combat",
+      "expression": "Party members act in turns selecting skills and targets.",
+      "map_notes": "Party members act in turns selecting skills and targets.",
+      "mechanic_slug": "turn-based-party-combat",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "equipment-loadout"
+      ],
+      "domain": "progression",
+      "expression": "Level-ups and stat curves define long-term power growth.",
+      "map_notes": "Level-ups and stat curves define long-term power growth.",
+      "mechanic_slug": "rpg-stat-progression",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "boss-gated-progression"
+      ],
+      "domain": "progression",
+      "expression": "World map or hub connects towns, dungeons, and story beats.",
+      "map_notes": "World map or hub connects towns, dungeons, and story beats.",
+      "mechanic_slug": "overworld-map-stage-selection",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "purchase-gated-upgrade",
+        "rpg-stat-progression"
+      ],
+      "domain": "economy",
+      "expression": "Weapons, armor, and accessories customize party roles.",
+      "map_notes": "Weapons, armor, and accessories customize party roles.",
+      "mechanic_slug": "equipment-loadout",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "level",
+      "expression": "Random or visible encounters populate dungeons and overworld.",
+      "map_notes": "Random or visible encounters populate dungeons and overworld.",
+      "mechanic_slug": "map-resource-monster-groups",
+      "phase": "early",
+      "role": "signature",
+      "weight": 3
+    },
+    {
+      "domain": "economy",
+      "expression": "Shops convert currency into gear and consumables.",
+      "map_notes": "Shops convert currency into gear and consumables.",
+      "mechanic_slug": "purchase-gated-upgrade",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "depends_on": [
+        "multi-phase-boss-battle"
+      ],
+      "domain": "progression",
+      "expression": "Story bosses gate new regions or abilities.",
+      "map_notes": "Story bosses gate new regions or abilities.",
+      "mechanic_slug": "boss-gated-progression",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "combat",
+      "expression": "Late-game bosses introduce phase shifts and new abilities.",
+      "map_notes": "Late-game bosses introduce phase shifts and new abilities.",
+      "mechanic_slug": "multi-phase-boss-battle",
+      "phase": "late",
+      "role": "supporting",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Explore overworld and dungeons, trigger turn-based battles, earn experience and loot, manage party loadouts at towns, and advance story through boss gates.",
+    "description": "Turn-based RPGs alternate between overworld exploration and menu-driven party combat. Stat growth, equipment, and ability unlocks compound over a long campaign.",
+    "skills_tested": [
+      "loadout optimization",
+      "resource management",
+      "turn order planning",
+      "pattern recognition"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "turn-based-rpg"
+    ],
+    "influence_slugs": [
+      "final-fantasy",
+      "dragon-quest"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "turn-based-party-combat",
+    "rpg-stat-progression",
+    "overworld-map-stage-selection",
+    "equipment-loadout",
+    "map-resource-monster-groups"
+  ],
+  "skill_slugs": [
+    "loadout-optimization",
+    "resource-management",
+    "pattern-recognition"
+  ],
+  "slug": "turn-based-rpg",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "RPG",
+      "JRPG"
+    ],
+    "influences": [
+      "Final Fantasy",
+      "Dragon Quest"
+    ],
+    "kind": "genre",
+    "name": "Turn-Based RPG"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "game-over-reload",
+    "metaprogression": false,
+    "pacing": {
+      "early": "Teach turn based party combat with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Turn Based Party Combat",
+        "mechanics": [
+          "turn-based-party-combat"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Rpg Stat Progression",
+        "mechanics": [
+          "rpg-stat-progression"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Overworld Map Stage Selection",
+        "mechanics": [
+          "overworld-map-stage-selection"
+        ]
+      },
+      {
+        "id": "phase-4",
+        "label": "Equipment Loadout",
+        "mechanics": [
+          "equipment-loadout"
+        ]
+      }
+    ]
+  },
+  "title": "Turn-Based RPG Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Party gear and skills.",
+      "menu_slug": "equipment-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Consumables and key items.",
+      "menu_slug": "inventory-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Town vendors and upgrades.",
+      "menu_slug": "shop-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Party HP management.",
+      "role": "primary",
+      "variable_slug": "health"
+    },
+    {
+      "expression": "Spell or skill point pools.",
+      "role": "supporting",
+      "variable_slug": "mana"
+    },
+    {
+      "expression": "Character growth milestones.",
+      "role": "supporting",
+      "variable_slug": "player-level"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-turn-based-rpg",
+      "label": "Hardcore Turn-Based RPG",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

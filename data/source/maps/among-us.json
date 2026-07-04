@@ -1,0 +1,200 @@
+{
+  "context": {
+    "year": 2018
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Asymmetric Multiplayer",
+      "Evidence Deduction Puzzle",
+      "Local Multiplayer Competition"
+    ],
+    "player_fantasy": "Experience Among Us through its core party loop.",
+    "theme_tags": [
+      "party",
+      "social-deduction",
+      "asymmetric-multiplayer",
+      "evidence-deduction-puzzle",
+      "local-multiplayer-competition"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Kills are instant in range with vent mobility; sabotages force crew movement and create alibi pressure.",
+    "constraints": [
+      "Limited vision and kill cooldowns for impostors",
+      "Discussion timer caps meeting length",
+      "Task progress visible to all players"
+    ],
+    "core_loop": "Crewmates finish tasks visible on map overlay; impostors kill and sabotage within cooldown rules; meetings discuss evidence and vote to eject suspects until one side wins.",
+    "economy_notes": "No in-match currency; optional cosmetic economy outside matches.",
+    "overview": "Among Us is a multiplayer social deduction game where crewmates complete ship tasks while impostors sabotage and eliminate players, resolving suspicion in emergency meetings and votes.",
+    "player_goals": [
+      "Crew: complete task bar or eject all impostors",
+      "Impostor: reduce crew to parity or critical sabotage win"
+    ],
+    "progression_notes": "Cosmetic unlocks persist; match progress resets each round."
+  },
+  "map_type": "game",
+  "mechanics": [
+    {
+      "domain": "session",
+      "expression": "In Among Us, players have different roles, abilities, or win conditions in the same match.",
+      "map_notes": "In Among Us, players have different roles, abilities, or win conditions in the same match.",
+      "mechanic_slug": "asymmetric-multiplayer",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "progression",
+      "expression": "In Among Us, players collect clues and deduce correct answers from constrained evidence sets.",
+      "map_notes": "In Among Us, players collect clues and deduce correct answers from constrained evidence sets.",
+      "mechanic_slug": "evidence-deduction-puzzle",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "combat",
+      "expression": "In Among Us, same-screen or local wireless play pits players against each other in shared sessions.",
+      "map_notes": "In Among Us, same-screen or local wireless play pits players against each other in shared sessions.",
+      "mechanic_slug": "local-multiplayer-competition",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    }
+  ],
+  "menu_flow": [
+    {
+      "from_menu": "map-overlay",
+      "relationship": "emergency_report",
+      "to_menu": "meeting-menu"
+    },
+    {
+      "from_menu": "meeting-menu",
+      "relationship": "leads_to",
+      "to_menu": "voting-menu"
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Complete ship tasks as crewmates or secretly eliminate crew and sabotage systems as impostors, then debate and vote in emergency meetings to eject suspects.",
+    "description": "Among Us is a multiplayer social deduction game where crewmates complete tasks while impostors sabotage and eliminate players without being caught.",
+    "skills_tested": [
+      "deception",
+      "observation",
+      "communication",
+      "deductive reasoning",
+      "task efficiency"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "asymmetric-multiplayer",
+    "evidence-deduction-puzzle",
+    "local-multiplayer-competition"
+  ],
+  "skill_slugs": [
+    "social-deduction",
+    "information-gathering",
+    "narrative-inference"
+  ],
+  "slug": "among-us",
+  "source_url": "https://en.wikipedia.org/wiki/List_of_best-selling_video_games",
+  "subject": {
+    "genres": [
+      "Party",
+      "Social Deduction"
+    ],
+    "kind": "game",
+    "name": "Among Us"
+  },
+  "title": "Among Us Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Host settings, color, and ready.",
+      "menu_slug": "lobby-menu",
+      "role": "core"
+    },
+    {
+      "displays_variables": [
+        "task-progress"
+      ],
+      "map_notes": "Chat discussion after report.",
+      "menu_slug": "meeting-menu",
+      "opens_from": [
+        "map-overlay"
+      ],
+      "role": "core"
+    },
+    {
+      "map_notes": "Vote or skip after discussion.",
+      "menu_slug": "voting-menu",
+      "opens_from": [
+        "meeting-menu"
+      ],
+      "role": "core"
+    },
+    {
+      "map_notes": "Minimap with task waypoints.",
+      "menu_slug": "map-overlay",
+      "role": "core"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "One life per player per round.",
+      "map_notes": "Crew lives = remaining players; impostor wins on parity.",
+      "role": "primary",
+      "variable_slug": "lives"
+    },
+    {
+      "expression": "Tasks complete across living crew.",
+      "map_notes": "Global task bar for crew victory.",
+      "role": "primary",
+      "variable_slug": "task-progress"
+    },
+    {
+      "expression": "Role-specific timers reset on meeting.",
+      "map_notes": "Kill, vent, and sabotage cooldowns.",
+      "role": "supporting",
+      "variable_slug": "cooldown-timer"
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

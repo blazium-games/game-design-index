@@ -1,0 +1,266 @@
+{
+  "context": {
+    "dimension": "3d",
+    "perspective": "third-person",
+    "session_type": "mission-based",
+    "world_structure": "mission-sandbox"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "player-authored approach",
+      "consequence of detection",
+      "multiple solutions"
+    ],
+    "player_fantasy": "Experience Stealth Action through its core stealth loop.",
+    "theme_tags": [
+      "stealth",
+      "action-adventure",
+      "stealth-detection-loop",
+      "sandbox-assassination-puzzle",
+      "environmental-trigger-switch"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat pacing should match genre tempo and readable threat language.",
+    "constraints": [
+      "Failure model: design-specific",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Observe patrol patterns, infiltrate spaces, achieve objectives undetected or eliminate targets, then exfiltrate.",
+    "economy_notes": "Tune earn/spend to genre tension targets.",
+    "overview": "Stealth action games reward avoiding detection, planning routes, and executing silent takedowns or assassinations with escape routes.",
+    "player_goals": [
+      "player-authored approach",
+      "consequence of detection",
+      "multiple solutions"
+    ],
+    "progression_notes": "Follow signature mechanic dependencies across early, mid, and late phases."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "combat",
+      "expression": "Light, sound, and vision cones drive detection states.",
+      "map_notes": "Light, sound, and vision cones drive detection states.",
+      "mechanic_slug": "stealth-detection-loop",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "stealth-detection-loop"
+      ],
+      "domain": "level",
+      "expression": "Multiple approaches to eliminate or bypass targets.",
+      "map_notes": "Multiple approaches to eliminate or bypass targets.",
+      "mechanic_slug": "sandbox-assassination-puzzle",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "optional-content-layering"
+      ],
+      "domain": "level",
+      "expression": "Doors, lights, and gadgets alter patrol routes.",
+      "map_notes": "Doors, lights, and gadgets alter patrol routes.",
+      "mechanic_slug": "environmental-trigger-switch",
+      "phase": "early",
+      "role": "signature",
+      "weight": 3
+    },
+    {
+      "depends_on": [
+        "environmental-trigger-switch"
+      ],
+      "domain": "level",
+      "expression": "Non-lethal and ghost run optional objectives.",
+      "map_notes": "Non-lethal and ghost run optional objectives.",
+      "mechanic_slug": "optional-content-layering",
+      "phase": "optional",
+      "role": "signature",
+      "weight": 3
+    },
+    {
+      "domain": "economy",
+      "expression": "Combat failure punishes loud play.",
+      "map_notes": "Combat failure punishes loud play.",
+      "mechanic_slug": "depletable-health-pool",
+      "optional": true,
+      "phase": "early",
+      "role": "supporting",
+      "weight": 2
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Observe patrol patterns, infiltrate spaces, achieve objectives undetected or eliminate targets, then exfiltrate.",
+    "description": "Stealth action games reward avoiding detection, planning routes, and executing silent takedowns or assassinations with escape routes.",
+    "design_pillars": [
+      "player-authored approach",
+      "consequence of detection",
+      "multiple solutions"
+    ],
+    "skills_tested": [
+      "information gathering",
+      "risk evaluation",
+      "spatial navigation",
+      "tension management"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure",
+      "open-world-action"
+    ],
+    "influence_slugs": [
+      "thief-the-dark-project",
+      "dishonored-2",
+      "hitman-world-of-assassination"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "stealth-detection-loop",
+    "sandbox-assassination-puzzle",
+    "environmental-trigger-switch",
+    "optional-content-layering"
+  ],
+  "skill_slugs": [
+    "information-gathering",
+    "risk-evaluation",
+    "spatial-navigation"
+  ],
+  "slug": "stealth-action",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Stealth",
+      "Action-Adventure"
+    ],
+    "influences": [
+      "Thief",
+      "Metal Gear Solid"
+    ],
+    "kind": "genre",
+    "name": "Stealth Action"
+  },
+  "systems": {
+    "economy_tightness": "light",
+    "failure_model": "alert-reset-or-checkpoint",
+    "metaprogression": false,
+    "pacing": {
+      "early": "Teach stealth detection loop with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Stealth Detection Loop",
+        "mechanics": [
+          "stealth-detection-loop"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Sandbox Assassination Puzzle",
+        "mechanics": [
+          "sandbox-assassination-puzzle"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Environmental Trigger Switch",
+        "mechanics": [
+          "environmental-trigger-switch"
+        ]
+      },
+      {
+        "id": "phase-4",
+        "label": "Optional Content Layering",
+        "mechanics": [
+          "optional-content-layering"
+        ]
+      }
+    ]
+  },
+  "title": "Stealth Action Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Gadgets and throwable tools.",
+      "menu_slug": "inventory-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Area recon and objective markers.",
+      "menu_slug": "map-menu",
+      "role": "optional"
+    },
+    {
+      "map_notes": "Pause and accessibility.",
+      "menu_slug": "pause-menu",
+      "role": "contextual"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Fail state when detected in combat.",
+      "role": "primary",
+      "variable_slug": "health"
+    },
+    {
+      "expression": "Optional non-lethal or lethal tools.",
+      "role": "hidden",
+      "variable_slug": "ammo"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-stealth-action",
+      "label": "Hardcore Stealth Action",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

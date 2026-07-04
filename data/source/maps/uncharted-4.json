@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.1",
+  "slug": "uncharted-4",
+  "title": "Uncharted 4: A Thief's End Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.imdb.com/list/ls074825432/",
+  "subject": {
+    "kind": "game",
+    "name": "Uncharted 4: A Thief's End",
+    "genres": [
+      "Action-Adventure",
+      "Third-Person Shooter"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Uncharted 4: A Thief's End follows Nathan Drake on a cinematic globe-trotting adventure mixing climbing traversal, cover shooting, and set-piece chase sequences.",
+    "core_loop": "Traverse exotic locales with platforming and rope mechanics, engage in cover-based gunfights, solve environmental puzzles, and survive scripted action sequences.",
+    "skills_tested": [
+      "aim control",
+      "cover usage",
+      "traversal timing",
+      "narrative pacing"
+    ]
+  },
+  "signature_gameplay": [
+    "cover-based-positioning",
+    "aim-down-sights-shooting",
+    "melee-primary-combat",
+    "environmental-hazard-navigation",
+    "telegraphed-threat-loop"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "cover-based-positioning",
+      "role": "signature",
+      "map_notes": "In Uncharted 4: A Thief's End, units gain defensive bonuses from terrain cover and flanking angles on a tactical grid.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Uncharted 4: A Thief's End, units gain defensive bonuses from terrain cover and flanking angles on a tactical grid."
+    },
+    {
+      "mechanic_slug": "aim-down-sights-shooting",
+      "role": "signature",
+      "map_notes": "In Uncharted 4: A Thief's End, zoomed aim mode trades movement speed for accuracy and range.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Uncharted 4: A Thief's End, zoomed aim mode trades movement speed for accuracy and range."
+    },
+    {
+      "mechanic_slug": "melee-primary-combat",
+      "role": "signature",
+      "map_notes": "In Uncharted 4: A Thief's End, the primary offensive loop uses close-range melee strikes rather than projectile weapons.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Uncharted 4: A Thief's End, the primary offensive loop uses close-range melee strikes rather than projectile weapons.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "signature",
+      "map_notes": "In Uncharted 4: A Thief's End, a traversal mechanic in which the level space contains persistent damaging or lethal obstacles that the player must avoid through precise movement.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Uncharted 4: A Thief's End, a traversal mechanic in which the level space contains persistent damaging or lethal obstacles that the player must avoid through precise movement."
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "signature",
+      "map_notes": "In Uncharted 4: A Thief's End, a combat encounter structure in which an enemy signals an incoming attack through a distinct visual or audio cue before the attack resolves.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Uncharted 4: A Thief's End, a combat encounter structure in which an enemy signals an incoming attack through a distinct visual or audio cue before the attack resolves."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2016
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure",
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Uncharted 4: A Thief's End through its core action-adventure loop.",
+    "theme_tags": [
+      "action-adventure",
+      "third-person-shooter",
+      "cover-based-positioning",
+      "aim-down-sights-shooting",
+      "melee-primary-combat"
+    ],
+    "design_pillars": [
+      "Cover Based Positioning",
+      "Aim Down Sights Shooting",
+      "Melee Primary Combat"
+    ]
+  }
+}

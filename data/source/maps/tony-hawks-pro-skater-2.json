@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.1",
+  "slug": "tony-hawks-pro-skater-2",
+  "title": "Tony Hawk's Pro Skater 2 Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Tony Hawk's Pro Skater 2",
+    "genres": [
+      "Sports",
+      "Action"
+    ],
+    "influences": [
+      "Tony Hawk's Pro Skater",
+      "SSX"
+    ]
+  },
+  "narrative": {
+    "description": "Neversoft's definitive skateboarding sequel deepens combo systems, introduces manual linking, create-a-skater, and park editor tools across iconic real-world and fantasy levels.",
+    "core_loop": "Chain flip tricks, grinds, and manuals in two-minute runs to hit score goals, collect S-K-A-T-E letters, and unlock new skaters and parks.",
+    "skills_tested": [
+      "combo chaining",
+      "timing precision",
+      "line routing",
+      "score optimization"
+    ]
+  },
+  "signature_gameplay": [
+    "combo-trick-scoring",
+    "momentum-based-speed",
+    "license-progression-gates"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "combo-trick-scoring",
+      "role": "signature",
+      "map_notes": "Multiplier grows as tricks link without bailing, defining high-score play.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Multiplier grows as tricks link without bailing, defining high-score play."
+    },
+    {
+      "mechanic_slug": "momentum-based-speed",
+      "role": "signature",
+      "map_notes": "Speed from ramps and pushes affects trick height and line possibilities.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Speed from ramps and pushes affects trick height and line possibilities."
+    },
+    {
+      "mechanic_slug": "license-progression-gates",
+      "role": "signature",
+      "map_notes": "Cash and medal goals unlock new skaters, parks, and create-a-park tools.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Cash and medal goals unlock new skaters, parks, and create-a-park tools.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden tapes, gaps, and secrets reward level mastery.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden tapes, gaps, and secrets reward level mastery."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Bail ends combo but run continues until timer expires.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bail ends combo but run continues until timer expires.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Gaps, rails, and vert ramps demand precise approach angles.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Gaps, rails, and vert ramps demand precise approach angles.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "special-move-command-input",
+      "role": "supporting",
+      "map_notes": "Special tricks require directional input sequences on ramps.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Special tricks require directional input sequences on ramps."
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Two-minute runs restart from level beginning on retry.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Two-minute runs restart from level beginning on retry.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Manual balance and lip tricks demand fine analog control.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Manual balance and lip tricks demand fine analog control.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "supporting",
+      "map_notes": "S-K-A-T-E letters and video tapes gate completionist goals.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "S-K-A-T-E letters and video tapes gate completionist goals.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Bail animations telegraph lost combo multiplier state.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bail animations telegraph lost combo multiplier state."
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Stat points buy improved air, hangtime, and balance attributes.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Stat points buy improved air, hangtime, and balance attributes."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2000
+  },
+  "relationships": {
+    "influence_slugs": [
+      "tony-hawks-pro-skater"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Tony Hawk's Pro Skater 2 through its core sports loop.",
+    "theme_tags": [
+      "sports",
+      "action",
+      "combo-trick-scoring",
+      "momentum-based-speed",
+      "license-progression-gates"
+    ],
+    "design_pillars": [
+      "Combo Trick Scoring",
+      "Momentum Based Speed",
+      "License Progression Gates"
+    ]
+  }
+}

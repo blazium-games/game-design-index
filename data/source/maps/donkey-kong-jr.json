@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.1",
+  "slug": "donkey-kong-jr",
+  "title": "Donkey Kong Jr. Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-2d-video-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Donkey Kong Jr.",
+    "genres": [
+      "Platformer",
+      "Arcade"
+    ],
+    "influences": [
+      "Donkey Kong"
+    ]
+  },
+  "narrative": {
+    "description": "Mario has captured Donkey Kong and caged him at the top of a jungle screen. Donkey Kong Jr. must climb vines, chains, and platforms while avoiding Snapjaws and Nitpickers to collect keys and free his father across four distinct stages.",
+    "core_loop": "Climb vertically through single-screen stages, grab keys one at a time and carry them to the cage, avoid or outmaneuver enemies on vines and platforms, and reach the top to unlock the next key until Donkey Kong is freed.",
+    "skills_tested": [
+      "timing",
+      "vertical navigation",
+      "enemy avoidance",
+      "route planning",
+      "reaction time"
+    ]
+  },
+  "signature_gameplay": [
+    "vine-rope-climbing",
+    "key-collect-rescue-objective",
+    "precision-platforming"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "vine-rope-climbing",
+      "role": "signature",
+      "map_notes": "Jr. climbs and descends vines and chains at variable speed; core traversal mechanic across all stages.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Jr. climbs and descends vines and chains at variable speed; core traversal mechanic across all stages.",
+      "depends_on": [
+        "key-collect-rescue-objective",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "key-collect-rescue-objective",
+      "role": "signature",
+      "map_notes": "Four keys must be collected sequentially and delivered to Donkey Kong's cage to advance.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Four keys must be collected sequentially and delivered to Donkey Kong's cage to advance.",
+      "depends_on": [
+        "boss-gated-progression",
+        "vine-rope-climbing"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "signature",
+      "map_notes": "Snappy arcade movement on platforms with no momentum; precise jumps between chains.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Snappy arcade movement on platforms with no momentum; precise jumps between chains.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "jump-cutoff"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Contact with enemies or hazards costs a life; no health bar.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Contact with enemies or hazards costs a life; no health bar.",
+      "depends_on": [
+        "life-based-retry-system",
+        "loot-based-economy"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Falling coconuts, electric sparks, birds, and crumbling platforms.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Falling coconuts, electric sparks, birds, and crumbling platforms.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Three lives per credit; restart stage on death.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Three lives per credit; restart stage on death.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Mario patrols the top platform with predictable movement; Snapjaws follow set paths.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Mario patrols the top platform with predictable movement; Snapjaws follow set paths.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Birds swoop on timers; spark gaps open and close rhythmically.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Birds swoop on timers; spark gaps open and close rhythmically.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Each of four stages introduces new enemy types and layout challenges.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Each of four stages introduces new enemy types and layout challenges.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "jump-cutoff",
+      "role": "supporting",
+      "map_notes": "Short hops between vines and platforms require precise timing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Short hops between vines and platforms require precise timing.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "loot-based-economy",
+      "role": "supporting",
+      "map_notes": "Fruit bonuses award extra points when collected during key runs.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Fruit bonuses award extra points when collected during key runs.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "All four keys in a stage must be delivered before the next stage unlocks.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "All four keys in a stage must be delivered before the next stage unlocks.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "supporting",
+      "map_notes": "Keys unlock cage segments; color-coded vines toggle between climbable states.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Keys unlock cage segments; color-coded vines toggle between climbable states."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "relationships": {
+    "influence_slugs": [
+      "donkey-kong"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Donkey Kong Jr. through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "arcade",
+      "vine-rope-climbing",
+      "key-collect-rescue-objective",
+      "precision-platforming"
+    ],
+    "design_pillars": [
+      "Vine Rope Climbing",
+      "Key Collect Rescue Objective",
+      "Precision Platforming"
+    ]
+  }
+}

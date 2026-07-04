@@ -1,0 +1,280 @@
+{
+  "context": {
+    "dimension": "2.5d",
+    "perspective": "isometric",
+    "session_type": "campaign",
+    "world_structure": "mission-grid"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "positioning is the puzzle",
+      "meaningful roster stakes",
+      "clear turn clarity"
+    ],
+    "player_fantasy": "Experience Tactics Strategy through its core strategy loop.",
+    "theme_tags": [
+      "strategy",
+      "tactics",
+      "tactics-grid-movement",
+      "turn-based-party-combat",
+      "cover-based-positioning"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat pacing should match genre tempo and readable threat language.",
+    "constraints": [
+      "Failure model: design-specific",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Deploy units on a grid, take turns moving and attacking, use cover and abilities, and preserve squad through missions.",
+    "economy_notes": "Tune earn/spend to genre tension targets.",
+    "overview": "Tactics games use grid or turn-based positioning where cover, unit roles, and permadeath tension drive each encounter.",
+    "player_goals": [
+      "positioning is the puzzle",
+      "meaningful roster stakes",
+      "clear turn clarity"
+    ],
+    "progression_notes": "Follow signature mechanic dependencies across early, mid, and late phases."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "depends_on": [
+        "cover-based-positioning",
+        "turn-based-party-combat"
+      ],
+      "domain": "combat",
+      "expression": "Tile grid constrains movement and range.",
+      "map_notes": "Tile grid constrains movement and range.",
+      "mechanic_slug": "tactics-grid-movement",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "rpg-stat-progression"
+      ],
+      "domain": "combat",
+      "expression": "Side or phase turns for each unit.",
+      "map_notes": "Side or phase turns for each unit.",
+      "mechanic_slug": "turn-based-party-combat",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "tactics-grid-movement",
+        "turn-based-party-combat"
+      ],
+      "domain": "economy",
+      "expression": "High cover and flanking modify hit chance.",
+      "map_notes": "High cover and flanking modify hit chance.",
+      "mechanic_slug": "cover-based-positioning",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "tactics-grid-movement",
+        "turn-based-party-combat"
+      ],
+      "domain": "session",
+      "expression": "Fallen units may be lost permanently.",
+      "map_notes": "Fallen units may be lost permanently.",
+      "mechanic_slug": "permadeath-unit-loss",
+      "phase": "mid",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "depends_on": [
+        "rpg-stat-progression"
+      ],
+      "domain": "economy",
+      "expression": "Pre-mission loadout choices.",
+      "map_notes": "Pre-mission loadout choices.",
+      "mechanic_slug": "equipment-loadout",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "depends_on": [
+        "equipment-loadout"
+      ],
+      "domain": "progression",
+      "expression": "Level-ups between missions.",
+      "map_notes": "Level-ups between missions.",
+      "mechanic_slug": "rpg-stat-progression",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Deploy units on a grid, take turns moving and attacking, use cover and abilities, and preserve squad through missions.",
+    "description": "Tactics games use grid or turn-based positioning where cover, unit roles, and permadeath tension drive each encounter.",
+    "design_pillars": [
+      "positioning is the puzzle",
+      "meaningful roster stakes",
+      "clear turn clarity"
+    ],
+    "skills_tested": [
+      "turn order planning",
+      "resource management",
+      "pattern recognition",
+      "territory control"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "turn-based-rpg"
+    ],
+    "influence_slugs": [
+      "xcom-enemy-unknown",
+      "fire-emblem-three-houses",
+      "valkyria-chronicles"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "tactics-grid-movement",
+    "turn-based-party-combat",
+    "cover-based-positioning",
+    "permadeath-unit-loss"
+  ],
+  "skill_slugs": [
+    "run-planning",
+    "resource-management",
+    "pattern-recognition"
+  ],
+  "slug": "tactics-strategy",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Strategy",
+      "Tactics"
+    ],
+    "influences": [
+      "XCOM",
+      "Fire Emblem"
+    ],
+    "kind": "genre",
+    "name": "Tactics Strategy"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "mission-restart",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach tactics grid movement with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Tactics Grid Movement",
+        "mechanics": [
+          "tactics-grid-movement"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Turn Based Party Combat",
+        "mechanics": [
+          "turn-based-party-combat"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Cover Based Positioning",
+        "mechanics": [
+          "cover-based-positioning"
+        ]
+      },
+      {
+        "id": "phase-4",
+        "label": "Permadeath Unit Loss",
+        "mechanics": [
+          "permadeath-unit-loss"
+        ]
+      }
+    ]
+  },
+  "title": "Tactics Strategy Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Unit loadout before battle.",
+      "menu_slug": "equipment-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Campaign or battle map select.",
+      "menu_slug": "map-menu",
+      "role": "core"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Squad count on grid or map.",
+      "role": "primary",
+      "variable_slug": "party-size"
+    },
+    {
+      "expression": "Ability or spell resources per turn.",
+      "role": "supporting",
+      "variable_slug": "mana"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-tactics-strategy",
+      "label": "Hardcore Tactics Strategy",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

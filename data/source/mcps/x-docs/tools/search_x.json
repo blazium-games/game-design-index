@@ -1,0 +1,18 @@
+{
+  "name": "search_x",
+  "description": "Search across the X knowledge base to find relevant information, code examples, API references, and guides. Use this tool when you need to answer questions about X, find specific documentation, understand how features work, or locate implementation details. The search returns contextual content with titles and direct links to the documentation pages. If you need the full content of a specific page, use the query_docs_filesystem tool to `head` or `cat` the page path (append `.mdx` to the path returned from search — e.g. `head -200 /api-reference/create-customer.mdx`).",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Search query"
+      }
+    },
+    "required": [
+      "query"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

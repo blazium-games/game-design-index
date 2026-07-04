@@ -1,0 +1,265 @@
+{
+  "schema_version": "1.1",
+  "slug": "jak-and-daxter-the-precursor-legacy",
+  "title": "Jak and Daxter: The Precursor Legacy Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Jak and Daxter: The Precursor Legacy",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario 64",
+      "Banjo-Kazooie"
+    ]
+  },
+  "narrative": {
+    "description": "Naughty Dog's PS2 launch platformer pairs Jak's expanding move set with Daxter's commentary across seamless hub-to-level streaming and precursor orb collectathons.",
+    "core_loop": "Explore the Sandover Village hub, earn precursor orbs and power cells, unlock eco-powered abilities, and reach Gol and Maia's citadel.",
+    "skills_tested": [
+      "eco timing",
+      "jump chaining",
+      "orb routing",
+      "ability sequencing"
+    ]
+  },
+  "signature_gameplay": [
+    "ability-gated-exploration",
+    "collectathon-token-gating",
+    "hub-world-stage-gates"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "signature",
+      "map_notes": "Blue, red, green, and yellow eco vents plus zoomer and roll unlock new routes.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Blue, red, green, and yellow eco vents plus zoomer and roll unlock new routes."
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Precursor orbs and power cells gate fly-through rings and hub expansion.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Precursor orbs and power cells gate fly-through rings and hub expansion.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "signature",
+      "map_notes": "Sandover, Rock Village, and Volcanic Crater hubs stream into open zones.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Sandover, Rock Village, and Volcanic Crater hubs stream into open zones.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "free-camera-3d-movement",
+      "role": "supporting",
+      "map_notes": "Seamless camera follows Jak through hub-to-level transitions without loading.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Seamless camera follows Jak through hub-to-level transitions without loading.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Jump dive and spin kick clear lurkers and metal heads.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Jump dive and spin kick clear lurkers and metal heads."
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden orbs, scout flies, and precursor pieces extend completion.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden orbs, scout flies, and precursor pieces extend completion."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Dark eco, lava, and bottomless pits punish mis-timed jumps.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Dark eco, lava, and bottomless pits punish mis-timed jumps.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Guardian bosses and Maia's citadel gate story milestones.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Guardian bosses and Maia's citadel gate story milestones.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses like Gol follow learnable eco-interaction patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses like Gol follow learnable eco-interaction patterns.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Death respawns at zone entrance with collected orbs retained.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Death respawns at zone entrance with collected orbs retained.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Yellow eco jumps and rolling require exact analog control.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Yellow eco jumps and rolling require exact analog control.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Metal head wind-ups telegraph before lunging.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Metal head wind-ups telegraph before lunging.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Lives or health gates retries on failure.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Lives or health gates retries on failure.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health depletes on hazard and enemy contact.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health depletes on hazard and enemy contact.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2001
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-64",
+      "banjo-kazooie"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Jak and Daxter: The Precursor Legacy through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "ability-gated-exploration",
+      "collectathon-token-gating",
+      "hub-world-stage-gates"
+    ],
+    "design_pillars": [
+      "Ability Gated Exploration",
+      "Collectathon Token Gating",
+      "Hub World Stage Gates"
+    ]
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.1",
+  "slug": "mortal-kombat-ii",
+  "title": "Mortal Kombat II Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Mortal Kombat II",
+    "genres": [
+      "Fighting"
+    ],
+    "influences": [
+      "Mortal Kombat",
+      "Street Fighter II"
+    ]
+  },
+  "narrative": {
+    "description": "Midway's arcade sequel amplifies the original's violence with more characters, babality and friendship finishers, extended combo strings, and the iconic Liu Kang vs Shao Kahn tower climax.",
+    "core_loop": "Win rounds with special moves, combos, and block/duck reads, then execute fatalities or mercies on defeated opponents.",
+    "skills_tested": [
+      "combo execution",
+      "block timing",
+      "punish reading",
+      "finisher input recall"
+    ]
+  },
+  "signature_gameplay": [
+    "finishing-move-execution",
+    "round-based-health-duel",
+    "special-move-command-input"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "finishing-move-execution",
+      "role": "signature",
+      "map_notes": "Fatalities, friendships, and babalities execute via memorized inputs at match end.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Fatalities, friendships, and babalities execute via memorized inputs at match end.",
+      "depends_on": [
+        "combo-chain-system",
+        "special-move-command-input"
+      ]
+    },
+    {
+      "mechanic_slug": "round-based-health-duel",
+      "role": "signature",
+      "map_notes": "Two rounds to win; draining the health bar secures round victory.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Two rounds to win; draining the health bar secures round victory.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "special-move-command-input",
+      "role": "signature",
+      "map_notes": "Directional sequences execute projectiles, teleports, and unique specials.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Directional sequences execute projectiles, teleports, and unique specials.",
+      "depends_on": [
+        "combo-chain-system"
+      ]
+    },
+    {
+      "mechanic_slug": "combo-chain-system",
+      "role": "supporting",
+      "map_notes": "Juggle and link combos extend damage off launchers.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Juggle and link combos extend damage off launchers.",
+      "depends_on": [
+        "frame-punish-engagement",
+        "special-move-command-input"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Normals and specials telegraph via startup animation.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Normals and specials telegraph via startup animation.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health depletes from blocked and unblocked hits.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health depletes from blocked and unblocked hits.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Shao Kahn follows difficulty-scaled pattern loops.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Shao Kahn follows difficulty-scaled pattern loops.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Final tower chains multiple boss fights consecutively.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Final tower chains multiple boss fights consecutively.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "melee-primary-combat",
+      "role": "supporting",
+      "map_notes": "Normals and throws anchor the neutral game.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Normals and throws anchor the neutral game.",
+      "depends_on": [
+        "depletable-health-pool",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Continue credits restart the tournament ladder.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Continue credits restart the tournament ladder.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "frame-punish-engagement",
+      "role": "supporting",
+      "map_notes": "Recovery frames on whiffed specials create punish windows.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Recovery frames on whiffed specials create punish windows.",
+      "depends_on": [
+        "combo-chain-system",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden characters and alternate finishers extend replay.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden characters and alternate finishers extend replay."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1993
+  },
+  "relationships": {
+    "influence_slugs": [
+      "mortal-kombat"
+    ],
+    "genre_maps": [
+      "fighting-game"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Mortal Kombat II through its core fighting loop.",
+    "theme_tags": [
+      "fighting",
+      "finishing-move-execution",
+      "round-based-health-duel",
+      "special-move-command-input"
+    ],
+    "design_pillars": [
+      "Finishing Move Execution",
+      "Round Based Health Duel",
+      "Special Move Command Input"
+    ]
+  }
+}

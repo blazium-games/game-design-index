@@ -1,0 +1,220 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Zone, build, and satisfy citizen needs.",
+      "Budget, tax, and upkeep loops."
+    ],
+    "player_fantasy": "Experience City Builder through its signature loop.",
+    "theme_tags": [
+      "city-builder",
+      "city-building-simulation",
+      "city-building-economy"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: scenario-restart",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Zone, build, and satisfy citizen needs.",
+    "economy_notes": "moderate",
+    "overview": "City Builder genre recipe anchored on city-building-simulation, city-building-economy.",
+    "player_goals": [
+      "Zone, build, and satisfy citizen needs.",
+      "Budget, tax, and upkeep loops."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "progression",
+      "expression": "Zone, build, and satisfy citizen needs.",
+      "map_notes": "Zone, build, and satisfy citizen needs.",
+      "mechanic_slug": "city-building-simulation",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "city-building-simulation"
+      ],
+      "domain": "economy",
+      "expression": "Budget, tax, and upkeep loops.",
+      "map_notes": "Budget, tax, and upkeep loops.",
+      "mechanic_slug": "city-building-economy",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "session",
+      "expression": "Day cycles for traffic and events.",
+      "map_notes": "Day cycles for traffic and events.",
+      "mechanic_slug": "day-night-schedule-loop",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "economy",
+      "expression": "Material and labor bottlenecks.",
+      "map_notes": "Material and labor bottlenecks.",
+      "mechanic_slug": "resource-scarcity-management",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Zone, build, and satisfy citizen needs.",
+    "description": "City Builder games center on zone, build, and satisfy citizen needs.",
+    "design_pillars": [
+      "Zone, build, and satisfy citizen needs.",
+      "Budget, tax, and upkeep loops."
+    ],
+    "skills_tested": [
+      "crafting planning",
+      "resource management",
+      "run planning",
+      "territory control"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "tycoon-simulation",
+      "life-sim"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "city-building-simulation",
+    "city-building-economy"
+  ],
+  "skill_slugs": [
+    "crafting-planning",
+    "resource-management",
+    "run-planning",
+    "territory-control"
+  ],
+  "slug": "city-builder",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "influences": [
+      "SimCity",
+      "Cities: Skylines"
+    ],
+    "kind": "genre",
+    "name": "City Builder"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "scenario-restart",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach city building simulation with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "City Building Simulation",
+        "mechanics": [
+          "city-building-simulation"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "City Building Economy",
+        "mechanics": [
+          "city-building-economy"
+        ]
+      }
+    ]
+  },
+  "title": "City Builder Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "City management overlays.",
+      "menu_slug": "hub-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Zoning and building catalog.",
+      "menu_slug": "shop-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "City budget and income.",
+      "role": "primary",
+      "variable_slug": "currency-soft"
+    },
+    {
+      "expression": "Citizen happiness or approval.",
+      "role": "supporting",
+      "variable_slug": "reputation"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-city-builder",
+      "label": "Hardcore City Builder",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

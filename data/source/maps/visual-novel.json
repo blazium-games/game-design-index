@@ -1,0 +1,213 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Branching dialogue drives endings and flags.",
+      "Chapter gates structure story arcs."
+    ],
+    "player_fantasy": "Experience Visual Novel through its signature loop.",
+    "theme_tags": [
+      "visual-novel",
+      "dialogue-choice-consequences",
+      "narrative-chapter-progression"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: chapter-reload",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Branching dialogue drives endings and flags.",
+    "economy_notes": "none",
+    "overview": "Visual Novel genre recipe anchored on dialogue-choice-consequences, narrative-chapter-progression.",
+    "player_goals": [
+      "Branching dialogue drives endings and flags.",
+      "Chapter gates structure story arcs."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "progression",
+      "expression": "Branching dialogue drives endings and flags.",
+      "map_notes": "Branching dialogue drives endings and flags.",
+      "mechanic_slug": "dialogue-choice-consequences",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "dialogue-choice-consequences"
+      ],
+      "domain": "progression",
+      "expression": "Chapter gates structure story arcs.",
+      "map_notes": "Chapter gates structure story arcs.",
+      "mechanic_slug": "narrative-chapter-progression",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "progression",
+      "expression": "Investigation boards in mystery routes.",
+      "map_notes": "Investigation boards in mystery routes.",
+      "mechanic_slug": "evidence-deduction-puzzle",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "progression",
+      "expression": "Gallery and ending checklist completion.",
+      "map_notes": "Gallery and ending checklist completion.",
+      "mechanic_slug": "metaprogression",
+      "phase": "late",
+      "role": "supporting",
+      "weight": 2
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Branching dialogue drives endings and flags.",
+    "description": "Visual Novel games center on branching dialogue drives endings and flags.",
+    "design_pillars": [
+      "Branching dialogue drives endings and flags.",
+      "Chapter gates structure story arcs."
+    ],
+    "skills_tested": [
+      "narrative inference",
+      "puzzle logic",
+      "information gathering"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure",
+      "life-sim"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "dialogue-choice-consequences",
+    "narrative-chapter-progression"
+  ],
+  "skill_slugs": [
+    "narrative-inference",
+    "puzzle-logic",
+    "information-gathering"
+  ],
+  "slug": "visual-novel",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Visual Novel",
+      "Adventure"
+    ],
+    "influences": [
+      "Ace Attorney",
+      "Steins;Gate"
+    ],
+    "kind": "genre",
+    "name": "Visual Novel"
+  },
+  "systems": {
+    "economy_tightness": "none",
+    "failure_model": "chapter-reload",
+    "metaprogression": false,
+    "pacing": {
+      "early": "Teach dialogue choice consequences with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Dialogue Choice Consequences",
+        "mechanics": [
+          "dialogue-choice-consequences"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Narrative Chapter Progression",
+        "mechanics": [
+          "narrative-chapter-progression"
+        ]
+      }
+    ]
+  },
+  "title": "Visual Novel Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Branching narrative UI.",
+      "menu_slug": "dialogue-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Scene bookmarks.",
+      "menu_slug": "save-load-menu",
+      "role": "core"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Story flags and evidence items.",
+      "role": "supporting",
+      "variable_slug": "key-items"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-visual-novel",
+      "label": "Hardcore Visual Novel",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

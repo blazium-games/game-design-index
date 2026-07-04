@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.1",
+  "slug": "portal-companion-collection",
+  "title": "Portal Companion Collection Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.metacritic.com/browse/game/all/all/all-time/metascore/",
+  "subject": {
+    "kind": "game",
+    "name": "Portal Companion Collection",
+    "genres": [
+      "Puzzle"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Portal Companion Collection (2022) is a acclaimed puzzle title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Place or match pieces under pressure to clear objectives and chase high scores.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "physics-puzzle-gating",
+    "portal-spatial-reasoning",
+    "linear-stage-gauntlet"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "physics-puzzle-gating",
+      "role": "signature",
+      "map_notes": "Core physics puzzle gating loop defines Portal Companion Collection's identity.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Portal gun or physics tools solve spatial puzzles to advance through test chambers.",
+      "depends_on": [
+        "linear-stage-gauntlet",
+        "portal-spatial-reasoning"
+      ]
+    },
+    {
+      "mechanic_slug": "portal-spatial-reasoning",
+      "role": "signature",
+      "map_notes": "Core portal spatial reasoning loop defines Portal Companion Collection's identity.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Linked portals enable non-Euclidean traversal and momentum puzzles.",
+      "depends_on": [
+        "linear-stage-gauntlet",
+        "physics-puzzle-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "signature",
+      "map_notes": "Core linear stage gauntlet loop defines Portal Companion Collection's identity.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Progression moves through a fixed sequence of confined stages without hub backtracking.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "lock-delay-placement",
+      "role": "supporting",
+      "map_notes": "Lock Delay Placement supports the main loop in Portal Companion Collection.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "After a piece lands, a brief grace period allows final horizontal adjustments before it locks permanently.",
+      "depends_on": [
+        "hard-drop-placement",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "next-piece-preview",
+      "role": "supporting",
+      "map_notes": "Next Piece Preview supports the main loop in Portal Companion Collection.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A display shows the upcoming piece or pieces, enabling advance planning of placement strategy.",
+      "depends_on": [
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "soft-drop-control",
+      "role": "supporting",
+      "map_notes": "Soft Drop Control supports the main loop in Portal Companion Collection.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Holding a direction accelerates piece descent without instant lock, allowing faster placement at a score or risk tradeoff.",
+      "depends_on": [
+        "escalating-drop-speed",
+        "hard-drop-placement"
+      ]
+    },
+    {
+      "mechanic_slug": "hard-drop-placement",
+      "role": "supporting",
+      "map_notes": "Hard Drop Placement supports the main loop in Portal Companion Collection.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "An instant-drop input locks the current piece at its horizontal position immediately.",
+      "depends_on": [
+        "soft-drop-control",
+        "tetromino-rotation"
+      ]
+    },
+    {
+      "mechanic_slug": "tetromino-rotation",
+      "role": "supporting",
+      "map_notes": "Tetromino Rotation supports the main loop in Portal Companion Collection.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Falling polyomino pieces rotate in fixed increments to fit into the playfield grid."
+    },
+    {
+      "mechanic_slug": "multi-line-scoring-multiplier",
+      "role": "supporting",
+      "map_notes": "Multi Line Scoring Multiplier supports the main loop in Portal Companion Collection.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Clearing multiple lines simultaneously awards disproportionately higher scores than single-line clears."
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Life Based Retry System supports the main loop in Portal Companion Collection.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "A failure-buffer system in which the player is granted a limited number of retries, losing one life upon failure and restarting from a previous checkpoint."
+    },
+    {
+      "mechanic_slug": "escalating-drop-speed",
+      "role": "supporting",
+      "map_notes": "Escalating Drop Speed supports the main loop in Portal Companion Collection.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "The rate at which pieces fall increases over time or level, compressing decision windows as the session progresses."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2022
+  },
+  "design_intent": {
+    "player_fantasy": "A puzzle experience centered on Portal Companion Collection.",
+    "theme_tags": [
+      "puzzle",
+      "physics-puzzle-gating",
+      "portal-spatial-reasoning",
+      "linear-stage-gauntlet"
+    ],
+    "design_pillars": [
+      "Physics Puzzle Gating",
+      "Portal Spatial Reasoning",
+      "Linear Stage Gauntlet"
+    ]
+  }
+}

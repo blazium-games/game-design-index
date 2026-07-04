@@ -1,0 +1,239 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Players infer rules from clues and environmental evidence.",
+      "Spatial placement puzzles with clear validity rules.",
+      "Logic deduction on hidden grids with numeric feedback."
+    ],
+    "player_fantasy": "Experience Puzzle Game through its signature loop.",
+    "theme_tags": [
+      "puzzle-game",
+      "evidence-deduction-puzzle",
+      "block-placement-tetromino",
+      "grid-deduction-mines"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: undo-or-retry",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Players infer rules from clues and environmental evidence.",
+    "economy_notes": "none",
+    "overview": "Puzzle Game genre recipe anchored on evidence-deduction-puzzle, block-placement-tetromino.",
+    "player_goals": [
+      "Players infer rules from clues and environmental evidence.",
+      "Spatial placement puzzles with clear validity rules.",
+      "Logic deduction on hidden grids with numeric feedback."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "progression",
+      "expression": "Players infer rules from clues and environmental evidence.",
+      "map_notes": "Players infer rules from clues and environmental evidence.",
+      "mechanic_slug": "evidence-deduction-puzzle",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "evidence-deduction-puzzle"
+      ],
+      "domain": "progression",
+      "expression": "Spatial placement puzzles with clear validity rules.",
+      "map_notes": "Spatial placement puzzles with clear validity rules.",
+      "mechanic_slug": "block-placement-tetromino",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "economy",
+      "expression": "Logic deduction on hidden grids with numeric feedback.",
+      "map_notes": "Logic deduction on hidden grids with numeric feedback.",
+      "mechanic_slug": "grid-deduction-mines",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "progression",
+      "expression": "Self-contained rooms teaching one rule each.",
+      "map_notes": "Self-contained rooms teaching one rule each.",
+      "mechanic_slug": "puzzle-room-exploration",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "progression",
+      "expression": "Optional narrative branches from solved mysteries.",
+      "map_notes": "Optional narrative branches from solved mysteries.",
+      "mechanic_slug": "dialogue-choice-consequences",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 2
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Players infer rules from clues and environmental evidence.",
+    "description": "Puzzle Game games center on players infer rules from clues and environmental evidence.",
+    "design_pillars": [
+      "Players infer rules from clues and environmental evidence.",
+      "Spatial placement puzzles with clear validity rules.",
+      "Logic deduction on hidden grids with numeric feedback."
+    ],
+    "skills_tested": [
+      "puzzle logic",
+      "pattern recognition",
+      "narrative inference"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure",
+      "precision-platformer"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "evidence-deduction-puzzle",
+    "block-placement-tetromino",
+    "grid-deduction-mines"
+  ],
+  "skill_slugs": [
+    "puzzle-logic",
+    "pattern-recognition",
+    "narrative-inference"
+  ],
+  "slug": "puzzle-game",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Puzzle",
+      "Adventure"
+    ],
+    "influences": [
+      "Portal",
+      "Baba Is You"
+    ],
+    "kind": "genre",
+    "name": "Puzzle Game"
+  },
+  "systems": {
+    "economy_tightness": "none",
+    "failure_model": "undo-or-retry",
+    "metaprogression": false,
+    "pacing": {
+      "early": "Teach evidence deduction puzzle with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Evidence Deduction Puzzle",
+        "mechanics": [
+          "evidence-deduction-puzzle"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Block Placement Tetromino",
+        "mechanics": [
+          "block-placement-tetromino"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Grid Deduction Mines",
+        "mechanics": [
+          "grid-deduction-mines"
+        ]
+      }
+    ]
+  },
+  "title": "Puzzle Game Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Retry and settings.",
+      "menu_slug": "pause-menu",
+      "role": "contextual"
+    },
+    {
+      "map_notes": "Collected clue items.",
+      "menu_slug": "inventory-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Clues and tools for puzzle states.",
+      "role": "supporting",
+      "variable_slug": "key-items"
+    },
+    {
+      "expression": "Optional challenge constraints.",
+      "role": "hidden",
+      "variable_slug": "timer"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-puzzle-game",
+      "label": "Hardcore Puzzle Game",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

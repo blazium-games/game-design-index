@@ -1,0 +1,25 @@
+{
+  "name": "submit_feedback",
+  "description": "Report a problem with this documentation site so the docs team can fix it. Use when a documentation page is incorrect, outdated, confusing, incomplete, or has a broken example. This is for feedback about the documentation content itself — not for product support requests or feedback about this tool or assistant.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "path": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The documentation page path the feedback is about (e.g., the page you were reading, such as `/quickstart`)."
+      },
+      "feedback": {
+        "type": "string",
+        "minLength": 1,
+        "description": "A clear description of the documentation issue or suggestion — what is incorrect, outdated, missing, or confusing."
+      }
+    },
+    "required": [
+      "path",
+      "feedback"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

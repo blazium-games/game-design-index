@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.1",
+  "slug": "ninpen-manmaru",
+  "title": "Ninpen Manmaru Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Ninpen Manmaru",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Super Mario 64",
+      "Jumping Flash"
+    ]
+  },
+  "narrative": {
+    "description": "One of the earliest Japanese 3D platformers, Ninpen Manmaru sends a ninja penguin through polygonal stages with basic hub navigation and collect-a-thon goals ahead of its contemporaries.",
+    "core_loop": "Clear linear 3D stages, collect scattered objectives, and unlock subsequent worlds from a simple hub.",
+    "skills_tested": [
+      "3D navigation",
+      "jump timing",
+      "collectible routing"
+    ]
+  },
+  "signature_gameplay": [
+    "free-camera-3d-movement",
+    "collectathon-token-gating",
+    "hub-world-stage-gates"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "free-camera-3d-movement",
+      "role": "signature",
+      "map_notes": "Early analog 3D movement with fixed camera angles per stage section.",
+      "domain": "locomotion",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Early analog 3D movement with fixed camera angles per stage section.",
+      "depends_on": [
+        "environmental-hazard-navigation",
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Collectibles gate stage completion and hub progression.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Collectibles gate stage completion and hub progression.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "signature",
+      "map_notes": "Central hub connects to individual 3D courses.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Central hub connects to individual 3D courses.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Jump arcs require careful analog input on narrow ledges.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Jump arcs require careful analog input on narrow ledges.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Limited lives restart the current stage.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Limited lives restart the current stage.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Pits and enemy contact punish misjudged jumps.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Pits and enemy contact punish misjudged jumps.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Stage boundaries checkpoint progress between attempts.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Stage boundaries checkpoint progress between attempts.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "Basic attack clears fodder enemies blocking paths.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Basic attack clears fodder enemies blocking paths."
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden collectibles reward thorough stage exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden collectibles reward thorough stage exploration."
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Boss clears unlock the next hub portal.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss clears unlock the next hub portal.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "End-stage bosses follow simple repeating patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "End-stage bosses follow simple repeating patterns."
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health depletes on enemy hits and falls.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health depletes on enemy hits and falls.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1996
+  },
+  "relationships": {
+    "influence_slugs": [
+      "super-mario-64"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Ninpen Manmaru through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "free-camera-3d-movement",
+      "collectathon-token-gating",
+      "hub-world-stage-gates"
+    ],
+    "design_pillars": [
+      "Free Camera 3D Movement",
+      "Collectathon Token Gating",
+      "Hub World Stage Gates"
+    ]
+  }
+}

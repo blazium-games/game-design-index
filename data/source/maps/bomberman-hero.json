@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.1",
+  "slug": "bomberman-hero",
+  "title": "Bomberman Hero Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Bomberman Hero",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Bomberman",
+      "Super Mario 64"
+    ]
+  },
+  "narrative": {
+    "description": "Hudson's 3D Bomberman adventure replaces grid bombing with free-roam stages, gold card collection, and multi-route level design across five planets.",
+    "core_loop": "Place timed bombs in 3D arenas, collect gold cards, defeat Dark Bomber, and clear five planet gauntlets.",
+    "skills_tested": [
+      "bomb timing",
+      "card routing",
+      "enemy spacing"
+    ]
+  },
+  "signature_gameplay": [
+    "linear-stage-gauntlet",
+    "collectathon-token-gating",
+    "environmental-hazard-navigation"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "linear-stage-gauntlet",
+      "role": "signature",
+      "map_notes": "Planet stages are forward gauntlets with bomb-gated obstacles.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Planet stages are forward gauntlets with bomb-gated obstacles.",
+      "depends_on": [
+        "boss-gated-progression",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "signature",
+      "map_notes": "Five gold cards per stage gate completion and secrets.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Five gold cards per stage gate completion and secrets.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "signature",
+      "map_notes": "Bomb chains and hazards require careful placement.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Bomb chains and hazards require careful placement.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Bomb fuse timers telegraph explosion windows.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bomb fuse timers telegraph explosion windows.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Dark Bomber lieutenants guard planet progression.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Dark Bomber lieutenants guard planet progression.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses follow bomb-dodge attack cycles.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses follow bomb-dodge attack cycles.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Hidden cards and routes reward thorough exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Hidden cards and routes reward thorough exploration."
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Stage portals checkpoint between attempts.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Stage portals checkpoint between attempts.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "supporting",
+      "map_notes": "Limited health and lives gate retries.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Limited health and lives gate retries.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Platform jumps require exact bomb-assisted routing.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Platform jumps require exact bomb-assisted routing.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Final Dark Bomber fight spans multiple forms.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Final Dark Bomber fight spans multiple forms.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Health depletes from enemy contact and bomb self-damage.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Health depletes from enemy contact and bomb self-damage.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1998
+  },
+  "relationships": {
+    "influence_slugs": [
+      "bomberman",
+      "super-mario-64"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Bomberman Hero through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "linear-stage-gauntlet",
+      "collectathon-token-gating",
+      "environmental-hazard-navigation"
+    ],
+    "design_pillars": [
+      "Linear Stage Gauntlet",
+      "Collectathon Token Gating",
+      "Environmental Hazard Navigation"
+    ]
+  }
+}

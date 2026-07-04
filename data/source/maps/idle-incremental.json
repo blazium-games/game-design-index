@@ -1,0 +1,209 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Exponential upgrade trees and automation.",
+      "Prestige layers reset with persistent bonuses."
+    ],
+    "player_fantasy": "Experience Idle Incremental through its signature loop.",
+    "theme_tags": [
+      "idle-incremental",
+      "purchase-gated-upgrade",
+      "metaprogression"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: prestige-reset",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Exponential upgrade trees and automation.",
+    "economy_notes": "escalating",
+    "overview": "Idle Incremental genre recipe anchored on purchase-gated-upgrade, metaprogression.",
+    "player_goals": [
+      "Exponential upgrade trees and automation.",
+      "Prestige layers reset with persistent bonuses."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "economy",
+      "expression": "Exponential upgrade trees and automation.",
+      "map_notes": "Exponential upgrade trees and automation.",
+      "mechanic_slug": "purchase-gated-upgrade",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ],
+      "domain": "progression",
+      "expression": "Prestige layers reset with persistent bonuses.",
+      "map_notes": "Prestige layers reset with persistent bonuses.",
+      "mechanic_slug": "metaprogression",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "progression",
+      "expression": "Passive earn rates and multipliers.",
+      "map_notes": "Passive earn rates and multipliers.",
+      "mechanic_slug": "fill-reward-progression-loop",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Exponential upgrade trees and automation.",
+    "description": "Idle Incremental games center on exponential upgrade trees and automation.",
+    "design_pillars": [
+      "Exponential upgrade trees and automation.",
+      "Prestige layers reset with persistent bonuses."
+    ],
+    "skills_tested": [
+      "resource management",
+      "run planning",
+      "pattern recognition"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "tycoon-simulation",
+      "roguelike-deckbuilder"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "purchase-gated-upgrade",
+    "metaprogression"
+  ],
+  "skill_slugs": [
+    "resource-management",
+    "run-planning",
+    "pattern-recognition"
+  ],
+  "slug": "idle-incremental",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Idle",
+      "Strategy"
+    ],
+    "influences": [
+      "Cookie Clicker",
+      "Melvor Idle"
+    ],
+    "kind": "genre",
+    "name": "Idle Incremental"
+  },
+  "systems": {
+    "economy_tightness": "escalating",
+    "failure_model": "prestige-reset",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach purchase gated upgrade with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Purchase Gated Upgrade",
+        "mechanics": [
+          "purchase-gated-upgrade"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Metaprogression",
+        "mechanics": [
+          "metaprogression"
+        ]
+      }
+    ]
+  },
+  "title": "Idle Incremental Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Upgrade purchase screen.",
+      "menu_slug": "shop-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Prestige and meta tabs.",
+      "menu_slug": "hub-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Primary generator currency.",
+      "role": "primary",
+      "variable_slug": "currency-soft"
+    },
+    {
+      "expression": "Prestige or ascension currency.",
+      "role": "supporting",
+      "variable_slug": "meta-currency"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-idle-incremental",
+      "label": "Hardcore Idle Incremental",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

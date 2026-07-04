@@ -1,0 +1,268 @@
+{
+  "context": {
+    "year": 2017
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Open World Exploration",
+      "Open World Quest Log",
+      "Equipment Loadout"
+    ],
+    "player_fantasy": "Experience The Legend of Zelda: Breath of the Wild through its core action-adventure loop.",
+    "theme_tags": [
+      "action-adventure",
+      "open-world",
+      "open-world-exploration",
+      "open-world-quest-log",
+      "equipment-loadout"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Slow-motion flurry rush rewards dodge timing; enemy camps reward stealth or weapon variety.",
+    "constraints": [
+      "Weapons break with use",
+      "Stamina limits climb, sprint, and glide",
+      "Cold, heat, and lightning demand preparation"
+    ],
+    "core_loop": "Scout landmarks, complete shrines and towers for map data, pursue main and side quests from the journal, manage weapons and food buffs in combat, and upgrade stamina or hearts at spirit orbs.",
+    "economy_notes": "No universal currency focus; loot is gear and materials for cooking and upgrades.",
+    "overview": "Breath of the Wild is an open-world action-adventure where Link explores Hyrule with minimal waypointing, climbing and gliding traversal, breakable weapons, and shrine puzzles layered over a flexible main quest.",
+    "player_goals": [
+      "Defeat Calamity Ganon",
+      "Free Divine Beasts or pursue direct route",
+      "Complete optional shrines and Korok collection"
+    ],
+    "progression_notes": "Spirit orbs trade shrine rewards for heart or stamina; armor and abilities gate extreme climates."
+  },
+  "map_type": "game",
+  "mechanics": [
+    {
+      "depends_on": [
+        "exploration-gated-upgrades"
+      ],
+      "domain": "progression",
+      "expression": "In The Legend of Zelda: Breath of the Wild, minimal UI encourages discovery of landmarks and secrets across vast terrain.",
+      "map_notes": "In The Legend of Zelda: Breath of the Wild, minimal UI encourages discovery of landmarks and secrets across vast terrain.",
+      "mechanic_slug": "open-world-exploration",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "exploration-gated-upgrades"
+      ],
+      "domain": "progression",
+      "expression": "In The Legend of Zelda: Breath of the Wild, a persistent world offers main and side quests tracked in a log with flexible completion order.",
+      "map_notes": "In The Legend of Zelda: Breath of the Wild, a persistent world offers main and side quests tracked in a log with flexible completion order.",
+      "mechanic_slug": "open-world-quest-log",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "economy",
+      "expression": "In The Legend of Zelda: Breath of the Wild, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "map_notes": "In The Legend of Zelda: Breath of the Wild, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "mechanic_slug": "equipment-loadout",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "optional-content-layering"
+      ],
+      "domain": "progression",
+      "expression": "In The Legend of Zelda: Breath of the Wild, the character unlocks permanent upgrades obtained through spatial exploration and world interaction, rather than direct combat rewards.",
+      "map_notes": "In The Legend of Zelda: Breath of the Wild, the character unlocks permanent upgrades obtained through spatial exploration and world interaction, rather than direct combat rewards.",
+      "mechanic_slug": "exploration-gated-upgrades",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "exploration-gated-upgrades"
+      ],
+      "domain": "level",
+      "expression": "In The Legend of Zelda: Breath of the Wild, hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments.",
+      "map_notes": "In The Legend of Zelda: Breath of the Wild, hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments.",
+      "mechanic_slug": "optional-content-layering",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    }
+  ],
+  "menu_flow": [
+    {
+      "from_menu": "pause-menu",
+      "relationship": "opens",
+      "to_menu": "inventory-menu"
+    },
+    {
+      "from_menu": "pause-menu",
+      "relationship": "opens",
+      "to_menu": "map-menu"
+    },
+    {
+      "from_menu": "pause-menu",
+      "relationship": "opens",
+      "to_menu": "options-menu"
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Explore Hyrule freely, complete shrines and towers, gather equipment and food, and tackle divine beasts and Ganon at your own pace.",
+    "description": "Breath of the Wild is an open-world action adventure emphasizing free exploration, shrine puzzles, and gear-based combat.",
+    "skills_tested": [
+      "exploration",
+      "improvisation",
+      "resource gathering",
+      "combat adaptability"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure",
+      "open-world-action"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "open-world-exploration",
+    "open-world-quest-log",
+    "equipment-loadout",
+    "exploration-gated-upgrades",
+    "optional-content-layering"
+  ],
+  "skill_slugs": [
+    "exploration",
+    "resource-management",
+    "risk-evaluation",
+    "stamina-management",
+    "loadout-optimization"
+  ],
+  "slug": "zelda-breath-of-the-wild",
+  "source_url": "https://www.metacritic.com/browse/game/all/all/all-time/metascore/",
+  "subject": {
+    "genres": [
+      "Action-Adventure",
+      "Open World"
+    ],
+    "kind": "game",
+    "name": "The Legend of Zelda: Breath of the Wild"
+  },
+  "title": "The Legend of Zelda: Breath of the Wild Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Inventory, map, and system from + menu.",
+      "menu_slug": "pause-menu",
+      "role": "core"
+    },
+    {
+      "displays_variables": [
+        "inventory-slots",
+        "equipment-belt-slots",
+        "ammo"
+      ],
+      "map_notes": "Armor, food, and materials.",
+      "menu_slug": "inventory-menu",
+      "opens_from": [
+        "pause-menu"
+      ],
+      "role": "core"
+    },
+    {
+      "map_notes": "Tower-unlocked map with pins.",
+      "menu_slug": "map-menu",
+      "opens_from": [
+        "pause-menu"
+      ],
+      "role": "core"
+    },
+    {
+      "map_notes": "Audio, controls, and HUD.",
+      "menu_slug": "options-menu",
+      "opens_from": [
+        "pause-menu"
+      ],
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "map_notes": "Heart containers from shrines.",
+      "related_mechanics": [
+        "depletable-health-pool"
+      ],
+      "role": "primary",
+      "variable_slug": "health"
+    },
+    {
+      "expression": "Vessel upgrades from shrines.",
+      "map_notes": "Stamina wheels for climb, sprint, glide.",
+      "role": "primary",
+      "variable_slug": "stamina"
+    },
+    {
+      "map_notes": "Weapon, bow, shield, material caps.",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "role": "primary",
+      "variable_slug": "inventory-slots"
+    },
+    {
+      "map_notes": "D-pad weapon and shield quick select.",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "role": "supporting",
+      "variable_slug": "equipment-belt-slots"
+    },
+    {
+      "expression": "Crafted and purchased.",
+      "map_notes": "Arrows and bombs from inventory.",
+      "role": "supporting",
+      "variable_slug": "ammo"
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

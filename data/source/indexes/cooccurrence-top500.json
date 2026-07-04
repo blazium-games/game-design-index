@@ -1,0 +1,2504 @@
+{
+  "pairs": [
+    {
+      "mechanic_a": "dialogue-choice-consequences",
+      "mechanic_b": "environmental-trigger-switch",
+      "count": 556
+    },
+    {
+      "mechanic_a": "dialogue-choice-consequences",
+      "mechanic_b": "narrative-chapter-progression",
+      "count": 552
+    },
+    {
+      "mechanic_a": "environmental-trigger-switch",
+      "mechanic_b": "narrative-chapter-progression",
+      "count": 552
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "optional-content-layering",
+      "count": 370
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 347
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "optional-content-layering",
+      "count": 336
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 335
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 330
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 308
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 298
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 293
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "optional-content-layering",
+      "count": 293
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 287
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 286
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 286
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "optional-content-layering",
+      "count": 281
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 269
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 268
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 267
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 267
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 247
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 247
+    },
+    {
+      "mechanic_a": "rpg-stat-progression",
+      "mechanic_b": "turn-based-party-combat",
+      "count": 242
+    },
+    {
+      "mechanic_a": "equipment-loadout",
+      "mechanic_b": "rpg-stat-progression",
+      "count": 241
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 240
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 239
+    },
+    {
+      "mechanic_a": "equipment-loadout",
+      "mechanic_b": "turn-based-party-combat",
+      "count": 238
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "optional-content-layering",
+      "count": 237
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 236
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 235
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "optional-content-layering",
+      "count": 234
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 233
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 233
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 231
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 226
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "environmental-hazard-navigation",
+      "count": 217
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 217
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 214
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "map-resource-monster-groups",
+      "count": 212
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "life-based-retry-system",
+      "count": 210
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "life-based-retry-system",
+      "count": 209
+    },
+    {
+      "mechanic_a": "map-resource-monster-groups",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 209
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "equipment-loadout",
+      "count": 208
+    },
+    {
+      "mechanic_a": "equipment-loadout",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 208
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "rpg-stat-progression",
+      "count": 208
+    },
+    {
+      "mechanic_a": "equipment-loadout",
+      "mechanic_b": "map-resource-monster-groups",
+      "count": 207
+    },
+    {
+      "mechanic_a": "map-resource-monster-groups",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 206
+    },
+    {
+      "mechanic_a": "equipment-loadout",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 205
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "turn-based-party-combat",
+      "count": 205
+    },
+    {
+      "mechanic_a": "purchase-gated-upgrade",
+      "mechanic_b": "rpg-stat-progression",
+      "count": 205
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "rpg-stat-progression",
+      "count": 204
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "turn-based-party-combat",
+      "count": 203
+    },
+    {
+      "mechanic_a": "map-resource-monster-groups",
+      "mechanic_b": "rpg-stat-progression",
+      "count": 202
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "overworld-map-stage-selection",
+      "count": 202
+    },
+    {
+      "mechanic_a": "purchase-gated-upgrade",
+      "mechanic_b": "turn-based-party-combat",
+      "count": 202
+    },
+    {
+      "mechanic_a": "map-resource-monster-groups",
+      "mechanic_b": "turn-based-party-combat",
+      "count": 201
+    },
+    {
+      "mechanic_a": "overworld-map-stage-selection",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 201
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "overworld-map-stage-selection",
+      "count": 200
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 199
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 199
+    },
+    {
+      "mechanic_a": "overworld-map-stage-selection",
+      "mechanic_b": "rpg-stat-progression",
+      "count": 199
+    },
+    {
+      "mechanic_a": "overworld-map-stage-selection",
+      "mechanic_b": "turn-based-party-combat",
+      "count": 199
+    },
+    {
+      "mechanic_a": "equipment-loadout",
+      "mechanic_b": "overworld-map-stage-selection",
+      "count": 198
+    },
+    {
+      "mechanic_a": "map-resource-monster-groups",
+      "mechanic_b": "overworld-map-stage-selection",
+      "count": 198
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "optional-content-layering",
+      "count": 195
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "mission-select-structure",
+      "count": 193
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "mission-select-structure",
+      "count": 190
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 186
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "optional-content-layering",
+      "count": 185
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "mission-select-structure",
+      "count": 185
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "environmental-hazard-navigation",
+      "count": 184
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 182
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 181
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "depletable-health-pool",
+      "count": 177
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 174
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 166
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 163
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 163
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 161
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 150
+    },
+    {
+      "mechanic_a": "projectile-pattern-enemy-design",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 150
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 145
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "precision-platforming",
+      "count": 136
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "precision-platforming",
+      "count": 135
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 134
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 133
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "precision-platforming",
+      "count": 131
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "precision-platforming",
+      "count": 131
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 120
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 120
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 118
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 118
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "mission-select-structure",
+      "count": 117
+    },
+    {
+      "mechanic_a": "round-based-health-duel",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 116
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 115
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 115
+    },
+    {
+      "mechanic_a": "purchase-gated-upgrade",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 115
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "mission-select-structure",
+      "count": 113
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "round-based-health-duel",
+      "count": 111
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 109
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "input-aligned-movement",
+      "count": 108
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "input-aligned-movement",
+      "count": 108
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 108
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 108
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 107
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "life-based-retry-system",
+      "count": 107
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 107
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "optional-content-layering",
+      "count": 107
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 107
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "life-based-retry-system",
+      "count": 107
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "optional-content-layering",
+      "count": 107
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 107
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "depletable-health-pool",
+      "count": 106
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 106
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 106
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 104
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 104
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "mission-select-structure",
+      "count": 103
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "mission-select-structure",
+      "count": 103
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 103
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 102
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 100
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 100
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 100
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "life-based-retry-system",
+      "count": 99
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 99
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "optional-content-layering",
+      "count": 99
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "license-progression-gates",
+      "count": 98
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 98
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 98
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "license-progression-gates",
+      "count": 97
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 97
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "mission-select-structure",
+      "count": 97
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "license-progression-gates",
+      "count": 96
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 96
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 96
+    },
+    {
+      "mechanic_a": "purchase-gated-upgrade",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 96
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 95
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 95
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 95
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 95
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 95
+    },
+    {
+      "mechanic_a": "telegraphed-threat-loop",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 95
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 94
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 94
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "life-based-retry-system",
+      "count": 88
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "mission-select-structure",
+      "count": 87
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 86
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 86
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 86
+    },
+    {
+      "mechanic_a": "resource-gated-weapon",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 86
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "health-capacity-upgrade",
+      "count": 85
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 85
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "environmental-hazard-navigation",
+      "count": 85
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 85
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 85
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 85
+    },
+    {
+      "mechanic_a": "health-capacity-upgrade",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 85
+    },
+    {
+      "mechanic_a": "health-capacity-upgrade",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 85
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 85
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 84
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 84
+    },
+    {
+      "mechanic_a": "health-capacity-upgrade",
+      "mechanic_b": "optional-content-layering",
+      "count": 84
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 84
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 84
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 84
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 84
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 84
+    },
+    {
+      "mechanic_a": "stealth-detection-loop",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 84
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "depletable-health-pool",
+      "count": 83
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 83
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "optional-content-layering",
+      "count": 83
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 83
+    },
+    {
+      "mechanic_a": "projectile-pattern-enemy-design",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 83
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 82
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 82
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "health-capacity-upgrade",
+      "count": 82
+    },
+    {
+      "mechanic_a": "health-capacity-upgrade",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 82
+    },
+    {
+      "mechanic_a": "health-capacity-upgrade",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 82
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 82
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 82
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "decoupled-aim-control",
+      "count": 81
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "mission-select-structure",
+      "count": 81
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 81
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 81
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "health-capacity-upgrade",
+      "count": 81
+    },
+    {
+      "mechanic_a": "health-capacity-upgrade",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 81
+    },
+    {
+      "mechanic_a": "health-capacity-upgrade",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 81
+    },
+    {
+      "mechanic_a": "health-capacity-upgrade",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 81
+    },
+    {
+      "mechanic_a": "health-capacity-upgrade",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 81
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 81
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 81
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 81
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 81
+    },
+    {
+      "mechanic_a": "projectile-pattern-enemy-design",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 81
+    },
+    {
+      "mechanic_a": "resource-gated-weapon",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 81
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "health-capacity-upgrade",
+      "count": 80
+    },
+    {
+      "mechanic_a": "decoupled-aim-control",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 80
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 79
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 79
+    },
+    {
+      "mechanic_a": "health-capacity-upgrade",
+      "mechanic_b": "mission-select-structure",
+      "count": 79
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "life-based-retry-system",
+      "count": 79
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 79
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "resource-gated-weapon",
+      "count": 79
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "round-based-health-duel",
+      "count": 77
+    },
+    {
+      "mechanic_a": "assist-mode-accessibility",
+      "mechanic_b": "environmental-hazard-navigation",
+      "count": 76
+    },
+    {
+      "mechanic_a": "assist-mode-accessibility",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 76
+    },
+    {
+      "mechanic_a": "assist-mode-accessibility",
+      "mechanic_b": "precision-platforming",
+      "count": 76
+    },
+    {
+      "mechanic_a": "assist-mode-accessibility",
+      "mechanic_b": "life-based-retry-system",
+      "count": 75
+    },
+    {
+      "mechanic_a": "assist-mode-accessibility",
+      "mechanic_b": "optional-content-layering",
+      "count": 75
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "round-based-health-duel",
+      "count": 75
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "round-based-health-duel",
+      "count": 75
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "round-based-health-duel",
+      "count": 74
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "round-based-health-duel",
+      "count": 74
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 73
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 73
+    },
+    {
+      "mechanic_a": "power-up-transformation-states",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 73
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "round-based-health-duel",
+      "count": 72
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 72
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 72
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "round-based-health-duel",
+      "count": 72
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "round-based-health-duel",
+      "count": 71
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "round-based-health-duel",
+      "count": 71
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "round-based-health-duel",
+      "count": 71
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 71
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 71
+    },
+    {
+      "mechanic_a": "purchase-gated-upgrade",
+      "mechanic_b": "round-based-health-duel",
+      "count": 71
+    },
+    {
+      "mechanic_a": "round-based-health-duel",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 71
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 68
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 67
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 61
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "precision-platforming",
+      "count": 59
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 57
+    },
+    {
+      "mechanic_a": "precision-platforming",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 57
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "instant-fire-attack",
+      "count": 55
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 55
+    },
+    {
+      "mechanic_a": "power-up-transformation-states",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 55
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "precision-platforming",
+      "count": 54
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "instant-fire-attack",
+      "count": 54
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "environmental-trigger-switch",
+      "count": 51
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 51
+    },
+    {
+      "mechanic_a": "combo-chain-system",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 50
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "precision-platforming",
+      "count": 50
+    },
+    {
+      "mechanic_a": "environmental-trigger-switch",
+      "mechanic_b": "optional-content-layering",
+      "count": 50
+    },
+    {
+      "mechanic_a": "special-move-command-input",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 48
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 47
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "environmental-hazard-navigation",
+      "count": 45
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 45
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "optional-content-layering",
+      "count": 45
+    },
+    {
+      "mechanic_a": "combo-chain-system",
+      "mechanic_b": "frame-punish-engagement",
+      "count": 45
+    },
+    {
+      "mechanic_a": "combo-chain-system",
+      "mechanic_b": "round-based-health-duel",
+      "count": 45
+    },
+    {
+      "mechanic_a": "combo-chain-system",
+      "mechanic_b": "special-move-command-input",
+      "count": 45
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 45
+    },
+    {
+      "mechanic_a": "frame-punish-engagement",
+      "mechanic_b": "round-based-health-duel",
+      "count": 45
+    },
+    {
+      "mechanic_a": "frame-punish-engagement",
+      "mechanic_b": "special-move-command-input",
+      "count": 45
+    },
+    {
+      "mechanic_a": "round-based-health-duel",
+      "mechanic_b": "special-move-command-input",
+      "count": 45
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 44
+    },
+    {
+      "mechanic_a": "combo-chain-system",
+      "mechanic_b": "super-meter-resource",
+      "count": 44
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 44
+    },
+    {
+      "mechanic_a": "frame-punish-engagement",
+      "mechanic_b": "super-meter-resource",
+      "count": 44
+    },
+    {
+      "mechanic_a": "frame-punish-engagement",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 44
+    },
+    {
+      "mechanic_a": "round-based-health-duel",
+      "mechanic_b": "super-meter-resource",
+      "count": 44
+    },
+    {
+      "mechanic_a": "special-move-command-input",
+      "mechanic_b": "super-meter-resource",
+      "count": 44
+    },
+    {
+      "mechanic_a": "super-meter-resource",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 44
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "collectathon-token-gating",
+      "count": 42
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "life-based-retry-system",
+      "count": 42
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "optional-content-layering",
+      "count": 42
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 42
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "special-move-command-input",
+      "count": 42
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 42
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 41
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 41
+    },
+    {
+      "mechanic_a": "combo-chain-system",
+      "mechanic_b": "mission-select-structure",
+      "count": 41
+    },
+    {
+      "mechanic_a": "frame-punish-engagement",
+      "mechanic_b": "mission-select-structure",
+      "count": 41
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "super-meter-resource",
+      "count": 41
+    },
+    {
+      "mechanic_a": "bench-checkpoint",
+      "mechanic_b": "depletable-health-pool",
+      "count": 40
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "precision-platforming",
+      "count": 40
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "instant-fire-attack",
+      "count": 39
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 39
+    },
+    {
+      "mechanic_a": "cover-based-positioning",
+      "mechanic_b": "equipment-loadout",
+      "count": 38
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "momentum-based-speed",
+      "count": 38
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "momentum-based-speed",
+      "count": 38
+    },
+    {
+      "mechanic_a": "momentum-based-speed",
+      "mechanic_b": "optional-content-layering",
+      "count": 38
+    },
+    {
+      "mechanic_a": "momentum-based-speed",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 38
+    },
+    {
+      "mechanic_a": "bench-checkpoint",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 37
+    },
+    {
+      "mechanic_a": "cover-based-positioning",
+      "mechanic_b": "permadeath-unit-loss",
+      "count": 37
+    },
+    {
+      "mechanic_a": "cover-based-positioning",
+      "mechanic_b": "rpg-stat-progression",
+      "count": 37
+    },
+    {
+      "mechanic_a": "cover-based-positioning",
+      "mechanic_b": "tactics-grid-movement",
+      "count": 37
+    },
+    {
+      "mechanic_a": "cover-based-positioning",
+      "mechanic_b": "turn-based-party-combat",
+      "count": 37
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "momentum-based-speed",
+      "count": 37
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "momentum-based-speed",
+      "count": 37
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 37
+    },
+    {
+      "mechanic_a": "permadeath-unit-loss",
+      "mechanic_b": "rpg-stat-progression",
+      "count": 37
+    },
+    {
+      "mechanic_a": "permadeath-unit-loss",
+      "mechanic_b": "tactics-grid-movement",
+      "count": 37
+    },
+    {
+      "mechanic_a": "permadeath-unit-loss",
+      "mechanic_b": "turn-based-party-combat",
+      "count": 37
+    },
+    {
+      "mechanic_a": "rpg-stat-progression",
+      "mechanic_b": "tactics-grid-movement",
+      "count": 37
+    },
+    {
+      "mechanic_a": "tactics-grid-movement",
+      "mechanic_b": "turn-based-party-combat",
+      "count": 37
+    },
+    {
+      "mechanic_a": "equipment-loadout",
+      "mechanic_b": "permadeath-unit-loss",
+      "count": 36
+    },
+    {
+      "mechanic_a": "equipment-loadout",
+      "mechanic_b": "tactics-grid-movement",
+      "count": 36
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "sector-clear-progression",
+      "count": 35
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "sector-clear-progression",
+      "count": 35
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "sector-clear-progression",
+      "count": 35
+    },
+    {
+      "mechanic_a": "sector-clear-progression",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 35
+    },
+    {
+      "mechanic_a": "bench-checkpoint",
+      "mechanic_b": "optional-content-layering",
+      "count": 34
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "sector-clear-progression",
+      "count": 34
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "sector-clear-progression",
+      "count": 34
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "depletable-health-pool",
+      "count": 33
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "environmental-hazard-navigation",
+      "count": 33
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "input-aligned-movement",
+      "count": 33
+    },
+    {
+      "mechanic_a": "environmental-trigger-switch",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 33
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "sector-clear-progression",
+      "count": 33
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "momentum-based-speed",
+      "count": 32
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 32
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "momentum-based-speed",
+      "count": 32
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "sector-clear-progression",
+      "count": 32
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "momentum-based-speed",
+      "count": 31
+    },
+    {
+      "mechanic_a": "projectile-pattern-enemy-design",
+      "mechanic_b": "sector-clear-progression",
+      "count": 31
+    },
+    {
+      "mechanic_a": "bench-checkpoint",
+      "mechanic_b": "environmental-trigger-switch",
+      "count": 30
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "resource-scarcity-management",
+      "count": 30
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "resource-scarcity-management",
+      "count": 30
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "hub-world-stage-gates",
+      "count": 29
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "loop-geometry-traversal",
+      "count": 29
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "hub-world-stage-gates",
+      "count": 29
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "loop-geometry-traversal",
+      "count": 29
+    },
+    {
+      "mechanic_a": "hub-world-stage-gates",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 29
+    },
+    {
+      "mechanic_a": "hub-world-stage-gates",
+      "mechanic_b": "optional-content-layering",
+      "count": 29
+    },
+    {
+      "mechanic_a": "hub-world-stage-gates",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 29
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "loop-geometry-traversal",
+      "count": 29
+    },
+    {
+      "mechanic_a": "loop-geometry-traversal",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 29
+    },
+    {
+      "mechanic_a": "loop-geometry-traversal",
+      "mechanic_b": "momentum-based-speed",
+      "count": 29
+    },
+    {
+      "mechanic_a": "loop-geometry-traversal",
+      "mechanic_b": "optional-content-layering",
+      "count": 29
+    },
+    {
+      "mechanic_a": "loop-geometry-traversal",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 29
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "license-progression-gates",
+      "count": 28
+    },
+    {
+      "mechanic_a": "mission-select-structure",
+      "mechanic_b": "momentum-based-speed",
+      "count": 28
+    },
+    {
+      "mechanic_a": "momentum-based-speed",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 28
+    },
+    {
+      "mechanic_a": "bench-checkpoint",
+      "mechanic_b": "resource-scarcity-management",
+      "count": 27
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "hub-world-stage-gates",
+      "count": 27
+    },
+    {
+      "mechanic_a": "combo-trick-scoring",
+      "mechanic_b": "loop-geometry-traversal",
+      "count": 27
+    },
+    {
+      "mechanic_a": "escalating-drop-speed",
+      "mechanic_b": "life-based-retry-system",
+      "count": 27
+    },
+    {
+      "mechanic_a": "input-aligned-movement",
+      "mechanic_b": "loop-geometry-traversal",
+      "count": 27
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "momentum-based-speed",
+      "count": 27
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "loop-geometry-traversal",
+      "count": 27
+    },
+    {
+      "mechanic_a": "loop-geometry-traversal",
+      "mechanic_b": "mission-select-structure",
+      "count": 27
+    },
+    {
+      "mechanic_a": "loop-geometry-traversal",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 27
+    },
+    {
+      "mechanic_a": "resource-scarcity-management",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 27
+    },
+    {
+      "mechanic_a": "environmental-trigger-switch",
+      "mechanic_b": "resource-scarcity-management",
+      "count": 26
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "life-based-retry-system",
+      "count": 26
+    },
+    {
+      "mechanic_a": "hub-world-stage-gates",
+      "mechanic_b": "life-based-retry-system",
+      "count": 26
+    },
+    {
+      "mechanic_a": "hub-world-stage-gates",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 26
+    },
+    {
+      "mechanic_a": "license-progression-gates",
+      "mechanic_b": "loop-geometry-traversal",
+      "count": 26
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "multi-line-scoring-multiplier",
+      "count": 26
+    },
+    {
+      "mechanic_a": "melee-primary-combat",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 26
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "sector-clear-progression",
+      "count": 26
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "sector-clear-progression",
+      "count": 25
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "spin-attack-combat",
+      "count": 25
+    },
+    {
+      "mechanic_a": "hub-world-stage-gates",
+      "mechanic_b": "precision-platforming",
+      "count": 25
+    },
+    {
+      "mechanic_a": "mid-level-checkpoint",
+      "mechanic_b": "spin-attack-combat",
+      "count": 25
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "spin-attack-combat",
+      "count": 25
+    },
+    {
+      "mechanic_a": "patterned-boss-encounter",
+      "mechanic_b": "spin-attack-combat",
+      "count": 25
+    },
+    {
+      "mechanic_a": "purchase-gated-upgrade",
+      "mechanic_b": "resource-scarcity-management",
+      "count": 25
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "melee-primary-combat",
+      "count": 24
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 24
+    },
+    {
+      "mechanic_a": "escalating-drop-speed",
+      "mechanic_b": "hard-drop-placement",
+      "count": 24
+    },
+    {
+      "mechanic_a": "escalating-drop-speed",
+      "mechanic_b": "lock-delay-placement",
+      "count": 24
+    },
+    {
+      "mechanic_a": "escalating-drop-speed",
+      "mechanic_b": "multi-line-scoring-multiplier",
+      "count": 24
+    },
+    {
+      "mechanic_a": "escalating-drop-speed",
+      "mechanic_b": "next-piece-preview",
+      "count": 24
+    },
+    {
+      "mechanic_a": "escalating-drop-speed",
+      "mechanic_b": "soft-drop-control",
+      "count": 24
+    },
+    {
+      "mechanic_a": "escalating-drop-speed",
+      "mechanic_b": "tetromino-rotation",
+      "count": 24
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "resource-scarcity-management",
+      "count": 24
+    },
+    {
+      "mechanic_a": "hard-drop-placement",
+      "mechanic_b": "life-based-retry-system",
+      "count": 24
+    },
+    {
+      "mechanic_a": "hard-drop-placement",
+      "mechanic_b": "lock-delay-placement",
+      "count": 24
+    },
+    {
+      "mechanic_a": "hard-drop-placement",
+      "mechanic_b": "multi-line-scoring-multiplier",
+      "count": 24
+    },
+    {
+      "mechanic_a": "hard-drop-placement",
+      "mechanic_b": "next-piece-preview",
+      "count": 24
+    },
+    {
+      "mechanic_a": "hard-drop-placement",
+      "mechanic_b": "soft-drop-control",
+      "count": 24
+    },
+    {
+      "mechanic_a": "hard-drop-placement",
+      "mechanic_b": "tetromino-rotation",
+      "count": 24
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "lock-delay-placement",
+      "count": 24
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "next-piece-preview",
+      "count": 24
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "soft-drop-control",
+      "count": 24
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "tetromino-rotation",
+      "count": 24
+    },
+    {
+      "mechanic_a": "lock-delay-placement",
+      "mechanic_b": "multi-line-scoring-multiplier",
+      "count": 24
+    },
+    {
+      "mechanic_a": "lock-delay-placement",
+      "mechanic_b": "next-piece-preview",
+      "count": 24
+    },
+    {
+      "mechanic_a": "lock-delay-placement",
+      "mechanic_b": "soft-drop-control",
+      "count": 24
+    },
+    {
+      "mechanic_a": "lock-delay-placement",
+      "mechanic_b": "tetromino-rotation",
+      "count": 24
+    },
+    {
+      "mechanic_a": "loop-geometry-traversal",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 24
+    },
+    {
+      "mechanic_a": "momentum-based-speed",
+      "mechanic_b": "vehicle-tuning-economy",
+      "count": 24
+    },
+    {
+      "mechanic_a": "multi-line-scoring-multiplier",
+      "mechanic_b": "next-piece-preview",
+      "count": 24
+    },
+    {
+      "mechanic_a": "multi-line-scoring-multiplier",
+      "mechanic_b": "soft-drop-control",
+      "count": 24
+    },
+    {
+      "mechanic_a": "multi-line-scoring-multiplier",
+      "mechanic_b": "tetromino-rotation",
+      "count": 24
+    },
+    {
+      "mechanic_a": "next-piece-preview",
+      "mechanic_b": "soft-drop-control",
+      "count": 24
+    },
+    {
+      "mechanic_a": "next-piece-preview",
+      "mechanic_b": "tetromino-rotation",
+      "count": 24
+    },
+    {
+      "mechanic_a": "soft-drop-control",
+      "mechanic_b": "tetromino-rotation",
+      "count": 24
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "spin-attack-combat",
+      "count": 23
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "fixed-formation-shooter",
+      "count": 23
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "fixed-formation-shooter",
+      "count": 23
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "life-based-retry-system",
+      "count": 23
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 23
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "projectile-pattern-enemy-design",
+      "count": 23
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 23
+    },
+    {
+      "mechanic_a": "spin-attack-combat",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 23
+    },
+    {
+      "mechanic_a": "environmental-hazard-navigation",
+      "mechanic_b": "melee-primary-combat",
+      "count": 22
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "multi-line-scoring-multiplier",
+      "count": 22
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "instant-fire-attack",
+      "count": 22
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 22
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 22
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "sector-clear-progression",
+      "count": 22
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "spin-attack-combat",
+      "count": 22
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "sector-clear-progression",
+      "count": 22
+    },
+    {
+      "mechanic_a": "melee-primary-combat",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 22
+    },
+    {
+      "mechanic_a": "power-up-transformation-states",
+      "mechanic_b": "sector-clear-progression",
+      "count": 22
+    },
+    {
+      "mechanic_a": "city-building-economy",
+      "mechanic_b": "city-building-simulation",
+      "count": 21
+    },
+    {
+      "mechanic_a": "city-building-economy",
+      "mechanic_b": "fill-reward-progression-loop",
+      "count": 21
+    },
+    {
+      "mechanic_a": "city-building-economy",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 21
+    },
+    {
+      "mechanic_a": "city-building-economy",
+      "mechanic_b": "resource-scarcity-management",
+      "count": 21
+    },
+    {
+      "mechanic_a": "city-building-simulation",
+      "mechanic_b": "fill-reward-progression-loop",
+      "count": 21
+    },
+    {
+      "mechanic_a": "city-building-simulation",
+      "mechanic_b": "purchase-gated-upgrade",
+      "count": 21
+    },
+    {
+      "mechanic_a": "city-building-simulation",
+      "mechanic_b": "resource-scarcity-management",
+      "count": 21
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "optional-content-layering",
+      "count": 21
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "power-up-transformation-states",
+      "count": 21
+    },
+    {
+      "mechanic_a": "melee-primary-combat",
+      "mechanic_b": "optional-content-layering",
+      "count": 21
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "fixed-formation-shooter",
+      "count": 20
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "spin-attack-combat",
+      "count": 20
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "hub-world-stage-gates",
+      "count": 20
+    },
+    {
+      "mechanic_a": "escalating-drop-speed",
+      "mechanic_b": "fill-reward-progression-loop",
+      "count": 20
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "hard-drop-placement",
+      "count": 20
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "lock-delay-placement",
+      "count": 20
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "next-piece-preview",
+      "count": 20
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "soft-drop-control",
+      "count": 20
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "tetromino-rotation",
+      "count": 20
+    },
+    {
+      "mechanic_a": "precision-platforming",
+      "mechanic_b": "spin-attack-combat",
+      "count": 20
+    },
+    {
+      "mechanic_a": "escalating-drop-speed",
+      "mechanic_b": "grid-placement-puzzle",
+      "count": 19
+    },
+    {
+      "mechanic_a": "escalating-drop-speed",
+      "mechanic_b": "line-clear-scoring",
+      "count": 19
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "grid-placement-puzzle",
+      "count": 19
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "line-clear-scoring",
+      "count": 19
+    },
+    {
+      "mechanic_a": "fixed-formation-shooter",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 19
+    },
+    {
+      "mechanic_a": "grid-placement-puzzle",
+      "mechanic_b": "hard-drop-placement",
+      "count": 19
+    },
+    {
+      "mechanic_a": "grid-placement-puzzle",
+      "mechanic_b": "life-based-retry-system",
+      "count": 19
+    },
+    {
+      "mechanic_a": "grid-placement-puzzle",
+      "mechanic_b": "line-clear-scoring",
+      "count": 19
+    },
+    {
+      "mechanic_a": "grid-placement-puzzle",
+      "mechanic_b": "lock-delay-placement",
+      "count": 19
+    },
+    {
+      "mechanic_a": "grid-placement-puzzle",
+      "mechanic_b": "multi-line-scoring-multiplier",
+      "count": 19
+    },
+    {
+      "mechanic_a": "grid-placement-puzzle",
+      "mechanic_b": "next-piece-preview",
+      "count": 19
+    },
+    {
+      "mechanic_a": "grid-placement-puzzle",
+      "mechanic_b": "soft-drop-control",
+      "count": 19
+    },
+    {
+      "mechanic_a": "grid-placement-puzzle",
+      "mechanic_b": "tetromino-rotation",
+      "count": 19
+    },
+    {
+      "mechanic_a": "hard-drop-placement",
+      "mechanic_b": "line-clear-scoring",
+      "count": 19
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "line-clear-scoring",
+      "count": 19
+    },
+    {
+      "mechanic_a": "line-clear-scoring",
+      "mechanic_b": "lock-delay-placement",
+      "count": 19
+    },
+    {
+      "mechanic_a": "line-clear-scoring",
+      "mechanic_b": "multi-line-scoring-multiplier",
+      "count": 19
+    },
+    {
+      "mechanic_a": "line-clear-scoring",
+      "mechanic_b": "next-piece-preview",
+      "count": 19
+    },
+    {
+      "mechanic_a": "line-clear-scoring",
+      "mechanic_b": "soft-drop-control",
+      "count": 19
+    },
+    {
+      "mechanic_a": "line-clear-scoring",
+      "mechanic_b": "tetromino-rotation",
+      "count": 19
+    },
+    {
+      "mechanic_a": "melee-primary-combat",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 19
+    },
+    {
+      "mechanic_a": "ability-gated-exploration",
+      "mechanic_b": "boss-gated-progression",
+      "count": 18
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "melee-primary-combat",
+      "count": 18
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "sandbox-assassination-puzzle",
+      "count": 18
+    },
+    {
+      "mechanic_a": "environmental-trigger-switch",
+      "mechanic_b": "sandbox-assassination-puzzle",
+      "count": 18
+    },
+    {
+      "mechanic_a": "environmental-trigger-switch",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 18
+    },
+    {
+      "mechanic_a": "linear-stage-gauntlet",
+      "mechanic_b": "precision-platforming",
+      "count": 18
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "precision-platforming",
+      "count": 18
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "sandbox-assassination-puzzle",
+      "count": 18
+    },
+    {
+      "mechanic_a": "sandbox-assassination-puzzle",
+      "mechanic_b": "stealth-detection-loop",
+      "count": 18
+    },
+    {
+      "mechanic_a": "melee-primary-combat",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 17
+    },
+    {
+      "mechanic_a": "ability-gated-exploration",
+      "mechanic_b": "environmental-hazard-navigation",
+      "count": 16
+    },
+    {
+      "mechanic_a": "ability-gated-exploration",
+      "mechanic_b": "optional-content-layering",
+      "count": 16
+    },
+    {
+      "mechanic_a": "ability-gated-exploration",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 16
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "spin-attack-combat",
+      "count": 16
+    },
+    {
+      "mechanic_a": "life-based-retry-system",
+      "mechanic_b": "melee-primary-combat",
+      "count": 16
+    },
+    {
+      "mechanic_a": "hub-world-stage-gates",
+      "mechanic_b": "spin-attack-combat",
+      "count": 15
+    },
+    {
+      "mechanic_a": "ability-gated-exploration",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 14
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "map-resource-monster-groups",
+      "count": 14
+    },
+    {
+      "mechanic_a": "ability-gated-exploration",
+      "mechanic_b": "depletable-health-pool",
+      "count": 13
+    },
+    {
+      "mechanic_a": "ability-gated-exploration",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 13
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "loot-based-economy",
+      "count": 13
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "progress-gated-dungeon-completion",
+      "count": 13
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "optional-content-layering",
+      "count": 13
+    },
+    {
+      "mechanic_a": "loot-based-economy",
+      "mechanic_b": "multi-phase-boss-battle",
+      "count": 13
+    },
+    {
+      "mechanic_a": "loot-based-economy",
+      "mechanic_b": "optional-content-layering",
+      "count": 13
+    },
+    {
+      "mechanic_a": "multi-phase-boss-battle",
+      "mechanic_b": "progress-gated-dungeon-completion",
+      "count": 13
+    },
+    {
+      "mechanic_a": "optional-content-layering",
+      "mechanic_b": "progress-gated-dungeon-completion",
+      "count": 13
+    },
+    {
+      "mechanic_a": "progress-gated-dungeon-completion",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 13
+    },
+    {
+      "mechanic_a": "ability-gated-exploration",
+      "mechanic_b": "collectathon-token-gating",
+      "count": 12
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "character-swap-abilities",
+      "count": 12
+    },
+    {
+      "mechanic_a": "boss-gated-progression",
+      "mechanic_b": "loot-based-economy",
+      "count": 12
+    },
+    {
+      "mechanic_a": "character-swap-abilities",
+      "mechanic_b": "environmental-hazard-navigation",
+      "count": 12
+    },
+    {
+      "mechanic_a": "character-swap-abilities",
+      "mechanic_b": "life-based-retry-system",
+      "count": 12
+    },
+    {
+      "mechanic_a": "character-swap-abilities",
+      "mechanic_b": "mid-level-checkpoint",
+      "count": 12
+    },
+    {
+      "mechanic_a": "character-swap-abilities",
+      "mechanic_b": "optional-content-layering",
+      "count": 12
+    },
+    {
+      "mechanic_a": "character-swap-abilities",
+      "mechanic_b": "patterned-boss-encounter",
+      "count": 12
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "equipment-loadout",
+      "count": 12
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "fill-reward-progression-loop",
+      "count": 12
+    },
+    {
+      "mechanic_a": "equipment-loadout",
+      "mechanic_b": "optional-content-layering",
+      "count": 12
+    },
+    {
+      "mechanic_a": "loot-based-economy",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 12
+    },
+    {
+      "mechanic_a": "character-swap-abilities",
+      "mechanic_b": "precision-platforming",
+      "count": 11
+    },
+    {
+      "mechanic_a": "character-swap-abilities",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 11
+    },
+    {
+      "mechanic_a": "collectathon-token-gating",
+      "mechanic_b": "linear-stage-gauntlet",
+      "count": 11
+    },
+    {
+      "mechanic_a": "depletable-health-pool",
+      "mechanic_b": "exploration-gated-upgrades",
+      "count": 11
+    },
+    {
+      "mechanic_a": "fill-reward-progression-loop",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 11
+    },
+    {
+      "mechanic_a": "instant-fire-attack",
+      "mechanic_b": "precision-platforming",
+      "count": 11
+    },
+    {
+      "mechanic_a": "map-resource-monster-groups",
+      "mechanic_b": "optional-content-layering",
+      "count": 11
+    },
+    {
+      "mechanic_a": "map-resource-monster-groups",
+      "mechanic_b": "telegraphed-threat-loop",
+      "count": 11
+    },
+    {
+      "mechanic_a": "power-up-transformation-states",
+      "mechanic_b": "precision-platforming",
+      "count": 11
+    },
+    {
+      "mechanic_a": "ability-driven-backtracking",
+      "mechanic_b": "boss-gated-progression",
+      "count": 10
+    }
+  ]
+}

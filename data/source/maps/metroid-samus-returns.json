@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.1",
+  "slug": "metroid-samus-returns",
+  "title": "Metroid: Samus Returns Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.nintendolife.com/guides/50-best-nintendo-3ds-games-of-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Metroid: Samus Returns",
+    "genres": [
+      "Metroidvania"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Metroid: Samus Returns (2017) is a acclaimed metroidvania title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Explore non-linear maps, gain abilities, backtrack, and defeat area guardians.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "ability-gated-exploration",
+    "ability-driven-backtracking",
+    "exploration-gated-upgrades",
+    "boss-gated-progression",
+    "bench-checkpoint"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 5,
+      "map_notes": "Uplifted from metroidvania recipe; customize for Metroid: Samus Returns.",
+      "expression": "Hallmark spatial locks requiring specific movement or combat abilities.",
+      "depends_on": [
+        "ability-driven-backtracking",
+        "exploration-gated-upgrades"
+      ]
+    },
+    {
+      "mechanic_slug": "ability-driven-backtracking",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 5,
+      "map_notes": "Uplifted from metroidvania recipe; customize for Metroid: Samus Returns.",
+      "expression": "Revisiting prior areas with new tools reveals secrets and shortcuts.",
+      "depends_on": [
+        "ability-gated-exploration",
+        "exploration-gated-upgrades"
+      ]
+    },
+    {
+      "mechanic_slug": "exploration-gated-upgrades",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from metroidvania recipe; customize for Metroid: Samus Returns.",
+      "expression": "Upgrades found through exploration rather than linear stage rewards.",
+      "depends_on": [
+        "ability-gated-exploration"
+      ]
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from metroidvania recipe; customize for Metroid: Samus Returns.",
+      "expression": "Major bosses guard ability unlocks and story milestones."
+    },
+    {
+      "mechanic_slug": "bench-checkpoint",
+      "role": "signature",
+      "domain": "session",
+      "phase": "early",
+      "weight": 3,
+      "map_notes": "Uplifted from metroidvania recipe; customize for Metroid: Samus Returns.",
+      "expression": "Safe rest points for save, heal, and respawn anchoring.",
+      "depends_on": [
+        "ability-driven-backtracking",
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 3,
+      "map_notes": "Uplifted from metroidvania recipe; customize for Metroid: Samus Returns.",
+      "expression": "Health depletion creates tension between checkpoints."
+    },
+    {
+      "mechanic_slug": "map-resource-monster-groups",
+      "role": "supporting",
+      "domain": "level",
+      "phase": "early",
+      "weight": 2,
+      "map_notes": "Uplifted from metroidvania recipe; customize for Metroid: Samus Returns.",
+      "expression": "Optional combat rooms and resource farming routes."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2017
+  },
+  "relationships": {
+    "genre_maps": [
+      "metroidvania"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A metroidvania experience centered on Metroid: Samus Returns.",
+    "theme_tags": [
+      "metroidvania",
+      "ability-gated-exploration",
+      "ability-driven-backtracking",
+      "exploration-gated-upgrades"
+    ],
+    "design_pillars": [
+      "Ability Gated Exploration",
+      "Ability Driven Backtracking",
+      "Exploration Gated Upgrades"
+    ]
+  }
+}

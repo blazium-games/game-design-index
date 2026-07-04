@@ -1,0 +1,185 @@
+{
+  "context": {
+    "year": 2016
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Farming Crop Cycle",
+      "Day Night Schedule Loop",
+      "Social Relationship Meter"
+    ],
+    "player_fantasy": "Experience Stardew Valley through its core simulation loop.",
+    "theme_tags": [
+      "simulation",
+      "life-sim",
+      "rpg",
+      "farming-crop-cycle",
+      "day-night-schedule-loop",
+      "social-relationship-meter"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Mine combat uses simple attack and dodge with weapon and food buffs.",
+    "constraints": [
+      "Day ends at 2 AM with energy limits",
+      "Crops die if unwatered or wrong season",
+      "Mine progress gated by combat skill and supplies"
+    ],
+    "core_loop": "Plan daily schedule around crop watering and seasons, spend energy on tools and combat in mines, build relationships through gifts and events, earn money for farm upgrades, and fill bundle collections for area rewards.",
+    "economy_notes": "Gold funds seeds, buildings, and upgrades; bundle items drive diversification of activities.",
+    "overview": "Stardew Valley is a farming life sim where each day offers limited time to tend crops, mine, fish, gift villagers, and complete community center bundles.",
+    "player_goals": [
+      "Restore community center or join Joja path",
+      "Build farm income and layout",
+      "Maximize villager relationships and marriage"
+    ],
+    "progression_notes": "Tool upgrades, greenhouse, and mine floors expand capabilities; bundles gate rewards."
+  },
+  "map_type": "game",
+  "mechanics": [
+    {
+      "domain": "progression",
+      "expression": "In Stardew Valley, plant, water, and harvest crops on daily cycles tied to in-game seasons.",
+      "map_notes": "In Stardew Valley, plant, water, and harvest crops on daily cycles tied to in-game seasons.",
+      "mechanic_slug": "farming-crop-cycle",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "farming-crop-cycle",
+        "social-relationship-meter"
+      ],
+      "domain": "session",
+      "expression": "In Stardew Valley, calendar days cycle with timed activities, shops, and events.",
+      "map_notes": "In Stardew Valley, calendar days cycle with timed activities, shops, and events.",
+      "mechanic_slug": "day-night-schedule-loop",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "day-night-schedule-loop"
+      ],
+      "domain": "progression",
+      "expression": "In Stardew Valley, nPC affinity or friendship meters unlock dialogue, gifts, and story branches.",
+      "map_notes": "In Stardew Valley, nPC affinity or friendship meters unlock dialogue, gifts, and story branches.",
+      "mechanic_slug": "social-relationship-meter",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ],
+      "domain": "progression",
+      "expression": "In Stardew Valley, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "map_notes": "In Stardew Valley, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "mechanic_slug": "fill-reward-progression-loop",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ],
+      "domain": "economy",
+      "expression": "In Stardew Valley, players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices.",
+      "map_notes": "In Stardew Valley, players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices.",
+      "mechanic_slug": "purchase-gated-upgrade",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Plan each day to tend crops, mine resources, gift villagers, and progress community bundles and farm upgrades.",
+    "description": "Stardew Valley is a farming life sim with daily schedules, crop cycles, mining combat, and village relationships.",
+    "skills_tested": [
+      "time management",
+      "planning",
+      "relationship building",
+      "resource optimization"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "tycoon-simulation",
+      "life-sim",
+      "turn-based-rpg"
+    ]
+  },
+  "schema_version": "1.1",
+  "signature_gameplay": [
+    "farming-crop-cycle",
+    "day-night-schedule-loop",
+    "social-relationship-meter",
+    "fill-reward-progression-loop",
+    "purchase-gated-upgrade"
+  ],
+  "skill_slugs": [
+    "resource-management",
+    "run-planning",
+    "risk-evaluation",
+    "narrative-inference"
+  ],
+  "slug": "stardew-valley",
+  "source_url": "https://meepleandthemoose.com/category/top-100-video-games/",
+  "subject": {
+    "genres": [
+      "Simulation",
+      "Life Sim",
+      "RPG"
+    ],
+    "influences": [],
+    "kind": "game",
+    "name": "Stardew Valley"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "metaprogression": true
+  },
+  "title": "Stardew Valley Gameplay Map",
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

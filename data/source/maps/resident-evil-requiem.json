@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.1",
+  "slug": "resident-evil-requiem",
+  "title": "Resident Evil Requiem Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://backloggd.com/u/MHM_/list/my-top-50-games-of-all-time-out-of-2000-1/title/grid/",
+  "subject": {
+    "kind": "game",
+    "name": "Resident Evil Requiem",
+    "genres": [
+      "Horror"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Resident Evil Requiem (2025) is a acclaimed horror title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Engage core systems repeatedly to overcome challenges and advance.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "resource-scarcity-management",
+    "depletable-health-pool",
+    "telegraphed-threat-loop",
+    "bench-checkpoint"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from horror-survival recipe; customize for Resident Evil Requiem.",
+      "expression": "Ammo, healing, and keys are deliberately scarce.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from horror-survival recipe; customize for Resident Evil Requiem.",
+      "expression": "Low TTK raises stakes on mistakes."
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from horror-survival recipe; customize for Resident Evil Requiem.",
+      "expression": "Audio and visual tells signal danger."
+    },
+    {
+      "mechanic_slug": "bench-checkpoint",
+      "role": "signature",
+      "domain": "session",
+      "phase": "early",
+      "weight": 4,
+      "map_notes": "Uplifted from horror-survival recipe; customize for Resident Evil Requiem.",
+      "expression": "Safe rooms save and heal between tense zones.",
+      "depends_on": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "supporting",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "map_notes": "Uplifted from horror-survival recipe; customize for Resident Evil Requiem.",
+      "expression": "Puzzles gate progression through locked areas.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "domain": "level",
+      "phase": "optional",
+      "weight": 2,
+      "map_notes": "Uplifted from horror-survival recipe; customize for Resident Evil Requiem.",
+      "optional": true,
+      "expression": "Files and lore optional pickups.",
+      "depends_on": [
+        "environmental-trigger-switch"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2025
+  },
+  "relationships": {
+    "genre_maps": [
+      "horror-survival"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A horror experience centered on Resident Evil Requiem.",
+    "theme_tags": [
+      "horror",
+      "resource-scarcity-management",
+      "depletable-health-pool",
+      "telegraphed-threat-loop"
+    ],
+    "design_pillars": [
+      "Resource Scarcity Management",
+      "Depletable Health Pool",
+      "Telegraphed Threat Loop"
+    ]
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "schema_version": "1.1",
+  "slug": "sonic-the-hedgehog-2",
+  "title": "Sonic the Hedgehog 2 Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Sonic the Hedgehog 2",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Sonic the Hedgehog",
+      "Super Mario"
+    ]
+  },
+  "narrative": {
+    "description": "Sega's Genesis sequel introduces Tails as a co-op companion and ramps up momentum platforming with faster zones, spin-dash acceleration, and the iconic Chemical Plant and Metropolis stages.",
+    "core_loop": "Build speed through loop geometry, spin-dash into enemies, reach act goals before the timer expires, and defeat Dr. Robotnik in zone boss encounters.",
+    "skills_tested": [
+      "momentum management",
+      "reaction timing",
+      "route memorization",
+      "boss pattern reading"
+    ]
+  },
+  "signature_gameplay": [
+    "momentum-based-speed",
+    "spin-attack-combat",
+    "life-based-retry-system"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "momentum-based-speed",
+      "role": "signature",
+      "map_notes": "Physics reward maintaining velocity through loops, slopes, and springs.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Physics reward maintaining velocity through loops, slopes, and springs.",
+      "depends_on": [
+        "loop-geometry-traversal",
+        "spin-attack-combat"
+      ]
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "signature",
+      "map_notes": "Jump and spin-dash destroy enemies and break certain walls.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Jump and spin-dash destroy enemies and break certain walls.",
+      "depends_on": [
+        "momentum-based-speed"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "signature",
+      "map_notes": "Lives and continues gate retries on hazard death.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Lives and continues gate retries on hazard death.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "mount-companion-control",
+      "role": "supporting",
+      "map_notes": "Tails follows and can carry Sonic in co-op flight sequences.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Tails follows and can carry Sonic in co-op flight sequences.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "loop-geometry-traversal",
+      "role": "supporting",
+      "map_notes": "Vertical loop-de-loops test speed maintenance.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Vertical loop-de-loops test speed maintenance.",
+      "depends_on": [
+        "momentum-based-speed"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Spikes, crushers, and drowning timers punish mistakes.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Spikes, crushers, and drowning timers punish mistakes.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Robotnik machines follow zone-specific attack patterns.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Robotnik machines follow zone-specific attack patterns.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Final Death Egg fight spans multiple arena configurations.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Final Death Egg fight spans multiple arena configurations.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Special stages and hidden paths reward exploration.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Special stages and hidden paths reward exploration."
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Platform sections demand tight jump timing at high speed.",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Platform sections demand tight jump timing at high speed.",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Boss machines expose weak points during attack wind-ups.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Boss machines expose weak points during attack wind-ups.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Checkpoints activate after passing lamppost markers.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Checkpoints activate after passing lamppost markers.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "Rings act as a buffer; zero rings means death on hit.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Rings act as a buffer; zero rings means death on hit.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1992
+  },
+  "relationships": {
+    "influence_slugs": [
+      "sonic-the-hedgehog"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Sonic the Hedgehog 2 through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "momentum-based-speed",
+      "spin-attack-combat",
+      "life-based-retry-system"
+    ],
+    "design_pillars": [
+      "Momentum Based Speed",
+      "Spin Attack Combat",
+      "Life Based Retry System"
+    ]
+  },
+  "systems": {
+    "failure_model": "permadeath-or-lives"
+  }
+}

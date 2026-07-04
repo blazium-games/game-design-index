@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.1",
+  "slug": "minecraft",
+  "title": "Minecraft Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.gq-magazine.co.uk/article/best-video-games-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Minecraft",
+    "genres": [
+      "Sandbox",
+      "Survival",
+      "Crafting"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Minecraft is a sandbox survival game where players gather resources, craft tools, build structures, and explore procedurally generated worlds in creative or survival modes.",
+    "core_loop": "Mine blocks and gather materials by day, craft tools and shelter, survive hostile mobs at night, and expand bases or explore deeper dimensions at your own pace.",
+    "skills_tested": [
+      "resource planning",
+      "creativity",
+      "exploration",
+      "risk management"
+    ]
+  },
+  "signature_gameplay": [
+    "open-world-exploration",
+    "fill-reward-progression-loop",
+    "purchase-gated-upgrade",
+    "resource-scarcity-management",
+    "optional-content-layering"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "open-world-exploration",
+      "role": "signature",
+      "map_notes": "In Minecraft, minimal UI encourages discovery of landmarks and secrets across vast terrain.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Minecraft, minimal UI encourages discovery of landmarks and secrets across vast terrain."
+    },
+    {
+      "mechanic_slug": "fill-reward-progression-loop",
+      "role": "signature",
+      "map_notes": "In Minecraft, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Minecraft, a progression gate where a fixed collection target must be met before an upgrade or skill point becomes available, tying advancement directly to measurable progress.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "signature",
+      "map_notes": "In Minecraft, players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Minecraft, players collect currency through gameplay and exchange it at vendors for permanent upgrades, creating economic progression choices.",
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "map_notes": "In Minecraft, limited ammo, healing, and save resources force careful risk assessment.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Minecraft, limited ammo, healing, and save resources force careful risk assessment."
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "signature",
+      "map_notes": "In Minecraft, hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Minecraft, hidden rooms, passages, or content zones exist off main paths, requiring players to investigate suspicious environments."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2011
+  },
+  "relationships": {
+    "genre_maps": [
+      "horror-survival"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Minecraft through its core sandbox loop.",
+    "theme_tags": [
+      "sandbox",
+      "survival",
+      "crafting",
+      "open-world-exploration",
+      "fill-reward-progression-loop",
+      "purchase-gated-upgrade"
+    ],
+    "design_pillars": [
+      "Open World Exploration",
+      "Fill Reward Progression Loop",
+      "Purchase Gated Upgrade"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "scarce"
+  }
+}

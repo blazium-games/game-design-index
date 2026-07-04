@@ -1,0 +1,20 @@
+{
+  "$id": "game-design-index/public/skill.schema.json",
+  "title": "PublicDesignSkill",
+  "description": "Public design skill entry",
+  "type": "object",
+  "required": ["schema_version", "slug", "name", "summary", "category", "learning_outcome", "tags"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0"] },
+    "slug": { "type": "string" },
+    "name": { "type": "string" },
+    "summary": { "type": "string" },
+    "category": { "type": "string", "enum": ["motor", "cognitive", "strategic", "social", "creative"] },
+    "learning_outcome": { "type": "string" },
+    "practice_activities": { "type": "array", "items": { "type": "string" } },
+    "related_mechanics": { "type": "array", "items": { "type": "string" } },
+    "related_variables": { "type": "array", "items": { "type": "string" } },
+    "design_guidance": { "type": "object" },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  }
+}

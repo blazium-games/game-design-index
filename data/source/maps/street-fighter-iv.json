@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.1",
+  "slug": "street-fighter-iv",
+  "title": "Street Fighter IV Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.metacritic.com/browse/game/all/all/all-time/metascore/",
+  "subject": {
+    "kind": "game",
+    "name": "Street Fighter IV",
+    "genres": [
+      "Fighting"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Street Fighter IV is a competitive fighting game built on footsies, combos, frame traps, and super meter management.",
+    "core_loop": "Win rounds by reading opponents, executing combos and special moves, and spending meter on supers or EX moves.",
+    "skills_tested": [
+      "execution",
+      "mind games",
+      "pattern recognition",
+      "timing"
+    ]
+  },
+  "signature_gameplay": [
+    "round-based-health-duel",
+    "combo-chain-system",
+    "special-move-command-input",
+    "frame-punish-engagement",
+    "super-meter-resource"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "round-based-health-duel",
+      "role": "signature",
+      "map_notes": "In Street Fighter IV, matches are divided into rounds with separate health pools; winning a set number of rounds wins the match.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Street Fighter IV, matches are divided into rounds with separate health pools; winning a set number of rounds wins the match."
+    },
+    {
+      "mechanic_slug": "combo-chain-system",
+      "role": "signature",
+      "map_notes": "In Street Fighter IV, attacks can be linked in sequence or canceled into one another within timing windows to deal extended damage.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Street Fighter IV, attacks can be linked in sequence or canceled into one another within timing windows to deal extended damage.",
+      "depends_on": [
+        "frame-punish-engagement",
+        "special-move-command-input"
+      ]
+    },
+    {
+      "mechanic_slug": "special-move-command-input",
+      "role": "signature",
+      "map_notes": "In Street Fighter IV, specific directional button sequences executed within a time window trigger character-specific special attacks.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Street Fighter IV, specific directional button sequences executed within a time window trigger character-specific special attacks.",
+      "depends_on": [
+        "combo-chain-system"
+      ]
+    },
+    {
+      "mechanic_slug": "frame-punish-engagement",
+      "role": "signature",
+      "map_notes": "In Street Fighter IV, attacks have startup, active, and recovery frames; unsafe moves can be punished with faster counter attacks during recovery windows.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Street Fighter IV, attacks have startup, active, and recovery frames; unsafe moves can be punished with faster counter attacks during recovery windows.",
+      "depends_on": [
+        "combo-chain-system"
+      ]
+    },
+    {
+      "mechanic_slug": "super-meter-resource",
+      "role": "signature",
+      "map_notes": "In Street Fighter IV, a meter fills through successful offense or defense and unlocks powerful super or ultimate attacks when full.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Street Fighter IV, a meter fills through successful offense or defense and unlocks powerful super or ultimate attacks when full.",
+      "depends_on": [
+        "combo-chain-system"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2008
+  },
+  "relationships": {
+    "genre_maps": [
+      "fighting-game"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Street Fighter IV through its core fighting loop.",
+    "theme_tags": [
+      "fighting",
+      "round-based-health-duel",
+      "combo-chain-system",
+      "special-move-command-input"
+    ],
+    "design_pillars": [
+      "Round Based Health Duel",
+      "Combo Chain System",
+      "Special Move Command Input"
+    ]
+  }
+}

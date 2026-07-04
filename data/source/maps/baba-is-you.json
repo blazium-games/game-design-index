@@ -1,0 +1,141 @@
+{
+  "context": {
+    "year": 2005
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Unit Assignment Puzzle",
+      "Environmental Trigger Switch",
+      "Puzzle Room Exploration"
+    ],
+    "player_fantasy": "Experience Baba Is You through its core puzzle loop.",
+    "theme_tags": [
+      "puzzle",
+      "unit-assignment-puzzle",
+      "environmental-trigger-switch",
+      "puzzle-room-exploration"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "No combat; hazards are rule-defined STOP, DEFEAT, or HOT properties.",
+    "constraints": [
+      "Only movable text can change rules",
+      "Rule conflicts resolve by sentence structure",
+      "Some levels require sacrificing controllable units"
+    ],
+    "core_loop": "Read active rules on each level, push word blocks to change properties and goals, experiment with rule interactions, and reach the win condition state before exhausting move patience.",
+    "economy_notes": "No economy; progression is level completion only.",
+    "overview": "Baba Is You is a puzzle game where players push word blocks to rewrite rules like BABA IS YOU or WALL IS STOP, making win conditions and obstacles emergent from grammar.",
+    "player_goals": [
+      "Solve each level's rule puzzle",
+      "Discover optional solutions and bonus objectives",
+      "Complete worlds with increasing rule complexity"
+    ],
+    "progression_notes": "Worlds introduce new nouns and operators; complexity stacks prior rule vocabulary."
+  },
+  "map_type": "game",
+  "mechanics": [
+    {
+      "domain": "level",
+      "expression": "In Baba Is You, assign abilities to autonomous units to navigate hazards toward an exit.",
+      "map_notes": "In Baba Is You, assign abilities to autonomous units to navigate hazards toward an exit.",
+      "mechanic_slug": "unit-assignment-puzzle",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "level",
+      "expression": "In Baba Is You, a mechanic where the player interacts with a fixed element in the environment to produce a state change such as opening a door or activating a bridge.",
+      "map_notes": "In Baba Is You, a mechanic where the player interacts with a fixed element in the environment to produce a state change such as opening a door or activating a bridge.",
+      "mechanic_slug": "environmental-trigger-switch",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "progression",
+      "expression": "In Baba Is You, interconnected rooms hide switches, keys, and environmental secrets.",
+      "map_notes": "In Baba Is You, interconnected rooms hide switches, keys, and environmental secrets.",
+      "mechanic_slug": "puzzle-room-exploration",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Read the current rule blocks, push words to alter rules like BABA IS YOU or WALL IS STOP, and reach the win condition through emergent logic puzzles.",
+    "description": "Baba Is You is a rule-manipulation puzzle game where players push word blocks to rewrite the rules of each level, changing what objects are controllable or win conditions.",
+    "skills_tested": [
+      "logical reasoning",
+      "rule inference",
+      "experimentation",
+      "spatial planning"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure"
+    ]
+  },
+  "schema_version": "1.1",
+  "signature_gameplay": [
+    "unit-assignment-puzzle",
+    "environmental-trigger-switch",
+    "puzzle-room-exploration"
+  ],
+  "skill_slugs": [
+    "pattern-recognition",
+    "spatial-navigation",
+    "narrative-inference"
+  ],
+  "slug": "baba-is-you",
+  "source_url": "https://www.slantmagazine.com/games/the-100-best-video-games-of-the-2010s/",
+  "subject": {
+    "genres": [
+      "Puzzle"
+    ],
+    "influences": [],
+    "kind": "game",
+    "name": "Baba Is You"
+  },
+  "title": "Baba Is You Gameplay Map",
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

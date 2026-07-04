@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.1",
+  "slug": "hitman-blood-money",
+  "title": "Hitman: Blood Money Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://digitaldreamdoor.com/pages/best_video-games-2000s.html",
+  "subject": {
+    "kind": "game",
+    "name": "Hitman: Blood Money",
+    "genres": [
+      "Stealth"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Hitman: Blood Money (2006) is a acclaimed stealth title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Engage core systems repeatedly to overcome challenges and advance.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "stealth-detection-loop",
+    "sandbox-assassination-puzzle",
+    "environmental-trigger-switch",
+    "optional-content-layering"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "stealth-detection-loop",
+      "role": "signature",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from stealth-action recipe; customize for Hitman: Blood Money.",
+      "expression": "Light, sound, and vision cones drive detection states."
+    },
+    {
+      "mechanic_slug": "sandbox-assassination-puzzle",
+      "role": "signature",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 5,
+      "map_notes": "Uplifted from stealth-action recipe; customize for Hitman: Blood Money.",
+      "expression": "Multiple approaches to eliminate or bypass targets.",
+      "depends_on": [
+        "stealth-detection-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "signature",
+      "domain": "level",
+      "phase": "early",
+      "weight": 3,
+      "map_notes": "Uplifted from stealth-action recipe; customize for Hitman: Blood Money.",
+      "expression": "Doors, lights, and gadgets alter patrol routes.",
+      "depends_on": [
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "signature",
+      "domain": "level",
+      "phase": "optional",
+      "weight": 3,
+      "map_notes": "Uplifted from stealth-action recipe; customize for Hitman: Blood Money.",
+      "expression": "Non-lethal and ghost run optional objectives.",
+      "depends_on": [
+        "environmental-trigger-switch"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 2,
+      "map_notes": "Uplifted from stealth-action recipe; customize for Hitman: Blood Money.",
+      "optional": true,
+      "expression": "Combat failure punishes loud play."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2006
+  },
+  "relationships": {
+    "genre_maps": [
+      "stealth-action"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A stealth experience centered on Hitman: Blood Money.",
+    "theme_tags": [
+      "stealth",
+      "stealth-detection-loop",
+      "sandbox-assassination-puzzle",
+      "environmental-trigger-switch"
+    ],
+    "design_pillars": [
+      "Stealth Detection Loop",
+      "Sandbox Assassination Puzzle",
+      "Environmental Trigger Switch"
+    ]
+  }
+}

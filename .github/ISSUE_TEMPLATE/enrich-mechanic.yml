@@ -1,0 +1,75 @@
+name: Enrich mechanic
+description: Add design guidance, agent context, learning objectives, and design exercises for a catalog mechanic (schema 1.3)
+title: "Enrich mechanic: "
+labels: ["data", "mechanics", "enrichment"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill in design pedagogy fields for one mechanic. See [enrichment README](https://github.com/blazium-games/game-design-index/blob/main/data/source/enrichment/README.md) and [DATA_FORMAT.md](https://github.com/blazium-games/game-design-index/blob/main/docs/DATA_FORMAT.md#schema-13-additions-design-pedagogy).
+  - type: input
+    id: slug
+    attributes:
+      label: Mechanic slug
+      description: kebab-case slug from library/mechanics.json
+    validations:
+      required: true
+  - type: textarea
+    id: when_to_use
+    attributes:
+      label: design_guidance.when_to_use
+      description: When designers should apply this mechanic
+    validations:
+      required: true
+  - type: textarea
+    id: where_to_use
+    attributes:
+      label: design_guidance.where_to_use
+      description: Which design layer (boss roster, macro routing, etc.)
+  - type: textarea
+    id: when_to_avoid
+    attributes:
+      label: design_guidance.when_to_avoid (one per line)
+  - type: textarea
+    id: designer_notes
+    attributes:
+      label: design_guidance.designer_notes
+  - type: textarea
+    id: player_experience
+    attributes:
+      label: player_experience
+  - type: textarea
+    id: summary_for_agents
+    attributes:
+      label: agent_context.summary_for_agents
+    validations:
+      required: true
+  - type: textarea
+    id: gdd_prompt
+    attributes:
+      label: agent_context.gdd_prompt
+  - type: textarea
+    id: implementation_checklist
+    attributes:
+      label: agent_context.implementation_checklist (one item per line)
+  - type: textarea
+    id: learning_objectives
+    attributes:
+      label: learning_objectives (one per line)
+  - type: input
+    id: skills_developed
+    attributes:
+      label: skills_developed (comma-separated skill slugs from library/skills.json)
+  - type: textarea
+    id: design_exercise_prompt
+    attributes:
+      label: design_exercises[0].prompt
+      description: At least one practice exercise for designers
+  - type: textarea
+    id: design_exercise_constraints
+    attributes:
+      label: design_exercises[0].constraints (one per line)
+  - type: textarea
+    id: design_exercise_success
+    attributes:
+      label: design_exercises[0].success_criteria (one per line)

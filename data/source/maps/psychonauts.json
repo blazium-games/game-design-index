@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.1",
+  "slug": "psychonauts",
+  "title": "Psychonauts Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://infinityretro.com/top-50-best-3d-platformers/",
+  "subject": {
+    "kind": "game",
+    "name": "Psychonauts",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "influences": [
+      "Banjo-Kazooie",
+      "Super Mario 64"
+    ]
+  },
+  "narrative": {
+    "description": "Double Fine's cult classic sends Raz through psychic summer camp and surreal mind-worlds with unique mechanics per mental landscape and emotionally themed level design.",
+    "core_loop": "Earn psychic badges at camp, enter agents' minds with unique rules per level, collect figments and mental cobwebs, and stop Coach Oleander's plot.",
+    "skills_tested": [
+      "mechanic adaptation",
+      "mental world routing",
+      "badge sequencing",
+      "narrative puzzle reading"
+    ]
+  },
+  "signature_gameplay": [
+    "ability-gated-exploration",
+    "hub-world-stage-gates",
+    "companion-possession-control"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "ability-gated-exploration",
+      "role": "signature",
+      "map_notes": "Each mind level introduces unique rules\u2014time, gravity, theater, milkman conspiracy.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Each mind level introduces unique rules\u2014time, gravity, theater, milkman conspiracy."
+    },
+    {
+      "mechanic_slug": "hub-world-stage-gates",
+      "role": "signature",
+      "map_notes": "Whispering Rock camp hub gates mind portals via rank progression.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Whispering Rock camp hub gates mind portals via rank progression.",
+      "depends_on": [
+        "boss-gated-progression",
+        "collectathon-token-gating"
+      ]
+    },
+    {
+      "mechanic_slug": "companion-possession-control",
+      "role": "signature",
+      "map_notes": "Clairvoyance and PSI powers let Raz read minds and manipulate NPC perception.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Clairvoyance and PSI powers let Raz read minds and manipulate NPC perception."
+    },
+    {
+      "mechanic_slug": "collectathon-token-gating",
+      "role": "supporting",
+      "map_notes": "Figments, cobwebs, and mental baggage gate rank advancement.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Figments, cobwebs, and mental baggage gate rank advancement.",
+      "depends_on": [
+        "hub-world-stage-gates",
+        "optional-content-layering"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "supporting",
+      "map_notes": "Psychic badges purchased with arrowheads unlock new powers.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Psychic badges purchased with arrowheads unlock new powers."
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "Emotional baggage, vaults, and nightmares extend each mind 100%.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Emotional baggage, vaults, and nightmares extend each mind 100%."
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Meat circus and watery minds alter hazard rules per level.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Meat circus and watery minds alter hazard rules per level."
+    },
+    {
+      "mechanic_slug": "boss-gated-progression",
+      "role": "supporting",
+      "map_notes": "Nevada and Oleander confrontations gate camp story milestones.",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Nevada and Oleander confrontations gate camp story milestones.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "Bosses like Boyd's God follow level-specific counter-strategies.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bosses like Boyd's God follow level-specific counter-strategies.",
+      "depends_on": [
+        "multi-phase-boss-battle",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "multi-phase-boss-battle",
+      "role": "supporting",
+      "map_notes": "Final brain tank fight spans multiple psychic arena phases.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Final brain tank fight spans multiple psychic arena phases.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Mind portals save progress; death respawns at level entrance.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Mind portals save progress; death respawns at level entrance."
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Censors and enemies telegraph before PSI counter windows.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Censors and enemies telegraph before PSI counter windows.",
+      "depends_on": [
+        "patterned-boss-encounter"
+      ]
+    },
+    {
+      "mechanic_slug": "glide-traversal",
+      "role": "supporting",
+      "map_notes": "Levitation and mental connection enable extended aerial routes.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Levitation and mental connection enable extended aerial routes."
+    },
+    {
+      "mechanic_slug": "spin-attack-combat",
+      "role": "supporting",
+      "map_notes": "PSI punch and pyrokinesis clear mental enemies.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "PSI punch and pyrokinesis clear mental enemies."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2005
+  },
+  "relationships": {
+    "influence_slugs": [
+      "banjo-kazooie",
+      "super-mario-64"
+    ],
+    "genre_maps": [
+      "precision-platformer"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Psychonauts through its core platformer loop.",
+    "theme_tags": [
+      "platformer",
+      "action",
+      "ability-gated-exploration",
+      "hub-world-stage-gates",
+      "companion-possession-control"
+    ],
+    "design_pillars": [
+      "Ability Gated Exploration",
+      "Hub World Stage Gates",
+      "Companion Possession Control"
+    ]
+  }
+}

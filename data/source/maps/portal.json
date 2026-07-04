@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.1",
+  "slug": "portal",
+  "title": "Portal Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.consolecrusade.com/p/top-100-video-games-of-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Portal",
+    "genres": [
+      "Puzzle",
+      "First-Person"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Portal is a first-person puzzle game built around the portal gun, which creates linked doorways to solve spatial physics challenges in test chambers.",
+    "core_loop": "Enter test chambers, place portals on surfaces to redirect momentum and reach exits, avoid hazards, and confront GLaDOS across escalating spatial puzzles.",
+    "skills_tested": [
+      "spatial reasoning",
+      "momentum planning",
+      "problem decomposition",
+      "precision movement"
+    ]
+  },
+  "signature_gameplay": [
+    "physics-ragdoll-puzzle",
+    "puzzle-room-exploration",
+    "environmental-trigger-switch"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "physics-ragdoll-puzzle",
+      "role": "signature",
+      "map_notes": "In Portal, floppy character bodies interact with physics objects to solve environmental puzzles.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Portal, floppy character bodies interact with physics objects to solve environmental puzzles."
+    },
+    {
+      "mechanic_slug": "puzzle-room-exploration",
+      "role": "signature",
+      "map_notes": "In Portal, interconnected rooms hide switches, keys, and environmental secrets.",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Portal, interconnected rooms hide switches, keys, and environmental secrets."
+    },
+    {
+      "mechanic_slug": "environmental-trigger-switch",
+      "role": "signature",
+      "map_notes": "In Portal, a mechanic where the player interacts with a fixed element in the environment to produce a state change such as opening a door or activating a bridge.",
+      "domain": "level",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Portal, a mechanic where the player interacts with a fixed element in the environment to produce a state change such as opening a door or activating a bridge."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2007
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Portal through its core puzzle loop.",
+    "theme_tags": [
+      "puzzle",
+      "first-person",
+      "physics-ragdoll-puzzle",
+      "puzzle-room-exploration",
+      "environmental-trigger-switch"
+    ],
+    "design_pillars": [
+      "Physics Ragdoll Puzzle",
+      "Puzzle Room Exploration",
+      "Environmental Trigger Switch"
+    ]
+  }
+}

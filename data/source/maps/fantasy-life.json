@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.1",
+  "slug": "fantasy-life",
+  "title": "Fantasy Life Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://www.nintendolife.com/guides/50-best-nintendo-3ds-games-of-all-time",
+  "subject": {
+    "kind": "game",
+    "name": "Fantasy Life",
+    "genres": [
+      "Life Sim",
+      "RPG"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Fantasy Life (2014) is a acclaimed life sim title recognized in retro gaming lists for its distinctive mechanics, pacing, and lasting influence on the genre.",
+    "core_loop": "Manage daily activities, build relationships, and customize your town or avatar.",
+    "skills_tested": [
+      "pattern recognition",
+      "timing",
+      "resource management",
+      "spatial awareness"
+    ]
+  },
+  "signature_gameplay": [
+    "farming-crop-cycle",
+    "day-night-schedule-loop",
+    "social-relationship-meter",
+    "fill-reward-progression-loop",
+    "purchase-gated-upgrade"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "farming-crop-cycle",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from life-sim recipe; customize for Fantasy Life.",
+      "expression": "Plant, water, harvest cycles drive daily rhythm."
+    },
+    {
+      "mechanic_slug": "day-night-schedule-loop",
+      "role": "signature",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "map_notes": "Uplifted from life-sim recipe; customize for Fantasy Life.",
+      "expression": "Calendar days structure activities and events.",
+      "depends_on": [
+        "farming-crop-cycle",
+        "social-relationship-meter"
+      ]
+    },
+    {
+      "mechanic_slug": "social-relationship-meter",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from life-sim recipe; customize for Fantasy Life.",
+      "expression": "Friendship meters unlock gifts and story.",
+      "depends_on": [
+        "day-night-schedule-loop",
+        "dialogue-choice-consequences"
+      ]
+    },
+    {
+      "mechanic_slug": "fill-reward-progression-loop",
+      "role": "signature",
+      "domain": "progression",
+      "phase": "mid",
+      "weight": 4,
+      "map_notes": "Uplifted from life-sim recipe; customize for Fantasy Life.",
+      "expression": "Museum, bundles, or town projects reward collection.",
+      "depends_on": [
+        "purchase-gated-upgrade"
+      ]
+    },
+    {
+      "mechanic_slug": "purchase-gated-upgrade",
+      "role": "signature",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "map_notes": "Uplifted from life-sim recipe; customize for Fantasy Life.",
+      "expression": "Tool and farm upgrades purchased with earned currency.",
+      "depends_on": [
+        "fill-reward-progression-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "dialogue-choice-consequences",
+      "role": "supporting",
+      "domain": "progression",
+      "phase": "optional",
+      "weight": 2,
+      "map_notes": "Uplifted from life-sim recipe; customize for Fantasy Life.",
+      "optional": true,
+      "expression": "Optional dialogue branches in social events."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "template"
+  },
+  "context": {
+    "year": 2014
+  },
+  "relationships": {
+    "genre_maps": [
+      "life-sim",
+      "turn-based-rpg"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "A life sim experience centered on Fantasy Life.",
+    "theme_tags": [
+      "life-sim",
+      "rpg",
+      "farming-crop-cycle",
+      "day-night-schedule-loop",
+      "social-relationship-meter"
+    ],
+    "design_pillars": [
+      "Farming Crop Cycle",
+      "Day Night Schedule Loop",
+      "Social Relationship Meter"
+    ]
+  }
+}

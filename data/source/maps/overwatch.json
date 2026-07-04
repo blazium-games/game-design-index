@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.1",
+  "slug": "overwatch",
+  "title": "Overwatch Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://en.wikipedia.org/wiki/List_of_best-selling_video_games",
+  "subject": {
+    "kind": "game",
+    "name": "Overwatch",
+    "genres": [
+      "Hero Shooter",
+      "FPS"
+    ],
+    "influences": []
+  },
+  "narrative": {
+    "description": "Overwatch is a team-based hero shooter where unique characters with distinct abilities cooperate to capture objectives or escort payloads.",
+    "core_loop": "Select a hero role, coordinate ultimates and ability combos with teammates, contest objectives on fast-paced maps, and adapt team composition between rounds.",
+    "skills_tested": [
+      "team coordination",
+      "ability timing",
+      "positioning",
+      "hero knowledge",
+      "objective control"
+    ]
+  },
+  "signature_gameplay": [
+    "equipment-loadout",
+    "real-time-action-combat",
+    "round-based-health-duel",
+    "resource-scarcity-management",
+    "cover-based-positioning"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "equipment-loadout",
+      "role": "signature",
+      "map_notes": "In Overwatch, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Overwatch, weapons, armor, and accessories occupy distinct equipment slots and modify combat stats and abilities."
+    },
+    {
+      "mechanic_slug": "real-time-action-combat",
+      "role": "signature",
+      "map_notes": "In Overwatch, direct player control over attacks, dodges, and combos in real time.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Overwatch, direct player control over attacks, dodges, and combos in real time.",
+      "depends_on": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "mechanic_slug": "round-based-health-duel",
+      "role": "signature",
+      "map_notes": "In Overwatch, matches are divided into rounds with separate health pools; winning a set number of rounds wins the match.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Overwatch, matches are divided into rounds with separate health pools; winning a set number of rounds wins the match."
+    },
+    {
+      "mechanic_slug": "resource-scarcity-management",
+      "role": "signature",
+      "map_notes": "In Overwatch, limited ammo, healing, and save resources force careful risk assessment.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Overwatch, limited ammo, healing, and save resources force careful risk assessment."
+    },
+    {
+      "mechanic_slug": "cover-based-positioning",
+      "role": "signature",
+      "map_notes": "In Overwatch, units gain defensive bonuses from terrain cover and flanking angles on a tactical grid.",
+      "domain": "economy",
+      "phase": "early",
+      "weight": 5,
+      "expression": "In Overwatch, units gain defensive bonuses from terrain cover and flanking angles on a tactical grid."
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 2016
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Overwatch through its core hero shooter loop.",
+    "theme_tags": [
+      "hero-shooter",
+      "fps",
+      "equipment-loadout",
+      "real-time-action-combat",
+      "round-based-health-duel"
+    ],
+    "design_pillars": [
+      "Equipment Loadout",
+      "Real Time Action Combat",
+      "Round Based Health Duel"
+    ]
+  },
+  "systems": {
+    "economy_tightness": "scarce"
+  }
+}

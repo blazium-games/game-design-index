@@ -1,0 +1,237 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Closing zone forces escalating encounters.",
+      "Gunplay with looted weapons and attachments."
+    ],
+    "player_fantasy": "Experience Battle Royale through its signature loop.",
+    "theme_tags": [
+      "battle-royale",
+      "battle-royale-zone-shrink",
+      "aim-down-sights-shooting",
+      "permadeath-run-structure"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: single-life-match",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Closing zone forces escalating encounters.",
+    "economy_notes": "moderate",
+    "overview": "Battle Royale genre recipe anchored on battle-royale-zone-shrink, aim-down-sights-shooting.",
+    "player_goals": [
+      "Closing zone forces escalating encounters.",
+      "Gunplay with looted weapons and attachments."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "combat",
+      "expression": "Closing zone forces escalating encounters.",
+      "map_notes": "Closing zone forces escalating encounters.",
+      "mechanic_slug": "battle-royale-zone-shrink",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "combat",
+      "expression": "Gunplay with looted weapons and attachments.",
+      "map_notes": "Gunplay with looted weapons and attachments.",
+      "mechanic_slug": "aim-down-sights-shooting",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "progression",
+      "expression": "Per-match loot power curve.",
+      "map_notes": "Per-match loot power curve.",
+      "mechanic_slug": "fill-reward-progression-loop",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "locomotion",
+      "expression": "Single life per match until victory.",
+      "map_notes": "Single life per match until victory.",
+      "mechanic_slug": "permadeath-run-structure",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 4
+    },
+    {
+      "domain": "economy",
+      "expression": "Inventory grid and swap decisions mid-fight.",
+      "map_notes": "Inventory grid and swap decisions mid-fight.",
+      "mechanic_slug": "equipment-loadout",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Closing zone forces escalating encounters.",
+    "description": "Battle Royale games center on closing zone forces escalating encounters.",
+    "design_pillars": [
+      "Closing zone forces escalating encounters.",
+      "Gunplay with looted weapons and attachments."
+    ],
+    "skills_tested": [
+      "aim precision",
+      "territory control",
+      "risk evaluation",
+      "loadout optimization"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "first-person-shooter",
+      "top-down-shooter"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "battle-royale-zone-shrink",
+    "aim-down-sights-shooting"
+  ],
+  "skill_slugs": [
+    "aim-precision",
+    "territory-control",
+    "risk-evaluation",
+    "loadout-optimization"
+  ],
+  "slug": "battle-royale",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Shooter",
+      "Multiplayer"
+    ],
+    "influences": [
+      "PUBG",
+      "Fortnite"
+    ],
+    "kind": "genre",
+    "name": "Battle Royale"
+  },
+  "systems": {
+    "economy_tightness": "moderate",
+    "failure_model": "single-life-match",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach battle royale zone shrink with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Battle Royale Zone Shrink",
+        "mechanics": [
+          "battle-royale-zone-shrink"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Aim Down Sights Shooting",
+        "mechanics": [
+          "aim-down-sights-shooting"
+        ]
+      }
+    ]
+  },
+  "title": "Battle Royale Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Squad queue and cosmetics.",
+      "menu_slug": "lobby-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Loot grid during match.",
+      "menu_slug": "inventory-menu",
+      "role": "contextual"
+    },
+    {
+      "map_notes": "Zone timer and ping wheel.",
+      "menu_slug": "map-overlay",
+      "role": "contextual"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Shield and health until elimination.",
+      "role": "primary",
+      "variable_slug": "health"
+    },
+    {
+      "expression": "Loot-dependent pressure.",
+      "role": "supporting",
+      "variable_slug": "ammo"
+    },
+    {
+      "expression": "Zone shrink schedule.",
+      "role": "supporting",
+      "variable_slug": "timer"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-battle-royale",
+      "label": "Hardcore Battle Royale",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

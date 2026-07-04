@@ -1,0 +1,220 @@
+{
+  "context": {
+    "dimension": "3d",
+    "perspective": "first-person",
+    "session_type": "session-based",
+    "world_structure": "linear-chapters"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Dialogue Choice Consequences",
+      "Narrative Chapter Progression",
+      "Environmental Trigger Switch"
+    ],
+    "player_fantasy": "Experience Narrative Adventure through its core adventure loop.",
+    "theme_tags": [
+      "adventure",
+      "narrative",
+      "dialogue-choice-consequences",
+      "narrative-chapter-progression",
+      "environmental-trigger-switch"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat pacing should match genre tempo and readable threat language.",
+    "constraints": [
+      "Failure model: design-specific",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Traverse authored spaces, interact with objects and characters, make dialogue or moral choices, and unlock new story chapters or locations.",
+    "economy_notes": "Tune earn/spend to genre tension targets.",
+    "overview": "Narrative adventures prioritize story revelation, environmental storytelling, and dialogue-driven choices over skill-heavy combat. Progression is measured in discovered plot beats and character relationships.",
+    "player_goals": [
+      "Master signature mechanics",
+      "Complete core progression arc"
+    ],
+    "progression_notes": "Follow signature mechanic dependencies across early, mid, and late phases."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "progression",
+      "expression": "Branching conversations alter relationships and outcomes.",
+      "map_notes": "Branching conversations alter relationships and outcomes.",
+      "mechanic_slug": "dialogue-choice-consequences",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "progression",
+      "expression": "Story advances through discrete chapters or acts.",
+      "map_notes": "Story advances through discrete chapters or acts.",
+      "mechanic_slug": "narrative-chapter-progression",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "domain": "level",
+      "expression": "Inspectable objects and triggers reveal lore and unlock paths.",
+      "map_notes": "Inspectable objects and triggers reveal lore and unlock paths.",
+      "mechanic_slug": "environmental-trigger-switch",
+      "phase": "early",
+      "role": "signature",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Traverse authored spaces, interact with objects and characters, make dialogue or moral choices, and unlock new story chapters or locations.",
+    "description": "Narrative adventures prioritize story revelation, environmental storytelling, and dialogue-driven choices over skill-heavy combat. Progression is measured in discovered plot beats and character relationships.",
+    "skills_tested": [
+      "narrative inference",
+      "information gathering",
+      "puzzle logic"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "narrative-adventure"
+    ],
+    "influence_slugs": [
+      "firewatch",
+      "what-remains-of-edith-finch"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "dialogue-choice-consequences",
+    "narrative-chapter-progression",
+    "environmental-trigger-switch"
+  ],
+  "skill_slugs": [
+    "narrative-inference",
+    "information-gathering"
+  ],
+  "slug": "narrative-adventure",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Adventure",
+      "Narrative"
+    ],
+    "influences": [
+      "Firewatch",
+      "What Remains of Edith Finch"
+    ],
+    "kind": "genre",
+    "name": "Narrative Adventure"
+  },
+  "systems": {
+    "economy_tightness": "light",
+    "failure_model": "story-rewind",
+    "metaprogression": false,
+    "pacing": {
+      "early": "Teach dialogue choice consequences with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Dialogue Choice Consequences",
+        "mechanics": [
+          "dialogue-choice-consequences"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Narrative Chapter Progression",
+        "mechanics": [
+          "narrative-chapter-progression"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Environmental Trigger Switch",
+        "mechanics": [
+          "environmental-trigger-switch"
+        ]
+      }
+    ]
+  },
+  "title": "Narrative Adventure Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Story choices and investigation.",
+      "menu_slug": "dialogue-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Clue and key item journal.",
+      "menu_slug": "inventory-menu",
+      "role": "optional"
+    },
+    {
+      "map_notes": "Scene and chapter saves.",
+      "menu_slug": "save-load-menu",
+      "role": "core"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Clues and quest items.",
+      "role": "primary",
+      "variable_slug": "key-items"
+    },
+    {
+      "expression": "Faction or character standing.",
+      "role": "supporting",
+      "variable_slug": "reputation"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-narrative-adventure",
+      "label": "Hardcore Narrative Adventure",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}

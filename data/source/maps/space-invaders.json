@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.1",
+  "slug": "space-invaders",
+  "title": "Space Invaders Gameplay Map",
+  "map_type": "game",
+  "source_url": "https://retrododo.com/best-retro-games/",
+  "subject": {
+    "kind": "game",
+    "name": "Space Invaders",
+    "genres": [
+      "Shooter",
+      "Arcade"
+    ],
+    "influences": [
+      "Breakout",
+      "Gun Fight"
+    ]
+  },
+  "narrative": {
+    "description": "Taito's fixed shooter pioneered the high-score arcade template with descending alien formations, destructible bunkers, and escalating speed that turns the final invader into a frantic dodge test.",
+    "core_loop": "Move horizontally beneath the formation, shoot descending aliens before they reach the ground, and hide behind crumbling bunkers.",
+    "skills_tested": [
+      "formation reading",
+      "reaction speed",
+      "bunker management",
+      "final invader timing"
+    ]
+  },
+  "signature_gameplay": [
+    "fixed-formation-shooter",
+    "projectile-pattern-enemy-design",
+    "life-based-retry-system"
+  ],
+  "mechanics": [
+    {
+      "mechanic_slug": "fixed-formation-shooter",
+      "role": "signature",
+      "map_notes": "Aliens march in formation while the player fires upward from a fixed lane.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Aliens march in formation while the player fires upward from a fixed lane.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "projectile-pattern-enemy-design",
+      "role": "signature",
+      "map_notes": "Random alien volleys create increasing bullet density as ranks thin.",
+      "domain": "combat",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Random alien volleys create increasing bullet density as ranks thin.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "life-based-retry-system",
+      "role": "signature",
+      "map_notes": "Three bases/lives per credit with continue on game over.",
+      "domain": "session",
+      "phase": "early",
+      "weight": 5,
+      "expression": "Three bases/lives per credit with continue on game over.",
+      "depends_on": [
+        "depletable-health-pool",
+        "environmental-hazard-navigation"
+      ]
+    },
+    {
+      "mechanic_slug": "telegraphed-threat-loop",
+      "role": "supporting",
+      "map_notes": "Speed increase as aliens die telegraphs escalating pressure.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Speed increase as aliens die telegraphs escalating pressure.",
+      "depends_on": [
+        "patterned-boss-encounter",
+        "projectile-pattern-enemy-design"
+      ]
+    },
+    {
+      "mechanic_slug": "depletable-health-pool",
+      "role": "supporting",
+      "map_notes": "One hit destroys the cannon unless shielded by bunker.",
+      "domain": "economy",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "One hit destroys the cannon unless shielded by bunker.",
+      "depends_on": [
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "environmental-hazard-navigation",
+      "role": "supporting",
+      "map_notes": "Bunkers erode from friendly and enemy fire, shrinking cover.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Bunkers erode from friendly and enemy fire, shrinking cover.",
+      "depends_on": [
+        "precision-platforming"
+      ]
+    },
+    {
+      "mechanic_slug": "instant-fire-attack",
+      "role": "supporting",
+      "map_notes": "Single shot fires on button press with fire-rate limit.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Single shot fires on button press with fire-rate limit."
+    },
+    {
+      "mechanic_slug": "patterned-boss-encounter",
+      "role": "supporting",
+      "map_notes": "UFO bonus target appears on timed intervals.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "UFO bonus target appears on timed intervals.",
+      "depends_on": [
+        "telegraphed-threat-loop"
+      ]
+    },
+    {
+      "mechanic_slug": "escalating-drop-speed",
+      "role": "supporting",
+      "map_notes": "Formation descent accelerates as alien count drops.",
+      "domain": "combat",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Formation descent accelerates as alien count drops."
+    },
+    {
+      "mechanic_slug": "mid-level-checkpoint",
+      "role": "supporting",
+      "map_notes": "Each cleared wave spawns a deeper formation.",
+      "domain": "session",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Each cleared wave spawns a deeper formation.",
+      "depends_on": [
+        "depletable-health-pool",
+        "life-based-retry-system"
+      ]
+    },
+    {
+      "mechanic_slug": "optional-content-layering",
+      "role": "supporting",
+      "map_notes": "UFO bonus points reward timing and priority fire.",
+      "domain": "level",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "UFO bonus points reward timing and priority fire."
+    },
+    {
+      "mechanic_slug": "precision-platforming",
+      "role": "supporting",
+      "map_notes": "Platform sections demand accurate jump and movement timing. (Space Invaders)",
+      "domain": "locomotion",
+      "phase": "mid",
+      "weight": 3,
+      "expression": "Platform sections demand accurate jump and movement timing. (Space Invaders)",
+      "depends_on": [
+        "environmental-hazard-navigation"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "all",
+      "label": "All",
+      "filter": {}
+    },
+    {
+      "id": "signature",
+      "label": "Signature Gameplay",
+      "filter": {
+        "role": "signature"
+      }
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "filter": {
+        "flavor": "action"
+      }
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "filter": {
+        "flavor": "adventure"
+      }
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "filter": {
+        "flavor": "strategy"
+      }
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "context": {
+    "year": 1978
+  },
+  "relationships": {
+    "genre_maps": [
+      "bullet-hell",
+      "top-down-shooter"
+    ]
+  },
+  "design_intent": {
+    "player_fantasy": "Experience Space Invaders through its core shooter loop.",
+    "theme_tags": [
+      "shooter",
+      "arcade",
+      "fixed-formation-shooter",
+      "projectile-pattern-enemy-design",
+      "life-based-retry-system"
+    ],
+    "design_pillars": [
+      "Fixed Formation Shooter",
+      "Projectile Pattern Enemy Design",
+      "Life Based Retry System"
+    ]
+  },
+  "systems": {
+    "failure_model": "permadeath-or-lives"
+  }
+}

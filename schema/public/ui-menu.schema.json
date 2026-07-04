@@ -1,0 +1,97 @@
+{
+  "$id": "gameplay_maps/ui-menu.schema.json",
+  "title": "UIMenu",
+  "description": "Reusable UI menu or screen pattern",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "slug",
+    "name",
+    "summary",
+    "menu_type",
+    "layer",
+    "tags"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0"] },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string", "minLength": 1 },
+    "menu_type": {
+      "type": "string",
+      "enum": [
+        "main",
+        "pause",
+        "options",
+        "settings",
+        "inventory",
+        "equipment",
+        "map",
+        "shop",
+        "crafting",
+        "dialogue",
+        "hud_overlay",
+        "save_load",
+        "credits",
+        "stage_select",
+        "controls_remap",
+        "lobby",
+        "meeting",
+        "voting",
+        "hub",
+        "weapon_select",
+        "map_overlay",
+        "boons",
+        "mirror"
+      ]
+    },
+    "layer": {
+      "type": "string",
+      "enum": ["meta", "in_game", "combat_overlay"]
+    },
+    "input_context": {
+      "type": "string",
+      "enum": ["gamepad", "keyboard_mouse", "touch", "any"]
+    },
+    "shared_rationale": { "type": "string" },
+    "typical_actions": { "type": "array", "items": { "type": "string" } },
+    "related_mechanics": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+    },
+    "related_variables": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+    },
+    "related_menus": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["slug"],
+        "properties": {
+          "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "relationship": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "featured_in": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+    },
+    "common_in": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "design_guidance": {
+      "type": "object",
+      "properties": {
+        "when_to_use": { "type": "string" },
+        "where_to_use": { "type": "string" },
+        "when_to_avoid": { "type": "array", "items": { "type": "string" } },
+        "designer_notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

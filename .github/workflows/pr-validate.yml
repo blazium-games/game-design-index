@@ -1,0 +1,32 @@
+name: Validate PR
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject tracked local-only enrichment assets
+        run: |
+          if git ls-files 'data/source/enrichment/cohorts/*.json' | grep -q .; then
+            echo "cohort JSON must not be committed"; exit 1
+          fi
+          if git ls-files 'scripts/generate_*.py' 'scripts/analyze_*.py' | grep -q .; then
+            echo "bulk generator scripts must not be committed"; exit 1
+          fi
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.23.8'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: go test ./...
+      - run: go run ./cmd/export -version 0.1.0
+      - run: go run ./scripts/lint_public_copy
+      - run: npm ci
+        working-directory: site
+      - run: npm run build
+        working-directory: site
+      - run: npm run test:webmcp
+        working-directory: site

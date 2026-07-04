@@ -1,0 +1,251 @@
+{
+  "context": {
+    "dimension": "2d",
+    "perspective": "varies",
+    "session_type": "varies",
+    "world_structure": "varies"
+  },
+  "design_intent": {
+    "design_pillars": [
+      "Gather, refine, and craft gear to survive biomes.",
+      "Scarce food, fuel, and durability pressure routes.",
+      "Day/night cycles force planning and shelter."
+    ],
+    "player_fantasy": "Experience Survival Crafting through its signature loop.",
+    "theme_tags": [
+      "survival-crafting",
+      "crafting-economy-loop",
+      "resource-scarcity-management",
+      "day-night-schedule-loop"
+    ]
+  },
+  "gdd_outline": {
+    "combat_notes": "Combat or challenge pacing should match genre tempo and readable feedback.",
+    "constraints": [
+      "Failure model: drop-on-death",
+      "Signature mechanics must reinforce genre fantasy"
+    ],
+    "core_loop": "Gather, refine, and craft gear to survive biomes.",
+    "economy_notes": "tight",
+    "overview": "Survival Crafting genre recipe anchored on crafting-economy-loop, resource-scarcity-management.",
+    "player_goals": [
+      "Gather, refine, and craft gear to survive biomes.",
+      "Scarce food, fuel, and durability pressure routes.",
+      "Day/night cycles force planning and shelter."
+    ],
+    "progression_notes": "Introduce one signature mechanic per teaching beat before combinations."
+  },
+  "map_type": "genre",
+  "mechanics": [
+    {
+      "domain": "economy",
+      "expression": "Gather, refine, and craft gear to survive biomes.",
+      "map_notes": "Gather, refine, and craft gear to survive biomes.",
+      "mechanic_slug": "crafting-economy-loop",
+      "phase": "early",
+      "role": "signature",
+      "weight": 5
+    },
+    {
+      "depends_on": [
+        "crafting-economy-loop"
+      ],
+      "domain": "economy",
+      "expression": "Scarce food, fuel, and durability pressure routes.",
+      "map_notes": "Scarce food, fuel, and durability pressure routes.",
+      "mechanic_slug": "resource-scarcity-management",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "session",
+      "expression": "Day/night cycles force planning and shelter.",
+      "map_notes": "Day/night cycles force planning and shelter.",
+      "mechanic_slug": "day-night-schedule-loop",
+      "phase": "early",
+      "role": "signature",
+      "weight": 4
+    },
+    {
+      "domain": "economy",
+      "expression": "Combat and hazards drain limited recovery.",
+      "map_notes": "Combat and hazards drain limited recovery.",
+      "mechanic_slug": "depletable-health-pool",
+      "phase": "early",
+      "role": "supporting",
+      "weight": 3
+    },
+    {
+      "domain": "progression",
+      "expression": "Biome gates tied to crafted tools.",
+      "map_notes": "Biome gates tied to crafted tools.",
+      "mechanic_slug": "open-world-exploration",
+      "phase": "mid",
+      "role": "supporting",
+      "weight": 3
+    }
+  ],
+  "metadata": {
+    "quality_tier": "curated"
+  },
+  "narrative": {
+    "core_loop": "Gather, refine, and craft gear to survive biomes.",
+    "description": "Survival Crafting games center on gather, refine, and craft gear to survive biomes.",
+    "design_pillars": [
+      "Gather, refine, and craft gear to survive biomes.",
+      "Scarce food, fuel, and durability pressure routes.",
+      "Day/night cycles force planning and shelter."
+    ],
+    "skills_tested": [
+      "crafting planning",
+      "resource management",
+      "risk evaluation",
+      "exploration"
+    ]
+  },
+  "relationships": {
+    "genre_maps": [
+      "open-world-action",
+      "sandbox-creative"
+    ]
+  },
+  "schema_version": "1.2",
+  "signature_gameplay": [
+    "crafting-economy-loop",
+    "resource-scarcity-management",
+    "day-night-schedule-loop"
+  ],
+  "skill_slugs": [
+    "crafting-planning",
+    "resource-management",
+    "risk-evaluation",
+    "exploration"
+  ],
+  "slug": "survival-crafting",
+  "source_url": "https://github.com/blazium-games/game-design-index",
+  "subject": {
+    "genres": [
+      "Survival",
+      "Sandbox"
+    ],
+    "influences": [
+      "Minecraft",
+      "Valheim"
+    ],
+    "kind": "genre",
+    "name": "Survival Crafting"
+  },
+  "systems": {
+    "economy_tightness": "tight",
+    "failure_model": "drop-on-death",
+    "metaprogression": true,
+    "pacing": {
+      "early": "Teach crafting economy loop with low failure cost.",
+      "late": "Test full signature loop mastery under peak constraints.",
+      "mid": "Combine supporting mechanics and raise resource or pattern pressure."
+    },
+    "primary_loop_phases": [
+      {
+        "id": "phase-1",
+        "label": "Crafting Economy Loop",
+        "mechanics": [
+          "crafting-economy-loop"
+        ]
+      },
+      {
+        "id": "phase-2",
+        "label": "Resource Scarcity Management",
+        "mechanics": [
+          "resource-scarcity-management"
+        ]
+      },
+      {
+        "id": "phase-3",
+        "label": "Day Night Schedule Loop",
+        "mechanics": [
+          "day-night-schedule-loop"
+        ]
+      }
+    ]
+  },
+  "title": "Survival Crafting Gameplay Map",
+  "ui_menus": [
+    {
+      "map_notes": "Recipe crafting and stations.",
+      "menu_slug": "crafting-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Materials and tools.",
+      "menu_slug": "inventory-menu",
+      "role": "core"
+    },
+    {
+      "map_notes": "Biome map after exploration.",
+      "menu_slug": "map-menu",
+      "role": "optional"
+    }
+  ],
+  "variables": [
+    {
+      "expression": "Food and sustenance planning.",
+      "role": "primary",
+      "variable_slug": "hunger"
+    },
+    {
+      "expression": "Carry limits for materials.",
+      "role": "supporting",
+      "variable_slug": "inventory-slots"
+    },
+    {
+      "expression": "Combat and environmental damage.",
+      "role": "primary",
+      "variable_slug": "health"
+    }
+  ],
+  "variants": [
+    {
+      "add_signatures": [],
+      "drop_signatures": [],
+      "id": "hardcore-survival-crafting",
+      "label": "Hardcore Survival Crafting",
+      "notes": "Tighter economy and higher failure cost for experienced players."
+    }
+  ],
+  "views": [
+    {
+      "filter": {},
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "filter": {
+        "role": "signature"
+      },
+      "id": "signature",
+      "label": "Signature Gameplay"
+    },
+    {
+      "filter": {
+        "flavor": "action"
+      },
+      "id": "action",
+      "label": "Action"
+    },
+    {
+      "filter": {
+        "flavor": "adventure"
+      },
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "filter": {
+        "flavor": "strategy"
+      },
+      "id": "strategy",
+      "label": "Strategy"
+    }
+  ]
+}
