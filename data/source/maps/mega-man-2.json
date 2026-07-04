@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "slug": "mega-man-2",
   "title": "Mega Man 2 Gameplay Map",
   "map_type": "game",
@@ -364,6 +364,73 @@
       "to_mechanic": "ability-loadout-switching",
       "relationship": "requires",
       "notes": "Players must equip the correct weakness weapon per encounter."
+    }
+  ],
+  "variables": [
+    {
+      "variable_slug": "health",
+      "role": "primary",
+      "map_notes": "Life energy from boss hits.",
+      "related_mechanics": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "variable_slug": "lives",
+      "role": "primary",
+      "map_notes": "Classic stock lives before game over.",
+      "expression": "E-tanks do not restore lives."
+    },
+    {
+      "variable_slug": "weapon-energy",
+      "role": "primary",
+      "map_notes": "Each boss weapon has separate ammo pool.",
+      "related_mechanics": [
+        "resource-gated-weapon"
+      ]
+    },
+    {
+      "variable_slug": "quick-slot-bar",
+      "role": "supporting",
+      "map_notes": "Weapon select during stages and boss fights.",
+      "related_mechanics": [
+        "resource-gated-weapon"
+      ]
+    }
+  ],
+  "ui_menus": [
+    {
+      "menu_slug": "stage-select-menu",
+      "role": "core",
+      "map_notes": "Robot master grid after intro.",
+      "supports_mechanics": [
+        "non-linear-boss-selection"
+      ]
+    },
+    {
+      "menu_slug": "pause-menu",
+      "role": "optional",
+      "map_notes": "Pause during stages."
+    },
+    {
+      "menu_slug": "weapon-select-overlay",
+      "role": "core",
+      "map_notes": "Select and Start opens weapon wheel.",
+      "displays_variables": [
+        "weapon-energy",
+        "quick-slot-bar"
+      ],
+      "supports_mechanics": [
+        "resource-gated-weapon"
+      ]
+    }
+  ],
+  "menu_flow": [
+    {
+      "from_menu": "stage-select-menu",
+      "to_menu": "weapon-select-overlay",
+      "relationship": "in_stage",
+      "notes": "Weapon swap during gameplay."
     }
   ]
 }

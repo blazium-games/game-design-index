@@ -26,7 +26,7 @@ export async function registerQueryTools(deps: WebMCPDeps, opts: RegisterOpts) {
         type: 'object',
         properties: {
           query: { type: 'string', description: 'Search text' },
-          type: { type: 'string', enum: ['game', 'mechanic'], description: 'Optional type filter' },
+          type: { type: 'string', enum: ['game', 'mechanic', 'variable', 'menu'], description: 'Optional type filter' },
           limit: { type: 'number', description: 'Max results (default 25)' },
         },
         required: ['query'],
@@ -232,6 +232,82 @@ export async function registerQueryTools(deps: WebMCPDeps, opts: RegisterOpts) {
       inputSchema: { type: 'object', properties: {} },
       async execute() {
         return jsonResponse(await deps.api.fetchTags())
+      },
+    },
+    opts,
+  )
+
+  await mc.registerTool(
+    {
+      name: 'list-variables',
+      description: 'List game variable catalog entries.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          category: { type: 'string' },
+          limit: { type: 'number' },
+        },
+      },
+      async execute(args) {
+        const { category, limit = 50 } = args as { category?: string; limit?: number }
+        let rows = await deps.api.fetchVariablesIndex()
+        if (category) rows = rows.filter((v) => v.category === category)
+        return jsonResponse(rows.slice(0, limit))
+      },
+    },
+    opts,
+  )
+
+  await mc.registerTool(
+    {
+      name: 'get-variable',
+      description: 'Return a full game variable catalog entry by slug.',
+      inputSchema: {
+        type: 'object',
+        properties: { slug: { type: 'string' } },
+        required: ['slug'],
+      },
+      async execute(args) {
+        const { slug } = args as { slug: string }
+        return jsonResponse(await deps.api.fetchVariable(slug))
+      },
+    },
+    opts,
+  )
+
+  await mc.registerTool(
+    {
+      name: 'list-ui-menus',
+      description: 'List UI menu catalog entries.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          layer: { type: 'string' },
+          limit: { type: 'number' },
+        },
+      },
+      async execute(args) {
+        const { layer, limit = 50 } = args as { layer?: string; limit?: number }
+        let rows = await deps.api.fetchUIMenusIndex()
+        if (layer) rows = rows.filter((m) => m.layer === layer)
+        return jsonResponse(rows.slice(0, limit))
+      },
+    },
+    opts,
+  )
+
+  await mc.registerTool(
+    {
+      name: 'get-ui-menu',
+      description: 'Return a full UI menu catalog entry by slug.',
+      inputSchema: {
+        type: 'object',
+        properties: { slug: { type: 'string' } },
+        required: ['slug'],
+      },
+      async execute(args) {
+        const { slug } = args as { slug: string }
+        return jsonResponse(await deps.api.fetchUIMenu(slug))
       },
     },
     opts,

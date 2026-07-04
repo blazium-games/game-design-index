@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "menus": {
+    "boons-menu": [
+      "hades"
+    ],
+    "hub-menu": [
+      "hades"
+    ],
+    "inventory-menu": [
+      "hollow-knight",
+      "zelda-breath-of-the-wild"
+    ],
+    "lobby-menu": [
+      "among-us"
+    ],
+    "map-menu": [
+      "hollow-knight",
+      "zelda-breath-of-the-wild"
+    ],
+    "map-overlay": [
+      "among-us"
+    ],
+    "meeting-menu": [
+      "among-us"
+    ],
+    "mirror-menu": [
+      "hades"
+    ],
+    "options-menu": [
+      "zelda-breath-of-the-wild"
+    ],
+    "pause-menu": [
+      "hades",
+      "hollow-knight",
+      "mega-man-2",
+      "zelda-breath-of-the-wild"
+    ],
+    "save-load-menu": [
+      "hollow-knight"
+    ],
+    "shop-menu": [
+      "hollow-knight"
+    ],
+    "stage-select-menu": [
+      "mega-man-2"
+    ],
+    "voting-menu": [
+      "among-us"
+    ],
+    "weapon-select-overlay": [
+      "mega-man-2"
+    ]
+  }
+}

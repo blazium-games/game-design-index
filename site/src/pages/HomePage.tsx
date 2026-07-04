@@ -54,6 +54,18 @@ export function HomePage() {
             <strong>{catalog.mechanic_count}</strong>
             <span>mechanics</span>
           </div>
+          {catalog.variable_count != null && (
+            <div className="stat">
+              <strong>{catalog.variable_count}</strong>
+              <span>variables</span>
+            </div>
+          )}
+          {catalog.menu_count != null && (
+            <div className="stat">
+              <strong>{catalog.menu_count}</strong>
+              <span>UI menus</span>
+            </div>
+          )}
           <div className="stat">
             <strong>{catalog.genre_count}</strong>
             <span>genre recipes</span>

@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
 import { Link, useParams } from 'react-router-dom'
 import { api } from '../api/client'
+import { ExportDropdown } from '../components/ExportDropdown'
+import { SuggestEditLink } from '../components/Layout'
 
 export function GenresPage() {
   const { data: genres } = useQuery({ queryKey: ['genres'], queryFn: api.fetchGenresIndex })
@@ -29,7 +31,13 @@ export function GenreDetailPage() {
   if (!map) return <p>Loading…</p>
   return (
     <div>
-      <h1>{map.subject.name}</h1>
+      <div className="detail-header">
+        <h1>{map.subject.name}</h1>
+        <div className="detail-actions">
+          <ExportDropdown kind="genre" slug={slug} entity={map} />
+          <SuggestEditLink slug={slug} kind="genre" />
+        </div>
+      </div>
       <p>{map.narrative.description}</p>
       <h2>Signature mechanics</h2>
       <div className="chips">

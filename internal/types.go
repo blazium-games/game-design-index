@@ -5,6 +5,12 @@ const SchemaVersion = "1.2"
 // MapSchemaVersion is the current gameplay map document version (maps migrate independently).
 const MapSchemaVersion = "1.1"
 
+// VariableSchemaVersion is the game variable catalog version.
+const VariableSchemaVersion = "1.0"
+
+// UIMenuSchemaVersion is the UI menu catalog version.
+const UIMenuSchemaVersion = "1.0"
+
 type Flavor string
 
 const (
@@ -299,6 +305,196 @@ type MechanicRelationship struct {
 	Notes        string `json:"notes,omitempty"`
 }
 
+type VariableCategory string
+
+const (
+	VarCategoryStat     VariableCategory = "stat"
+	VarCategoryResource VariableCategory = "resource"
+	VarCategoryCurrency VariableCategory = "currency"
+	VarCategorySlot     VariableCategory = "slot"
+	VarCategoryMeter    VariableCategory = "meter"
+	VarCategoryCounter  VariableCategory = "counter"
+	VarCategoryFlag     VariableCategory = "flag"
+)
+
+type VariableScope string
+
+const (
+	ScopePlayer  VariableScope = "player"
+	ScopeParty   VariableScope = "party"
+	ScopeWorld   VariableScope = "world"
+	ScopeSession VariableScope = "session"
+	ScopeRun     VariableScope = "run"
+)
+
+type ValueKind string
+
+const (
+	ValueInteger  ValueKind = "integer"
+	ValueFloat    ValueKind = "float"
+	ValueBoolean  ValueKind = "boolean"
+	ValueEnum     ValueKind = "enum"
+	ValueSlotList ValueKind = "slot_list"
+	ValueGrid     ValueKind = "grid"
+)
+
+type ResetBehavior string
+
+const (
+	ResetPerDeath   ResetBehavior = "per_death"
+	ResetPerLevel   ResetBehavior = "per_level"
+	ResetPerSession ResetBehavior = "per_session"
+	ResetPersistent ResetBehavior = "persistent"
+)
+
+type EntityRelationship struct {
+	Slug         string `json:"slug"`
+	Relationship string `json:"relationship,omitempty"`
+	Notes        string `json:"notes,omitempty"`
+}
+
+type GameVariable struct {
+	SchemaVersion    string               `json:"schema_version"`
+	Slug             string               `json:"slug"`
+	Name             string               `json:"name"`
+	Summary          string               `json:"summary"`
+	Category         VariableCategory     `json:"category"`
+	Scope            VariableScope        `json:"scope"`
+	ValueKind        ValueKind            `json:"value_kind"`
+	SharedRationale  string               `json:"shared_rationale,omitempty"`
+	PlayerFocus      string               `json:"player_focus,omitempty"`
+	TypicalRange     string               `json:"typical_range,omitempty"`
+	ResetBehavior    ResetBehavior        `json:"reset_behavior,omitempty"`
+	RelatedMechanics []string             `json:"related_mechanics,omitempty"`
+	RelatedVariables []EntityRelationship `json:"related_variables,omitempty"`
+	FeaturedIn       []string             `json:"featured_in,omitempty"`
+	CommonIn         []string             `json:"common_in,omitempty"`
+	Tags             []string             `json:"tags"`
+	ParameterKnobs   []ParameterKnob      `json:"parameter_knobs,omitempty"`
+	DesignGuidance   *DesignGuidance      `json:"design_guidance,omitempty"`
+}
+
+type VariablesCatalog struct {
+	SchemaVersion string         `json:"schema_version"`
+	Variables     []GameVariable `json:"variables"`
+}
+
+type MenuType string
+
+const (
+	MenuMain          MenuType = "main"
+	MenuPause         MenuType = "pause"
+	MenuOptions       MenuType = "options"
+	MenuSettings      MenuType = "settings"
+	MenuInventory     MenuType = "inventory"
+	MenuEquipment     MenuType = "equipment"
+	MenuMap           MenuType = "map"
+	MenuShop          MenuType = "shop"
+	MenuCrafting      MenuType = "crafting"
+	MenuDialogue      MenuType = "dialogue"
+	MenuHUDOverlay    MenuType = "hud_overlay"
+	MenuSaveLoad      MenuType = "save_load"
+	MenuCredits       MenuType = "credits"
+	MenuStageSelect   MenuType = "stage_select"
+	MenuControlsRemap MenuType = "controls_remap"
+	MenuLobby         MenuType = "lobby"
+	MenuMeeting       MenuType = "meeting"
+	MenuVoting        MenuType = "voting"
+	MenuHub           MenuType = "hub"
+	MenuWeaponSelect  MenuType = "weapon_select"
+	MenuMapOverlay    MenuType = "map_overlay"
+	MenuBoons         MenuType = "boons"
+	MenuMirror        MenuType = "mirror"
+)
+
+type MenuLayer string
+
+const (
+	LayerMeta          MenuLayer = "meta"
+	LayerInGame        MenuLayer = "in_game"
+	LayerCombatOverlay MenuLayer = "combat_overlay"
+)
+
+type InputContext string
+
+const (
+	InputGamepad       InputContext = "gamepad"
+	InputKeyboardMouse InputContext = "keyboard_mouse"
+	InputTouch         InputContext = "touch"
+	InputAny           InputContext = "any"
+)
+
+type UIMenu struct {
+	SchemaVersion    string               `json:"schema_version"`
+	Slug             string               `json:"slug"`
+	Name             string               `json:"name"`
+	Summary          string               `json:"summary"`
+	MenuType         MenuType             `json:"menu_type"`
+	Layer            MenuLayer            `json:"layer"`
+	InputContext     InputContext         `json:"input_context,omitempty"`
+	SharedRationale  string               `json:"shared_rationale,omitempty"`
+	TypicalActions   []string             `json:"typical_actions,omitempty"`
+	RelatedMechanics []string             `json:"related_mechanics,omitempty"`
+	RelatedVariables []string             `json:"related_variables,omitempty"`
+	RelatedMenus     []EntityRelationship `json:"related_menus,omitempty"`
+	FeaturedIn       []string             `json:"featured_in,omitempty"`
+	CommonIn         []string             `json:"common_in,omitempty"`
+	Tags             []string             `json:"tags"`
+	DesignGuidance   *DesignGuidance      `json:"design_guidance,omitempty"`
+}
+
+type UIMenusCatalog struct {
+	SchemaVersion string   `json:"schema_version"`
+	Menus         []UIMenu `json:"menus"`
+}
+
+type VariableRole string
+
+const (
+	VarRolePrimary    VariableRole = "primary"
+	VarRoleSupporting VariableRole = "supporting"
+	VarRoleHidden     VariableRole = "hidden"
+)
+
+type MenuRole string
+
+const (
+	MenuRoleCore       MenuRole = "core"
+	MenuRoleOptional   MenuRole = "optional"
+	MenuRoleContextual MenuRole = "contextual"
+)
+
+type MapVariableBinding struct {
+	VariableSlug     string       `json:"variable_slug"`
+	Role             VariableRole `json:"role"`
+	MapNotes         string       `json:"map_notes,omitempty"`
+	Expression       string       `json:"expression,omitempty"`
+	RelatedMechanics []string     `json:"related_mechanics,omitempty"`
+}
+
+type MapUIMenuBinding struct {
+	MenuSlug          string   `json:"menu_slug"`
+	Role              MenuRole `json:"role"`
+	MapNotes          string   `json:"map_notes,omitempty"`
+	OpensFrom         []string `json:"opens_from,omitempty"`
+	DisplaysVariables []string `json:"displays_variables,omitempty"`
+	SupportsMechanics []string `json:"supports_mechanics,omitempty"`
+}
+
+type VariableRelationship struct {
+	FromVariable string `json:"from_variable"`
+	ToVariable   string `json:"to_variable"`
+	Relationship string `json:"relationship,omitempty"`
+	Notes        string `json:"notes,omitempty"`
+}
+
+type MenuFlowEdge struct {
+	FromMenu     string `json:"from_menu"`
+	ToMenu       string `json:"to_menu"`
+	Relationship string `json:"relationship,omitempty"`
+	Notes        string `json:"notes,omitempty"`
+}
+
 type GameplayMap struct {
 	SchemaVersion         string                 `json:"schema_version"`
 	Slug                  string                 `json:"slug"`
@@ -319,10 +515,16 @@ type GameplayMap struct {
 	Variants              []GenreVariant         `json:"variants,omitempty"`
 	GDDOutline            *GDDOutline            `json:"gdd_outline,omitempty"`
 	MechanicRelationships []MechanicRelationship `json:"mechanic_relationships,omitempty"`
+	Variables             []MapVariableBinding   `json:"variables,omitempty"`
+	UIMenus               []MapUIMenuBinding     `json:"ui_menus,omitempty"`
+	VariableRelationships []VariableRelationship `json:"variable_relationships,omitempty"`
+	MenuFlow              []MenuFlowEdge         `json:"menu_flow,omitempty"`
 }
 
 type Bundle struct {
 	Root      string
 	Mechanics map[string]MechanicEntry
+	Variables map[string]GameVariable
+	UIMenus   map[string]UIMenu
 	Maps      map[string]GameplayMap
 }

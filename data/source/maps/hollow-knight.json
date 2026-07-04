@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "slug": "hollow-knight",
   "title": "Hollow Knight Gameplay Map",
   "map_type": "game",
@@ -329,14 +329,14 @@
     "quality_tier": "curated"
   },
   "relationships": {
+    "genre_maps": [
+      "metroidvania",
+      "precision-platformer"
+    ],
     "influence_slugs": [
       "metroid",
       "castlevania-symphony-of-the-night",
       "dark-souls"
-    ],
-    "genre_maps": [
-      "metroidvania",
-      "precision-platformer"
     ]
   },
   "design_intent": {
@@ -357,5 +357,135 @@
   },
   "systems": {
     "failure_model": "checkpoint-respawn"
-  }
+  },
+  "variables": [
+    {
+      "variable_slug": "health",
+      "role": "primary",
+      "map_notes": "Mask shards extend lifeblood masks to 4–9.",
+      "expression": "Bench heals to full; death drops geo at shade.",
+      "related_mechanics": [
+        "depletable-health-pool",
+        "bench-checkpoint"
+      ]
+    },
+    {
+      "variable_slug": "geo",
+      "role": "primary",
+      "map_notes": "Primary currency for vendors and shade recovery.",
+      "expression": "Lost on death at shade; recovered by defeating shade."
+    },
+    {
+      "variable_slug": "souls",
+      "role": "supporting",
+      "map_notes": "Soul currency for shade gate and vendors.",
+      "expression": "Spent at shade and some vendors."
+    },
+    {
+      "variable_slug": "charm-notches",
+      "role": "primary",
+      "map_notes": "Notch count gates charm loadout.",
+      "related_mechanics": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "variable_slug": "inventory-slots",
+      "role": "supporting",
+      "map_notes": "Key items and consumables inventory.",
+      "related_mechanics": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "variable_slug": "spell-slots",
+      "role": "supporting",
+      "map_notes": "Focus spells bound to attack buttons.",
+      "expression": "Vengeful Spirit, Desolate Dive, Howling Wraiths, Descending Dark."
+    }
+  ],
+  "ui_menus": [
+    {
+      "menu_slug": "pause-menu",
+      "role": "core",
+      "map_notes": "Opens charm, inventory, map, and options."
+    },
+    {
+      "menu_slug": "inventory-menu",
+      "role": "core",
+      "map_notes": "Charm equip screen from pause.",
+      "opens_from": [
+        "pause-menu"
+      ],
+      "displays_variables": [
+        "charm-notches",
+        "inventory-slots"
+      ],
+      "supports_mechanics": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "menu_slug": "map-menu",
+      "role": "core",
+      "map_notes": "Purchasable map with bench pins.",
+      "opens_from": [
+        "pause-menu"
+      ],
+      "displays_variables": [
+        "checkpoint-id"
+      ],
+      "supports_mechanics": [
+        "ability-gated-exploration"
+      ]
+    },
+    {
+      "menu_slug": "shop-menu",
+      "role": "optional",
+      "map_notes": "Sly, Iselda, and other geo vendors.",
+      "displays_variables": [
+        "geo"
+      ]
+    },
+    {
+      "menu_slug": "save-load-menu",
+      "role": "core",
+      "map_notes": "Bench rest saves and heals.",
+      "supports_mechanics": [
+        "bench-checkpoint"
+      ]
+    }
+  ],
+  "variable_relationships": [
+    {
+      "from_variable": "geo",
+      "to_variable": "health",
+      "relationship": "bench_heal_cost",
+      "notes": "Benches heal health without spending geo."
+    },
+    {
+      "from_variable": "geo",
+      "to_variable": "inventory-slots",
+      "relationship": "purchases",
+      "notes": "Shops sell charms and tools for geo."
+    }
+  ],
+  "menu_flow": [
+    {
+      "from_menu": "pause-menu",
+      "to_menu": "inventory-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "pause-menu",
+      "to_menu": "map-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "pause-menu",
+      "to_menu": "save-load-menu",
+      "relationship": "opens",
+      "notes": "Via bench interaction."
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "slug": "hades",
   "title": "Hades Gameplay Map",
   "map_type": "game",
@@ -10,8 +10,7 @@
     "genres": [
       "Roguelike",
       "Action"
-    ],
-    "influences": []
+    ]
   },
   "narrative": {
     "description": "Hades is a roguelike action game where Zagreus escapes the underworld through procedural runs, earning boons and narrative progression.",
@@ -115,11 +114,11 @@
       }
     }
   ],
-  "metadata": {
-    "quality_tier": "curated"
-  },
   "context": {
     "year": 2020
+  },
+  "metadata": {
+    "quality_tier": "curated"
   },
   "relationships": {
     "genre_maps": [
@@ -145,5 +144,100 @@
     "failure_model": "permadeath-or-lives",
     "economy_tightness": "moderate",
     "metaprogression": true
-  }
+  },
+  "variables": [
+    {
+      "variable_slug": "health",
+      "role": "primary",
+      "map_notes": "Death defiance extends effective health pool.",
+      "related_mechanics": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "variable_slug": "death-defiance-charges",
+      "role": "primary",
+      "map_notes": "Extra kills before chamber failure.",
+      "expression": "Mirror and keepsake sources."
+    },
+    {
+      "variable_slug": "currency-soft",
+      "role": "primary",
+      "map_notes": "Bones spent at wells and mid-run shops.",
+      "expression": "Earned from chambers and sells."
+    },
+    {
+      "variable_slug": "meta-currency",
+      "role": "primary",
+      "map_notes": "Darkness for Mirror of Night.",
+      "related_mechanics": [
+        "metaprogression"
+      ]
+    }
+  ],
+  "ui_menus": [
+    {
+      "menu_slug": "hub-menu",
+      "role": "core",
+      "map_notes": "House hub between escape attempts.",
+      "displays_variables": [
+        "currency-soft",
+        "meta-currency"
+      ]
+    },
+    {
+      "menu_slug": "boons-menu",
+      "role": "core",
+      "map_notes": "God boon selection after rooms.",
+      "supports_mechanics": [
+        "metaprogression"
+      ]
+    },
+    {
+      "menu_slug": "mirror-menu",
+      "role": "core",
+      "map_notes": "Permanent upgrades.",
+      "opens_from": [
+        "hub-menu"
+      ],
+      "displays_variables": [
+        "meta-currency"
+      ],
+      "supports_mechanics": [
+        "metaprogression"
+      ]
+    },
+    {
+      "menu_slug": "pause-menu",
+      "role": "optional",
+      "map_notes": "In-chamber pause and settings."
+    }
+  ],
+  "variable_relationships": [
+    {
+      "from_variable": "currency-soft",
+      "to_variable": "health",
+      "relationship": "well_heal",
+      "notes": "Fountain chambers restore health."
+    },
+    {
+      "from_variable": "meta-currency",
+      "to_variable": "death-defiance-charges",
+      "relationship": "unlocks",
+      "notes": "Mirror can grant extra defiance."
+    }
+  ],
+  "menu_flow": [
+    {
+      "from_menu": "hub-menu",
+      "to_menu": "mirror-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "hub-menu",
+      "to_menu": "boons-menu",
+      "relationship": "in_run",
+      "notes": "Boon choice during escape."
+    }
+  ]
 }

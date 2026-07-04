@@ -140,3 +140,117 @@ func (b *Bundle) SimilarMaps(mapSlug string, minShared int) []string {
 	}
 	return out
 }
+
+// MapsWithVariable returns map slugs that bind the given variable.
+func (b *Bundle) MapsWithVariable(variableSlug string) []string {
+	var out []string
+	for slug, m := range b.Maps {
+		for _, binding := range m.Variables {
+			if binding.VariableSlug == variableSlug {
+				out = append(out, slug)
+				break
+			}
+		}
+	}
+	sort.Strings(out)
+	return out
+}
+
+// MapsWithMenu returns map slugs that bind the given UI menu.
+func (b *Bundle) MapsWithMenu(menuSlug string) []string {
+	var out []string
+	for slug, m := range b.Maps {
+		for _, binding := range m.UIMenus {
+			if binding.MenuSlug == menuSlug {
+				out = append(out, slug)
+				break
+			}
+		}
+	}
+	sort.Strings(out)
+	return out
+}
+
+// VariablesForMechanic returns variable slugs related to a mechanic.
+func (b *Bundle) VariablesForMechanic(mechanicSlug string) []string {
+	seen := map[string]struct{}{}
+	for slug, v := range b.Variables {
+		for _, m := range v.RelatedMechanics {
+			if m == mechanicSlug {
+				seen[slug] = struct{}{}
+				break
+			}
+		}
+	}
+	for _, m := range b.Maps {
+		for _, vb := range m.Variables {
+			for _, mech := range vb.RelatedMechanics {
+				if mech == mechanicSlug {
+					seen[vb.VariableSlug] = struct{}{}
+				}
+			}
+		}
+	}
+	out := make([]string, 0, len(seen))
+	for s := range seen {
+		out = append(out, s)
+	}
+	sort.Strings(out)
+	return out
+}
+
+// MenusForMechanic returns menu slugs related to a mechanic.
+func (b *Bundle) MenusForMechanic(mechanicSlug string) []string {
+	seen := map[string]struct{}{}
+	for slug, menu := range b.UIMenus {
+		for _, m := range menu.RelatedMechanics {
+			if m == mechanicSlug {
+				seen[slug] = struct{}{}
+				break
+			}
+		}
+	}
+	for _, m := range b.Maps {
+		for _, mb := range m.UIMenus {
+			for _, mech := range mb.SupportsMechanics {
+				if mech == mechanicSlug {
+					seen[mb.MenuSlug] = struct{}{}
+				}
+			}
+		}
+	}
+	out := make([]string, 0, len(seen))
+	for s := range seen {
+		out = append(out, s)
+	}
+	sort.Strings(out)
+	return out
+}
+
+// MenusForVariable returns menus that reference a variable.
+func (b *Bundle) MenusForVariable(variableSlug string) []string {
+	seen := map[string]struct{}{}
+	for slug, menu := range b.UIMenus {
+		for _, v := range menu.RelatedVariables {
+			if v == variableSlug {
+				seen[slug] = struct{}{}
+				break
+			}
+		}
+	}
+	for _, m := range b.Maps {
+		for _, mb := range m.UIMenus {
+			for _, v := range mb.DisplaysVariables {
+				if v == variableSlug {
+					seen[mb.MenuSlug] = struct{}{}
+				}
+			}
+		}
+	}
+	out := make([]string, 0, len(seen))
+	for s := range seen {
+		out = append(out, s)
+	}
+	sort.Strings(out)
+	return out
+}

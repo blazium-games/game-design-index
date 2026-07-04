@@ -11,6 +11,10 @@ import { GenreDetailPage, GenresPage } from './pages/GenresPage'
 import { HomePage } from './pages/HomePage'
 import { MechanicDetailPage } from './pages/MechanicDetailPage'
 import { MechanicsPage } from './pages/MechanicsPage'
+import { VariableDetailPage } from './pages/VariableDetailPage'
+import { VariablesPage } from './pages/VariablesPage'
+import { UIMenuDetailPage } from './pages/UIMenuDetailPage'
+import { UIMenusPage } from './pages/UIMenusPage'
 import { WebMcpDocsPage } from './pages/WebMcpDocsPage'
 
 const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
@@ -26,6 +30,10 @@ const router = createBrowserRouter(
         { path: 'games/:slug', element: <GameDetailPage /> },
         { path: 'mechanics', element: <MechanicsPage /> },
         { path: 'mechanics/:slug', element: <MechanicDetailPage /> },
+        { path: 'variables', element: <VariablesPage /> },
+        { path: 'variables/:slug', element: <VariableDetailPage /> },
+        { path: 'ui-menus', element: <UIMenusPage /> },
+        { path: 'ui-menus/:slug', element: <UIMenuDetailPage /> },
         { path: 'genres', element: <GenresPage /> },
         { path: 'genres/:slug', element: <GenreDetailPage /> },
         { path: 'explore/cooccurrence', element: <CooccurrencePage /> },

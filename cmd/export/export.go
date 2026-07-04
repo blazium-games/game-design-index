@@ -18,6 +18,8 @@ type Catalog struct {
 	ReleaseVersion  string   `json:"release_version"`
 	MapCount        int      `json:"map_count"`
 	MechanicCount   int      `json:"mechanic_count"`
+	VariableCount   int      `json:"variable_count"`
+	MenuCount       int      `json:"menu_count"`
 	GenreCount      int      `json:"genre_count"`
 	GameCount       int      `json:"game_count"`
 	Genres          []string `json:"genres"`
@@ -51,6 +53,26 @@ type GenreIndexRow struct {
 	Slug  string `json:"slug"`
 	Title string `json:"title"`
 	Name  string `json:"name"`
+}
+
+type VariableIndexRow struct {
+	Slug              string   `json:"slug"`
+	Name              string   `json:"name"`
+	Category          string   `json:"category"`
+	Scope             string   `json:"scope"`
+	Tags              []string `json:"tags,omitempty"`
+	FeaturedCount     int      `json:"featured_count"`
+	EnrichmentStatus  string   `json:"enrichment_status"`
+}
+
+type MenuIndexRow struct {
+	Slug             string   `json:"slug"`
+	Name             string   `json:"name"`
+	MenuType         string   `json:"menu_type"`
+	Layer            string   `json:"layer"`
+	Tags             []string `json:"tags,omitempty"`
+	FeaturedCount    int      `json:"featured_count"`
+	EnrichmentStatus string   `json:"enrichment_status"`
 }
 
 type SearchRow struct {
@@ -115,6 +137,12 @@ func exportAPI(b *internal.Bundle, outDir, releaseVersion string) error {
 	if err := os.MkdirAll(filepath.Join(api, "genres"), 0o755); err != nil {
 		return err
 	}
+	if err := os.MkdirAll(filepath.Join(api, "variables"), 0o755); err != nil {
+		return err
+	}
+	if err := os.MkdirAll(filepath.Join(api, "ui-menus"), 0o755); err != nil {
+		return err
+	}
 
 	genreCount, gameCount := 0, 0
 	genreSet := map[string]struct{}{}
@@ -140,6 +168,8 @@ func exportAPI(b *internal.Bundle, outDir, releaseVersion string) error {
 		ReleaseVersion: releaseVersion,
 		MapCount:       len(b.Maps),
 		MechanicCount:  len(b.Mechanics),
+		VariableCount:  len(b.Variables),
+		MenuCount:      len(b.UIMenus),
 		GenreCount:     genreCount,
 		GameCount:      gameCount,
 		Genres:         genres,
@@ -201,6 +231,50 @@ func exportAPI(b *internal.Bundle, outDir, releaseVersion string) error {
 		return err
 	}
 
+	var varRows []VariableIndexRow
+	for slug, v := range b.Variables {
+		varRows = append(varRows, VariableIndexRow{
+			Slug:             slug,
+			Name:             v.Name,
+			Category:         string(v.Category),
+			Scope:            string(v.Scope),
+			Tags:             append([]string(nil), v.Tags...),
+			FeaturedCount:    len(v.FeaturedIn),
+			EnrichmentStatus: internal.VariableEnrichmentStatus(v),
+		})
+		if err := writeJSON(filepath.Join(api, "variables", slug+".json"), v); err != nil {
+			return err
+		}
+	}
+	sort.Slice(varRows, func(i, j int) bool { return varRows[i].Slug < varRows[j].Slug })
+	if len(varRows) > 0 {
+		if err := writeJSON(filepath.Join(api, "variables", "index.json"), varRows); err != nil {
+			return err
+		}
+	}
+
+	var menuRows []MenuIndexRow
+	for slug, menu := range b.UIMenus {
+		menuRows = append(menuRows, MenuIndexRow{
+			Slug:             slug,
+			Name:             menu.Name,
+			MenuType:         string(menu.MenuType),
+			Layer:            string(menu.Layer),
+			Tags:             append([]string(nil), menu.Tags...),
+			FeaturedCount:    len(menu.FeaturedIn),
+			EnrichmentStatus: internal.MenuEnrichmentStatus(menu),
+		})
+		if err := writeJSON(filepath.Join(api, "ui-menus", slug+".json"), menu); err != nil {
+			return err
+		}
+	}
+	sort.Slice(menuRows, func(i, j int) bool { return menuRows[i].Slug < menuRows[j].Slug })
+	if len(menuRows) > 0 {
+		if err := writeJSON(filepath.Join(api, "ui-menus", "index.json"), menuRows); err != nil {
+			return err
+		}
+	}
+
 	var genreRows []GenreIndexRow
 	for slug, m := range b.Maps {
 		if m.MapType != internal.MapTypeGenre {
@@ -255,6 +329,31 @@ func exportAPI(b *internal.Bundle, outDir, releaseVersion string) error {
 		_ = os.WriteFile(filepath.Join(api, "indexes", "genre-to-recipes.json"), data, 0o644)
 	}
 
+	for _, idxName := range []string{"variable-to-maps.json", "menu-to-maps.json", "variable-to-mechanics.json", "menu-flow-edges.json"} {
+		idxPath := filepath.Join(b.Root, "indexes", idxName)
+		if data, err := os.ReadFile(idxPath); err == nil {
+			if err := scanBannedJSON(data, idxPath); err != nil {
+				return err
+			}
+			_ = os.WriteFile(filepath.Join(api, "indexes", idxName), data, 0o644)
+		}
+	}
+
+	varTagPath := filepath.Join(b.Root, "schema", "variable-tags.json")
+	if data, err := os.ReadFile(varTagPath); err == nil {
+		if err := scanBannedJSON(data, varTagPath); err != nil {
+			return err
+		}
+		_ = os.WriteFile(filepath.Join(api, "variable-tags.json"), data, 0o644)
+	}
+	menuTagPath := filepath.Join(b.Root, "schema", "menu-tags.json")
+	if data, err := os.ReadFile(menuTagPath); err == nil {
+		if err := scanBannedJSON(data, menuTagPath); err != nil {
+			return err
+		}
+		_ = os.WriteFile(filepath.Join(api, "menu-tags.json"), data, 0o644)
+	}
+
 	tagsPath := filepath.Join(b.Root, "schema", "mechanic-tags.json")
 	if data, err := os.ReadFile(tagsPath); err == nil {
 		if err := scanBannedJSON(data, tagsPath); err != nil {
@@ -275,6 +374,16 @@ func exportAPI(b *internal.Bundle, outDir, releaseVersion string) error {
 	for _, row := range mechRows {
 		search = append(search, SearchRow{
 			Type: "mechanic", Slug: row.Slug, Title: row.Name, Tags: row.Tags,
+		})
+	}
+	for _, row := range varRows {
+		search = append(search, SearchRow{
+			Type: "variable", Slug: row.Slug, Title: row.Name, Tags: row.Tags,
+		})
+	}
+	for _, row := range menuRows {
+		search = append(search, SearchRow{
+			Type: "menu", Slug: row.Slug, Title: row.Name, Tags: row.Tags,
 		})
 	}
 	sort.Slice(search, func(i, j int) bool {
@@ -316,6 +425,10 @@ func exportAPI(b *internal.Bundle, outDir, releaseVersion string) error {
 			"/api/v1/maps/{slug}.json":        map[string]any{"get": map[string]any{"summary": "Full gameplay map"}},
 			"/api/v1/mechanics/index.json":    map[string]any{"get": map[string]any{"summary": "Mechanic index"}},
 			"/api/v1/mechanics/{slug}.json":   map[string]any{"get": map[string]any{"summary": "Full mechanic entry"}},
+			"/api/v1/variables/index.json":    map[string]any{"get": map[string]any{"summary": "Variable index"}},
+			"/api/v1/variables/{slug}.json":   map[string]any{"get": map[string]any{"summary": "Full game variable entry"}},
+			"/api/v1/ui-menus/index.json":     map[string]any{"get": map[string]any{"summary": "UI menu index"}},
+			"/api/v1/ui-menus/{slug}.json":    map[string]any{"get": map[string]any{"summary": "Full UI menu entry"}},
 			"/api/v1/search.json":             map[string]any{"get": map[string]any{"summary": "Unified search index"}},
 			"/formats/v1/mechanics/{slug}.md": map[string]any{"get": map[string]any{"summary": "Mechanic entry as Markdown"}},
 			"/formats/v1/mechanics/{slug}.txt": map[string]any{"get": map[string]any{"summary": "Mechanic entry as plain text"}},
@@ -369,6 +482,58 @@ func exportFormats(b *internal.Bundle, outDir, releaseVersion string, pubMaps, p
 			return err
 		}
 		if err := os.WriteFile(filepath.Join(fmtBase, "mechanics", slug+".xml"), xml, 0o644); err != nil {
+			return err
+		}
+	}
+
+	for slug, v := range b.Variables {
+		if err := writeText(filepath.Join(fmtBase, "variables", slug+".md"), formats.VariableMarkdown(v)); err != nil {
+			return err
+		}
+		if err := writeText(filepath.Join(fmtBase, "variables", slug+".txt"), formats.VariableText(v)); err != nil {
+			return err
+		}
+		yml, err := formats.ToYAML(v)
+		if err != nil {
+			return err
+		}
+		if err := os.MkdirAll(filepath.Join(fmtBase, "variables"), 0o755); err != nil {
+			return err
+		}
+		if err := os.WriteFile(filepath.Join(fmtBase, "variables", slug+".yaml"), yml, 0o644); err != nil {
+			return err
+		}
+		xml, err := formats.VariableXML(v)
+		if err != nil {
+			return err
+		}
+		if err := os.WriteFile(filepath.Join(fmtBase, "variables", slug+".xml"), xml, 0o644); err != nil {
+			return err
+		}
+	}
+
+	for slug, menu := range b.UIMenus {
+		if err := writeText(filepath.Join(fmtBase, "ui-menus", slug+".md"), formats.MenuMarkdown(menu)); err != nil {
+			return err
+		}
+		if err := writeText(filepath.Join(fmtBase, "ui-menus", slug+".txt"), formats.MenuText(menu)); err != nil {
+			return err
+		}
+		yml, err := formats.ToYAML(menu)
+		if err != nil {
+			return err
+		}
+		if err := os.MkdirAll(filepath.Join(fmtBase, "ui-menus"), 0o755); err != nil {
+			return err
+		}
+		if err := os.WriteFile(filepath.Join(fmtBase, "ui-menus", slug+".yaml"), yml, 0o644); err != nil {
+			return err
+		}
+		xml, err := formats.MenuXML(menu)
+		if err != nil {
+			return err
+		}
+		if err := os.WriteFile(filepath.Join(fmtBase, "ui-menus", slug+".xml"), xml, 0o644); err != nil {
 			return err
 		}
 	}

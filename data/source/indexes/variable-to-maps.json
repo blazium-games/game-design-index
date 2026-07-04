@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "variables": {
+    "ammo": [
+      "zelda-breath-of-the-wild"
+    ],
+    "charm-notches": [
+      "hollow-knight"
+    ],
+    "cooldown-timer": [
+      "among-us"
+    ],
+    "currency-soft": [
+      "hades"
+    ],
+    "death-defiance-charges": [
+      "hades"
+    ],
+    "equipment-belt-slots": [
+      "zelda-breath-of-the-wild"
+    ],
+    "geo": [
+      "hollow-knight"
+    ],
+    "health": [
+      "hades",
+      "hollow-knight",
+      "mega-man-2",
+      "zelda-breath-of-the-wild"
+    ],
+    "inventory-slots": [
+      "hollow-knight",
+      "zelda-breath-of-the-wild"
+    ],
+    "lives": [
+      "among-us",
+      "mega-man-2"
+    ],
+    "meta-currency": [
+      "hades"
+    ],
+    "quick-slot-bar": [
+      "mega-man-2"
+    ],
+    "souls": [
+      "hollow-knight"
+    ],
+    "spell-slots": [
+      "hollow-knight"
+    ],
+    "stamina": [
+      "zelda-breath-of-the-wild"
+    ],
+    "task-progress": [
+      "among-us"
+    ],
+    "weapon-energy": [
+      "mega-man-2"
+    ]
+  }
+}

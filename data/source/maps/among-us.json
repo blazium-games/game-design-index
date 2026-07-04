@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "slug": "among-us",
   "title": "Among Us Gameplay Map",
   "map_type": "game",
@@ -10,8 +10,7 @@
     "genres": [
       "Party",
       "Social Deduction"
-    ],
-    "influences": []
+    ]
   },
   "narrative": {
     "description": "Among Us is a multiplayer social deduction game where crewmates complete tasks while impostors sabotage and eliminate players without being caught.",
@@ -93,11 +92,11 @@
       }
     }
   ],
-  "metadata": {
-    "quality_tier": "curated"
-  },
   "context": {
     "year": 2018
+  },
+  "metadata": {
+    "quality_tier": "curated"
   },
   "design_intent": {
     "player_fantasy": "Experience Among Us through its core party loop.",
@@ -113,5 +112,68 @@
       "Evidence Deduction Puzzle",
       "Local Multiplayer Competition"
     ]
-  }
+  },
+  "variables": [
+    {
+      "variable_slug": "lives",
+      "role": "primary",
+      "map_notes": "Crew lives = remaining players; impostor wins on parity.",
+      "expression": "One life per player per round."
+    },
+    {
+      "variable_slug": "task-progress",
+      "role": "primary",
+      "map_notes": "Global task bar for crew victory.",
+      "expression": "Tasks complete across living crew."
+    },
+    {
+      "variable_slug": "cooldown-timer",
+      "role": "supporting",
+      "map_notes": "Kill, vent, and sabotage cooldowns.",
+      "expression": "Role-specific timers reset on meeting."
+    }
+  ],
+  "ui_menus": [
+    {
+      "menu_slug": "lobby-menu",
+      "role": "core",
+      "map_notes": "Host settings, color, and ready."
+    },
+    {
+      "menu_slug": "meeting-menu",
+      "role": "core",
+      "map_notes": "Chat discussion after report.",
+      "opens_from": [
+        "map-overlay"
+      ],
+      "displays_variables": [
+        "task-progress"
+      ]
+    },
+    {
+      "menu_slug": "voting-menu",
+      "role": "core",
+      "map_notes": "Vote or skip after discussion.",
+      "opens_from": [
+        "meeting-menu"
+      ]
+    },
+    {
+      "menu_slug": "map-overlay",
+      "role": "core",
+      "map_notes": "Minimap with task waypoints."
+    }
+  ],
+  "menu_flow": [
+    {
+      "from_menu": "map-overlay",
+      "to_menu": "meeting-menu",
+      "relationship": "emergency_report"
+    },
+    {
+      "from_menu": "meeting-menu",
+      "to_menu": "voting-menu",
+      "relationship": "leads_to"
+    }
+  ]
 }

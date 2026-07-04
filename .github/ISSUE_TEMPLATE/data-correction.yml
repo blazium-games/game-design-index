@@ -13,7 +13,7 @@ body:
     id: kind
     attributes:
       label: Entry type
-      options: [game, mechanic, genre]
+      options: [game, mechanic, genre, variable, ui-menu]
     validations:
       required: true
   - type: textarea

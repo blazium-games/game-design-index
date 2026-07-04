@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "slug": "zelda-breath-of-the-wild",
   "title": "The Legend of Zelda: Breath of the Wild Gameplay Map",
   "map_type": "game",
@@ -10,8 +10,7 @@
     "genres": [
       "Action-Adventure",
       "Open World"
-    ],
-    "influences": []
+    ]
   },
   "narrative": {
     "description": "Breath of the Wild is an open-world action adventure emphasizing free exploration, shrine puzzles, and gear-based combat.",
@@ -124,11 +123,11 @@
       }
     }
   ],
-  "metadata": {
-    "quality_tier": "curated"
-  },
   "context": {
     "year": 2017
+  },
+  "metadata": {
+    "quality_tier": "curated"
   },
   "relationships": {
     "genre_maps": [
@@ -150,5 +149,96 @@
       "Open World Quest Log",
       "Equipment Loadout"
     ]
-  }
+  },
+  "variables": [
+    {
+      "variable_slug": "health",
+      "role": "primary",
+      "map_notes": "Heart containers from shrines.",
+      "related_mechanics": [
+        "depletable-health-pool"
+      ]
+    },
+    {
+      "variable_slug": "stamina",
+      "role": "primary",
+      "map_notes": "Stamina wheels for climb, sprint, glide.",
+      "expression": "Vessel upgrades from shrines."
+    },
+    {
+      "variable_slug": "inventory-slots",
+      "role": "primary",
+      "map_notes": "Weapon, bow, shield, material caps.",
+      "related_mechanics": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "variable_slug": "equipment-belt-slots",
+      "role": "supporting",
+      "map_notes": "D-pad weapon and shield quick select.",
+      "related_mechanics": [
+        "equipment-loadout"
+      ]
+    },
+    {
+      "variable_slug": "ammo",
+      "role": "supporting",
+      "map_notes": "Arrows and bombs from inventory.",
+      "expression": "Crafted and purchased."
+    }
+  ],
+  "ui_menus": [
+    {
+      "menu_slug": "pause-menu",
+      "role": "core",
+      "map_notes": "Inventory, map, and system from + menu."
+    },
+    {
+      "menu_slug": "inventory-menu",
+      "role": "core",
+      "map_notes": "Armor, food, and materials.",
+      "opens_from": [
+        "pause-menu"
+      ],
+      "displays_variables": [
+        "inventory-slots",
+        "equipment-belt-slots",
+        "ammo"
+      ]
+    },
+    {
+      "menu_slug": "map-menu",
+      "role": "core",
+      "map_notes": "Tower-unlocked map with pins.",
+      "opens_from": [
+        "pause-menu"
+      ]
+    },
+    {
+      "menu_slug": "options-menu",
+      "role": "optional",
+      "map_notes": "Audio, controls, and HUD.",
+      "opens_from": [
+        "pause-menu"
+      ]
+    }
+  ],
+  "menu_flow": [
+    {
+      "from_menu": "pause-menu",
+      "to_menu": "inventory-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "pause-menu",
+      "to_menu": "map-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "pause-menu",
+      "to_menu": "options-menu",
+      "relationship": "opens"
+    }
+  ]
 }

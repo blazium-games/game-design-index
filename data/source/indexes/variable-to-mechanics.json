@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "variables": {
+    "charm-notches": [
+      "equipment-loadout"
+    ],
+    "checkpoint-id": [
+      "bench-checkpoint"
+    ],
+    "equipment-belt-slots": [
+      "equipment-loadout"
+    ],
+    "health": [
+      "bench-checkpoint",
+      "depletable-health-pool"
+    ],
+    "inventory-slots": [
+      "equipment-loadout"
+    ],
+    "meta-currency": [
+      "metaprogression"
+    ],
+    "quick-slot-bar": [
+      "equipment-loadout",
+      "resource-gated-weapon"
+    ],
+    "weapon-energy": [
+      "resource-gated-weapon"
+    ]
+  }
+}

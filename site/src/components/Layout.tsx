@@ -13,6 +13,8 @@ export function Layout() {
         <nav>
           <Link to="/games">Games</Link>
           <Link to="/mechanics">Mechanics</Link>
+          <Link to="/variables">Variables</Link>
+          <Link to="/ui-menus">UI Menus</Link>
           <Link to="/genres">Genres</Link>
           <Link to="/explore/cooccurrence">Co-occurrence</Link>
           <Link to="/contribute">Contribute</Link>
@@ -36,7 +38,13 @@ export function Layout() {
   )
 }
 
-export function SuggestEditLink({ slug, kind }: { slug: string; kind: 'game' | 'mechanic' }) {
+export function SuggestEditLink({
+  slug,
+  kind,
+}: {
+  slug: string
+  kind: 'game' | 'mechanic' | 'genre' | 'variable' | 'ui-menu'
+}) {
   const title = encodeURIComponent(`Data correction: ${slug}`)
   const body = encodeURIComponent(
     `**${kind} slug:** \`${slug}\`\n\n**What should change:**\n\n`,

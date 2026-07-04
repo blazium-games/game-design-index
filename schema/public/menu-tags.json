@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "tags": [
+    "meta",
+    "in_game",
+    "overlay",
+    "navigation",
+    "inventory",
+    "economy",
+    "social",
+    "combat",
+    "progression",
+    "settings",
+    "hub"
+  ]
+}

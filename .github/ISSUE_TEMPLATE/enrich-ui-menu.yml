@@ -1,0 +1,23 @@
+name: Enrich UI menu
+description: Add shared rationale and example games for a catalog UI menu pattern
+title: "Enrich UI menu: "
+labels: ["data", "ui-menus"]
+body:
+  - type: input
+    id: slug
+    attributes:
+      label: UI menu slug
+    validations:
+      required: true
+  - type: textarea
+    id: shared_rationale
+    attributes:
+      label: Shared rationale
+  - type: textarea
+    id: typical_actions
+    attributes:
+      label: Typical actions (comma-separated)
+  - type: textarea
+    id: example_games
+    attributes:
+      label: Example game map slugs (one per line)

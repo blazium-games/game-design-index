@@ -21,6 +21,17 @@ export function ContributePage() {
             <strong>New mechanic</strong> — schema 1.1 entry with domain, tags, summary
           </li>
           <li>
+            <strong>Game variables</strong> — enrich catalog entries (shared rationale, player
+            focus, typical range) via enrich-variable issues
+          </li>
+          <li>
+            <strong>UI menus</strong> — document screen patterns and map bindings via enrich-ui-menu
+            issues
+          </li>
+          <li>
+            <strong>Map bindings</strong> — add variables[] and ui_menus[] to gameplay maps
+          </li>
+          <li>
             <strong>Corrections</strong> — fix genres, synergies, or signature lists
           </li>
         </ul>

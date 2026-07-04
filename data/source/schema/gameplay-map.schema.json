@@ -1,5 +1,5 @@
 {
-  "$id": "game-mechanics-index/gameplay-map.schema.json",
+  "$id": "gameplay_maps/gameplay-map.schema.json",
   "title": "GameplayMap",
   "description": "Gameplay map document analyzing a game or defining a genre recipe",
   "type": "object",
@@ -214,6 +214,77 @@
         "properties": {
           "from_mechanic": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
           "to_mechanic": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "relationship": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["variable_slug", "role"],
+        "properties": {
+          "variable_slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "role": { "type": "string", "enum": ["primary", "supporting", "hidden"] },
+          "map_notes": { "type": "string" },
+          "expression": { "type": "string" },
+          "related_mechanics": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "ui_menus": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["menu_slug", "role"],
+        "properties": {
+          "menu_slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "role": { "type": "string", "enum": ["core", "optional", "contextual"] },
+          "map_notes": { "type": "string" },
+          "opens_from": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+          },
+          "displays_variables": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+          },
+          "supports_mechanics": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "variable_relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from_variable", "to_variable"],
+        "properties": {
+          "from_variable": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "to_variable": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "relationship": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "menu_flow": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from_menu", "to_menu"],
+        "properties": {
+          "from_menu": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "to_menu": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
           "relationship": { "type": "string" },
           "notes": { "type": "string" }
         },

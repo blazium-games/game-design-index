@@ -13,6 +13,8 @@ func LoadDir(root string) (*Bundle, error) {
 	b := &Bundle{
 		Root:      root,
 		Mechanics: make(map[string]MechanicEntry),
+		Variables: make(map[string]GameVariable),
+		UIMenus:   make(map[string]UIMenu),
 		Maps:      make(map[string]GameplayMap),
 	}
 
@@ -33,6 +35,40 @@ func LoadDir(root string) (*Bundle, error) {
 			return nil, fmt.Errorf("duplicate mechanic slug %q", entry.Slug)
 		}
 		b.Mechanics[entry.Slug] = entry
+	}
+
+	varPath := filepath.Join(root, "library", "variables.json")
+	if varData, err := os.ReadFile(varPath); err == nil {
+		var varCatalog VariablesCatalog
+		if err := json.Unmarshal(varData, &varCatalog); err != nil {
+			return nil, fmt.Errorf("parse variables catalog: %w", err)
+		}
+		for _, entry := range varCatalog.Variables {
+			if entry.Slug == "" {
+				return nil, fmt.Errorf("variable entry missing slug")
+			}
+			if _, exists := b.Variables[entry.Slug]; exists {
+				return nil, fmt.Errorf("duplicate variable slug %q", entry.Slug)
+			}
+			b.Variables[entry.Slug] = entry
+		}
+	}
+
+	menuPath := filepath.Join(root, "library", "ui-menus.json")
+	if menuData, err := os.ReadFile(menuPath); err == nil {
+		var menuCatalog UIMenusCatalog
+		if err := json.Unmarshal(menuData, &menuCatalog); err != nil {
+			return nil, fmt.Errorf("parse ui-menus catalog: %w", err)
+		}
+		for _, entry := range menuCatalog.Menus {
+			if entry.Slug == "" {
+				return nil, fmt.Errorf("ui menu entry missing slug")
+			}
+			if _, exists := b.UIMenus[entry.Slug]; exists {
+				return nil, fmt.Errorf("duplicate ui menu slug %q", entry.Slug)
+			}
+			b.UIMenus[entry.Slug] = entry
+		}
 	}
 
 	mapsDir := filepath.Join(root, "maps")
@@ -146,4 +182,48 @@ func (b *Bundle) MechanicSlugs() []string {
 	}
 	sort.Strings(slugs)
 	return slugs
+}
+
+func (b *Bundle) Variable(slug string) (GameVariable, bool) {
+	v, ok := b.Variables[slug]
+	return v, ok
+}
+
+func (b *Bundle) UIMenu(slug string) (UIMenu, bool) {
+	m, ok := b.UIMenus[slug]
+	return m, ok
+}
+
+func (b *Bundle) VariableSlugs() []string {
+	slugs := make([]string, 0, len(b.Variables))
+	for s := range b.Variables {
+		slugs = append(slugs, s)
+	}
+	sort.Strings(slugs)
+	return slugs
+}
+
+func (b *Bundle) UIMenuSlugs() []string {
+	slugs := make([]string, 0, len(b.UIMenus))
+	for s := range b.UIMenus {
+		slugs = append(slugs, s)
+	}
+	sort.Strings(slugs)
+	return slugs
+}
+
+// VariableEnrichmentStatus returns "complete" or "needs_info".
+func VariableEnrichmentStatus(v GameVariable) string {
+	if v.SharedRationale != "" && v.PlayerFocus != "" {
+		return "complete"
+	}
+	return "needs_info"
+}
+
+// MenuEnrichmentStatus returns "complete" or "needs_info".
+func MenuEnrichmentStatus(m UIMenu) string {
+	if m.SharedRationale != "" {
+		return "complete"
+	}
+	return "needs_info"
 }

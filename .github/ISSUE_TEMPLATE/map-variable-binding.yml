@@ -1,0 +1,23 @@
+name: Map variable or menu binding
+description: Document variables and UI menus on a gameplay map
+title: "Map bindings: "
+labels: ["data", "maps"]
+body:
+  - type: input
+    id: map_slug
+    attributes:
+      label: Game map slug
+    validations:
+      required: true
+  - type: textarea
+    id: variables
+    attributes:
+      label: Variable bindings (slug, role, expression)
+  - type: textarea
+    id: ui_menus
+    attributes:
+      label: UI menu bindings (slug, role, opens_from)
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes

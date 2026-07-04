@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { Link, useParams } from 'react-router-dom'
 import { api } from '../api/client'
+import { ExportDropdown } from '../components/ExportDropdown'
 import { SuggestEditLink } from '../components/Layout'
 
 export function MechanicDetailPage() {
@@ -18,6 +19,31 @@ export function MechanicDetailPage() {
     },
     enabled: !!slug,
   })
+  const { data: varMechs } = useQuery({
+    queryKey: ['variable-to-mechanics', slug],
+    queryFn: async () => {
+      const idx = await api.fetchVariableToMechanics()
+      const out: string[] = []
+      for (const [v, mechs] of Object.entries(idx.variables)) {
+        if (mechs.includes(slug)) out.push(v)
+      }
+      return out.sort()
+    },
+    enabled: !!slug,
+  })
+  const { data: menuIndex } = useQuery({
+    queryKey: ['ui-menus-index'],
+    queryFn: api.fetchUIMenusIndex,
+  })
+  const { data: relatedMenus } = useQuery({
+    queryKey: ['menus-for-mechanic', slug, menuIndex?.length],
+    queryFn: async () => {
+      if (!menuIndex) return []
+      const menus = await Promise.all(menuIndex.map((row) => api.fetchUIMenu(row.slug)))
+      return menus.filter((m) => m.related_mechanics?.includes(slug))
+    },
+    enabled: !!slug && !!menuIndex,
+  })
 
   if (!mech) return <p>Loading…</p>
 
@@ -25,7 +51,10 @@ export function MechanicDetailPage() {
     <div>
       <div className="detail-header">
         <h1>{mech.name}</h1>
-        <SuggestEditLink slug={slug} kind="mechanic" />
+        <div className="detail-actions">
+          <ExportDropdown kind="mechanic" slug={slug} entity={mech} />
+          <SuggestEditLink slug={slug} kind="mechanic" />
+        </div>
       </div>
       <p className="meta">
         {mech.domain} · flavor: {mech.flavor}
@@ -34,6 +63,18 @@ export function MechanicDetailPage() {
         <h2>Summary</h2>
         <p>{mech.summary}</p>
       </section>
+      {mech.player_experience && (
+        <section>
+          <h2>Player experience</h2>
+          <p>{mech.player_experience}</p>
+        </section>
+      )}
+      {mech.flavor_rationale && (
+        <section>
+          <h2>Flavor rationale</h2>
+          <p>{mech.flavor_rationale}</p>
+        </section>
+      )}
       {mech.tags && mech.tags.length > 0 && (
         <section>
           <h2>Tags</h2>
@@ -42,6 +83,30 @@ export function MechanicDetailPage() {
               <span key={t} className="chip">
                 {t}
               </span>
+            ))}
+          </div>
+        </section>
+      )}
+      {varMechs && varMechs.length > 0 && (
+        <section>
+          <h2>Related variables</h2>
+          <div className="chips">
+            {varMechs.map((v) => (
+              <Link key={v} className="chip" to={`/variables/${v}`}>
+                {v}
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+      {relatedMenus && relatedMenus.length > 0 && (
+        <section>
+          <h2>Related UI menus</h2>
+          <div className="chips">
+            {relatedMenus.map((m) => (
+              <Link key={m.slug} className="chip" to={`/ui-menus/${m.slug}`}>
+                {m.slug}
+              </Link>
             ))}
           </div>
         </section>
@@ -66,6 +131,12 @@ export function MechanicDetailPage() {
               </Link>
             ))}
           </div>
+        </section>
+      )}
+      {mech.design_guidance?.when_to_use && (
+        <section>
+          <h2>When to use</h2>
+          <p>{mech.design_guidance.when_to_use}</p>
         </section>
       )}
       <section>

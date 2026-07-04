@@ -1,0 +1,808 @@
+{
+  "schema_version": "1.0",
+  "variables": [
+    {
+      "schema_version": "1.0",
+      "slug": "ammo",
+      "name": "Ammo",
+      "summary": "Consumable ammunition for ranged weapons.",
+      "category": "resource",
+      "scope": "player",
+      "value_kind": "integer",
+      "shared_rationale": "Ranged weapons consume arrows and bombs from inventory.",
+      "player_focus": "Craft or buy ammo before encounters.",
+      "typical_range": "0–999 per type",
+      "reset_behavior": "per_session",
+      "featured_in": [
+        "zelda-breath-of-the-wild"
+      ],
+      "common_in": [
+        "Adventure"
+      ],
+      "tags": [
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "boss-hp-phases",
+      "name": "Boss HP Phases",
+      "summary": "Segmented boss health triggering phase shifts.",
+      "category": "meter",
+      "scope": "session",
+      "value_kind": "integer",
+      "reset_behavior": "per_level",
+      "tags": [
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "charm-notches",
+      "name": "Charm Notches",
+      "summary": "Equip capacity for passive charm modifiers.",
+      "category": "slot",
+      "scope": "player",
+      "value_kind": "integer",
+      "shared_rationale": "Loadout capacity forces charm build choices without unlimited passives.",
+      "player_focus": "Equip charms within notch budget.",
+      "typical_range": "3–11 notches",
+      "reset_behavior": "persistent",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "related_variables": [
+        {
+          "slug": "inventory-slots",
+          "relationship": "capacity_constraint"
+        }
+      ],
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "common_in": [
+        "Metroidvania"
+      ],
+      "tags": [
+        "capacity",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "checkpoint-id",
+      "name": "Checkpoint ID",
+      "summary": "Last saved bench or respawn anchor.",
+      "category": "flag",
+      "scope": "player",
+      "value_kind": "enum",
+      "reset_behavior": "persistent",
+      "related_mechanics": [
+        "bench-checkpoint"
+      ],
+      "tags": [
+        "session",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "combo-counter",
+      "name": "Combo Counter",
+      "summary": "Streak counter rewarding sustained offense.",
+      "category": "counter",
+      "scope": "session",
+      "value_kind": "integer",
+      "reset_behavior": "per_session",
+      "tags": [
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "cooldown-timer",
+      "name": "Cooldown Timer",
+      "summary": "Seconds until ability or action is available again.",
+      "category": "meter",
+      "scope": "player",
+      "value_kind": "float",
+      "shared_rationale": "Ability pacing prevents spam in asymmetric roles.",
+      "player_focus": "Time kills and sabotage around cooldowns.",
+      "typical_range": "10–60 seconds",
+      "reset_behavior": "per_session",
+      "featured_in": [
+        "among-us"
+      ],
+      "common_in": [
+        "Multiplayer"
+      ],
+      "tags": [
+        "combat",
+        "multiplayer"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "currency-premium",
+      "name": "Premium Currency",
+      "summary": "Optional paid or rare meta currency.",
+      "category": "currency",
+      "scope": "player",
+      "value_kind": "integer",
+      "reset_behavior": "persistent",
+      "tags": [
+        "economy",
+        "meta"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "currency-soft",
+      "name": "Soft Currency",
+      "summary": "Earnable in-run currency for upgrades and consumables.",
+      "category": "currency",
+      "scope": "run",
+      "value_kind": "integer",
+      "shared_rationale": "In-run bones buy mid-escape boons and wells.",
+      "player_focus": "Spend bones before chamber ends.",
+      "typical_range": "0–999 per run",
+      "reset_behavior": "per_death",
+      "featured_in": [
+        "hades"
+      ],
+      "common_in": [
+        "Roguelike"
+      ],
+      "tags": [
+        "economy",
+        "meta"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "death-defiance-charges",
+      "name": "Death Defiance Charges",
+      "summary": "Extra death saves before run failure.",
+      "category": "counter",
+      "scope": "run",
+      "value_kind": "integer",
+      "shared_rationale": "Extra revives extend high-difficulty escape attempts.",
+      "player_focus": "Spend charges on lethal mistakes.",
+      "typical_range": "0–3 charges",
+      "reset_behavior": "per_death",
+      "featured_in": [
+        "hades"
+      ],
+      "common_in": [
+        "Roguelike"
+      ],
+      "tags": [
+        "combat",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "difficulty-tier",
+      "name": "Difficulty Tier",
+      "summary": "Selected challenge modifier or heat level.",
+      "category": "flag",
+      "scope": "session",
+      "value_kind": "enum",
+      "reset_behavior": "per_session",
+      "tags": [
+        "session",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "durability",
+      "name": "Durability",
+      "summary": "Item wear before repair or breakage.",
+      "category": "meter",
+      "scope": "player",
+      "value_kind": "integer",
+      "reset_behavior": "persistent",
+      "tags": [
+        "economy",
+        "crafting"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "energy",
+      "name": "Energy",
+      "summary": "Generic secondary resource for gadgets or shields.",
+      "category": "resource",
+      "scope": "player",
+      "value_kind": "integer",
+      "reset_behavior": "per_session",
+      "tags": [
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "equipment-belt-slots",
+      "name": "Equipment Belt Slots",
+      "summary": "Quick-access weapon or tool slots.",
+      "category": "slot",
+      "scope": "player",
+      "value_kind": "slot_list",
+      "shared_rationale": "Weapon/tool wheel limits mid-combat swaps.",
+      "player_focus": "Assign swords, bows, and shields to belt.",
+      "typical_range": "1–8 slots",
+      "reset_behavior": "persistent",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "featured_in": [
+        "zelda-breath-of-the-wild"
+      ],
+      "common_in": [
+        "Adventure"
+      ],
+      "tags": [
+        "capacity",
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "experience",
+      "name": "Experience",
+      "summary": "Accumulated progress toward level or skill unlocks.",
+      "category": "counter",
+      "scope": "player",
+      "value_kind": "integer",
+      "reset_behavior": "persistent",
+      "tags": [
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "focus-meter",
+      "name": "Focus Meter",
+      "summary": "Build-up resource spent on specials.",
+      "category": "meter",
+      "scope": "player",
+      "value_kind": "float",
+      "reset_behavior": "per_session",
+      "tags": [
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "geo",
+      "name": "Geo",
+      "summary": "Primary soft currency for shops and upgrades.",
+      "category": "currency",
+      "scope": "player",
+      "value_kind": "integer",
+      "shared_rationale": "Soft currency ties exploration rewards to bench-risk and shade recovery.",
+      "player_focus": "Bank geo safely at benches; spend on maps, charms, and upgrades.",
+      "typical_range": "0–99999 per run",
+      "reset_behavior": "per_death",
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "common_in": [
+        "Metroidvania"
+      ],
+      "tags": [
+        "economy"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "gold",
+      "name": "Gold",
+      "summary": "Classic soft currency for vendors and crafting.",
+      "category": "currency",
+      "scope": "player",
+      "value_kind": "integer",
+      "reset_behavior": "persistent",
+      "tags": [
+        "economy"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "health",
+      "name": "Health",
+      "summary": "Primary survivability pool depleted by damage.",
+      "category": "stat",
+      "scope": "player",
+      "value_kind": "integer",
+      "shared_rationale": "Nearly every action game needs a failure boundary the player can read at a glance.",
+      "player_focus": "Survive encounters without depleting the pool.",
+      "typical_range": "1–9 masks / 3–20 hearts",
+      "reset_behavior": "per_death",
+      "related_mechanics": [
+        "depletable-health-pool"
+      ],
+      "featured_in": [
+        "hades",
+        "hollow-knight",
+        "mega-man-2",
+        "zelda-breath-of-the-wild"
+      ],
+      "common_in": [
+        "Action",
+        "Metroidvania"
+      ],
+      "tags": [
+        "combat",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "heat",
+      "name": "Heat",
+      "summary": "Escalating difficulty modifier within a run.",
+      "category": "meter",
+      "scope": "run",
+      "value_kind": "integer",
+      "reset_behavior": "per_death",
+      "tags": [
+        "progression",
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "hunger",
+      "name": "Hunger",
+      "summary": "Survival need forcing resource consumption.",
+      "category": "meter",
+      "scope": "player",
+      "value_kind": "float",
+      "reset_behavior": "per_session",
+      "tags": [
+        "survival"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "inventory-slots",
+      "name": "Inventory Slots",
+      "summary": "Capacity for carried items and equipment.",
+      "category": "slot",
+      "scope": "player",
+      "value_kind": "integer",
+      "shared_rationale": "Item caps prevent hoarding and keep UI scannable.",
+      "player_focus": "Prioritize key items and consumables.",
+      "typical_range": "3–40 slots",
+      "reset_behavior": "persistent",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "featured_in": [
+        "hollow-knight",
+        "zelda-breath-of-the-wild"
+      ],
+      "common_in": [
+        "Adventure",
+        "RPG"
+      ],
+      "tags": [
+        "capacity",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "key-items",
+      "name": "Key Items",
+      "summary": "Story or access flags represented as inventory.",
+      "category": "flag",
+      "scope": "player",
+      "value_kind": "slot_list",
+      "reset_behavior": "persistent",
+      "tags": [
+        "progression",
+        "exploration"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "lives",
+      "name": "Lives",
+      "summary": "Remaining attempts before session or stage failure.",
+      "category": "counter",
+      "scope": "player",
+      "value_kind": "integer",
+      "shared_rationale": "Extra attempts soften difficulty in stage-based action games.",
+      "player_focus": "Preserve lives through boss patterns.",
+      "typical_range": "0–3 per stage",
+      "reset_behavior": "per_level",
+      "featured_in": [
+        "among-us",
+        "mega-man-2"
+      ],
+      "common_in": [
+        "Platformer"
+      ],
+      "tags": [
+        "session",
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "mana",
+      "name": "Mana",
+      "summary": "Spell or ability resource consumed by magic attacks.",
+      "category": "resource",
+      "scope": "player",
+      "value_kind": "integer",
+      "reset_behavior": "per_session",
+      "tags": [
+        "combat",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "meta-currency",
+      "name": "Meta Currency",
+      "summary": "Persistent currency for between-run upgrades.",
+      "category": "currency",
+      "scope": "player",
+      "value_kind": "integer",
+      "shared_rationale": "Darkness funds permanent mirror upgrades between runs.",
+      "player_focus": "Invest in hub mirror for long-term power.",
+      "typical_range": "0–99999 persistent",
+      "reset_behavior": "persistent",
+      "related_mechanics": [
+        "metaprogression"
+      ],
+      "related_variables": [
+        {
+          "slug": "currency-soft",
+          "relationship": "complements"
+        }
+      ],
+      "featured_in": [
+        "hades"
+      ],
+      "common_in": [
+        "Roguelike"
+      ],
+      "tags": [
+        "meta",
+        "economy"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "new-game-plus-flag",
+      "name": "New Game Plus Flag",
+      "summary": "Whether post-completion run modifiers apply.",
+      "category": "flag",
+      "scope": "world",
+      "value_kind": "boolean",
+      "reset_behavior": "persistent",
+      "tags": [
+        "meta",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "oxygen",
+      "name": "Oxygen",
+      "summary": "Breath timer in hazardous environments.",
+      "category": "meter",
+      "scope": "player",
+      "value_kind": "float",
+      "reset_behavior": "per_session",
+      "tags": [
+        "survival",
+        "exploration"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "party-size",
+      "name": "Party Size",
+      "summary": "Number of active party members.",
+      "category": "counter",
+      "scope": "party",
+      "value_kind": "integer",
+      "reset_behavior": "persistent",
+      "tags": [
+        "multiplayer",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "player-level",
+      "name": "Player Level",
+      "summary": "Discrete tier gating stats, gear, or abilities.",
+      "category": "counter",
+      "scope": "player",
+      "value_kind": "integer",
+      "reset_behavior": "persistent",
+      "tags": [
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "quick-slot-bar",
+      "name": "Quick Slot Bar",
+      "summary": "Hotbar slots for active items or weapons.",
+      "category": "slot",
+      "scope": "player",
+      "value_kind": "slot_list",
+      "shared_rationale": "Hotbar exposes active weapon without pausing combat.",
+      "player_focus": "Swap to weakness weapon mid-fight.",
+      "typical_range": "1–8 slots",
+      "reset_behavior": "per_session",
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "featured_in": [
+        "mega-man-2"
+      ],
+      "common_in": [
+        "Action"
+      ],
+      "tags": [
+        "capacity",
+        "ui"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "renown",
+      "name": "Renown",
+      "summary": "Seasonal or account-wide prestige score.",
+      "category": "counter",
+      "scope": "player",
+      "value_kind": "integer",
+      "reset_behavior": "persistent",
+      "tags": [
+        "meta",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "reputation",
+      "name": "Reputation",
+      "summary": "Faction standing affecting prices and quests.",
+      "category": "counter",
+      "scope": "player",
+      "value_kind": "integer",
+      "reset_behavior": "persistent",
+      "tags": [
+        "progression",
+        "economy"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "sanity",
+      "name": "Sanity",
+      "summary": "Psychological stress meter affecting abilities.",
+      "category": "meter",
+      "scope": "player",
+      "value_kind": "float",
+      "reset_behavior": "per_session",
+      "tags": [
+        "survival",
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "score",
+      "name": "Score",
+      "summary": "Session points for ranking or rewards.",
+      "category": "counter",
+      "scope": "session",
+      "value_kind": "integer",
+      "reset_behavior": "per_session",
+      "tags": [
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "shield",
+      "name": "Shield",
+      "summary": "Secondary damage buffer before health depletes.",
+      "category": "stat",
+      "scope": "player",
+      "value_kind": "integer",
+      "reset_behavior": "per_session",
+      "tags": [
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "souls",
+      "name": "Souls",
+      "summary": "Run-scoped currency earned from combat, spent at vendors.",
+      "category": "currency",
+      "scope": "run",
+      "value_kind": "integer",
+      "shared_rationale": "Run-scoped souls fund shade recovery and vendor purchases in roguelikes.",
+      "player_focus": "Spend before dying or recover shade pile.",
+      "typical_range": "0–5000 per escape",
+      "reset_behavior": "per_death",
+      "related_variables": [
+        {
+          "slug": "geo",
+          "relationship": "parallel_currency"
+        }
+      ],
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "common_in": [
+        "Roguelike"
+      ],
+      "tags": [
+        "economy",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "spell-slots",
+      "name": "Spell Slots",
+      "summary": "Equipped active spell or ability slots.",
+      "category": "slot",
+      "scope": "player",
+      "value_kind": "slot_list",
+      "shared_rationale": "Limited spell bindings make focus/soul management tactical.",
+      "player_focus": "Assign spells to face buttons.",
+      "typical_range": "1–4 slots",
+      "reset_behavior": "persistent",
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "common_in": [
+        "Action"
+      ],
+      "tags": [
+        "capacity",
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "stamina",
+      "name": "Stamina",
+      "summary": "Short-term exertion meter for sprint, dodge, or climb.",
+      "category": "meter",
+      "scope": "player",
+      "value_kind": "float",
+      "shared_rationale": "Climb and sprint economy gates vertical exploration.",
+      "player_focus": "Manage stamina while climbing and gliding.",
+      "typical_range": "0–3 wheels",
+      "reset_behavior": "per_session",
+      "featured_in": [
+        "zelda-breath-of-the-wild"
+      ],
+      "common_in": [
+        "Adventure"
+      ],
+      "tags": [
+        "combat",
+        "exploration"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "stamina-regen-delay",
+      "name": "Stamina Regen Delay",
+      "summary": "Cooldown before stamina refills after exertion.",
+      "category": "meter",
+      "scope": "player",
+      "value_kind": "float",
+      "reset_behavior": "per_session",
+      "tags": [
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "super-meter",
+      "name": "Super Meter",
+      "summary": "Team or player ultimate charge.",
+      "category": "meter",
+      "scope": "player",
+      "value_kind": "float",
+      "reset_behavior": "per_session",
+      "tags": [
+        "combat",
+        "multiplayer"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "task-progress",
+      "name": "Task Progress",
+      "summary": "Fraction of crew objectives completed.",
+      "category": "counter",
+      "scope": "session",
+      "value_kind": "integer",
+      "shared_rationale": "Crew win condition visible to both teams.",
+      "player_focus": "Complete tasks before elimination quota.",
+      "typical_range": "0–100%",
+      "reset_behavior": "per_session",
+      "featured_in": [
+        "among-us"
+      ],
+      "common_in": [
+        "Social Deduction"
+      ],
+      "tags": [
+        "multiplayer",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "timer",
+      "name": "Timer",
+      "summary": "Countdown or elapsed time pressure.",
+      "category": "meter",
+      "scope": "session",
+      "value_kind": "float",
+      "reset_behavior": "per_session",
+      "tags": [
+        "session"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "wave-number",
+      "name": "Wave Number",
+      "summary": "Current enemy wave in horde modes.",
+      "category": "counter",
+      "scope": "session",
+      "value_kind": "integer",
+      "reset_behavior": "per_session",
+      "tags": [
+        "combat",
+        "session"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "weapon-energy",
+      "name": "Weapon Energy",
+      "summary": "Ammo pool for special weapons distinct from health.",
+      "category": "resource",
+      "scope": "player",
+      "value_kind": "integer",
+      "shared_rationale": "Distinct ammo per boss weapon creates routing puzzles.",
+      "player_focus": "Match weapon to boss weakness without starving others.",
+      "typical_range": "0–28 units per weapon",
+      "reset_behavior": "per_level",
+      "related_mechanics": [
+        "resource-gated-weapon"
+      ],
+      "featured_in": [
+        "mega-man-2"
+      ],
+      "common_in": [
+        "Platformer"
+      ],
+      "tags": [
+        "combat"
+      ]
+    }
+  ]
+}

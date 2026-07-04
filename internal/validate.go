@@ -210,8 +210,8 @@ func validateGameplayMap(m GameplayMap) error {
 	if label == "" {
 		label = m.Title
 	}
-	if m.SchemaVersion != MapSchemaVersion && m.SchemaVersion != SchemaVersion {
-		return fmt.Errorf("%s: schema_version must be %q or %q", label, MapSchemaVersion, SchemaVersion)
+	if m.SchemaVersion != MapSchemaVersion && m.SchemaVersion != SchemaVersion && m.SchemaVersion != "1.2" {
+		return fmt.Errorf("%s: schema_version must be %q, %q, or %q", label, MapSchemaVersion, SchemaVersion, "1.2")
 	}
 	if err := validateSlug(label, m.Slug); err != nil {
 		return err
@@ -280,6 +280,28 @@ func validateGameplayMap(m GameplayMap) error {
 			return err
 		}
 		if err := validateSlug(label+".mechanic_relationships.to", rel.ToMechanic); err != nil {
+			return err
+		}
+	}
+	if err := validateMapVariableBindings(label, m.Variables); err != nil {
+		return err
+	}
+	if err := validateMapUIMenuBindings(label, m.UIMenus); err != nil {
+		return err
+	}
+	for _, rel := range m.VariableRelationships {
+		if err := validateSlug(label+".variable_relationships.from", rel.FromVariable); err != nil {
+			return err
+		}
+		if err := validateSlug(label+".variable_relationships.to", rel.ToVariable); err != nil {
+			return err
+		}
+	}
+	for _, edge := range m.MenuFlow {
+		if err := validateSlug(label+".menu_flow.from", edge.FromMenu); err != nil {
+			return err
+		}
+		if err := validateSlug(label+".menu_flow.to", edge.ToMenu); err != nil {
 			return err
 		}
 	}
@@ -413,6 +435,70 @@ func crossValidate(_ string, b *Bundle) error {
 		if err := validateGenreMechanicSanity(slug, m); err != nil {
 			return err
 		}
+
+		boundVars := make(map[string]struct{}, len(m.Variables))
+		for _, vb := range m.Variables {
+			if _, ok := b.Variables[vb.VariableSlug]; !ok {
+				return fmt.Errorf("map %q references unknown variable %q", slug, vb.VariableSlug)
+			}
+			boundVars[vb.VariableSlug] = struct{}{}
+			for _, mech := range vb.RelatedMechanics {
+				if _, ok := b.Mechanics[mech]; !ok {
+					return fmt.Errorf("map %q: variable %q related_mechanics references unknown mechanic %q", slug, vb.VariableSlug, mech)
+				}
+			}
+		}
+
+		boundMenus := make(map[string]struct{}, len(m.UIMenus))
+		for _, mb := range m.UIMenus {
+			if _, ok := b.UIMenus[mb.MenuSlug]; !ok {
+				return fmt.Errorf("map %q references unknown menu %q", slug, mb.MenuSlug)
+			}
+			boundMenus[mb.MenuSlug] = struct{}{}
+			for _, from := range mb.OpensFrom {
+				if _, ok := boundMenus[from]; !ok {
+					if _, libOk := b.UIMenus[from]; !libOk {
+						return fmt.Errorf("map %q: menu %q opens_from unknown menu %q", slug, mb.MenuSlug, from)
+					}
+				}
+			}
+			for _, v := range mb.DisplaysVariables {
+				if _, ok := b.Variables[v]; !ok {
+					return fmt.Errorf("map %q: menu %q displays unknown variable %q", slug, mb.MenuSlug, v)
+				}
+			}
+			for _, mech := range mb.SupportsMechanics {
+				if _, ok := b.Mechanics[mech]; !ok {
+					return fmt.Errorf("map %q: menu %q supports unknown mechanic %q", slug, mb.MenuSlug, mech)
+				}
+			}
+		}
+
+		for _, rel := range m.VariableRelationships {
+			if _, ok := boundVars[rel.FromVariable]; !ok {
+				if _, libOk := b.Variables[rel.FromVariable]; !libOk {
+					return fmt.Errorf("map %q: variable_relationship from unknown variable %q", slug, rel.FromVariable)
+				}
+			}
+			if _, ok := boundVars[rel.ToVariable]; !ok {
+				if _, libOk := b.Variables[rel.ToVariable]; !libOk {
+					return fmt.Errorf("map %q: variable_relationship to unknown variable %q", slug, rel.ToVariable)
+				}
+			}
+		}
+
+		for _, edge := range m.MenuFlow {
+			if _, ok := boundMenus[edge.FromMenu]; !ok {
+				if _, libOk := b.UIMenus[edge.FromMenu]; !libOk {
+					return fmt.Errorf("map %q: menu_flow from unknown menu %q", slug, edge.FromMenu)
+				}
+			}
+			if _, ok := boundMenus[edge.ToMenu]; !ok {
+				if _, libOk := b.UIMenus[edge.ToMenu]; !libOk {
+					return fmt.Errorf("map %q: menu_flow to unknown menu %q", slug, edge.ToMenu)
+				}
+			}
+		}
 	}
 	return nil
 }
@@ -444,6 +530,15 @@ func CollectTemplateWarnings(b *Bundle) []string {
 }
 
 func ValidateBundle(root string, b *Bundle) error {
+	mechanicSlugs := make(map[string]struct{}, len(b.Mechanics))
+	for s := range b.Mechanics {
+		mechanicSlugs[s] = struct{}{}
+	}
+	variableSlugs := make(map[string]struct{}, len(b.Variables))
+	for s := range b.Variables {
+		variableSlugs[s] = struct{}{}
+	}
+
 	catalog := MechanicsCatalog{
 		SchemaVersion: SchemaVersion,
 		Mechanics:     make([]MechanicEntry, 0, len(b.Mechanics)),
@@ -454,6 +549,33 @@ func ValidateBundle(root string, b *Bundle) error {
 	if err := ValidateCatalog(root, catalog); err != nil {
 		return err
 	}
+
+	if len(b.Variables) > 0 {
+		varCatalog := VariablesCatalog{
+			SchemaVersion: VariableSchemaVersion,
+			Variables:     make([]GameVariable, 0, len(b.Variables)),
+		}
+		for _, v := range b.Variables {
+			varCatalog.Variables = append(varCatalog.Variables, v)
+		}
+		if err := validateVariablesCatalog(root, varCatalog, mechanicSlugs); err != nil {
+			return err
+		}
+	}
+
+	if len(b.UIMenus) > 0 {
+		menuCatalog := UIMenusCatalog{
+			SchemaVersion: UIMenuSchemaVersion,
+			Menus:         make([]UIMenu, 0, len(b.UIMenus)),
+		}
+		for _, m := range b.UIMenus {
+			menuCatalog.Menus = append(menuCatalog.Menus, m)
+		}
+		if err := validateUIMenusCatalog(root, menuCatalog, mechanicSlugs, variableSlugs); err != nil {
+			return err
+		}
+	}
+
 	for _, m := range b.Maps {
 		if err := ValidateMap(root, m); err != nil {
 			return err
@@ -464,7 +586,15 @@ func ValidateBundle(root string, b *Bundle) error {
 
 // ValidateSchemaFiles ensures schema JSON files are present and parseable.
 func ValidateSchemaFiles(root string) error {
-	for _, name := range []string{"mechanic-entry.schema.json", "gameplay-map.schema.json", "mechanic-tags.json"} {
+	for _, name := range []string{
+		"mechanic-entry.schema.json",
+		"gameplay-map.schema.json",
+		"mechanic-tags.json",
+		"game-variable.schema.json",
+		"ui-menu.schema.json",
+		"variable-tags.json",
+		"menu-tags.json",
+	} {
 		path := filepath.Join(root, "schema", name)
 		data, err := os.ReadFile(path)
 		if err != nil {

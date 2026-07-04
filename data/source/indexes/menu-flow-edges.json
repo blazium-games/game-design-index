@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "edges": [
+    {
+      "from_menu": "hub-menu",
+      "to_menu": "boons-menu",
+      "relationship": "in_run",
+      "notes": "Boon choice during escape."
+    },
+    {
+      "from_menu": "hub-menu",
+      "to_menu": "mirror-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "hub-menu",
+      "to_menu": "shop-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "lobby-menu",
+      "to_menu": "map-overlay",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "main-menu",
+      "to_menu": "credits-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "main-menu",
+      "to_menu": "settings-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "map-overlay",
+      "to_menu": "meeting-menu",
+      "relationship": "emergency_report"
+    },
+    {
+      "from_menu": "meeting-menu",
+      "to_menu": "voting-menu",
+      "relationship": "leads_to"
+    },
+    {
+      "from_menu": "options-menu",
+      "to_menu": "controls-remap-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "pause-menu",
+      "to_menu": "inventory-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "pause-menu",
+      "to_menu": "map-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "pause-menu",
+      "to_menu": "options-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "pause-menu",
+      "to_menu": "save-load-menu",
+      "relationship": "opens",
+      "notes": "Via bench interaction."
+    },
+    {
+      "from_menu": "settings-menu",
+      "to_menu": "controls-remap-menu",
+      "relationship": "opens"
+    },
+    {
+      "from_menu": "stage-select-menu",
+      "to_menu": "weapon-select-overlay",
+      "relationship": "in_stage",
+      "notes": "Weapon swap during gameplay."
+    }
+  ]
+}

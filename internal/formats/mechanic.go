@@ -179,6 +179,28 @@ func MapMarkdown(m internal.GameplayMap) string {
 		}
 		b.WriteString("\n")
 	}
+	if len(m.Variables) > 0 {
+		b.WriteString("## Variable Bindings\n\n")
+		for _, vb := range m.Variables {
+			fmt.Fprintf(&b, "- **%s** (%s)", vb.VariableSlug, vb.Role)
+			if vb.Expression != "" {
+				fmt.Fprintf(&b, ": %s", vb.Expression)
+			}
+			b.WriteString("\n")
+		}
+		b.WriteString("\n")
+	}
+	if len(m.UIMenus) > 0 {
+		b.WriteString("## UI Menu Bindings\n\n")
+		for _, mb := range m.UIMenus {
+			fmt.Fprintf(&b, "- **%s** (%s)", mb.MenuSlug, mb.Role)
+			if mb.MapNotes != "" {
+				fmt.Fprintf(&b, ": %s", mb.MapNotes)
+			}
+			b.WriteString("\n")
+		}
+		b.WriteString("\n")
+	}
 	return strings.TrimRight(b.String(), "\n") + "\n"
 }
 

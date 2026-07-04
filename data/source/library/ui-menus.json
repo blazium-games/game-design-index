@@ -1,0 +1,636 @@
+{
+  "schema_version": "1.0",
+  "menus": [
+    {
+      "schema_version": "1.0",
+      "slug": "boons-menu",
+      "name": "Boons Menu",
+      "summary": "Choose run modifiers or blessings during escape.",
+      "menu_type": "boons",
+      "layer": "in_game",
+      "input_context": "any",
+      "shared_rationale": "God boon choice after chamber clears.",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "featured_in": [
+        "hades"
+      ],
+      "common_in": [
+        "Roguelike"
+      ],
+      "tags": [
+        "progression",
+        "in_game"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "controls-remap-menu",
+      "name": "Controls Remap Menu",
+      "summary": "Rebind inputs for gamepad, keyboard, or touch.",
+      "menu_type": "controls_remap",
+      "layer": "meta",
+      "input_context": "any",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "tags": [
+        "settings"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "crafting-menu",
+      "name": "Crafting Menu",
+      "summary": "Combine materials into gear or consumables.",
+      "menu_type": "crafting",
+      "layer": "in_game",
+      "input_context": "any",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_variables": [
+        "inventory-slots"
+      ],
+      "tags": [
+        "economy"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "credits-menu",
+      "name": "Credits Menu",
+      "summary": "Scroll staff and attribution.",
+      "menu_type": "credits",
+      "layer": "meta",
+      "input_context": "any",
+      "typical_actions": [
+        "navigate"
+      ],
+      "tags": [
+        "meta"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "dialogue-menu",
+      "name": "Dialogue Menu",
+      "summary": "Branching conversation choices with NPCs.",
+      "menu_type": "dialogue",
+      "layer": "in_game",
+      "input_context": "any",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_mechanics": [
+        "dialogue-choice-consequences"
+      ],
+      "tags": [
+        "in_game",
+        "social"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "equipment-menu",
+      "name": "Equipment Menu",
+      "summary": "Manage weapons, armor, and loadout slots.",
+      "menu_type": "equipment",
+      "layer": "in_game",
+      "input_context": "any",
+      "typical_actions": [
+        "navigate",
+        "equip"
+      ],
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "related_variables": [
+        "equipment-belt-slots",
+        "quick-slot-bar"
+      ],
+      "tags": [
+        "inventory",
+        "combat"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "hub-menu",
+      "name": "Hub Menu",
+      "summary": "Between-run home base for meta progression.",
+      "menu_type": "hub",
+      "layer": "meta",
+      "input_context": "any",
+      "shared_rationale": "House of Hades hub between escape attempts.",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_mechanics": [
+        "metaprogression"
+      ],
+      "related_variables": [
+        "currency-soft",
+        "meta-currency"
+      ],
+      "related_menus": [
+        {
+          "slug": "mirror-menu",
+          "relationship": "opens"
+        },
+        {
+          "slug": "shop-menu",
+          "relationship": "opens"
+        }
+      ],
+      "featured_in": [
+        "hades"
+      ],
+      "common_in": [
+        "Roguelike"
+      ],
+      "tags": [
+        "hub",
+        "meta"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "hud-overlay",
+      "name": "HUD Overlay",
+      "summary": "Persistent on-screen status and prompts.",
+      "menu_type": "hud_overlay",
+      "layer": "in_game",
+      "input_context": "any",
+      "typical_actions": [
+        "display"
+      ],
+      "related_variables": [
+        "health",
+        "ammo"
+      ],
+      "tags": [
+        "in_game",
+        "overlay"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "inventory-menu",
+      "name": "Inventory Menu",
+      "summary": "Browse, equip, and consume carried items.",
+      "menu_type": "inventory",
+      "layer": "in_game",
+      "input_context": "any",
+      "shared_rationale": "Charm and item management screen central to buildcrafting.",
+      "typical_actions": [
+        "navigate",
+        "equip",
+        "consume"
+      ],
+      "related_mechanics": [
+        "equipment-loadout"
+      ],
+      "related_variables": [
+        "inventory-slots",
+        "charm-notches"
+      ],
+      "featured_in": [
+        "hollow-knight",
+        "zelda-breath-of-the-wild"
+      ],
+      "common_in": [
+        "Metroidvania",
+        "RPG"
+      ],
+      "tags": [
+        "inventory",
+        "in_game"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "lobby-menu",
+      "name": "Lobby Menu",
+      "summary": "Pre-match room for roles, cosmetics, and ready-up.",
+      "menu_type": "lobby",
+      "layer": "meta",
+      "input_context": "any",
+      "shared_rationale": "Pre-game role, color, and map voting.",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_mechanics": [
+        "asymmetric-multiplayer"
+      ],
+      "related_menus": [
+        {
+          "slug": "map-overlay",
+          "relationship": "opens"
+        }
+      ],
+      "featured_in": [
+        "among-us"
+      ],
+      "common_in": [
+        "Party"
+      ],
+      "tags": [
+        "social"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "main-menu",
+      "name": "Main Menu",
+      "summary": "Title screen hub for starting, continuing, or configuring a game.",
+      "menu_type": "main",
+      "layer": "meta",
+      "input_context": "any",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_menus": [
+        {
+          "slug": "settings-menu",
+          "relationship": "opens"
+        },
+        {
+          "slug": "credits-menu",
+          "relationship": "opens"
+        }
+      ],
+      "tags": [
+        "meta",
+        "navigation"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "map-menu",
+      "name": "Map Menu",
+      "summary": "World or stage map with markers and fast travel.",
+      "menu_type": "map",
+      "layer": "in_game",
+      "input_context": "any",
+      "shared_rationale": "Fog-of-war map with pins and bench fast travel.",
+      "typical_actions": [
+        "navigate",
+        "filter"
+      ],
+      "related_mechanics": [
+        "ability-gated-exploration"
+      ],
+      "related_variables": [
+        "checkpoint-id"
+      ],
+      "featured_in": [
+        "hollow-knight",
+        "zelda-breath-of-the-wild"
+      ],
+      "common_in": [
+        "Metroidvania"
+      ],
+      "tags": [
+        "navigation"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "map-overlay",
+      "name": "Map Overlay",
+      "summary": "Minimap and task/route overlay during play.",
+      "menu_type": "map_overlay",
+      "layer": "in_game",
+      "input_context": "any",
+      "shared_rationale": "Ship minimap with task markers during play.",
+      "typical_actions": [
+        "display"
+      ],
+      "related_variables": [
+        "task-progress"
+      ],
+      "featured_in": [
+        "among-us"
+      ],
+      "common_in": [
+        "Social Deduction"
+      ],
+      "tags": [
+        "navigation",
+        "overlay"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "meeting-menu",
+      "name": "Meeting Menu",
+      "summary": "Emergency discussion UI after a body report.",
+      "menu_type": "meeting",
+      "layer": "in_game",
+      "input_context": "any",
+      "shared_rationale": "Discussion phase after body report or emergency button.",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_mechanics": [
+        "evidence-deduction-puzzle"
+      ],
+      "related_variables": [
+        "task-progress"
+      ],
+      "related_menus": [
+        {
+          "slug": "voting-menu",
+          "relationship": "leads_to"
+        }
+      ],
+      "featured_in": [
+        "among-us"
+      ],
+      "common_in": [
+        "Social Deduction"
+      ],
+      "tags": [
+        "social",
+        "overlay"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "mirror-menu",
+      "name": "Mirror Menu",
+      "summary": "Permanent meta upgrade tree between runs.",
+      "menu_type": "mirror",
+      "layer": "meta",
+      "input_context": "any",
+      "shared_rationale": "Permanent talent tree funded by darkness.",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_mechanics": [
+        "metaprogression"
+      ],
+      "related_variables": [
+        "meta-currency"
+      ],
+      "featured_in": [
+        "hades"
+      ],
+      "common_in": [
+        "Roguelike"
+      ],
+      "tags": [
+        "hub",
+        "meta"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "options-menu",
+      "name": "Options Menu",
+      "summary": "Quick in-run settings for audio, display, and controls.",
+      "menu_type": "options",
+      "layer": "in_game",
+      "input_context": "any",
+      "shared_rationale": "System and gameplay toggles from pause.",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_menus": [
+        {
+          "slug": "controls-remap-menu",
+          "relationship": "opens"
+        }
+      ],
+      "featured_in": [
+        "zelda-breath-of-the-wild"
+      ],
+      "common_in": [
+        "Adventure"
+      ],
+      "tags": [
+        "in_game",
+        "settings"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "pause-menu",
+      "name": "Pause Menu",
+      "summary": "In-game overlay to halt play and access sub-screens.",
+      "menu_type": "pause",
+      "layer": "in_game",
+      "input_context": "any",
+      "shared_rationale": "Universal session break that hosts inventory, map, and options.",
+      "typical_actions": [
+        "navigate",
+        "resume"
+      ],
+      "related_menus": [
+        {
+          "slug": "inventory-menu",
+          "relationship": "opens"
+        },
+        {
+          "slug": "map-menu",
+          "relationship": "opens"
+        },
+        {
+          "slug": "options-menu",
+          "relationship": "opens"
+        }
+      ],
+      "featured_in": [
+        "hades",
+        "hollow-knight",
+        "mega-man-2",
+        "zelda-breath-of-the-wild"
+      ],
+      "common_in": [
+        "Action"
+      ],
+      "tags": [
+        "in_game",
+        "overlay"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "save-load-menu",
+      "name": "Save / Load Menu",
+      "summary": "Checkpoint and slot management.",
+      "menu_type": "save_load",
+      "layer": "in_game",
+      "input_context": "any",
+      "shared_rationale": "Bench interaction saves progress and heals.",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_mechanics": [
+        "bench-checkpoint"
+      ],
+      "related_variables": [
+        "checkpoint-id"
+      ],
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "common_in": [
+        "Metroidvania"
+      ],
+      "tags": [
+        "in_game",
+        "progression"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "settings-menu",
+      "name": "Settings Menu",
+      "summary": "Persistent configuration from main menu or pause.",
+      "menu_type": "settings",
+      "layer": "meta",
+      "input_context": "any",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_menus": [
+        {
+          "slug": "controls-remap-menu",
+          "relationship": "opens"
+        }
+      ],
+      "tags": [
+        "meta",
+        "settings"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "shop-menu",
+      "name": "Shop Menu",
+      "summary": "Purchase upgrades and consumables with currency.",
+      "menu_type": "shop",
+      "layer": "in_game",
+      "input_context": "any",
+      "shared_rationale": "Vendor UI spending geo on maps, charms, and keys.",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_variables": [
+        "geo",
+        "gold",
+        "currency-soft"
+      ],
+      "featured_in": [
+        "hollow-knight"
+      ],
+      "common_in": [
+        "Metroidvania"
+      ],
+      "tags": [
+        "economy",
+        "in_game"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "stage-select-menu",
+      "name": "Stage Select Menu",
+      "summary": "Pick levels or bosses in non-linear order.",
+      "menu_type": "stage_select",
+      "layer": "meta",
+      "input_context": "any",
+      "shared_rationale": "Robot master grid with cleared stage indicators.",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_mechanics": [
+        "non-linear-boss-selection"
+      ],
+      "featured_in": [
+        "mega-man-2"
+      ],
+      "common_in": [
+        "Platformer"
+      ],
+      "tags": [
+        "meta",
+        "navigation"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "voting-menu",
+      "name": "Voting Menu",
+      "summary": "Cast eject votes on suspected players.",
+      "menu_type": "voting",
+      "layer": "in_game",
+      "input_context": "any",
+      "shared_rationale": "Eject vote tally and skip option.",
+      "typical_actions": [
+        "confirm"
+      ],
+      "related_mechanics": [
+        "evidence-deduction-puzzle"
+      ],
+      "featured_in": [
+        "among-us"
+      ],
+      "common_in": [
+        "Social Deduction"
+      ],
+      "tags": [
+        "social",
+        "overlay"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "slug": "weapon-select-overlay",
+      "name": "Weapon Select Overlay",
+      "summary": "Combat overlay to swap active weapons.",
+      "menu_type": "weapon_select",
+      "layer": "combat_overlay",
+      "input_context": "gamepad",
+      "shared_rationale": "Boss fight weapon wheel without leaving combat.",
+      "typical_actions": [
+        "navigate",
+        "confirm"
+      ],
+      "related_mechanics": [
+        "resource-gated-weapon"
+      ],
+      "related_variables": [
+        "weapon-energy",
+        "quick-slot-bar"
+      ],
+      "featured_in": [
+        "mega-man-2"
+      ],
+      "common_in": [
+        "Platformer"
+      ],
+      "tags": [
+        "combat",
+        "overlay"
+      ]
+    }
+  ]
+}

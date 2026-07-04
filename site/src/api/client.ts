@@ -3,11 +3,16 @@ import type {
   Catalog,
   CooccurrencePair,
   GameplayMap,
+  GameVariable,
   GenreIndexRow,
   MapIndexRow,
   MechanicEntry,
   MechanicIndexRow,
+  MenuIndexRow,
+  MenuFlowEdge,
   SearchRow,
+  UIMenu,
+  VariableIndexRow,
 } from '../types'
 
 const BASE =
@@ -27,6 +32,10 @@ export const api = {
   fetchMap: (slug: string) => get<GameplayMap>(`/maps/${slug}.json`),
   fetchMechanicsIndex: () => get<MechanicIndexRow[]>('/mechanics/index.json'),
   fetchMechanic: (slug: string) => get<MechanicEntry>(`/mechanics/${slug}.json`),
+  fetchVariablesIndex: () => get<VariableIndexRow[]>('/variables/index.json'),
+  fetchVariable: (slug: string) => get<GameVariable>(`/variables/${slug}.json`),
+  fetchUIMenusIndex: () => get<MenuIndexRow[]>('/ui-menus/index.json'),
+  fetchUIMenu: (slug: string) => get<UIMenu>(`/ui-menus/${slug}.json`),
   fetchGenresIndex: () => get<GenreIndexRow[]>('/genres/index.json'),
   fetchGenre: (slug: string) => get<GameplayMap>(`/genres/${slug}.json`),
   fetchSearch: () => get<SearchRow[]>('/search.json'),
@@ -39,7 +48,17 @@ export const api = {
   },
   fetchMechanicToMaps: () =>
     get<{ mechanics: Record<string, string[]> }>('/indexes/mechanic-to-maps.json'),
+  fetchVariableToMaps: () =>
+    get<{ variables: Record<string, string[]> }>('/indexes/variable-to-maps.json'),
+  fetchMenuToMaps: () =>
+    get<{ menus: Record<string, string[]> }>('/indexes/menu-to-maps.json'),
+  fetchVariableToMechanics: () =>
+    get<{ variables: Record<string, string[]> }>('/indexes/variable-to-mechanics.json'),
+  fetchMenuFlowEdges: () =>
+    get<{ edges: MenuFlowEdge[] }>('/indexes/menu-flow-edges.json'),
   fetchTags: () => get<{ tags: string[] }>('/tags.json'),
+  fetchVariableTags: () => get<{ tags: string[] }>('/variable-tags.json'),
+  fetchMenuTags: () => get<{ tags: string[] }>('/menu-tags.json'),
   fetchMechanicFormatted: async (slug: string, format: 'md' | 'yaml' | 'txt' = 'md') => {
     const entry = await get<MechanicEntry>(`/mechanics/${slug}.json`)
     return formatMechanic(entry, format)
